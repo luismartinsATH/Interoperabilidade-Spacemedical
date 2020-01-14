@@ -1,0 +1,61 @@
+Agendar Exame:
+
+MSH|^~\&|Sentinel|Cardiology|WISE|IPOL|20190507235703||ORM^O01^ORM_O01|9eea1533-303c-418f-8611-69c25328678f|P|2.3.1|||AL|||8859/1
+PID|1||x21292915^^^SIMA||FIALHO^ANA^MARIA LOURENCO PEREIRA||20141227|F|||^^^^|||||||||||||||||||
+PV1|1|||||||^Medico Solicitante^|||||||||||||||||||||||||||||||||||||||||||
+ORC|NW||||AGD|||||||
+OBR|1|||ExamCode^Exam Description||||||||||||^^^^^^^^^^^^^&Reffering Unit||xx1344670|01||ECG|||ECG|||^^^20190507235654^^^||||^Reason for exam|&Medico Relator|
+NTE|||Case history
+
+
+Executar Exame:
+MSH|^~\&|Sentinel|Cardiology|WISE|IPOL|20190507235705||ORM^O01^ORM_O01|211a3560-d236-46ff-87e0-555e48db5828|P|2.3.1|||AL|||8859/1
+PID|1||x21292915^^^SIMA||FIALHO^ANA^MARIA LOURENCO PEREIRA||20141227|F|||^^^^|||||||||||||||||||
+PV1|1|||||||^Medico Solicitante^|||||||||||||||||||||||||||||||||||||||||||
+ORC|XO||||EFT|||||||
+OBR|1|||ExamCode^Exam Description||||||||||||^^^^^^^^^^^^^&Reffering Unit||xx1344670|01||ECG|||ECG|||^^^20190507235654^^^||||^Reason for exam|&Medico Relator|
+NTE|||Case history
+
+
+Adicionar Relatório:
+MSH|^~\&|Sentinel|Cardiology|WISE|IPOL|20190507235959||ORU^R01^ORU_R01|c7cc93b1-51e7-4d4d-b603-80e5838b9be1|P|2.3.1||||||8859/1
+PID|1||x21292915^^^SIMA||FIALHO^ANA^MARIA LOURENCO PEREIRA||20141227|F|||^^^^|||||||||||||||||||
+ORC|||||F|||||||||||
+OBR|1|||ExamCode^Exam Description||||||||||||||xx1344670|REPORTID|||20190508110054|||F|||||||&Medico Relator|
+OBX||TX|1||REPORT TEXT LINE 1\X0A\REPORT TEXT LINE 2 \XE9\ \XE3\  \XE7\||||||F|
+ZEI|01
+
+
+Apagar Relatório:
+MSH|^~\&|Sentinel|Cardiology|WISE|IPOL|20190507235959||ORU^R01^ORU_R01|c7cc93b1-51e7-4d4d-b603-80e5838b9be1|P|2.3.1||||||8859/1
+PID|1||x21292915^^^SIMA||FIALHO^ANA^MARIA LOURENCO PEREIRA||20141227|F|||^^^^|||||||||||||||||||
+ORC|||||EFT|||||||||||
+OBR|1|||ExamCode^Exam Description||||||||||||||xx1344670|REPORTID|||20190508110054|||X|||||||&Medico Relator|
+OBX||TX|1||REPORT TEXT LINE 1\X0A\REPORT TEXT LINE 2 \XE9\ \XE3\  \XE7\||||||X|||||
+ZEI|01
+
+
+Caracteres extended ASCII code indicados em hexadecimal com o seguinte formato https://www.ascii-code.com/:
+é: \XE9\
+ã: \XE3\
+ç: \XE7\
+Nova linha: \X0A\
+
+
+Apagar Exame (caso não tenha imagens):
+MSH|^~\&|Sentinel|Cardiology|WISE|IPOL|20190507235703||ORM^O01^ORM_O01|9eea1533-303c-418f-8611-69c25328678f|P|2.3.1|||AL|||8859/1
+PID|1||x21292915^^^SIMA||FIALHO^ANA^MARIA LOURENCO PEREIRA||20141227|F|||^^^^|||||||||||||||||||
+PV1|1|||||||^Medico Solicitante^|||||||||||||||||||||||||||||||||||||||||||
+ORC|CA||||ANU|||||||
+OBR|1|||ExamCode^Exam Description||||||||||||^^^^^^^^^^^^^&Reffering Unit||xx1344670|01||ECG|||ECG|||^^^20190507235654^^^||||^Reason for exam|&Medico Relator|
+NTE|||Case history
+
+
+Mensagem de relatório, exemplo
+
+MSH|^~\&|Sentinel|Cardiology|WISE|IPOL|20190507235959||ORU^R01^ORU_R01|c7cc93b1-51e7-4d4d-b603-80e5838b9be1|P|2.3.1||||||8859/1
+PID|1||x21292915^^^SIMA||FIALHO^ANA^MARIA LOURENCO PEREIRA||20141227|F|||^^^^|||||||||||||||||||
+ORC|||||F|||||||||||
+OBR|1|||ExamCode^Exam Description||||||||||||||xx1344670|REPORTID|||20190508110054|||F|||||||&Medico Relator|
+OBX||TX|1||Eixo Frontal QRS 46 deg\X0A\Eixo Frontal P 237 deg\X0A\Eixo Frontal T 53 deg\X0A\Dura\XE7\\XE3\o P 59 ms\X0A\Dura\XE7\\XE3\o QRS 85 ms\X0A\Intervalo PR 381 ms\X0A\Intervalo PQ 381 ms\X0A\Intervalo QT 347 ms\X0A\Intervalo QTc 359 ms\X0A\Intervalo de RR 930 ms\X0A\Frequ\XA3\ncia card\XED\aca 64 bpm\X0A\Press\XE3\o arterial sist\XF3\lica 0 mmHg\X0A\Press\XE3\o arterial diast\XF3\lica 0 mmHg\X0A\Resumo de declara\XE7\\XE3\o Sinus Rhythm\X0A\Declara\XE7\\XE3\o 1 Second-degree Atrioventricular Block (Wenckebach type)\X0A\||||||F|
+ZEI|01

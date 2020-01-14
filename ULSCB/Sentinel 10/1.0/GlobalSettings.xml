@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SentinelSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ThickClientExe>C:\Program Files (x86)\Del Mar Reynolds Medical\Common\cfip.exe</ThickClientExe>
+  <RootFolder>D:\DMR\Sentinel\</RootFolder>
+  <ReportFolder>C:\Program Files (x86)\Del Mar Reynolds Medical\Report\</ReportFolder>
+  <RestingECGReportFormat3>UKRestingECG1x3_a4.xml</RestingECGReportFormat3>
+  <RestingECGReportFormat6>UKRestingECG3x2_a4.xml</RestingECGReportFormat6>
+  <RestingECGReportFormat12>UKRestingECG4x3_a4.xml</RestingECGReportFormat12>
+  <RhythmECGReportFormat>UKRhythmECG_a4.xml</RhythmECGReportFormat>
+  <DefaultABPReportFormat>SinglePageReport.shrf</DefaultABPReportFormat>
+  <BasicReportECGGraticule>false</BasicReportECGGraticule>
+  <LeadDisplayMode>1</LeadDisplayMode>
+  <FileTimeOutInMinutes>10</FileTimeOutInMinutes>
+  <GlasgowStatementSetting>0</GlasgowStatementSetting>
+  <DefaultWebTimeout>100000</DefaultWebTimeout>
+  <LomondConnectionString>Data Source=ABENAKI\SQLEXPRESS;Initial Catalog=LomondClinicalData;User=LomondApp;Password=L0m0ndUs3r</LomondConnectionString>
+</SentinelSettings>

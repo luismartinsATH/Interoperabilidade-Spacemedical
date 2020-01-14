@@ -1,0 +1,235 @@
+<!-- Sample configurations for the resting 12 lead worklist test grid -->
+<!-- Should be placed in Del Mar Reynolds Medical\Sentinel\1.0\DataGridViews\-->
+<Grid>
+  <Tabs>
+    <Tab caption="Orders">
+      <!--<Roles>
+        <Role>EditTest</Role>
+      <Roles>-->
+      <Columns>
+        <Column>PatientStatus</Column>
+        <!-- remove CaseNumber
+        <Column>CaseNumber</Column>
+        -->
+        <Column Width="100">PatientNumber</Column>
+        <Column Width="150">PatientName</Column>
+        <Column Width="75" HeaderText="DoB">DateOfBirth</Column>
+        <!-- REMOVED FOR TESTING FOR LUIS<Column Width="75">Status</Column>-->
+        <Column Width="50">Ward</Column>
+        <Column Width="50">CaseNumber</Column>
+        <Column Width="50">OrderID</Column>
+        <Column Width="50">PointOfCare</Column>
+        <Column Width="50">OrderRequestedDate</Column>
+        <!-- remove Duration 
+        <Column>Duration</Column>
+        -->
+      </Columns>
+      <!-- Only show tests that have not been assigned to patient records yet -->
+      <Criteria>
+        <Criterion>
+          <Column>Status</Column>
+          <Comparison>Equals</Comparison>
+          <Values>
+            <Value>NewTest</Value>
+          </Values>
+        </Criterion>
+      </Criteria>
+      <!--Default sort for the tab-->
+      <SortColumn>RecordingStartDateTime</SortColumn>
+      <SortDirection>Descending</SortDirection>
+    </Tab>
+    <Tab caption="Unidentified">
+      <!-- Specify which roles are necessary to view the tab. This is an or, so can have any of the roles
+      specified to view the tab.
+      so for example 
+      <Roles>
+        <Role>EditTest</Role>
+      <Roles>
+      would require them to have the Edit Tests role to view this tab.
+      The roles are named in English, *exactly* as in LomondRoleGuids. Is case sensitive.
+      The current roles are: EditTest, ViewAudit, ViewPatient, EditReport, Analyse, ConfigureRecorder,
+      Download, ModifyPatient, SignReport, SystemAdmin, ViewReport, SendClinicalData, SendReport,
+      PrintReport, DeleteRecording, DeleteReport, DeleteTest, Export12LeadTest
+      If none are specified, it is assumed no roles are required to view the tab.
+      -->
+      <!--This is the default all tab, so specify no roles-->
+      <!--Which columns are displayed. Names are as recovered by reflection -->
+      <!--Which columns are displayed. Names are as recovered by reflection -->
+      <!-- Current possibilities: CaseNumber, DateOfBirth,Duration,SecondIdentifier, OrderID-->
+      <!-- ThirdIdentifier,PatientName, FamilyName,GivenName,PatientNumber,PatientStatus,RecorderType-->
+      <!-- StartDate,Status, TestType, Ward, PointOfCare, Bed, LastArchive, Priority, RecordingStartDateTime -->
+      <!-- ConfirmedReportCount, UnconfirmedReportCount, DeclinedReportCount, OrderRequestedDate, PatientNumberNamespace -->
+      <Columns>
+        <Column>PatientStatus</Column>
+        <!-- remove CaseNumber
+        <Column>CaseNumber</Column>
+        -->
+        <Column Width="100">PatientNumber</Column>
+        <Column Width="150">PatientName</Column>
+        <Column Width="75" HeaderText="DoB">DateOfBirth</Column>
+        <Column Width="125">RecordingStartDateTime</Column>
+        <Column Width="75">Status</Column>
+        <Column>UnconfirmedReportCount</Column>
+		<Column Width="50" HeaderText="Origem">TestFacilityName</Column>
+        <Column Width="50" HeaderText="Facility">DownloadFacilityName</Column>
+        <!-- remove Duration 
+        <Column>Duration</Column>
+        -->
+      </Columns>
+      <!-- Only show tests that have not been assigned to patient records yet -->
+      <Criteria>
+        <Criterion>
+          <Column>PatientStatus</Column>
+          <Comparison>Equals</Comparison>
+          <Values>
+            <Value>Unknown</Value>
+            <Value>NotInitialised</Value>
+          </Values>
+        </Criterion>
+      </Criteria>
+      <!--Default sort for the tab-->
+      <SortColumn>RecordingStartDateTime</SortColumn>
+      <SortDirection>Descending</SortDirection>
+    </Tab>
+<Tab caption="Pending Review">
+<!-- THIS TAB SHOWS IDENTIFIED 12 LEAD TESTS
+-->
+      <!-- No roles defined
+	<Roles>
+	<Role>Download</Role>
+      </Roles>
+	-->
+      <Columns>
+        <Column>PatientStatus</Column>
+        <!-- remove CaseNumber
+        <Column>CaseNumber</Column>
+        -->
+        <Column Width="100">PatientNumber</Column>
+        <Column Width="150">PatientName</Column>
+        <Column Width="75" HeaderText="DoB">DateOfBirth</Column>
+        <Column Width="125">RecordingStartDateTime</Column>
+        <Column Width="75">Status</Column>
+        <Column>UnconfirmedReportCount</Column>
+		<Column Width="50" HeaderText="Origem">TestFacilityName</Column>
+        <Column Width="50" HeaderText="Facility">DownloadFacilityName</Column>
+        <!-- remove Duration 
+        <Column>Duration</Column>
+        -->
+      </Columns>
+      <Criteria>
+        <Criterion>
+          <Column>Status</Column>
+          <Comparison>Equals</Comparison>
+          <Values>
+	<Value>Unconfirmed</Value>
+          </Values>
+        </Criterion>
+      </Criteria>
+      <SortColumn>RecordingStartDateTime</SortColumn>
+      <SortDirection>Descending</SortDirection>
+    </Tab>
+<Tab caption="Completed/Confirmed">
+<!-- THIS TAB SHOWS CONFIRMED, CONFIRMED AMENDED OR COMPLETED 12 LEAD TESTS
+-->
+      <!-- No roles defined
+	<Roles>
+	<Role>Download</Role>
+      </Roles>
+	-->
+      <Columns>
+	<Column>PatientStatus</Column>
+	<!-- Remove case No.
+        <Column>CaseNumber</Column>
+	-->
+        <Column Width="100">PatientNumber</Column>
+        <Column Width="150">PatientName</Column>
+        <Column Width="75" HeaderText="DoB">DateOfBirth</Column>
+        <Column Width="125">RecordingStartDateTime</Column>
+        <Column Width="75">Status</Column>
+        <Column>UnconfirmedReportCount</Column>
+        <Column>ConfirmedReportCount</Column>
+		<Column Width="50" HeaderText="Origem">TestFacilityName</Column>		
+        <Column Width="50" HeaderText="Facility">DownloadFacilityName</Column>
+      </Columns>
+      <Criteria>
+<Criterion>
+<!-- Test status is "Confirmed" or "Confirmed Amended" or "Completed"
+	-->
+          <Column>Status</Column>
+          <Comparison>OneOf</Comparison>
+          <Values>
+            <Value>Confirmed</Value>
+	   <Value>Completed</Value>
+	   <Value>ConfirmedAmended</Value>
+          </Values>
+        </Criterion>
+      </Criteria>
+      <SortColumn>RecordingStartDateTime</SortColumn>
+      <SortDirection>Descending</SortDirection>
+    </Tab>
+<Tab caption="Declined">
+<!-- THIS TAB SHOWS DECLINED 12 LEAD TESTS
+-->
+      <!-- No roles defined
+	<Roles>
+	<Role>Download</Role>
+      </Roles>
+	-->
+      <Columns>
+	<Column>PatientStatus</Column>
+	<!-- Remove case No.
+        <Column>CaseNumber</Column>
+	-->
+        <Column Width="100">PatientNumber</Column>
+        <Column Width="150">PatientName</Column>
+        <Column Width="75" HeaderText="DoB">DateOfBirth</Column>
+        <Column Width="125">RecordingStartDateTime</Column>
+        <Column Width="75">Status</Column>
+        <Column>DeclinedReportCount</Column>
+		<Column Width="50" HeaderText="Origem">TestFacilityName</Column>		
+        <Column Width="50" HeaderText="Facility">DownloadFacilityName</Column>
+      </Columns>
+      <Criteria>
+<Criterion>
+<!-- Test status is "Rejected"
+	-->
+          <Column>Status</Column>
+          <Comparison>Equals</Comparison>
+          <Values>
+            <Value>Rejected</Value>
+	  </Values>
+        </Criterion>
+      </Criteria>
+      <SortColumn>RecordingStartDateTime</SortColumn>
+      <SortDirection>Descending</SortDirection>
+    </Tab>
+   <Tab caption="All 12 Lead">
+<!-- THIS TAB SHOWS ALL 12 LEAD TESTS
+-->
+      <!-- No roles
+	<Roles>
+        <Role>ConfigureRecorder</Role>
+      </Roles>
+	-->
+	<Columns>      
+	<Column>PatientStatus</Column>
+		<!-- Remove case No.
+        <Column>CaseNumber</Column>
+	-->
+        <Column Width="100">PatientNumber</Column>
+        <Column Width="150">PatientName</Column>
+        <Column Width="75" HeaderText="DoB">DateOfBirth</Column>
+        <Column Width="125">RecordingStartDateTime</Column>
+        <Column Width="75">Status</Column>
+        <Column>UnconfirmedReportCount</Column>
+        <Column>ConfirmedReportCount</Column>
+        <Column>DeclinedReportCount</Column>
+		<Column Width="50" HeaderText="Origem">TestFacilityName</Column>		
+        <Column Width="50" HeaderText="Facility">DownloadFacilityName</Column>
+       </Columns>
+	<SortColumn>RecordingStartDateTime</SortColumn>
+      <SortDirection>Descending</SortDirection>
+    </Tab>
+  </Tabs>
+</Grid>
+

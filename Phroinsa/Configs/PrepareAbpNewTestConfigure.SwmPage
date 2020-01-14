@@ -1,0 +1,580 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- this configuration file should not be edited. -->
+
+<Page PageKind="Update" ShowPatientLockedMessage="true">
+
+  <OnPageLoad>
+    <Commands>
+      <Command Type="WriteDefaultValuesIntoFieldsCommand"/>
+      <Command Type="WriteUrlQueryParametersIntoFieldsCommand"/>
+      <Command Type="WritePatientIntoFieldsCommand"/>
+      <Command Type="WriteDefaultTestValuesIntoFieldsCommand"/>
+      <Command Type="WriteAbpProtocolIntoFieldsCommand"/>
+      <Command Type="WriteDefaultHookupTechnicianValueIntoTestFieldsCommand"/>
+      <Command Type="AuditFromFieldsCommand">
+        <Activity>#ActivityBeginConfigureABPRecorder#</Activity>
+        <AuditKind>Patient</AuditKind>
+      </Command>
+    </Commands>
+  </OnPageLoad>
+
+  <OnValidate>
+    <Commands>
+      <Command Type="AbpIntervalsValidator"/>
+    </Commands>
+  </OnValidate>
+
+  <Header DisplayName="#ConfigureABPRecorder#">
+    <div class="navigation">
+      <include file="HeaderIcons/CommonHeaderIconsWithConfirmation.SwmControl"/>
+      <include file="HeaderIcons/HomeIcon.SwmControl"/>
+      <span Id="PageTitle" class="page-header-abp"/>
+    </div>
+    <div class="actions">
+      <Menu class="Horizontal">
+
+        <Item DisplayName="#Cancel#" Id="Cancel">
+          <OnClicked Id="Click Cancel button">
+            <Commands>
+              <Command Type="CancelCommand"/>
+            </Commands>
+          </OnClicked>
+        </Item>
+
+        <Item DisplayName="#ConfigureRecorder#" Id="Button_InitialiseRecorder">
+          <OnClicked Id="Configure recorder">
+            <Commands>
+              <Command Type="AuditFromFieldsCommand">
+                <Activity>#ActivityConfigureABPRecorder#</Activity>
+                <AuditKind>Patient</AuditKind>
+              </Command>
+              <Command Type="ConfigureNewTestAbpForPatientKeyFieldCommand"/>
+              <Command Type="EndWorkflowCommand"/>
+            </Commands>
+          </OnClicked>
+        </Item>
+
+      </Menu>
+    </div>
+    <div class="info">#InfoABPNewTestCreated#</div>
+  </Header>
+
+  <Content>
+
+    <DataEntry>
+      <TextBox Id="Patient_Key" DataType="Key" IsHidden="true"/>
+      <TextBox Id="Test_Key" DataType="Key" IsHidden="true"/>
+      <TextBox Id="Case_Key" DataType="Key" IsHidden="true"/>
+      <TextBox Id="MinimiseAfterAcquire" IsHidden="true"/>
+      <TextBox Id="Critereon_Id" IsHidden="true" />"
+    </DataEntry>
+
+    <div class="col-group">
+      <div class="col-span-4">
+
+        <Portlet>
+          <Header DisplayName="#PatientInfoFromTestHeading#"/>
+          <Content>
+            <DataEntry>
+              <TextBox Id="Patient_Organisation" FieldSettings="ABP_PFT_Patient_Organisation"/>
+              <TextBox Id="Patient_Id" FieldSettings="ABP_PFT_Patient_Id"/>
+                
+              <TextBox Id="Patient_NationalId" FieldSettings="ABP_PFT_Patient_NationalId">
+                <OnLoseFocus>
+                    <Commands>
+                        <Command Type="ReformatFieldValueCommand">
+                            <NationalId/>
+                        </Command>
+                    </Commands>
+                </OnLoseFocus>
+                <OnValidate>
+                    <Commands>
+                        <Command Type="NationalIdValidator" WarnOrError="Warn"/>
+                    </Commands>
+                </OnValidate>
+              </TextBox>
+
+              <TextBox Id="Patient_SecondId" FieldSettings="ABP_PFT_Patient_SecondId"/>
+              <TextBox Id="Patient_ThirdId" FieldSettings="ABP_PFT_Patient_ThirdId"/>
+              <TextBox Id="Patient_Title" FieldSettings="ABP_PFT_Patient_Title"/>
+              <TextBox Id="Patient_LastName" FieldSettings="ABP_PFT_Patient_LastName"/>
+              <TextBox Id="Patient_FirstName" FieldSettings="ABP_PFT_Patient_FirstName"/>
+              <TextBox Id="Patient_MiddleInitials" FieldSettings="ABP_PFT_Patient_MiddleInitials"/>
+              <TextBox Id="Patient_MaidenName" FieldSettings="ABP_PFT_Patient_MaidenName"/>
+              <DropDownList Id="Patient_GenderPickList" FieldSettings="ABP_PFT_Patient_GenderPickList">
+                <Options>
+                  <Option Value="Male" DisplayName="#GenderMale#"/>
+                  <Option Value="Female" DisplayName="#GenderFemale#"/>
+                  <Option Value="Unknown" DisplayName="#GenderUnknown#"/>
+                </Options>
+              </DropDownList>
+			  <TextBox Id="Patient_Ethnicity" FieldSettings="ABP_PFT_Patient_Ethnicity"/>
+              <TextBox Id="Patient_BirthDate" DataType="DateOnly" FieldSettings="ABP_PFT_Patient_BirthDate"/>
+            </DataEntry>
+          </Content>
+        </Portlet>
+
+        <Portlet>
+          <Header DisplayName="#Test#"/>
+          <Content>
+            <DataEntry>
+              <DropDownList Id="Test_CaseNumber" FieldSettings="ABP_PFT_Test_CaseNumber">
+                <OnPageLoad>
+                  <Commands>
+                    <Command Type="AcquirePatientCasesForPrepareForTestCommand" />
+                    <Command Type="UpdateCaseDependentTestFieldsCommand"/>
+                  </Commands>
+                </OnPageLoad>
+                <OnEditedValueChanged>
+                  <Commands>
+                    <Command Type="UpdateCaseDependentTestFieldsCommand"/>
+                  </Commands>
+                </OnEditedValueChanged>
+              </DropDownList>
+              <TextBox Id="Test_Height" DataType="Height" FieldSettings="ABP_PFT_Test_Height">
+                <OnLoseFocus>
+                  <Commands>
+                    <Command Type="ReformatFieldValueCommand">
+                      <Float Format="0.00"/>
+                    </Command>
+                  </Commands>
+                </OnLoseFocus>
+              </TextBox>
+              <TextBox Id="Test_Weight" DataType="Weight" FieldSettings="ABP_PFT_Test_Weight">
+                <OnLoseFocus>
+                  <Commands>
+                    <Command Type="ReformatFieldValueCommand">
+                      <Float Format="0.00"/>
+                    </Command>
+                  </Commands>
+                </OnLoseFocus>
+              </TextBox>
+              <DropDownList Id="Test_PacemakerType" DataType="Pacemaker" FieldSettings="ABP_PFT_Test_PacemakerType">
+                <OnPageLoad>
+                  <Commands>
+                    <Command Type="DataEntrySupplyDropDownListOptionsCommand">
+                      <DataSourcedFromConfigFile>
+                        <FileKind>Pacemakers</FileKind>
+                        <IsFiltered>false</IsFiltered>
+                      </DataSourcedFromConfigFile>
+                    </Command>
+                  </Commands>
+                </OnPageLoad>
+              </DropDownList>
+              <ComboBox Id="Test_Hookup_Staff_Name" FieldSettings="ABP_PFT_Test_Hookup_Staff_Name">
+                <OnSuggestionsRequested>
+                  <Commands>
+                    <Command Type="DataEntrySupplySuggestionsCommand">
+                      <DataSourcedFromDatabaseView>
+                        <View>WebGridStaffView</View>
+                        <Column>Staff_Name_With_Facility</Column>
+                        <Criteria>
+                          <ColumnEqualsValue ColumnId="Staff_TechnicianList" Value="1" />
+                        </Criteria>
+                      </DataSourcedFromDatabaseView>
+                    </Command>
+                  </Commands>
+                </OnSuggestionsRequested>
+              </ComboBox>
+
+
+              <ComboBox Id="Test_Supervisor_Staff_Name" FieldSettings="ABP_PFT_Test_Supervisor_Staff_Name">
+                <OnSuggestionsRequested>
+                  <Commands>
+                    <Command Type="DataEntrySupplySuggestionsCommand">
+                      <DataSourcedFromDatabaseView>
+                        <View>WebGridStaffView</View>
+                        <Column>Staff_Name_With_Facility</Column>
+                        <Criteria>
+                          <ColumnEqualsValue ColumnId="Staff_PhysicianList" Value="1" />
+                        </Criteria>
+                      </DataSourcedFromDatabaseView>
+                    </Command>
+                  </Commands>
+                </OnSuggestionsRequested>
+              </ComboBox>
+
+              <ComboBox Id="Test_Analysis_Staff_Name" FieldSettings="ABP_PFT_Test_Analysis_Staff_Name">
+                <OnSuggestionsRequested>
+                  <Commands>
+                    <Command Type="DataEntrySupplySuggestionsCommand">
+                      <DataSourcedFromDatabaseView>
+                        <View>WebGridStaffView</View>
+                        <Column>Staff_Name_With_Facility</Column>
+                        <Criteria>
+                          <ColumnEqualsValue ColumnId="Staff_TechnicianList" Value="1" />
+                        </Criteria>
+                      </DataSourcedFromDatabaseView>
+                    </Command>
+                  </Commands>
+                </OnSuggestionsRequested>
+              </ComboBox>
+
+              <ComboBox Id="Test_Referring_Staff_Name" FieldSettings="ABP_PFT_Test_Referring_Staff_Name">
+                <OnSuggestionsRequested>
+                  <Commands>
+                    <Command Type="DataEntrySupplySuggestionsCommand">
+                      <DataSourcedFromDatabaseView>
+                        <View>WebGridStaffView</View>
+                        <Column>Staff_Name_With_Facility</Column>
+                        <Criteria>
+                          <ColumnEqualsValue ColumnId="Staff_PhysicianList" Value="1" />
+                        </Criteria>
+                      </DataSourcedFromDatabaseView>
+                    </Command>
+                  </Commands>
+                </OnSuggestionsRequested>
+              </ComboBox>
+
+              <ComboBox Id="Test_Responsible_Staff_Name" FieldSettings="ABP_PFT_Test_Responsible_Staff_Name">
+                <OnSuggestionsRequested>
+                  <Commands>
+                    <Command Type="DataEntrySupplySuggestionsCommand">
+                      <DataSourcedFromDatabaseView>
+                        <View>WebGridStaffView</View>
+                        <Column>Staff_Name_With_Facility</Column>
+                        <Criteria>
+                          <ColumnEqualsValue ColumnId="Staff_PhysicianList" Value="1" />
+                        </Criteria>
+                      </DataSourcedFromDatabaseView>
+                    </Command>
+                  </Commands>
+                </OnSuggestionsRequested>
+              </ComboBox>
+
+              
+                  <ComboBox Id="Test_Facility_Name" FieldSettings="ABP_PFT_Test_Facility_Name">
+                <OnSuggestionsRequested>
+                  <Commands>
+                    <Command Type="DataEntrySupplySuggestionsCommand">
+                      <DataSourcedFromDatabaseView>
+                        <View>WebGridFacilityView</View>
+                        <Column>Facility_Name</Column>
+                        <Criteria>
+                          <ColumnStartsWithField ColumnId="Facility_Name" FieldId="Test_Facility_Name" Value="1" />
+                        </Criteria>
+                      </DataSourcedFromDatabaseView>
+                    </Command>
+                  </Commands>
+                </OnSuggestionsRequested>
+              </ComboBox>
+              <TextBox Id="Test_RecorderSerialNumber" FieldSettings="ABP_PFT_Test_RecorderSerialNumber"/>
+              <TextBox Id="Test_RecorderModel" FieldSettings="ABP_PFT_Test_RecorderModel"/>
+              <TextBox Id="Test_Ward" FieldSettings="ABP_PFT_Test_Ward"/>
+              <TextBox Id="Test_PointOfCare" FieldSettings="ABP_PFT_Test_PointOfCare"/>
+              <TextBox Id="Test_Bed" FieldSettings="ABP_PFT_Test_Bed"/>
+              <RadioButtons Id="Test_PriorityPickList" FieldSettings="ABP_PFT_Test_PriorityPickList">
+                <Options>
+                  <Option Value="High" DisplayName="#PriorityHigh#"/>
+                  <Option Value="Normal" DisplayName="#PriorityStandard#"/>
+                </Options>
+              </RadioButtons>
+              <TextBox Id="Test_TestId1" FieldSettings="ABP_PFT_Test_TestId1"/>
+              <TextBox Id="Test_TestId2" FieldSettings="ABP_PFT_Test_TestId2"/>
+              <TextBox Id="Test_TestId3" FieldSettings="ABP_PFT_Test_TestId3"/>
+            </DataEntry>
+          </Content>
+        </Portlet>
+
+        <Portlet>
+          <Header DisplayName="#CustomFields#"/>
+          <Content>
+            <DataEntry>
+              <TextBox Id="Test_Custom0" FieldSettings="ABP_PFT_Test_Custom0"/>
+              <TextBox Id="Test_Custom1" FieldSettings="ABP_PFT_Test_Custom1"/>
+              <TextBox Id="Test_Custom2" FieldSettings="ABP_PFT_Test_Custom2"/>
+              <TextBox Id="Test_Custom3" FieldSettings="ABP_PFT_Test_Custom3"/>
+            </DataEntry>
+          </Content>
+        </Portlet>
+
+
+
+      </div>
+      <div class="col-span-8">
+
+
+
+        <Portlet>
+          <Header DisplayName="#Notes#"/>
+          <Content>
+            <DataEntry>
+              <TextBox Id="Test_Comments" Rows="5" FieldSettings="ABP_PFT_Test_Comments"/>
+            </DataEntry>
+          </Content>
+        </Portlet>
+
+        <Portlet>
+          <Header DisplayName="#AbpProtocolPickOrType#"/>
+          <Content>
+            <DataEntry>
+              <DropDownList Id="AbpProtocol_Name">
+                <DefaultValue>Default</DefaultValue>
+
+                <OnPageLoad>
+                  <Commands>
+                    <Command Type="DataEntrySupplyDropDownListOptionsCommand">
+                      <DataSourcedFromDatabaseView>
+                        <FilterToTargetIdContents>false</FilterToTargetIdContents>
+                        <View>WebGridAbpProtocolView</View>
+                        <Column>AbpProtocol_Name</Column>
+                      </DataSourcedFromDatabaseView>
+                    </Command>
+                  </Commands>
+                </OnPageLoad>
+
+                <OnEditedValueChanged>
+                  <Commands>
+                    <Command Type="WriteAbpProtocolIntoFieldsCommand"/>
+                    <Command Type="SupplyFieldValuesToWebPageCommand"/>
+                    <Command Type="ValidateCommand"/>
+                  </Commands>
+                </OnEditedValueChanged>
+
+              </DropDownList>
+              <CheckBox Id="AbpProtocol_AreReadingsVisibleOnRecorder">
+                <DefaultValue>false</DefaultValue>
+              </CheckBox>
+              <CheckBox Id="AbpProtocol_VerificationSetup">
+                <DefaultValue>NonClinicalAccuracy</DefaultValue>
+                <CheckedValue>ClinicalAccuracy</CheckedValue>
+                <UncheckedValue>NonClinicalAccuracy</UncheckedValue>
+              </CheckBox>
+              <CheckBox Id="AbpProtocol_IsCuffPressureVisibleOnRecorder">
+                <DefaultValue>false</DefaultValue>
+              </CheckBox>
+              <RadioButtons Id="AbpProtocol_ClockFormatOnRecorder">
+                <DefaultValue>TwentyFourHour</DefaultValue>
+                <Options>
+                  <Option Value="TwelveHour" DisplayName="#AbpClockFormatTwelveHour#"/>
+                  <Option Value="TwentyFourHour" DisplayName="#AbpClockFormatTwentyFourHour#"/>
+                </Options>
+              </RadioButtons>
+            </DataEntry>
+          </Content>
+        </Portlet>
+
+        <include file="AbpControls/AbpProtocolIntervalEditlist.SwmControl"/>
+
+        <Portlet>
+          <Header DisplayName="#Medications#"/>
+          <Content>
+            <table>
+              <tr>
+                <td style="width: 7em">
+                  <Menu class="Vertical">
+                    <Item DisplayName="#Add#" Id="Button_AddMedication">
+                      <OnClicked>
+                        <Commands>
+                          <Command Type="AddRowToEditListCommand">
+                            <TargetId>MedicationEditList</TargetId>
+                          </Command>
+                          <Command Type="ValidateCommand"/>
+                        </Commands>
+                      </OnClicked>
+                    </Item>
+                    <Item DisplayName="#Delete#" Id="Button_DeleteMedication">
+                      <OnClicked>
+                        <Commands>
+                          <Command Type="DeleteRowFromEditListCommand">
+                            <TargetId>MedicationEditList</TargetId>
+                          </Command>
+                          <Command Type="ValidateCommand"/>
+                        </Commands>
+                      </OnClicked>
+                    </Item>
+                    <Item DisplayName="#Up#" Id="Button_MoveMedicationUp">
+                      <OnClicked>
+                        <Commands>
+                          <Command Type="MoveRowUpInEditListCommand">
+                            <TargetId>MedicationEditList</TargetId>
+                          </Command>
+                          <Command Type="ValidateCommand"/>
+                        </Commands>
+                      </OnClicked>
+                    </Item>
+                    <Item DisplayName="#Down#" Id="Button_MoveMedicationDown">
+                      <OnClicked>
+                        <Commands>
+                          <Command Type="MoveRowDownInEditListCommand">
+                            <TargetId>MedicationEditList</TargetId>
+                          </Command>
+                          <Command Type="ValidateCommand"/>
+                        </Commands>
+                      </OnClicked>
+                    </Item>
+                  </Menu>
+                </td>
+                <td>
+                  <EditList Id="MedicationEditList">
+
+                    <ComboBox Id="Medication_Name" width="15em;" FieldSettings="Medication_Name">
+                      <Discretion>Mandatory</Discretion>
+
+                      <OnSuggestionsRequested>
+                        <Commands>
+                          <Command Type="DataEntrySupplySuggestionsCommand">
+                            <NotAlreadySelectedInEditlist>
+                              <DataSourcedFromConfigFile>
+                                <FileKind>PatientMedications</FileKind>
+                                <SortOrder>Ascending</SortOrder>
+                              </DataSourcedFromConfigFile>
+                            </NotAlreadySelectedInEditlist>
+                          </Command>
+                        </Commands>
+                      </OnSuggestionsRequested>
+
+                    </ComboBox>
+
+                    <TextBox Id="Medication_Dosage" FieldSettings="Medication_Dosage"></TextBox>
+
+                    <ComboBox Id="Medication_Units">
+                      <OnSuggestionsRequested>
+                        <Commands>
+                          <Command Type="DataEntrySupplySuggestionsCommand">
+                            <DataSourcedFromConfigFile>
+                              <FileKind>PatientMedicationUnits</FileKind>
+                              <SortOrder>Ascending</SortOrder>
+                            </DataSourcedFromConfigFile>
+                          </Command>
+                        </Commands>
+                      </OnSuggestionsRequested>
+                    </ComboBox>
+
+                    <ComboBox Id="Medication_Regime" FieldSettings="Medication_Regime">
+                      <OnSuggestionsRequested>
+                        <Commands>
+                          <Command Type="DataEntrySupplySuggestionsCommand">
+                            <DataSourcedFromConfigFile>
+                              <FileKind>PatientMedicationRegimes</FileKind>
+                              <SortOrder>Ascending</SortOrder>
+                            </DataSourcedFromConfigFile>
+                          </Command>
+                        </Commands>
+                      </OnSuggestionsRequested>
+                    </ComboBox>
+
+                    <ComboBox Id="Medication_Route" FieldSettings="Medication_Route">
+                      <OnSuggestionsRequested>
+                        <Commands>
+                          <Command Type="DataEntrySupplySuggestionsCommand">
+                            <DataSourcedFromConfigFile>
+                              <FileKind>PatientMedicationRoutes</FileKind>
+                              <SortOrder>Ascending</SortOrder>
+                            </DataSourcedFromConfigFile>
+                          </Command>
+                        </Commands>
+                      </OnSuggestionsRequested>
+                    </ComboBox>
+
+                    <AddedRows>
+                      <ScrollableRegion style="max-height: 12.5em; min-height: 12.5em;"/>
+
+                      <OnSelectedRowsChanged>
+                        <Commands>
+                          <Command Type="ValidateCommand"/>
+                        </Commands>
+                      </OnSelectedRowsChanged>
+
+                    </AddedRows>
+
+                  </EditList>
+                </td>
+              </tr>
+            </table>
+          </Content>
+        </Portlet>
+
+        <Portlet>
+          <Header DisplayName="#Indications#"/>
+          <Content>
+            <table>
+              <tr>
+                <td style="width: 7em">
+                  <Menu class="Vertical">
+                    <Item DisplayName="#Add#" Id="Button_AddIndication">
+                      <OnClicked>
+                        <Commands>
+                          <Command Type="AddRowToEditListCommand">
+                            <TargetId>IndicationEditList</TargetId>
+                          </Command>
+                          <Command Type="ValidateCommand"/>
+                        </Commands>
+                      </OnClicked>
+                    </Item>
+                    <Item DisplayName="#Delete#" Id="Button_DeleteIndication">
+                      <OnClicked>
+                        <Commands>
+                          <Command Type="DeleteRowFromEditListCommand">
+                            <TargetId>IndicationEditList</TargetId>
+                          </Command>
+                          <Command Type="ValidateCommand"/>
+                        </Commands>
+                      </OnClicked>
+                    </Item>
+                    <Item DisplayName="#Up#" Id="Button_MoveIndicationUp">
+                      <OnClicked>
+                        <Commands>
+                          <Command Type="MoveRowUpInEditListCommand">
+                            <TargetId>IndicationEditList</TargetId>
+                          </Command>
+                          <Command Type="ValidateCommand"/>
+                        </Commands>
+                      </OnClicked>
+                    </Item>
+                    <Item DisplayName="#Down#" Id="Button_MoveIndicationDown">
+                      <OnClicked>
+                        <Commands>
+                          <Command Type="MoveRowDownInEditListCommand">
+                            <TargetId>IndicationEditList</TargetId>
+                          </Command>
+                          <Command Type="ValidateCommand"/>
+                        </Commands>
+                      </OnClicked>
+                    </Item>
+                  </Menu>
+                </td>
+                <td>
+                  <EditList Id="IndicationEditList">
+
+                    <ComboBox Id="Indication_Name" FieldSettings="Indication_Name">
+                      <Discretion>Mandatory</Discretion>
+                      <OnSuggestionsRequested>
+                        <Commands>
+                          <Command Type="DataEntrySupplySuggestionsCommand">
+                            <NotAlreadySelectedInEditlist>
+                              <DataSourcedFromConfigFile>
+                                <FileKind>PatientIndications</FileKind>
+                                <SortOrder>Ascending</SortOrder>
+                              </DataSourcedFromConfigFile>
+                            </NotAlreadySelectedInEditlist>
+                          </Command>
+                        </Commands>
+                      </OnSuggestionsRequested>
+                    </ComboBox>
+
+                    <AddedRows>
+                      <ScrollableRegion style="max-height: 7.5em; min-height: 7.5em;"/>
+
+                      <OnSelectedRowsChanged>
+                        <Commands>
+                          <Command Type="ValidateCommand"/>
+                        </Commands>
+                      </OnSelectedRowsChanged>
+
+                    </AddedRows>
+
+                  </EditList>
+                </td>
+              </tr>
+            </table>
+          </Content>
+        </Portlet>
+
+
+      </div>
+    </div>
+
+  </Content>
+</Page>

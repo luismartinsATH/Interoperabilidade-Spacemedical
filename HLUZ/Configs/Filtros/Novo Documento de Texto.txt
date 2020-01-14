@@ -1,0 +1,1 @@
+([Test_StatusPickList]=20 AND ([Patient_Organisation]='HLUZ' OR [Patient_Organisation]='CCA'))

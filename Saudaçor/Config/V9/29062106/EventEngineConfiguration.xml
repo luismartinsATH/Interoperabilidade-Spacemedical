@@ -1,0 +1,122 @@
+﻿<?xml version="1.0"?>
+<EventEngineConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <!-- 
+
+  This xml configuration file is included as an example of the format of such files.
+  
+  If the ConfigurationName is omitted from the EventHandler entries the ConfigurationName "Default" will be used.
+
+  -->
+
+  <EventConfigurations>
+
+    <!-- Example configuration for sending reports back to an EMR when the Report Signed event is raised -->
+     <EventConfiguration EventName="TestRecordingAddedToTest" AssemblyName="Dmr.Lomond.Automation.Events">
+<!--        <EventConfiguration EventName="ReportSignedEventArg" AssemblyName="Dmr.Lomond.Automation.Events">-->
+      <EventHandlers>
+
+        <EventHandler Name="SendReportToEMREventHandler" AssemblyName="Dmr.Lomond.EventHandlers">
+          <Conditions/>
+        </EventHandler>
+
+        <EventHandler Name="UpdateOrderStatusEventHandler" AssemblyName="Dmr.Lomond.EventHandlers">
+          <Conditions/>
+        </EventHandler>
+
+      </EventHandlers>
+      
+    </EventConfiguration>
+    
+
+   <!--  Example configuration for returning reports back to the sender of the recording when the Report Signed event is raised.
+    <EventConfiguration EventName="ReportSignedEventArg" AssemblyName="Dmr.Lomond.Automation.Events">
+      <EventHandlers>
+
+        <EventHandler Name="AutomaticallyReturnReportEventHandler" AssemblyName="Dmr.Lomond.EventHandlers">
+          <Conditions/>
+        </EventHandler>
+
+      </EventHandlers>
+    </EventConfiguration>
+   --> 
+    
+    <!-- Example configuration to assign a received patient from site "testsite" to user group "usergroup1" (and the test to "usergroup2").
+    
+    <EventConfiguration EventName="PatientCreatedForReceivedTestEventArg" AssemblyName="Dmr.Lomond.Automation.Events">
+
+      <EventHandlers>
+
+        <EventHandler Name="UserGroupForPatientsEventHandler" AssemblyName="Dmr.Lomond.EventHandlers">
+          <Conditions>
+            <Condition Name="MatchAllCondition" AssemblyName="Dmr.Lomond.EventHandlers">
+              <Criteria>
+                <Criterion Name="PatientOriginatingSiteName" Value="testsite" />
+              </Criteria>
+            </Condition>
+          </Conditions>
+          
+          <UserGroupsToAdd>
+            <UserGroupToAdd>usergroup1</UserGroupToAdd>
+          </UserGroupsToAdd>
+          
+        </EventHandler>
+
+      </EventHandlers>
+	
+    </EventConfiguration>
+
+    <EventConfiguration EventName="RemoteDataReceivedEventArg" AssemblyName="Dmr.Lomond.Automation.Events">
+
+      <EventHandlers>
+
+        <EventHandler Name="UserGroupForTestsEventHandler" AssemblyName="Dmr.Lomond.EventHandlers">
+          <Conditions>
+            <Condition Name="MatchAllCondition" AssemblyName="Dmr.Lomond.EventHandlers">
+              <Criteria>
+                <Criterion Name="TestOriginatingSiteName" Value="testsite" />
+              </Criteria>
+            </Condition>
+          </Conditions>
+          
+          <UserGroupsToAdd>
+            <UserGroupToAdd>usergroup2</UserGroupToAdd>
+          </UserGroupsToAdd>
+          
+        </EventHandler>
+
+      </EventHandlers>
+	
+    </EventConfiguration>
+    <EventConfiguration EventName="ReceivedReturnedReportEventArg" AssemblyName="Dmr.Lomond.Automation.Events">
+      <EventHandlers>
+        <EventHandler Name="PrintReportEventHandler" AssemblyName="Dmr.Lomond.EventHandlers">
+          <Conditions />
+          <WindowsUsername></WindowsUsername>
+          <WindowsPassword></WindowsPassword>
+          <PrinterName>\\ServerName\PrinterName</PrinterName>
+          <NumberOfCopies>1</NumberOfCopies>
+          <StartPage>1</StartPage>
+          <EndPage>32767</EndPage>
+          <Collate>true</Collate>
+          <Duplex>Default</Duplex>
+          <PrintFilename></PrintFilename>
+          <PrintPreviousReport>DoNotPrint</PrintPreviousReport>
+          <CultureName>En-Gb</CultureName>   
+          <RestingEcgFormatTrace12>UKRestingECG4x3_a4.xml</RestingEcgFormatTrace12>
+          <RestingEcgFormatTrace6>UKRestingECG4x3_a4.xml</RestingEcgFormatTrace6>
+          <RestingEcgFormatTrace3>UKRestingECG4x3_a4.xml</RestingEcgFormatTrace3>
+          <RhythmECGReportFormat>UKRhythmECG_a4.xml</RhythmECGReportFormat>
+        </EventHandler>
+      </EventHandlers>
+    </EventConfiguration>
+    -->
+    
+  </EventConfigurations>
+
+</EventEngineConfiguration>
+
+
+
+
+

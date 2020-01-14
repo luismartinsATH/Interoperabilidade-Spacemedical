@@ -1,0 +1,17 @@
+MSH|^~\&|EPIC|UCSD||UCSD|20181009213620|136|ORM^O01|24|P|2.5.1
+PID|1||80003652^^^PID^PID||LAB^CHERRY||19880420|F|||1319 PADA^^SAN DIMAS^CA^91773^US||(909)263-9443^^7^^^909^2639443~^NET^Internet^mmdaf@gmail.com||||||123-95-8493
+PV1||I|HC 10-EAST^1004^1004A^UCHC^^^^^^^UCDEPID|||||10414^POLSTON^GREGORY^ROBERT^^^^^UCSDSER^^^^UCSDSER||General Med|||||||99999^RN HOSPITAL^CHARGE^ONLY^^^^^UCSDSER^^^^UCSDSER||33000081864|||||||||||||||||||||||||20180420152000|20181009173600
+ORC|CA|187511793^EPIC||33000081864|||^ONE TIME^^20181009091500^20181009^R^^Standing^^^^1||20181009213617|136^DISCHARGE^AUTOMATIC^DISCONTINUE||60677^TAUB^PAM^R.^^^^^UCSDSER^^^^UCSDSER|700101^^^700^^^^^HC 10-EAST|(619)543-8213^^^^^619^5438213||PD^Patient Discharge||NOLWSDEFINED^NO LWS DEFINED|||||||||||I
+OBR|1|187511793^EPIC||CARD15^AMB 24 HR BLOOD PRESSURE MONITOR^SENTINEL^^AMB 24 HR BLOOD PRESSURE MONITOR||20181009091500|||||Normal|||||60677^TAUB^PAM^R.^^^^^UCSDSER^^^^UCSDSER|(619)543-8213^^^^^619^5438213||||||||||^ONE TIME^^20181009091500^20181009^R^^Standing^^^^1|||||||||20181009091500
+NTE|1||Your physician has ordered a 24 hour blood pressure monitor. For your convenience, we will perform the necessary insurance authorizations|SCH
+NTE|2|||SCH
+NTE|3||If you do not receive your monitor today, you will need to schedule an appointment for a nurse visit in clinic to have your monitor set up. |SCH
+NTE|4|||SCH
+NTE|5||For appointment scheduling, changes or cancellations, please call the Sulpizio Cardiology clinic at 858-657-8530.|SCH
+NTE|6|||SCH
+NTE|7||UCSD looks forward to serving your Cardiology needs.|SCH
+NTE|8|||SCH
+NTE|9|||SCH
+NTE|10||Clinical History:->Sent 10/09/18|OSQ
+OBX|1|NM|HT^HEIGHT||1.75|m||||||||20180420
+OBX|2|NM|WT^WEIGHT||90.719|kg||||||||20180420

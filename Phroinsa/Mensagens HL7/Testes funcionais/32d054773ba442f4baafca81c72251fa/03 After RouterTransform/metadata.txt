@@ -1,0 +1,5 @@
+﻿Name = ignore
+FromTrustedSource = False
+MessageDirection = Incoming
+FileName = Message
+Event = Unknown

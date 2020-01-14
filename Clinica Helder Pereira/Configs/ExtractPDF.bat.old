@@ -1,0 +1,4 @@
+REM ping localhost -n 5 -w 1000 > null
+timeout 5 >nul
+"C:\ProgramData\Del Mar Reynolds Medical\Sentinel\scripts\Conversor_DCM2PDF.exe"
+REM sqlcmd -S sm-lap-10\sqlexpress -i "C:\ProgramData\Del Mar Reynolds Medical\Sentinel\scripts\SN to Facilty.sql" -o "C:\ProgramData\Del Mar Reynolds Medical\Sentinel\scripts\SN to Facilty.log"

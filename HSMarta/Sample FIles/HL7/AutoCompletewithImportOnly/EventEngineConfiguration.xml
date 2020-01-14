@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" ?>
+<EventEngineConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <!-- 
+
+  This xml configuration file is included as an example of the format of such files.
+  
+  If the ConfigurationName is omitted from the EventHandler entries the ConfigurationName "Default" will be used.
+
+  -->
+
+  <EventConfigurations>
+
+    <!-- DICOM communication with PACS/RIS -->
+    <!-- Example configuration for sending DICOM Worklist (order) status to PACS when Test Recording Added To Test then this event is raised 
+    <EventConfiguration EventName="DataAcquiredEventArg" AssemblyName="Dmr.Lomond.Automation.Events">
+
+      <EventHandlers>
+
+        <EventHandler Name="SendOrderStatusEventHandler" AssemblyName ="Dmr.Lomond.EventHandlers">
+          <Conditions />
+        </EventHandler>
+
+      </EventHandlers>
+
+    </EventConfiguration>
+    -->
+    <!-- DICOM communication with PACS/RIS -->
+    <!-- Example configuration for sending 12 lead Resting Waveform Data and reports to PACS when Test completed event is raised
+    <EventConfiguration EventName="TestCompletedEventArg" AssemblyName="Dmr.Lomond.Automation.Events">
+    
+      <EventHandlers>
+        
+        <EventHandler Name="ExportTestToFileEventHandler" AssemblyName ="Dmr.Lomond.EventHandlers">
+          <Conditions />
+          <FileKind>.DCM</FileKind>
+          <Folder>C:\DMR\Sentinel\DICOM</Folder>
+        </EventHandler>
+        
+        <EventHandler Name="UpdateOrderStatusEventHandler" AssemblyName="Dmr.Lomond.EventHandlers">
+          <Conditions/>
+        </EventHandler>
+        
+      </EventHandlers>
+      
+    </EventConfiguration>
+    -->
+    
+    <!-- Example configuration for sending reports back to an EMR when the Report Signed event is raised
+    <EventConfiguration EventName="ReportSignedEventArg" AssemblyName="Dmr.Lomond.Automation.Events">
+
+      <EventHandlers>
+
+        <EventHandler Name="SendReportToEMREventHandler" AssemblyName="Dmr.Lomond.EventHandlers">
+          <Conditions/>
+        </EventHandler>
+
+        <EventHandler Name="UpdateOrderStatusEventHandler" AssemblyName="Dmr.Lomond.EventHandlers">
+          <Conditions/>
+        </EventHandler>
+
+      </EventHandlers>
+      
+    </EventConfiguration>
+    -->
+
+    <!-- Example configuration for returning reports back to the sender of the recording when the Report Signed event is raised.
+    <EventConfiguration EventName="ReportSignedEventArg" AssemblyName="Dmr.Lomond.Automation.Events">
+      <EventHandlers>
+
+        <EventHandler Name="AutomaticallyReturnReportEventHandler" AssemblyName="Dmr.Lomond.EventHandlers">
+          <Conditions/>
+        </EventHandler>
+
+      </EventHandlers>
+    </EventConfiguration>
+    -->
+
+    <!-- when setting up PrintReportEventHandlers on 64bit computers leave the WindowsUsername and WindowsPassword fields
+         empty and ensure that the windows account under which IIS executes has permissions to access the printer -->
+
+    <!-- Example configuration to print a report if received via remote data transfer.
+    
+    <EventConfiguration EventName="ReceivedReturnedReportEventArg" AssemblyName="Dmr.Lomond.Automation.Events">
+      <EventHandlers>
+        <EventHandler Name="PrintReportEventHandler" AssemblyName="Dmr.Lomond.EventHandlers">
+          <Conditions />
+          <WindowsUsername></WindowsUsername>
+          <WindowsPassword></WindowsPassword>
+          <PrinterName>\\ServerName\PrinterName</PrinterName>
+          <NumberOfCopies>1</NumberOfCopies>
+          <StartPage>1</StartPage>
+          <EndPage>32767</EndPage>
+          <Collate>true</Collate>
+          <Duplex>Default</Duplex>
+          <PrintFilename></PrintFilename>
+          <PrintPreviousReport>DoNotPrint</PrintPreviousReport>
+          <CultureName>En-Gb</CultureName>   
+          <RestingEcgFormatTrace12>UKRestingECG4x3_a4.xml</RestingEcgFormatTrace12>
+          <RestingEcgFormatTrace6>UKRestingECG4x3_a4.xml</RestingEcgFormatTrace6>
+          <RestingEcgFormatTrace3>UKRestingECG4x3_a4.xml</RestingEcgFormatTrace3>
+          <RhythmECGReportFormat>UKRhythmECG_a4.xml</RhythmECGReportFormat>
+          <Rasterizer>GdiPlus</Rasterizer>
+          <PdfResFolder>C:\Program Files (x86)\Del Mar Reynolds Medical\Common\</PdfResFolder>
+    </EventHandler>
+      </EventHandlers>
+    </EventConfiguration>
+    -->
+
+<!-- EVENT HANDLER TO MARK 12 LEAD RESTING TESTS AS COMPLETED -->    
+<!-- <EventConfiguration EventName="TestCreatedEventArg" AssemblyName="Dmr.Lomond.Automation.Events"> -->
+<!-- <EventConfiguration EventName="ReportCreatedEventArg" AssemblyName="Dmr.Lomond.Automation.Events"> -->
+<!-- <EventConfiguration EventName="ReportAddedToTest" AssemblyName="Dmr.Lomond.Automation.Events"> -->
+<!-- <EventConfiguration EventName="TestRecordingAddedToTest" AssemblyName="Dmr.Lomond.Automation.Events"> -->
+<EventConfiguration EventName="TestImported" AssemblyName="Dmr.Lomond.Automation.Events">
+
+      <EventHandlers>
+
+        <EventHandler Name="MarkTestCompletedEventHandler" AssemblyName="Dmr.Lomond.EventHandlers">
+          <Conditions/>
+	 <!-- <Condition Name="MatchAllCondition" AssemblyName="Dmr.Lomond.EventHandlers">
+          <Criteria>
+          <Criterion Name="TestType" Value="Resting12LeadECG"/>
+          <Criterion Name="ReportType" Value="VirtualRestingECGReport"/>
+          </Criteria>
+          </Condition>
+          </Conditions> -->
+        </EventHandler>
+
+      </EventHandlers>
+    </EventConfiguration>
+
+
+
+  </EventConfigurations>
+
+</EventEngineConfiguration>
+

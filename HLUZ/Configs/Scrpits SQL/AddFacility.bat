@@ -1,0 +1,2 @@
+Rem ping localhost -n 5 -w 1000 > null
+sqlcmd -S HL-SPSQLGERAL2 -U sentinel -P sentinel06 -i "C:\ProgramData\Del Mar Reynolds Medical\Sentinel\scripts\SN to Facilty.sql" -o "C:\ProgramData\Del Mar Reynolds Medical\Sentinel\scripts\SN to Facilty.log"

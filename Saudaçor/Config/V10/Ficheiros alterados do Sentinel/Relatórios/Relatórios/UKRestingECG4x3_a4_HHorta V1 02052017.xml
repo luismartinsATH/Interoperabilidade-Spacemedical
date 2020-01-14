@@ -1,0 +1,746 @@
+<?xml version="1.0"?>
+<ReportFormat xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Definition>
+    <Title>UK Resting Report 6x2 A4</Title>
+    <ReportType ReportTypeValue="RestingECG" />
+    <PageType PageTypeValue="NormalPage" />
+    <PageOrientation>Landscape</PageOrientation>
+  </Definition>
+  <SectionPos X="4" Y="0" />
+  <DrawPolyLine Name="cal pulse 1 v leads full gain">
+    <Condition Param="resting_ecg.vleads_half_gain" Value="false" />
+    <MoveTo X="6.5" Y="101.5" OffsetType="Abs" Thickness="Normal" />
+    <DrawLineRel X="1" Y="0" OffsetType="Abs" />
+    <DrawLineRel X="0" Y="-10" OffsetType="Abs" />
+    <DrawLineRel X="2" Y="0" OffsetType="Abs" />
+    <DrawLineRel X="0" Y="10" OffsetType="Abs" />
+    <DrawLineRel X="1" Y="0" OffsetType="Abs" />
+  </DrawPolyLine>
+  <DrawPolyLine Name="cal pulse 1 v leads half gain">
+    <Condition Param="resting_ecg.vleads_half_gain" Value="true" />
+    <MoveTo X="5.5" Y="101.5" OffsetType="Abs" Thickness="Normal" />
+    <DrawLineRel X="1" Y="0" OffsetType="Abs" />
+    <DrawLineRel X="0" Y="-10" OffsetType="Abs" />
+    <DrawLineRel X="2" Y="0" OffsetType="Abs" />
+    <DrawLineRel X="0" Y="5" OffsetType="Abs" />
+    <DrawLineRel X="2" Y="0" OffsetType="Abs" />
+    <DrawLineRel X="0" Y="5" OffsetType="Abs" />
+    <DrawLineRel X="1" Y="0" OffsetType="Abs" />
+  </DrawPolyLine>
+  <DrawPolyLine Name="cal pulse 2 v leads full gain">
+    <Condition Param="resting_ecg.vleads_half_gain" Value="false" />
+    <MoveTo X="6" Y="79" OffsetType="Abs" Thickness="Normal" />
+    <DrawLineRel X="1" Y="0" OffsetType="Abs" />
+    <DrawLineRel X="0" Y="-10" OffsetType="Abs" />
+    <DrawLineRel X="2" Y="0" OffsetType="Abs" />
+    <DrawLineRel X="0" Y="10" OffsetType="Abs" />
+    <DrawLineRel X="1" Y="0" OffsetType="Abs" />
+  </DrawPolyLine>
+  <DrawPolyLine Name="cal pulse 2 v leads half gain">
+    <Condition Param="resting_ecg.vleads_half_gain" Value="true" />
+    <MoveTo X="5.5" Y="79" OffsetType="Abs" Thickness="Normal" />
+    <DrawLineRel X="1" Y="0" OffsetType="Abs" />
+    <DrawLineRel X="0" Y="-10" OffsetType="Abs" />
+    <DrawLineRel X="2" Y="0" OffsetType="Abs" />
+    <DrawLineRel X="0" Y="5" OffsetType="Abs" />
+    <DrawLineRel X="2" Y="0" OffsetType="Abs" />
+    <DrawLineRel X="0" Y="5" OffsetType="Abs" />
+    <DrawLineRel X="1" Y="0" OffsetType="Abs" />
+  </DrawPolyLine>
+  <DrawPolyLine Name="cal pulse 3 v leads full gain">
+    <Condition Param="resting_ecg.vleads_half_gain" Value="false" />
+    <MoveTo X="6.5" Y="57.5" OffsetType="Abs" Thickness="Normal" />
+    <DrawLineRel X="1" Y="0" OffsetType="Abs" />
+    <DrawLineRel X="0" Y="-10" OffsetType="Abs" />
+    <DrawLineRel X="2" Y="0" OffsetType="Abs" />
+    <DrawLineRel X="0" Y="10" OffsetType="Abs" />
+    <DrawLineRel X="1" Y="0" OffsetType="Abs" />
+  </DrawPolyLine>
+  <DrawPolyLine Name="cal pulse 3 v leads half gain">
+    <Condition Param="resting_ecg.vleads_half_gain" Value="true" />
+    <MoveTo X="5.5" Y="57" OffsetType="Abs" Thickness="Normal" />
+    <DrawLineRel X="1" Y="0" OffsetType="Abs" />
+    <DrawLineRel X="0" Y="-10" OffsetType="Abs" />
+    <DrawLineRel X="2" Y="0" OffsetType="Abs" />
+    <DrawLineRel X="0" Y="5" OffsetType="Abs" />
+    <DrawLineRel X="2" Y="0" OffsetType="Abs" />
+    <DrawLineRel X="0" Y="5" OffsetType="Abs" />
+    <DrawLineRel X="1" Y="0" OffsetType="Abs" />
+  </DrawPolyLine>
+  <DrawPolyLine Name="cal pulse 4">
+    <MoveTo X="7" Y="123" OffsetType="Abs" Thickness="Normal" />
+    <DrawLineRel X="1" Y="0" OffsetType="Abs" />
+    <DrawLineRel X="0" Y="-10" OffsetType="Abs" />
+    <DrawLineRel X="2" Y="0" OffsetType="Abs" />
+    <DrawLineRel X="0" Y="10" OffsetType="Abs" />
+    <DrawLineRel X="1" Y="0" OffsetType="Abs" />
+  </DrawPolyLine>
+  <DrawPolyLine Name="cal pulse 3 v leads full gain">
+    <Condition Param="resting_ecg.vleads_half_gain" Value="false" />
+    <MoveTo X="6.5" Y="146.5" OffsetType="Abs" Thickness="Normal" />
+    <DrawLineRel X="1" Y="0" OffsetType="Abs" />
+    <DrawLineRel X="0" Y="-10" OffsetType="Abs" />
+    <DrawLineRel X="2" Y="0" OffsetType="Abs" />
+    <DrawLineRel X="0" Y="10" OffsetType="Abs" />
+    <DrawLineRel X="1" Y="0" OffsetType="Abs" />
+  </DrawPolyLine>
+  <DrawPolyLine Name="cal pulse 3 v leads full gain">
+    <Condition Param="resting_ecg.vleads_half_gain" Value="false" />
+    <MoveTo X="6" Y="168.5" OffsetType="Abs" Thickness="Normal" />
+    <DrawLineRel X="1" Y="0" OffsetType="Abs" />
+    <DrawLineRel X="0" Y="-10" OffsetType="Abs" />
+    <DrawLineRel X="2" Y="0" OffsetType="Abs" />
+    <DrawLineRel X="0" Y="10" OffsetType="Abs" />
+    <DrawLineRel X="1" Y="0" OffsetType="Abs" />
+  </DrawPolyLine>
+  <DrawPolyLine Name="cal pulse 2 v leads half gain">
+    <Condition Param="resting_ecg.vleads_half_gain" Value="true" />
+    <MoveTo X="6.5" Y="123.5" OffsetType="Abs" Thickness="Normal" />
+    <DrawLineRel X="1" Y="0" OffsetType="Abs" />
+    <DrawLineRel X="0" Y="-10" OffsetType="Abs" />
+    <DrawLineRel X="2" Y="0" OffsetType="Abs" />
+    <DrawLineRel X="0" Y="5" OffsetType="Abs" />
+    <DrawLineRel X="2" Y="0" OffsetType="Abs" />
+    <DrawLineRel X="0" Y="5" OffsetType="Abs" />
+    <DrawLineRel X="1" Y="0" OffsetType="Abs" />
+  </DrawPolyLine>
+  <DrawPolyLine Name="cal pulse 2 v leads half gain">
+    <Condition Param="resting_ecg.vleads_half_gain" Value="true" />
+    <MoveTo X="5" Y="146" OffsetType="Abs" Thickness="Normal" />
+    <DrawLineRel X="1" Y="0" OffsetType="Abs" />
+    <DrawLineRel X="0" Y="-10" OffsetType="Abs" />
+    <DrawLineRel X="2" Y="0" OffsetType="Abs" />
+    <DrawLineRel X="0" Y="5" OffsetType="Abs" />
+    <DrawLineRel X="2" Y="0" OffsetType="Abs" />
+    <DrawLineRel X="0" Y="5" OffsetType="Abs" />
+    <DrawLineRel X="1" Y="0" OffsetType="Abs" />
+  </DrawPolyLine>
+  <DrawPolyLine Name="cal pulse 2 v leads half gain">
+    <Condition Param="resting_ecg.vleads_half_gain" Value="true" />
+    <MoveTo X="5" Y="168.5" OffsetType="Abs" Thickness="Normal" />
+    <DrawLineRel X="1" Y="0" OffsetType="Abs" />
+    <DrawLineRel X="0" Y="-10" OffsetType="Abs" />
+    <DrawLineRel X="2" Y="0" OffsetType="Abs" />
+    <DrawLineRel X="0" Y="5" OffsetType="Abs" />
+    <DrawLineRel X="2" Y="0" OffsetType="Abs" />
+    <DrawLineRel X="0" Y="5" OffsetType="Abs" />
+    <DrawLineRel X="1" Y="0" OffsetType="Abs" />
+  </DrawPolyLine>
+  <DrawPolyLine Name="cal pulse 3 v leads full gain">
+    <Condition Param="resting_ecg.vleads_half_gain" Value="false" />
+    <MoveTo X="6" Y="190.5" OffsetType="Abs" Thickness="Normal" />
+    <DrawLineRel X="1" Y="0" OffsetType="Abs" />
+    <DrawLineRel X="0" Y="-10" OffsetType="Abs" />
+    <DrawLineRel X="2" Y="0" OffsetType="Abs" />
+    <DrawLineRel X="0" Y="10" OffsetType="Abs" />
+    <DrawLineRel X="1" Y="0" OffsetType="Abs" />
+  </DrawPolyLine>
+  <DrawPolyLine Name="cal pulse 2 v leads half gain">
+    <Condition Param="resting_ecg.vleads_half_gain" Value="true" />
+    <MoveTo X="5" Y="190.5" OffsetType="Abs" Thickness="Normal" />
+    <DrawLineRel X="1" Y="0" OffsetType="Abs" />
+    <DrawLineRel X="0" Y="-10" OffsetType="Abs" />
+    <DrawLineRel X="2" Y="0" OffsetType="Abs" />
+    <DrawLineRel X="0" Y="5" OffsetType="Abs" />
+    <DrawLineRel X="2" Y="0" OffsetType="Abs" />
+    <DrawLineRel X="0" Y="5" OffsetType="Abs" />
+    <DrawLineRel X="1" Y="0" OffsetType="Abs" />
+  </DrawPolyLine>
+  <DrawLine X0="0" Y0="0.5" X1="278.5" Y1="0.5" OffsetType="Abs" Thickness="Thick" />
+  <DrawLine X0="278.5" Y0="0.5" X1="278.5" Y1="207" OffsetType="Abs" Thickness="Thick" />
+  <DrawLine X0="278.5" Y0="207" X1="0" Y1="207" OffsetType="Abs" Thickness="Thick" />
+  <DrawLine X0="0" Y0="207" X1="0" Y1="0.5" OffsetType="Abs" Thickness="Thick" />
+  <DrawLine X0="0" Y0="9" X1="278.5" Y1="9" OffsetType="Abs" Thickness="Thick" />
+  <DrawLine X0="0" Y0="14" X1="278.5" Y1="14" OffsetType="Abs" Thickness="Normal" />
+  <DrawLine X0="0" Y0="42" X1="278.5" Y1="42" OffsetType="Abs" Thickness="Normal" />
+  <DrawLine X0="-0.5" Y0="197" X1="278" Y1="197" OffsetType="Abs" Thickness="Normal" />
+  <DrawLine X0="54" Y0="14" X1="54" Y1="42" OffsetType="Abs" Thickness="Normal" />
+  <DrawLine X0="186" Y0="14" X1="186" Y1="42" OffsetType="Abs" Thickness="Normal" />
+  <DrawLine X0="141.5" Y0="43.5" X1="141.5" Y1="173.5" OffsetType="Abs" Thickness="Normal" />
+  <DrawText Name="Report Title">
+    <Position X="139.25" Y="4.5" OffsetType="Abs" />
+    <Parameter Number="0" Id="facility" Format="Text" />
+    <Alignment Horizontal="Centre" Vertical="Middle" />
+    <Font FontType="ArialLargeBold" />
+    <Text>
+      <Language Name="En-Us">%0 - ECG Report</Language>
+    </Text>
+  </DrawText>
+  <DrawText Name="">
+    <Position X="2" Y="205" OffsetType="Abs" />
+    <Parameter Number="0" Id="date_time_now" Format="Text" />
+    <Font FontType="ArialSmall" />
+    <Text>
+      <Language Name="En-Us">PDF criado em %0</Language>
+    </Text>
+  </DrawText>
+  <DrawText Name="">
+    <Condition Param="report_signed" Value="true" />
+    <Position X="95" Y="205" OffsetType="Abs" />
+    <Parameter Number="0" Id="signed_by_operator" Format="Text" />
+    <Parameter Number="1" Id="signed_date_time" Format="Text" />
+    <Font FontType="ArialSmall" />
+    <Text>
+      <Language Name="En-Us">Signed by %0 on %1</Language>
+    </Text>
+  </DrawText>
+  <DrawText Name="">
+    <Position X="277" Y="204.5" OffsetType="Abs" />
+    <Parameter Number="0" Id="sentinel_version" Format="Text" />
+    <Parameter Number="1" Id="recorder_type" Format="Text" />
+    <Parameter Number="2" Id="recorder_serialnum" Format="Text" />
+    <Alignment Horizontal="Right" Vertical="Below" />
+    <Font FontType="ArialSmall" />
+    <Text>
+      <Language Name="En-Us">Spacelabs Healthcare Sentinel Ver: %0,  %1 Ser Num: %2</Language>
+    </Text>
+  </DrawText>
+  <DrawText Name="">
+    <Position X="20" Y="38" OffsetType="Abs" />
+    <Parameter Number="0" Id="resting_ecg.heart_rate" Format="Text" />
+    <Alignment Horizontal="Left" Vertical="Below" />
+    <Font FontType="ArialNormal" />
+    <Text>
+      <Language Name="En-Us">%0 bpm</Language>
+    </Text>
+  </DrawText>
+  <DrawText Name="">
+    <Position X="2" Y="18" OffsetType="Abs" />
+    <Font FontType="ArialNormal" />
+    <Text>
+      <Language Name="En-Us">RR:</Language>
+    </Text>
+  </DrawText>
+  <DrawText Name="">
+    <Position X="20" Y="18" OffsetType="Abs" />
+    <Parameter Number="0" Id="resting_ecg.rr" Format="Text" />
+    <Font FontType="ArialNormal" />
+    <Text>
+      <Language Name="En-Us">%0 ms</Language>
+    </Text>
+  </DrawText>
+  <DrawText Name="">
+    <Position X="2" Y="22" OffsetType="Abs" />
+    <Font FontType="ArialNormal" />
+    <Text>
+      <Language Name="En-Us">QRS:</Language>
+    </Text>
+  </DrawText>
+  <DrawText Name="">
+    <Position X="20" Y="22" OffsetType="Abs" />
+    <Parameter Number="0" Id="resting_ecg.qrs" Format="Text" />
+    <Font FontType="ArialNormal" />
+    <Text>
+      <Language Name="En-Us">%0 ms</Language>
+    </Text>
+  </DrawText>
+  <DrawText Name="">
+    <Position X="2" Y="26" OffsetType="Abs" />
+    <Font FontType="ArialNormal" />
+    <Text>
+      <Language Name="En-Us">QT/QTc:</Language>
+    </Text>
+  </DrawText>
+  <DrawText Name="">
+    <Position X="20" Y="26" OffsetType="Abs" />
+    <Parameter Number="0" Id="resting_ecg.qt" Format="Text" />
+    <Parameter Number="1" Id="resting_ecg.qtc" Format="Text" />
+    <Font FontType="ArialNormal" />
+    <Text>
+      <Language Name="En-Us">%0 / %1 ms</Language>
+    </Text>
+  </DrawText>
+  <DrawText Name="">
+    <Position X="2" Y="30" OffsetType="Abs" />
+    <Font FontType="ArialNormal" />
+    <Text>
+      <Language Name="En-Us">P/PQ:</Language>
+    </Text>
+  </DrawText>
+  <DrawText Name="">
+    <Position X="20" Y="30" OffsetType="Abs" />
+    <Parameter Number="0" Id="resting_ecg.p" Format="Text" />
+    <Parameter Number="1" Id="resting_ecg.pq" Format="Text" />
+    <Font FontType="ArialNormal" />
+    <Text>
+      <Language Name="En-Us">%0 / %1 ms</Language>
+    </Text>
+  </DrawText>
+  <DrawText Name="">
+    <Position X="2" Y="34" OffsetType="Abs" />
+    <Font FontType="ArialNormal" />
+    <Text>
+      <Language Name="En-Us">P/QRS/T:</Language>
+    </Text>
+  </DrawText>
+  <DrawText Name="">
+    <Position X="20" Y="34" OffsetType="Abs" />
+    <Parameter Number="0" Id="resting_ecg.axis_p" Format="Text" />
+    <Parameter Number="1" Id="resting_ecg.axis_qrs" Format="Text" />
+    <Parameter Number="2" Id="resting_ecg.axis_t" Format="Text" />
+    <Font FontType="ArialNormal" />
+    <Text>
+      <Language Name="En-Us">%0° / %1° / %2°</Language>
+    </Text>
+  </DrawText>
+  <DrawText Name="">
+    <Position X="55" Y="18.5" OffsetType="Abs" />
+    <Parameter Number="0" Id="resting_ecg.algorithm" Format="Text" />
+    <Font FontType="ArialNormalBold" />
+    <Text>
+      <Language Name="En-Us">Relatório</Language>
+    </Text>
+  </DrawText>
+  <DrawText Name="">
+    <Position X="56.5" Y="22" OffsetType="Abs" />
+    <Size X="125" Y="20" />
+    <Parameter Number="0" Id="resting_ecg.interpretation" Format="Text" />
+    <Alignment Horizontal="Left" Vertical="Above" />
+    <Font FontType="ArialNormal" />
+    <LongComments Filename="UKRestingECGLongComments_a4.xml" />
+    <Text>
+      <Language Name="En-Us">%0</Language>
+    </Text>
+  </DrawText>
+  <DrawText Name="">
+    <Position X="2.5" Y="12.5" OffsetType="Abs" />
+    <Font FontType="ArialNormal" />
+    <Text>
+      <Language Name="En-Us">ID:</Language>
+    </Text>
+  </DrawText>
+  <DrawText Name="">
+    <Position X="47" Y="12.5" OffsetType="Abs" />
+    <Parameter Number="0" Id="patient_last_name_comma_first_name" Format="Text" />
+    <Font FontType="ArialNormalBold" />
+    <Text>
+      <Language Name="En-Us">Nome: %0</Language>
+    </Text>
+  </DrawText>
+  <DrawText Name="">
+    <Position X="8.5" Y="12.5" OffsetType="Abs" />
+    <Parameter Number="0" Id="patient_number" Format="Text" />
+    <Font FontType="ArialNormalBold" />
+    <Text>
+      <Language Name="En-Us">%0</Language>
+    </Text>
+  </DrawText>
+  <DrawText Name="">
+    <Position X="125.5" Y="12.5" OffsetType="Abs" />
+    <Parameter Number="0" Id="patient_age" Format="Text" />
+    <Font FontType="ArialNormalBold" />
+    <Text>
+      <Language Name="En-Us">Idade: %0</Language>
+    </Text>
+  </DrawText>
+  <DrawText Name="">
+    <Position X="151" Y="12.5" OffsetType="Abs" />
+    <Parameter Number="0" Id="gender" Format="Text" />
+    <Font FontType="ArialNormalBold" />
+    <Text>
+      <Language Name="En-Us">Sexo: %0</Language>
+    </Text>
+  </DrawText>
+  <DrawText Name="">
+    <Position X="187" Y="26" OffsetType="Abs" />
+    <Font FontType="ArialNormal" />
+    <Text>
+      <Language Name="En-Us">Data Gravação:</Language>
+    </Text>
+  </DrawText>
+  <DrawText Name="">
+    <Position X="210" Y="26" OffsetType="Abs" />
+    <Parameter Number="0" Id="recorded_date_time" Format="Text" />
+    <Font FontType="ArialNormalBold" />
+    <Text>
+      <Language Name="En-Us">%0</Language>
+    </Text>
+  </DrawText>
+  <DrawText Name="">
+    <Position X="2" Y="201" OffsetType="Abs" />
+    <Font FontType="ArialNormal" />
+    <Text>
+      <Language Name="En-Us">Filtro:</Language>
+    </Text>
+  </DrawText>
+  <DrawText Name="">
+    <Position X="11" Y="201" OffsetType="Abs" />
+    <Parameter Number="0" Id="resting_ecg.filter" Format="Text" />
+    <Font FontType="ArialNormalBold" />
+    <Text>
+      <Language Name="En-Us">%0</Language>
+    </Text>
+  </DrawText>
+  <DrawText Name="">
+    <Position X="187" Y="18" OffsetType="Abs" />
+    <Font FontType="ArialNormal" />
+    <Text>
+      <Language Name="En-Us">Médico Resp.:</Language>
+    </Text>
+  </DrawText>
+  <DrawText Name="">
+    <Position X="210" Y="18" OffsetType="Abs" />
+    <Parameter Number="0" Id="responsible_physician" Format="Text" />
+    <Font FontType="ArialNormalBold" />
+    <Text>
+      <Language Name="En-Us">%0</Language>
+    </Text>
+  </DrawText>
+  <DrawText Name="">
+    <Position X="187" Y="22" OffsetType="Abs" />
+    <Font FontType="ArialNormal" />
+    <Text>
+      <Language Name="En-Us">Técnico:</Language>
+    </Text>
+  </DrawText>
+  <DrawText Name="">
+    <Position X="210" Y="22" OffsetType="Abs" />
+    <Parameter Number="0" Id="operator" Format="Text" />
+    <Font FontType="ArialNormalBold" />
+    <Text>
+      <Language Name="En-Us">%0</Language>
+    </Text>
+  </DrawText>
+  <DrawText Name="">
+    <Position X="187" Y="30" OffsetType="Abs" />
+    <Font FontType="ArialNormal" />
+    <Text>
+      <Language Name="En-Us">Indicações:</Language>
+    </Text>
+  </DrawText>
+  <DrawText Name="">
+    <Position X="210" Y="30" OffsetType="Abs" />
+    <Parameter Number="0" Id="indications" Format="Text" />
+    <Font FontType="ArialNormalBold" />
+    <Text>
+      <Language Name="En-Us">%0</Language>
+    </Text>
+  </DrawText>
+  <DrawText Name="">
+    <Position X="2" Y="38" OffsetType="Abs" />
+    <Font FontType="ArialNormal" />
+    <Text>
+      <Language Name="En-Us">FC:</Language>
+    </Text>
+  </DrawText>
+  <DrawText Name="">
+    <Position X="9.5" Y="170.5" OffsetType="Abs" />
+    <Parameter Number="0" Id="ecg_speed" Format="Text" />
+    <Alignment Horizontal="Centre" Vertical="Middle" />
+    <Font FontType="ArialSmall" />
+    <Text>
+      <Language Name="En-Us">%0 mm/s</Language>
+    </Text>
+  </DrawText>
+  <DrawText Name="">
+    <Position X="9.5" Y="149" OffsetType="Abs" />
+    <Parameter Number="0" Id="ecg_speed" Format="Text" />
+    <Alignment Horizontal="Centre" Vertical="Middle" />
+    <Font FontType="ArialSmall" />
+    <Text>
+      <Language Name="En-Us">%0 mm/s</Language>
+    </Text>
+  </DrawText>
+  <DrawText Name="">
+    <Position X="9" Y="126" OffsetType="Abs" />
+    <Parameter Number="0" Id="ecg_speed" Format="Text" />
+    <Alignment Horizontal="Centre" Vertical="Middle" />
+    <Font FontType="ArialSmall" />
+    <Text>
+      <Language Name="En-Us">%0 mm/s</Language>
+    </Text>
+  </DrawText>
+  <DrawText Name="">
+    <Position X="9.5" Y="103.5" OffsetType="Abs" />
+    <Parameter Number="0" Id="ecg_speed" Format="Text" />
+    <Alignment Horizontal="Centre" Vertical="Middle" />
+    <Font FontType="ArialSmall" />
+    <Text>
+      <Language Name="En-Us">%0 mm/s</Language>
+    </Text>
+  </DrawText>
+  <DrawText Name="">
+    <Position X="9.5" Y="85" OffsetType="Abs" />
+    <Parameter Number="0" Id="ecg_speed" Format="Text" />
+    <Alignment Horizontal="Centre" Vertical="Middle" />
+    <Font FontType="ArialSmall" />
+    <Text>
+      <Language Name="En-Us">%0 mm/s</Language>
+    </Text>
+  </DrawText>
+  <DrawText Name="">
+    <Position X="9.5" Y="61" OffsetType="Abs" />
+    <Parameter Number="0" Id="ecg_speed" Format="Text" />
+    <Alignment Horizontal="Centre" Vertical="Middle" />
+    <Font FontType="ArialSmall" />
+    <Text>
+      <Language Name="En-Us">%0 mm/s</Language>
+    </Text>
+  </DrawText>
+  <DrawText Name="">
+    <Position X="187" Y="12.5" OffsetType="Abs" />
+    <Parameter Number="0" Id="ward" Format="Text" />
+    <Font FontType="ArialNormalBold" />
+    <Text>
+      <Language Name="En-Us">Proveniência: %0</Language>
+    </Text>
+  </DrawText>
+  <DrawText Name="">
+    <Position X="241" Y="48.5" OffsetType="Abs" />
+    <Parameter Number="0" Id="resting_ecg.heart_rate" Format="Text" />
+    <Alignment Horizontal="Left" Vertical="Below" />
+    <Font FontType="ArialLarge" />
+    <Text>
+      <Language Name="En-Us">FC: %0 bpm</Language>
+    </Text>
+  </DrawText>
+  <ECGTraceMap Name="">
+    <ECGTrace Number="1" SCPCode="I" />
+    <ECGTrace Number="2" SCPCode="II" />
+    <ECGTrace Number="3" SCPCode="III" />
+    <ECGTrace Number="4" SCPCode="AVR" />
+    <ECGTrace Number="5" SCPCode="AVL" />
+    <ECGTrace Number="6" SCPCode="AVF" />
+    <ECGTrace Number="7" SCPCode="V1" />
+    <ECGTrace Number="8" SCPCode="V2" />
+    <ECGTrace Number="9" SCPCode="V3" />
+    <ECGTrace Number="10" SCPCode="V4" />
+    <ECGTrace Number="11" SCPCode="V5" />
+    <ECGTrace Number="12" SCPCode="V6" />
+  </ECGTraceMap>
+  <ECGStrip Name="graticule">
+    <Position X="4" Y="42" OffsetType="Abs" />
+    <Size X="270" Y="155" />
+    <TraceNumber Number="1" />
+    <Scale EcgScaleType="TimesOne" />
+    <Speed EcgSpeedType="ReadFromSentinel" />
+    <ShowECG Show="false" />
+  </ECGStrip>
+  <ECGStrip Name="">
+    <Position X="14.5" Y="43.5" OffsetType="Abs" />
+    <Size X="125" Y="20" />
+    <TraceNumber Number="1" />
+    <SeqOffset MilliMetres="0" />
+    <SimOffset MilliMetres="0" />
+    <Scale EcgScaleType="TimesOne" />
+    <Speed EcgSpeedType="ReadFromSentinel" />
+    <ShowGraticule Show="false" />
+    <ShowCallipers CalliperType="RestingECG" />
+  </ECGStrip>
+  <ECGStrip Name="">
+    <Position X="14.5" Y="65.5" OffsetType="Abs" />
+    <Size X="125" Y="20" />
+    <TraceNumber Number="2" />
+    <SeqOffset MilliMetres="0" />
+    <SimOffset MilliMetres="0" />
+    <Scale EcgScaleType="TimesOne" />
+    <Speed EcgSpeedType="ReadFromSentinel" />
+    <ShowGraticule Show="false" />
+    <ShowCallipers CalliperType="RestingECG" />
+  </ECGStrip>
+  <ECGStrip Name="">
+    <Position X="14.5" Y="87.5" OffsetType="Abs" />
+    <Size X="125" Y="20" />
+    <TraceNumber Number="3" />
+    <SeqOffset MilliMetres="0" />
+    <SimOffset MilliMetres="0" />
+    <Scale EcgScaleType="TimesOne" />
+    <Speed EcgSpeedType="ReadFromSentinel" />
+    <ShowGraticule Show="false" />
+    <ShowCallipers CalliperType="RestingECG" />
+  </ECGStrip>
+  <ECGStrip Name="">
+    <Position X="14.5" Y="109.5" OffsetType="Abs" />
+    <Size X="125" Y="20" />
+    <TraceNumber Number="4" />
+    <SeqOffset MilliMetres="62.5" />
+    <SimOffset MilliMetres="0" />
+    <Scale EcgScaleType="TimesOne" />
+    <Speed EcgSpeedType="ReadFromSentinel" />
+    <ShowGraticule Show="false" />
+    <ShowCallipers CalliperType="RestingECG" />
+  </ECGStrip>
+  <ECGStrip Name="">
+    <Position X="14.5" Y="132" OffsetType="Abs" />
+    <Size X="125" Y="20" />
+    <TraceNumber Number="5" />
+    <SeqOffset MilliMetres="62.5" />
+    <SimOffset MilliMetres="0" />
+    <Scale EcgScaleType="TimesOne" />
+    <Speed EcgSpeedType="ReadFromSentinel" />
+    <ShowGraticule Show="false" />
+    <ShowCallipers CalliperType="RestingECG" />
+  </ECGStrip>
+  <ECGStrip Name="">
+    <Position X="14.5" Y="154" OffsetType="Abs" />
+    <Size X="125" Y="20" />
+    <TraceNumber Number="6" />
+    <SeqOffset MilliMetres="62.5" />
+    <SimOffset MilliMetres="0" />
+    <Scale EcgScaleType="TimesOne" />
+    <Speed EcgSpeedType="ReadFromSentinel" />
+    <ShowGraticule Show="false" />
+    <ShowCallipers CalliperType="RestingECG" />
+  </ECGStrip>
+  <ECGStrip Name="Lead7 full gain">
+    <Condition Param="resting_ecg.vleads_half_gain" Value="false" />
+    <Position X="144.5" Y="43.5" OffsetType="Abs" />
+    <Size X="125" Y="20" />
+    <TraceNumber Number="7" />
+    <SeqOffset MilliMetres="125" />
+    <SimOffset MilliMetres="0" />
+    <Scale EcgScaleType="TimesOne" />
+    <Speed EcgSpeedType="ReadFromSentinel" />
+    <ShowGraticule Show="false" />
+    <ShowCallipers CalliperType="RestingECG" />
+  </ECGStrip>
+  <ECGStrip Name="Lead7 half gain">
+    <Condition Param="resting_ecg.vleads_half_gain" Value="true" />
+    <Position X="144.5" Y="43.5" OffsetType="Abs" />
+    <Size X="125" Y="20" />
+    <TraceNumber Number="7" />
+    <SeqOffset MilliMetres="125" />
+    <SimOffset MilliMetres="0" />
+    <Scale EcgScaleType="TimesHalf" />
+    <Speed EcgSpeedType="ReadFromSentinel" />
+    <ShowGraticule Show="false" />
+    <ShowCallipers CalliperType="RestingECG" />
+  </ECGStrip>
+  <ECGStrip Name="Lead8 full gain">
+    <Condition Param="resting_ecg.vleads_half_gain" Value="false" />
+    <Position X="144.5" Y="65.5" OffsetType="Abs" />
+    <Size X="125" Y="20" />
+    <TraceNumber Number="8" />
+    <SeqOffset MilliMetres="125" />
+    <SimOffset MilliMetres="0" />
+    <Scale EcgScaleType="TimesOne" />
+    <Speed EcgSpeedType="ReadFromSentinel" />
+    <ShowGraticule Show="false" />
+    <ShowCallipers CalliperType="RestingECG" />
+  </ECGStrip>
+  <ECGStrip Name="Lead8 half gain">
+    <Condition Param="resting_ecg.vleads_half_gain" Value="true" />
+    <Position X="144.5" Y="65.5" OffsetType="Abs" />
+    <Size X="125" Y="20" />
+    <TraceNumber Number="8" />
+    <SeqOffset MilliMetres="125" />
+    <SimOffset MilliMetres="0" />
+    <Scale EcgScaleType="TimesHalf" />
+    <Speed EcgSpeedType="ReadFromSentinel" />
+    <ShowGraticule Show="false" />
+    <ShowCallipers CalliperType="RestingECG" />
+  </ECGStrip>
+  <ECGStrip Name="Lead9 full gain">
+    <Condition Param="resting_ecg.vleads_half_gain" Value="false" />
+    <Position X="144.5" Y="87.5" OffsetType="Abs" />
+    <Size X="125" Y="20" />
+    <TraceNumber Number="9" />
+    <SeqOffset MilliMetres="125" />
+    <SimOffset MilliMetres="0" />
+    <Scale EcgScaleType="TimesOne" />
+    <Speed EcgSpeedType="ReadFromSentinel" />
+    <ShowGraticule Show="false" />
+    <ShowCallipers CalliperType="RestingECG" />
+  </ECGStrip>
+  <ECGStrip Name="Lead9 half gain">
+    <Condition Param="resting_ecg.vleads_half_gain" Value="true" />
+    <Position X="144.5" Y="87.5" OffsetType="Abs" />
+    <Size X="125" Y="20" />
+    <TraceNumber Number="9" />
+    <SeqOffset MilliMetres="125" />
+    <SimOffset MilliMetres="0" />
+    <Scale EcgScaleType="TimesHalf" />
+    <Speed EcgSpeedType="ReadFromSentinel" />
+    <ShowGraticule Show="false" />
+    <ShowCallipers CalliperType="RestingECG" />
+  </ECGStrip>
+  <ECGStrip Name="Lead10 full gain">
+    <Condition Param="resting_ecg.vleads_half_gain" Value="false" />
+    <Position X="144.5" Y="109.5" OffsetType="Abs" />
+    <Size X="125" Y="20" />
+    <TraceNumber Number="10" />
+    <SeqOffset MilliMetres="187.5" />
+    <SimOffset MilliMetres="0" />
+    <Scale EcgScaleType="TimesOne" />
+    <Speed EcgSpeedType="ReadFromSentinel" />
+    <ShowGraticule Show="false" />
+    <ShowCallipers CalliperType="RestingECG" />
+  </ECGStrip>
+  <ECGStrip Name="Lead10 half gain">
+    <Condition Param="resting_ecg.vleads_half_gain" Value="true" />
+    <Position X="144.5" Y="109.5" OffsetType="Abs" />
+    <Size X="125" Y="20" />
+    <TraceNumber Number="10" />
+    <SeqOffset MilliMetres="187.5" />
+    <SimOffset MilliMetres="0" />
+    <Scale EcgScaleType="TimesHalf" />
+    <Speed EcgSpeedType="ReadFromSentinel" />
+    <ShowGraticule Show="false" />
+    <ShowCallipers CalliperType="RestingECG" />
+  </ECGStrip>
+  <ECGStrip Name="Lead11 full gain">
+    <Condition Param="resting_ecg.vleads_half_gain" Value="false" />
+    <Position X="144.5" Y="132" OffsetType="Abs" />
+    <Size X="125" Y="20" />
+    <TraceNumber Number="11" />
+    <SeqOffset MilliMetres="187.5" />
+    <SimOffset MilliMetres="0" />
+    <Scale EcgScaleType="TimesOne" />
+    <Speed EcgSpeedType="ReadFromSentinel" />
+    <ShowGraticule Show="false" />
+    <ShowCallipers CalliperType="RestingECG" />
+  </ECGStrip>
+  <ECGStrip Name="Lead11 half gain">
+    <Condition Param="resting_ecg.vleads_half_gain" Value="true" />
+    <Position X="144.5" Y="132" OffsetType="Abs" />
+    <Size X="125" Y="20" />
+    <TraceNumber Number="11" />
+    <SeqOffset MilliMetres="187.5" />
+    <SimOffset MilliMetres="0" />
+    <Scale EcgScaleType="TimesHalf" />
+    <Speed EcgSpeedType="ReadFromSentinel" />
+    <ShowGraticule Show="false" />
+    <ShowCallipers CalliperType="RestingECG" />
+  </ECGStrip>
+  <ECGStrip Name="Lead12 full gain">
+    <Condition Param="resting_ecg.vleads_half_gain" Value="false" />
+    <Position X="144.5" Y="154" OffsetType="Abs" />
+    <Size X="125" Y="20" />
+    <TraceNumber Number="12" />
+    <SeqOffset MilliMetres="187.5" />
+    <SimOffset MilliMetres="0" />
+    <Scale EcgScaleType="TimesOne" />
+    <Speed EcgSpeedType="ReadFromSentinel" />
+    <ShowGraticule Show="false" />
+    <ShowCallipers CalliperType="RestingECG" />
+  </ECGStrip>
+  <ECGStrip Name="Lead12 half gain">
+    <Condition Param="resting_ecg.vleads_half_gain" Value="true" />
+    <Position X="144.5" Y="154" OffsetType="Abs" />
+    <Size X="125" Y="20" />
+    <TraceNumber Number="12" />
+    <SeqOffset MilliMetres="187.5" />
+    <SimOffset MilliMetres="0" />
+    <Scale EcgScaleType="TimesHalf" />
+    <Speed EcgSpeedType="ReadFromSentinel" />
+    <ShowGraticule Show="false" />
+    <ShowCallipers CalliperType="RestingECG" />
+  </ECGStrip>
+  <ECGStrip Name="">
+    <Position X="14.5" Y="176" OffsetType="Abs" />
+    <Size X="255" Y="20" />
+    <TraceNumber Number="2" />
+    <SeqOffset MilliMetres="62.5" />
+    <SimOffset MilliMetres="0" />
+    <Scale EcgScaleType="TimesOne" />
+    <Speed EcgSpeedType="ReadFromSentinel" />
+    <ShowGraticule Show="false" />
+    <ShowCallipers CalliperType="RestingECG" />
+  </ECGStrip>
+  <DrawBitmap Name="">
+    <Position X="2" Y="1.3" OffsetType="Abs" />
+    <Size X="34" Y="6.5" />
+    <BitmapFile Filename="SLHC_Logo_Hor.bmp" />
+    <Orientation Angle="0" />
+  </DrawBitmap>
+</ReportFormat>

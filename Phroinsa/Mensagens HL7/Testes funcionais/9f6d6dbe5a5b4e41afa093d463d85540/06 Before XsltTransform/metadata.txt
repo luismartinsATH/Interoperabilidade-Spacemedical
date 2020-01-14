@@ -1,0 +1,5 @@
+﻿Name = HL7 Socket Data Source
+FromTrustedSource = True
+MessageDirection = Incoming
+FileName = Message
+Event = Unknown

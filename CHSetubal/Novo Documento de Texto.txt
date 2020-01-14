@@ -1,0 +1,10 @@
+host: srvsetmapa  (172.17.9.93)
+user: space
+pass: medical
+
+SQL EXPRESS 2014
+sa: chsetubal
+
+sentinel
+admin
+spacemedical

@@ -1,0 +1,37 @@
+MSH|^~\&|Sentinel|CARDIOLOGY|EPIC|UC SAN DIEGO|20181206092555||ORU^R01|181206092555600009|T|2.3.1
+PID|||80003711^^^PID||PROFEE^HIMRADIANTIP||19830427|O|||TEST^^SAN DIEGO^CA^92101^US||(818)987-6543|||||33000082236
+PV1||I|HC 10-CCU^CCU09^CCU09^UCHC||||||||||||||||33000082236
+OBR|1|187513293^EPIC|baa5a1ed-664e-4d86-93b0-6582d1dfd7f7|CARD7^HOLTER MONITOR (24 HOURS)^SENTINEL^^HOLTER MONITOR|||20041109113900||||||||||||||||||C|||||||007^larry|||007^larry^^^^^larry
+OBX|1|NM|SVE Total Beats^^SENTINELLRR||5082|count|||||C
+OBX|2|NM|SVE Percent Beats^^SENTINELLRR||5|percent|||||C
+OBX|3|NM|SVE Max Per Hour^^SENTINELLRR||350|count|||||C
+OBX|4|DTM|SVE Max Per Hour Time^^SENTINELLRR||20041109180000||||||C
+OBX|5|ST|Apnea number of sleep periods^^SENTINELLRR||0||||||C
+OBX|6|ST|Apnea total sleep duration^^SENTINELLRR||0 day 0 hr 0 min||||||C
+OBX|7|ST|Apnea overall mean Est AHI^^SENTINELLRR||0.0||||||C
+OBX|8|ST|Apnea most apneic period Est AHI^^SENTINELLRR||0.0||||||C
+OBX|9|ST|Apnea most apneic period start^^SENTINELLRR||2004-11-09 11:39:00||||||C
+OBX|10|ST|Apnea most apneic period classification^^SENTINELLRR||Normal (AHI <= 5)||||||C
+OBX|11|DTM|Recording Date^^SENTINELLRR||20041109113900||||||C
+OBX|12|DTM|Analysis Date^^SENTINELLRR||20170323||||||C
+OBX|13|NM|Max Heart Rate^^SENTINELLRR||89|bpm|||||C
+OBX|14|DTM|Max Heart Rate Time^^SENTINELLRR||20041109180200||||||C
+OBX|15|NM|Min Heart Rate^^SENTINELLRR||65|bpm|||||C
+OBX|16|DTM|Min Heart Rate Time^^SENTINELLRR||20041110110700||||||C
+OBX|17|DTM|AIVR/IVR Max Rate Time^^SENTINELLRR||20041110114533||||||C
+OBX|18|NM|VE Total Beats^^SENTINELLRR||161|count|||||C
+OBX|19|NM|VE Percent Beats^^SENTINELLRR||0|percent|||||C
+OBX|20|NM|VE Max Per Hour^^SENTINELLRR||61|count|||||C
+OBX|21|DTM|VE Max Per Hour Time^^SENTINELLRR||20041110110000||||||C
+OBX|22|NM|AF Count^^SENTINELLRR||0|count|||||C
+OBX|23|NM|SVT Runs^^SENTINELLRR||0|count|||||C
+OBX|24|NM|Mean Heart Rate^^SENTINELLRR||76|bpm|||||C
+OBX|25|NM|Pauses^^SENTINELLRR||0|count|||||C
+OBX|26|NM|Tachycardia Runs^^SENTINELLRR||0|count|||||C
+OBX|27|NM|Bradycardia Runs^^SENTINELLRR||0|count|||||C
+OBX|28|NM|VT Runs^^SENTINELLRR||0|count|||||C
+OBX|29|NM|AIVR/IVR Runs^^SENTINELLRR||3|count|||||C
+OBX|30|NM|AIVR/IVR Longest^^SENTINELLRR||5|beats|||||C
+OBX|31|DTM|AIVR/IVR Longest Time^^SENTINELLRR||20041110114301||||||C
+OBX|32|NM|AIVR/IVR Max Rate^^SENTINELLRR||106|bpm|||||C
+NTE|1|SI|Why try? I know why.brThe feeling inside me says it's time I was gone.brClear head, new life ahead.brIt's time I was king now, not just one more pawn.brFly by night, away from here.brChange my life again.brFly by night, goodbye my dear.brMy ship isn't coming and I just can't pretend.brMoon rise, thoughtful eyes.brStaring back at me from the window beside.brNo fright or hindsight.brLeaving behind that empty feeling inside.brFly by night, away from here.brChange my life again.brFly by night, goodbye my dear.brMy ship isn't coming and I just can't pretend, wow.brFly by night, away from here.brChange my life again.brFly by night, goodbye my dear.brMy ship isn't coming and I just can't pretend.br.br|Result Comments|||||||C

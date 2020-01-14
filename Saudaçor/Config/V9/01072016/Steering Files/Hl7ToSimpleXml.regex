@@ -1,0 +1,69 @@
+// Format: source regex,destination regex<newline>
+
+// Regular Expressions
+MSH\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|(?<DATA>[^\|]*),<MessageType>DATA</MessageType>
+MSH\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|(?<DATA>[^\|]*),<ControlID>DATA</ControlID>
+EVN\|[^\|]*\|[^\|]*\|(?<DATA>[^\^\|]*),<EventTime>DATA</EventTime>
+PID\|[^\|]*\|[^\|]*\|(?<DATA>[^\^\|]*),<PatientID>DATA</PatientID>
+PID\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|(?<DATA>[^\^]*),<FamilyName>DATA</FamilyName>
+PID\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\^]*\^(?<DATA>[^\^\|]*),<GivenName>DATA</GivenName>
+PID\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|(?<DATA>[^\^\|]*),<DateOfBirth>DATA</DateOfBirth>
+PID\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|(?<DATA>[^\|]*),<Sex>DATA</Sex>
+PID\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|(?<DATA>[^\^\|]*),<StreetAddress1>DATA</StreetAddress1>
+PID\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\^]*\^(?<DATA>[^\^\|]*),<StreetAddress2>DATA</StreetAddress2>
+PID\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\^]*\^[^\^]*\^(?<DATA>[^\^\|]*),<City>DATA</City>
+PID\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\^]*\^[^\^]*\^[^\^]*\^(?<DATA>[^\^\|]*),<State>DATA</State>
+PID\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\^]*\^[^\^]*\^[^\^]*\^[^\^]*\^(?<DATA>[^\^\|]*),<ZipOrPostalCode>DATA</ZipOrPostalCode>
+PID\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\^]*\^[^\^]*\^[^\^]*\^[^\^]*\^[^\^]*\^(?<DATA>[^\^\|]*),<Country>DATA</Country>
+PV1\|[^\|]*\|(?<DATA>[^\^\|]*),<PatientClass>DATA</PatientClass>
+PV1\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|(?<DATA>[^\^\|]*),<VisitNumber>DATA</VisitNumber>
+ORC\|(?<DATA>[^\^\|]*),<ControlCode>DATA</ControlCode>
+ORC\|[^\|]*\|(?<DATA>[^\|]*),<PlacerOrderNumber>DATA</PlacerOrderNumber>
+ORC\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\^]*\^[^\^]*\^[^\^]*\^(?<DATA>[^\^\|]*),<QuantityTiming>DATA</QuantityTiming>
+OBR\|[^\|]*\|[^\|]*\|[^\|]*\|(?<DATA>[^\|]*),<Procedure>DATA</Procedure>
+OBR\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|[^\|]*\|(?<DATA>[^\|]*),<OrderingProvider>DATA</OrderingProvider>
+
+
+// Template Text
+<?xml version="1.0" encoding="utf-8"?>
+<HL7Message>
+	<MSH>
+		<MessageType></MessageType>
+		<ControlID></ControlID>
+	</MSH>
+	<EVN>
+		<Facility></Facility>
+		<EventTime></EventTime>
+	</EVN>
+	<PID>
+		<PatientID></PatientID>
+		<GivenName></GivenName>
+		<FamilyName></FamilyName>
+		<DateOfBirth></DateOfBirth>
+		<Sex></Sex>
+		<Address>
+			<StreetAddress1></StreetAddress1>
+			<StreetAddress2></StreetAddress2>
+			<City></City>
+			<State></State>
+			<ZipOrPostalCode></ZipOrPostalCode>
+			<Country></Country>
+		</Address>
+	</PID>
+	<PV1>
+		<PatientClass></PatientClass>
+		<VisitNumber></VisitNumber>
+	</PV1>
+	<Order>
+		<ORC>
+			<ControlCode></ControlCode>
+			<PlacerOrderNumber></PlacerOrderNumber>
+			<QuantityTiming></QuantityTiming>
+			<Notes></Notes>
+		</ORC>
+		<OBR>
+			<Procedure></Procedure>
+			<OrderingProvider></OrderingProvider>
+		</OBR>
+	</Order>
+</HL7Message>

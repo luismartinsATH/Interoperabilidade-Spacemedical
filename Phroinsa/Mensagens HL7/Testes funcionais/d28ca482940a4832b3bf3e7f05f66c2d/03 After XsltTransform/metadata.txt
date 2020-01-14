@@ -1,0 +1,5 @@
+﻿Name = Philips File System Data Source
+FromTrustedSource = True
+MessageDirection = Incoming
+FileName = Message
+Event = Unknown

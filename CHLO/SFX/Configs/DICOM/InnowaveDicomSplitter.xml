@@ -1,0 +1,352 @@
+<channel>
+  <id>e729bec0-72a9-4305-9d35-405d9a75ca93</id>
+  <name>InnowaveDicomSplitter</name>
+  <description>This is a DICOM Splitter from Innowave Healthcare - India.&#xd;
+&#xd;
+DICOM Splitter will run a DICOM Server on Port 104, every image will be pushed to a external DICOM Server which is a clearcanvas Viewer and simultaniously will be stored to a local drive under c:\Innowave&#xd;
+&#xd;
+</description>
+  <enabled>true</enabled>
+  <version>2.2.2.6388</version>
+  <lastModified>
+    <time>1375233379363</time>
+    <timezone>Asia/Calcutta</timezone>
+  </lastModified>
+  <revision>15</revision>
+  <sourceConnector>
+    <name>sourceConnector</name>
+    <properties>
+      <property name="applicationEntity">AETITLE</property>
+      <property name="async">0</property>
+      <property name="bigendian">0</property>
+      <property name="bufsize">1</property>
+      <property name="defts">0</property>
+      <property name="dest"></property>
+      <property name="host">0.0.0.0</property>
+      <property name="idleto">60</property>
+      <property name="keypw"></property>
+      <property name="keystore"></property>
+      <property name="keystorepw"></property>
+      <property name="nativeData">0</property>
+      <property name="noclientauth">1</property>
+      <property name="nossl2">1</property>
+      <property name="pdv1">0</property>
+      <property name="port">104</property>
+      <property name="rcvpdulen">16</property>
+      <property name="reaper">10</property>
+      <property name="releaseto">5</property>
+      <property name="requestto">5</property>
+      <property name="rspdelay">0</property>
+      <property name="sndpdulen">16</property>
+      <property name="soclosedelay">50</property>
+      <property name="sorcvbuf">0</property>
+      <property name="sosndbuf">0</property>
+      <property name="tcpdelay">1</property>
+      <property name="tls">notls</property>
+      <property name="truststore"></property>
+      <property name="truststorepw"></property>
+    </properties>
+    <transformer>
+      <steps/>
+      <inboundProtocol>DICOM</inboundProtocol>
+      <outboundProtocol>DICOM</outboundProtocol>
+      <inboundProperties/>
+      <outboundProperties/>
+    </transformer>
+    <filter>
+      <rules/>
+    </filter>
+    <transportName>DICOM Listener</transportName>
+    <mode>SOURCE</mode>
+    <enabled>true</enabled>
+    <version>2.2.2.6388</version>
+  </sourceConnector>
+  <destinationConnectors>
+    <connector>
+      <name>PushToCC</name>
+      <properties>
+        <property name="DataType">DICOM Sender</property>
+        <property name="accecptto">5000</property>
+        <property name="applicationEntity">CCWS</property>
+        <property name="async">0</property>
+        <property name="bufsize">1</property>
+        <property name="connectto">0</property>
+        <property name="host">127.0.0.1</property>
+        <property name="keypw"></property>
+        <property name="keystore"></property>
+        <property name="keystorepw"></property>
+        <property name="localApplicationEntity">SAMPLE</property>
+        <property name="localHost"></property>
+        <property name="localPort"></property>
+        <property name="noclientauth">1</property>
+        <property name="nossl2">1</property>
+        <property name="passcode"></property>
+        <property name="pdv1">0</property>
+        <property name="port">4001</property>
+        <property name="priority">med</property>
+        <property name="rcvpdulen">16</property>
+        <property name="reaper">10</property>
+        <property name="releaseto">5</property>
+        <property name="rspto">60</property>
+        <property name="shutdowndelay">1000</property>
+        <property name="sndpdulen">16</property>
+        <property name="soclosedelay">50</property>
+        <property name="sorcvbuf">0</property>
+        <property name="sosndbuf">0</property>
+        <property name="stgcmt">0</property>
+        <property name="tcpdelay">1</property>
+        <property name="template">${DICOMMESSAGE}</property>
+        <property name="tls">notls</property>
+        <property name="truststore"></property>
+        <property name="truststorepw"></property>
+        <property name="ts1">0</property>
+        <property name="uidnegrsp">0</property>
+        <property name="username"></property>
+      </properties>
+      <transformer>
+        <steps/>
+        <inboundProtocol>DICOM</inboundProtocol>
+        <outboundProtocol>DICOM</outboundProtocol>
+        <inboundProperties/>
+        <outboundProperties/>
+      </transformer>
+      <filter>
+        <rules/>
+      </filter>
+      <transportName>DICOM Sender</transportName>
+      <mode>DESTINATION</mode>
+      <enabled>true</enabled>
+      <version>2.2.2.6388</version>
+    </connector>
+    <connector>
+      <name>PushToFolder</name>
+      <properties>
+        <property name="DataType">File Writer</property>
+        <property name="FTPAnonymous">1</property>
+        <property name="binary">1</property>
+        <property name="charsetEncoding">DEFAULT_ENCODING</property>
+        <property name="errorOnExists">0</property>
+        <property name="host">C:/Innowave/${vPID}</property>
+        <property name="outputAppend">1</property>
+        <property name="outputPattern">${vImageUID}.dcm</property>
+        <property name="passive">1</property>
+        <property name="password">anonymous</property>
+        <property name="scheme">file</property>
+        <property name="secure">1</property>
+        <property name="template">${DICOMMESSAGE}</property>
+        <property name="temporary">0</property>
+        <property name="timeout">10000</property>
+        <property name="username">anonymous</property>
+        <property name="validateConnections">1</property>
+      </properties>
+      <transformer>
+        <steps>
+          <step>
+            <sequenceNumber>0</sequenceNumber>
+            <name>vPID</name>
+            <script>var mapping;try { mapping = msg[&apos;tag00100020&apos;].toString(); }catch (e) { logger.error(e);  mapping = &apos;&apos;;}connectorMap.put(&apos;vPID&apos;, validate( mapping , &apos;&apos;, new Array()));</script>
+            <type>Mapper</type>
+            <data class="map">
+              <entry>
+                <string>Variable</string>
+                <string>vPID</string>
+              </entry>
+              <entry>
+                <string>DefaultValue</string>
+                <string></string>
+              </entry>
+              <entry>
+                <string>Mapping</string>
+                <string>msg[&apos;tag00100020&apos;].toString()</string>
+              </entry>
+              <entry>
+                <string>RegularExpressions</string>
+                <list/>
+              </entry>
+              <entry>
+                <string>isGlobal</string>
+                <string>connector</string>
+              </entry>
+            </data>
+          </step>
+          <step>
+            <sequenceNumber>1</sequenceNumber>
+            <name>vImageUID</name>
+            <script>var mapping;try { mapping = msg[&apos;tag00080018&apos;].toString(); }catch (e) { logger.error(e);  mapping = &apos;&apos;;}channelMap.put(&apos;vImageUID&apos;, validate( mapping , &apos;&apos;, new Array()));</script>
+            <type>Mapper</type>
+            <data class="map">
+              <entry>
+                <string>Variable</string>
+                <string>vImageUID</string>
+              </entry>
+              <entry>
+                <string>DefaultValue</string>
+                <string></string>
+              </entry>
+              <entry>
+                <string>Mapping</string>
+                <string>msg[&apos;tag00080018&apos;].toString()</string>
+              </entry>
+              <entry>
+                <string>RegularExpressions</string>
+                <list/>
+              </entry>
+              <entry>
+                <string>isGlobal</string>
+                <string>channel</string>
+              </entry>
+            </data>
+          </step>
+        </steps>
+        <inboundTemplate encoding="base64">PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+DQo8
+ZGljb20+DQogICAgPHRhZzAwMDIwMDAwIGxlbj0iNCIgdGFnPSIwMDAyMDAwMCIgdnI9IlVMIj4x
+OTY8L3RhZzAwMDIwMDAwPg0KICAgIDx0YWcwMDAyMDAwMSBsZW49IjIiIHRhZz0iMDAwMjAwMDEi
+IHZyPSJPQiI+MDBcMDE8L3RhZzAwMDIwMDAxPg0KICAgIDx0YWcwMDAyMDAwMiBsZW49IjI2IiB0
+YWc9IjAwMDIwMDAyIiB2cj0iVUkiPjEuMi44NDAuMTAwMDguNS4xLjQuMS4xLjI8L3RhZzAwMDIw
+MDAyPg0KICAgIDx0YWcwMDAyMDAwMyBsZW49IjU0IiB0YWc9IjAwMDIwMDAzIiB2cj0iVUkiPjEu
+Mi44NDAuMTEzNjE5LjIuNTUuMy40MjQ1Mjk1NjI2Ljk3Mi4xMzY2MDM0Nzk3LjU0My40PC90YWcw
+MDAyMDAwMz4NCiAgICA8dGFnMDAwMjAwMTAgbGVuPSIxOCIgdGFnPSIwMDAyMDAxMCIgdnI9IlVJ
+Ij4xLjIuODQwLjEwMDA4LjEuMjwvdGFnMDAwMjAwMTA+DQogICAgPHRhZzAwMDIwMDEyIGxlbj0i
+MjgiIHRhZz0iMDAwMjAwMTIiIHZyPSJVSSI+MS4yLjI3Ni4wLjcyMzAwMTAuMy4wLjMuNi4wPC90
+YWcwMDAyMDAxMj4NCiAgICA8dGFnMDAwMjAwMTMgbGVuPSIxNiIgdGFnPSIwMDAyMDAxMyIgdnI9
+IlNIIj5PRkZJU19EQ01US18zNjA8L3RhZzAwMDIwMDEzPg0KICAgIDx0YWcwMDA4MDAwNSBsZW49
+IjEwIiB0YWc9IjAwMDgwMDA1IiB2cj0iQ1MiPklTT19JUiAxMDA8L3RhZzAwMDgwMDA1Pg0KICAg
+IDx0YWcwMDA4MDAwOCBsZW49IjIyIiB0YWc9IjAwMDgwMDA4IiB2cj0iQ1MiPk9SSUdJTkFMXFBS
+SU1BUllcQVhJQUw8L3RhZzAwMDgwMDA4Pg0KICAgIDx0YWcwMDA4MDAxMiBsZW49IjgiIHRhZz0i
+MDAwODAwMTIiIHZyPSJEQSI+MjAxMzA2MDM8L3RhZzAwMDgwMDEyPg0KICAgIDx0YWcwMDA4MDAx
+MyBsZW49IjE0IiB0YWc9IjAwMDgwMDEzIiB2cj0iVE0iPjE2NTQzNi41NDkwMDA8L3RhZzAwMDgw
+MDEzPg0KICAgIDx0YWcwMDA4MDAxNiBsZW49IjI2IiB0YWc9IjAwMDgwMDE2IiB2cj0iVUkiPjEu
+Mi44NDAuMTAwMDguNS4xLjQuMS4xLjI8L3RhZzAwMDgwMDE2Pg0KICAgIDx0YWcwMDA4MDAxOCBs
+ZW49IjU0IiB0YWc9IjAwMDgwMDE4IiB2cj0iVUkiPjEuMi44NDAuMTEzNjE5LjIuNTUuMy40MjQ1
+Mjk1NjI2Ljk3Mi4xMzY2MDM0Nzk3LjU0My40PC90YWcwMDA4MDAxOD4NCiAgICA8dGFnMDAwODAw
+MjAgbGVuPSI4IiB0YWc9IjAwMDgwMDIwIiB2cj0iREEiPjIwMTMwNDE1PC90YWcwMDA4MDAyMD4N
+CiAgICA8dGFnMDAwODAwMjEgbGVuPSI4IiB0YWc9IjAwMDgwMDIxIiB2cj0iREEiPjIwMTMwNDE1
+PC90YWcwMDA4MDAyMT4NCiAgICA8dGFnMDAwODAwMjMgbGVuPSI4IiB0YWc9IjAwMDgwMDIzIiB2
+cj0iREEiPjIwMTMwNDE1PC90YWcwMDA4MDAyMz4NCiAgICA8dGFnMDAwODAwMzAgbGVuPSI2IiB0
+YWc9IjAwMDgwMDMwIiB2cj0iVE0iPjEzNDYzNDwvdGFnMDAwODAwMzA+DQogICAgPHRhZzAwMDgw
+MDMxIGxlbj0iNiIgdGFnPSIwMDA4MDAzMSIgdnI9IlRNIj4xMzQ4MjY8L3RhZzAwMDgwMDMxPg0K
+ICAgIDx0YWcwMDA4MDAzMyBsZW49IjYiIHRhZz0iMDAwODAwMzMiIHZyPSJUTSI+MTM0ODUxPC90
+YWcwMDA4MDAzMz4NCiAgICA8dGFnMDAwODAwNTAgbGVuPSI4IiB0YWc9IjAwMDgwMDUwIiB2cj0i
+U0giPjY5MzUwNzI8L3RhZzAwMDgwMDUwPg0KICAgIDx0YWcwMDA4MDA2MCBsZW49IjIiIHRhZz0i
+MDAwODAwNjAiIHZyPSJDUyI+Q1Q8L3RhZzAwMDgwMDYwPg0KICAgIDx0YWcwMDA4MDA3MCBsZW49
+IjE4IiB0YWc9IjAwMDgwMDcwIiB2cj0iTE8iPkdFIE1FRElDQUwgU1lTVEVNUzwvdGFnMDAwODAw
+NzA+DQogICAgPHRhZzAwMDgwMDgwIGxlbj0iOCIgdGFnPSIwMDA4MDA4MCIgdnI9IkxPIj5TdGFu
+Zm9yZDwvdGFnMDAwODAwODA+DQogICAgPHRhZzAwMDgwMDkwIGxlbj0iOCIgdGFnPSIwMDA4MDA5
+MCIgdnI9IlBOIj4xMTExMTExMTwvdGFnMDAwODAwOTA+DQogICAgPHRhZzAwMDgxMDEwIGxlbj0i
+NCIgdGFnPSIwMDA4MTAxMCIgdnI9IlNIIj5zdGN0PC90YWcwMDA4MTAxMD4NCiAgICA8dGFnMDAw
+ODEwMzAgbGVuPSIyMiIgdGFnPSIwMDA4MTAzMCIgdnI9IkxPIj5SYWRpYXRpb24gT25jb2xvZ3kg
+Q1Q8L3RhZzAwMDgxMDMwPg0KICAgIDx0YWcwMDA4MTAzRSBsZW49IjE4IiB0YWc9IjAwMDgxMDNF
+IiB2cj0iTE8iPlJBRCBUTEkgV0hPTEUgQk9EWTwvdGFnMDAwODEwM0U+DQogICAgPHRhZzAwMDgx
+MDQ4IGxlbj0iOCIgdGFnPSIwMDA4MTA0OCIgdnI9IlBOIj4xMTExMTExMTwvdGFnMDAwODEwNDg+
+DQogICAgPHRhZzAwMDgxMDkwIGxlbj0iMTIiIHRhZz0iMDAwODEwOTAiIHZyPSJMTyI+RGlzY292
+ZXJ5IFNUPC90YWcwMDA4MTA5MD4NCiAgICA8dGFnMDAxMDAwMTAgbGVuPSIyNiIgdGFnPSIwMDEw
+MDAxMCIgdnI9IlBOIj4wM0p1bjIwMTMtMTYtNTQtMzYtMjkyMDAwPC90YWcwMDEwMDAxMD4NCiAg
+ICA8dGFnMDAxMDAwMjAgbGVuPSIyNiIgdGFnPSIwMDEwMDAyMCIgdnI9IkxPIj4wM0p1bjIwMTMt
+MTYtNTQtMzYtMjkyMDAwPC90YWcwMDEwMDAyMD4NCiAgICA8dGFnMDAxMDAwMzAgbGVuPSI4IiB0
+YWc9IjAwMTAwMDMwIiB2cj0iREEiPjExMTExMTExPC90YWcwMDEwMDAzMD4NCiAgICA8dGFnMDAx
+MDAwMzIgbGVuPSI4IiB0YWc9IjAwMTAwMDMyIiB2cj0iVE0iPjExMTExMTExPC90YWcwMDEwMDAz
+Mj4NCiAgICA8dGFnMDAxMDAwNDAgbGVuPSIyIiB0YWc9IjAwMTAwMDQwIiB2cj0iQ1MiPk88L3Rh
+ZzAwMTAwMDQwPg0KICAgIDx0YWcwMDEwMjE2MCBsZW49IjYiIHRhZz0iMDAxMDIxNjAiIHZyPSJT
+SCI+b3RoZXI8L3RhZzAwMTAyMTYwPg0KICAgIDx0YWcwMDE4MDAyMiBsZW49IjEyIiB0YWc9IjAw
+MTgwMDIyIiB2cj0iQ1MiPkhFTElDQUwgTU9ERTwvdGFnMDAxODAwMjI+DQogICAgPHRhZzAwMTgw
+MDUwIGxlbj0iNCIgdGFnPSIwMDE4MDA1MCIgdnI9IkRTIj4zLjc1PC90YWcwMDE4MDA1MD4NCiAg
+ICA8dGFnMDAxODAwNjAgbGVuPSI0IiB0YWc9IjAwMTgwMDYwIiB2cj0iRFMiPjEyMDwvdGFnMDAx
+ODAwNjA+DQogICAgPHRhZzAwMTgwMDkwIGxlbj0iNCIgdGFnPSIwMDE4MDA5MCIgdnI9IkRTIj41
+MDA8L3RhZzAwMTgwMDkwPg0KICAgIDx0YWcwMDE4MTAyMCBsZW49IjE0IiB0YWc9IjAwMTgxMDIw
+IiB2cj0iTE8iPmRtMDlfaGwyc3AxLjIzPC90YWcwMDE4MTAyMD4NCiAgICA8dGFnMDAxODExMDAg
+bGVuPSI0IiB0YWc9IjAwMTgxMTAwIiB2cj0iRFMiPjcwMDwvdGFnMDAxODExMDA+DQogICAgPHRh
+ZzAwMTgxMTEwIGxlbj0iMTAiIHRhZz0iMDAxODExMTAiIHZyPSJEUyI+OTQ5LjA3NTAxMjwvdGFn
+MDAxODExMTA+DQogICAgPHRhZzAwMTgxMTExIGxlbj0iNCIgdGFnPSIwMDE4MTExMSIgdnI9IkRT
+Ij41NDE8L3RhZzAwMTgxMTExPg0KICAgIDx0YWcwMDE4MTEyMCBsZW49IjIiIHRhZz0iMDAxODEx
+MjAiIHZyPSJEUyI+MDwvdGFnMDAxODExMjA+DQogICAgPHRhZzAwMTgxMTMwIGxlbj0iMTAiIHRh
+Zz0iMDAxODExMzAiIHZyPSJEUyI+MTQ0LjE5OTk5NzwvdGFnMDAxODExMzA+DQogICAgPHRhZzAw
+MTgxMTQwIGxlbj0iMiIgdGFnPSIwMDE4MTE0MCIgdnI9IkNTIj5DVzwvdGFnMDAxODExNDA+DQog
+ICAgPHRhZzAwMTgxMTUwIGxlbj0iNCIgdGFnPSIwMDE4MTE1MCIgdnI9IklTIj4xMDM5PC90YWcw
+MDE4MTE1MD4NCiAgICA8dGFnMDAxODExNTEgbGVuPSI0IiB0YWc9IjAwMTgxMTUxIiB2cj0iSVMi
+PjEyMTwvdGFnMDAxODExNTE+DQogICAgPHRhZzAwMTgxMTUyIGxlbj0iMiIgdGFnPSIwMDE4MTE1
+MiIgdnI9IklTIj4xMzwvdGFnMDAxODExNTI+DQogICAgPHRhZzAwMTgxMTYwIGxlbj0iMTIiIHRh
+Zz0iMDAxODExNjAiIHZyPSJTSCI+Qk9EWSBGSUxURVI8L3RhZzAwMTgxMTYwPg0KICAgIDx0YWcw
+MDE4MTE3MCBsZW49IjYiIHRhZz0iMDAxODExNzAiIHZyPSJJUyI+NDc0MDA8L3RhZzAwMTgxMTcw
+Pg0KICAgIDx0YWcwMDE4MTE5MCBsZW49IjQiIHRhZz0iMDAxODExOTAiIHZyPSJEUyI+MS4yPC90
+YWcwMDE4MTE5MD4NCiAgICA8dGFnMDAxODEyMTAgbGVuPSI4IiB0YWc9IjAwMTgxMjEwIiB2cj0i
+U0giPlNUQU5EQVJEPC90YWcwMDE4MTIxMD4NCiAgICA8dGFnMDAxODUxMDAgbGVuPSI0IiB0YWc9
+IjAwMTg1MTAwIiB2cj0iQ1MiPkhGUzwvdGFnMDAxODUxMDA+DQogICAgPHRhZzAwMjAwMDBEIGxl
+bj0iNTIiIHRhZz0iMDAyMDAwMEQiIHZyPSJVSSI+MS4yLjg0MC4xMTM2MTkuMi41NS4zLjQyNDUy
+OTU2MjYuOTcyLjEzNjYwMzQ3OTcuNTM3PC90YWcwMDIwMDAwRD4NCiAgICA8dGFnMDAyMDAwMEUg
+bGVuPSI1MiIgdGFnPSIwMDIwMDAwRSIgdnI9IlVJIj4xLjIuODQwLjExMzYxOS4yLjU1LjMuNDI0
+NTI5NTYyNi45NzIuMTM2NjAzNDc5Ny41NDI8L3RhZzAwMjAwMDBFPg0KICAgIDx0YWcwMDIwMDAx
+MCBsZW49IjIiIHRhZz0iMDAyMDAwMTAiIHZyPSJTSCI+UzwvdGFnMDAyMDAwMTA+DQogICAgPHRh
+ZzAwMjAwMDExIGxlbj0iMiIgdGFnPSIwMDIwMDAxMSIgdnI9IklTIj4yPC90YWcwMDIwMDAxMT4N
+CiAgICA8dGFnMDAyMDAwMTIgbGVuPSIyIiB0YWc9IjAwMjAwMDEyIiB2cj0iSVMiPjE8L3RhZzAw
+MjAwMDEyPg0KICAgIDx0YWcwMDIwMDAxMyBsZW49IjIiIHRhZz0iMDAyMDAwMTMiIHZyPSJJUyI+
+NDwvdGFnMDAyMDAwMTM+DQogICAgPHRhZzAwMjAwMDMyIGxlbj0iMTgiIHRhZz0iMDAyMDAwMzIi
+IHZyPSJEUyI+LTM1NC44XC0zOTYuMlw0OTc8L3RhZzAwMjAwMDMyPg0KICAgIDx0YWcwMDIwMDAz
+NyBsZW49IjEyIiB0YWc9IjAwMjAwMDM3IiB2cj0iRFMiPjFcMFwwXDBcMVwwPC90YWcwMDIwMDAz
+Nz4NCiAgICA8dGFnMDAyMDAwNTIgbGVuPSI1OCIgdGFnPSIwMDIwMDA1MiIgdnI9IlVJIj4xLjIu
+ODQwLjExMzYxOS4yLjU1LjMuNDI0NTI5NTYyNi45NzIuMTM2NjAzNDc5Ny41MzguOTk1MC4xPC90
+YWcwMDIwMDA1Mj4NCiAgICA8dGFnMDAyMDEwNDAgbGVuPSIyIiB0YWc9IjAwMjAxMDQwIiB2cj0i
+TE8iPlhZPC90YWcwMDIwMTA0MD4NCiAgICA8dGFnMDAyMDEwNDEgbGVuPSI0IiB0YWc9IjAwMjAx
+MDQxIiB2cj0iRFMiPjQ5NzwvdGFnMDAyMDEwNDE+DQogICAgPHRhZzAwMjgwMDAyIGxlbj0iMiIg
+dGFnPSIwMDI4MDAwMiIgdnI9IlVTIj4xPC90YWcwMDI4MDAwMj4NCiAgICA8dGFnMDAyODAwMDQg
+bGVuPSIxMiIgdGFnPSIwMDI4MDAwNCIgdnI9IkNTIj5NT05PQ0hST01FMjwvdGFnMDAyODAwMDQ+
+DQogICAgPHRhZzAwMjgwMDEwIGxlbj0iMiIgdGFnPSIwMDI4MDAxMCIgdnI9IlVTIj41MTI8L3Rh
+ZzAwMjgwMDEwPg0KICAgIDx0YWcwMDI4MDAxMSBsZW49IjIiIHRhZz0iMDAyODAwMTEiIHZyPSJV
+UyI+NTEyPC90YWcwMDI4MDAxMT4NCiAgICA8dGFnMDAyODAwMzAgbGVuPSIxOCIgdGFnPSIwMDI4
+MDAzMCIgdnI9IkRTIj4xLjM2NzE4OFwxLjM2NzE4ODwvdGFnMDAyODAwMzA+DQogICAgPHRhZzAw
+MjgwMTAwIGxlbj0iMiIgdGFnPSIwMDI4MDEwMCIgdnI9IlVTIj4xNjwvdGFnMDAyODAxMDA+DQog
+ICAgPHRhZzAwMjgwMTAxIGxlbj0iMiIgdGFnPSIwMDI4MDEwMSIgdnI9IlVTIj4xNjwvdGFnMDAy
+ODAxMDE+DQogICAgPHRhZzAwMjgwMTAyIGxlbj0iMiIgdGFnPSIwMDI4MDEwMiIgdnI9IlVTIj4x
+NTwvdGFnMDAyODAxMDI+DQogICAgPHRhZzAwMjgwMTAzIGxlbj0iMiIgdGFnPSIwMDI4MDEwMyIg
+dnI9IlVTIj4wPC90YWcwMDI4MDEwMz4NCiAgICA8dGFnMDAyODEwNTAgbGVuPSIyIiB0YWc9IjAw
+MjgxMDUwIiB2cj0iRFMiPjQwPC90YWcwMDI4MTA1MD4NCiAgICA8dGFnMDAyODEwNTEgbGVuPSI0
+IiB0YWc9IjAwMjgxMDUxIiB2cj0iRFMiPjQwMDwvdGFnMDAyODEwNTE+DQogICAgPHRhZzAwMjgx
+MDUyIGxlbj0iNiIgdGFnPSIwMDI4MTA1MiIgdnI9IkRTIj4tMTAyNDwvdGFnMDAyODEwNTI+DQog
+ICAgPHRhZzAwMjgxMDUzIGxlbj0iMiIgdGFnPSIwMDI4MTA1MyIgdnI9IkRTIj4xPC90YWcwMDI4
+MTA1Mz4NCiAgICA8dGFnMDAyODEwNTQgbGVuPSIyIiB0YWc9IjAwMjgxMDU0IiB2cj0iTE8iPkhV
+PC90YWcwMDI4MTA1ND4NCiAgICA8dGFnMzI1MzAwMTAgbGVuPSIzNCIgdGFnPSIzMjUzMDAxMCIg
+dnI9IkxPIj5WYXJpYW4gTWVkaWNhbCBTeXN0ZW1zIFZJU0lPTiAzMjUzPC90YWczMjUzMDAxMD4N
+CiAgICA8dGFnMzI1MzEwMDAgbGVuPSIxNjAiIHRhZz0iMzI1MzEwMDAiIHZyPSJVTiI+Jmx0O1JU
+SW1hZ2VFeHRlbmRlZEludGVyZmFjZSZndDsmbHQ7ZmM6VlhGaWx0ZXJDb25maWd1cmF0aW9uIHht
+bG5zOmZjPSJodHRwOi8veHNkLmJhZGVuLnZhcmlhbi5jb20vRmlsdGVyQ29uZmlndXJhdGlvbi54
+c2QiIGZjOlZlcnNpb249IjEiLyZndDsmbHQ7L1JUSW1hZ2VFeHRlbmRlZEludGVyZmFjZSZndDtc
+MERcMEE8L3RhZzMyNTMxMDAwPg0KICAgIDx0YWczMjUzMTAwMSBsZW49IjIiIHRhZz0iMzI1MzEw
+MDEiIHZyPSJVTiI+MCA8L3RhZzMyNTMxMDAxPg0KICAgIDx0YWczMjUzMTAwMiBsZW49IjE2IiB0
+YWc9IjMyNTMxMDAyIiB2cj0iVU4iPkltYWdlUHJvY2Vzc2luZyA8L3RhZzMyNTMxMDAyPg0KPC9k
+aWNvbT4NCg==</inboundTemplate>
+        <outboundTemplate encoding="base64"></outboundTemplate>
+        <inboundProtocol>DICOM</inboundProtocol>
+        <outboundProtocol>DICOM</outboundProtocol>
+        <inboundProperties/>
+        <outboundProperties/>
+      </transformer>
+      <filter>
+        <rules/>
+      </filter>
+      <transportName>File Writer</transportName>
+      <mode>DESTINATION</mode>
+      <enabled>true</enabled>
+      <version>2.2.2.6388</version>
+    </connector>
+  </destinationConnectors>
+  <properties>
+    <property name="clearGlobalChannelMap">true</property>
+    <property name="dont_store_filtered">false</property>
+    <property name="encryptData">false</property>
+    <property name="error_messages_only">false</property>
+    <property name="initialState">started</property>
+    <property name="max_message_age">7</property>
+    <property name="store_messages">true</property>
+    <property name="synchronous">true</property>
+    <property name="transactional">false</property>
+  </properties>
+  <preprocessingScript>// Modify the message variable below to pre process data
+return message;</preprocessingScript>
+  <postprocessingScript>// This script executes once after a message has been processed
+return;</postprocessingScript>
+  <deployScript>// This script executes once when the channel is deployed
+// You only have access to the globalMap and globalChannelMap here to persist data
+return;</deployScript>
+  <shutdownScript>// This script executes once when the channel is undeployed
+// You only have access to the globalMap and globalChannelMap here to persist data
+return;</shutdownScript>
+</channel>

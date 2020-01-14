@@ -1,0 +1,2 @@
+Rem ping localhost -n 5 -w 1000 > null
+sqlcmd -S JPIAH-BD.CHLC.NET\SMED -U smed1 -P Smed!2017 -i "C:\ProgramData\Del Mar Reynolds Medical\Sentinel\scripts\SN to Facilty.sql" -o "C:\ProgramData\Del Mar Reynolds Medical\Sentinel\scripts\SN to Facilty.log"

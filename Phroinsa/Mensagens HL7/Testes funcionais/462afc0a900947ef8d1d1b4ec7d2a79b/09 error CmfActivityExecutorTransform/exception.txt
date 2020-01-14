@@ -1,0 +1,9 @@
+Dmr.LomondMessaging.Transformations.MessageTransformException: failure when applying transform ---> System.InvalidOperationException: patient record HULP 738340 does not exist and cannot be updated
+   at Dmr.LomondMessaging.DatabaseAccess.PatientInfoImporter.UpdatePatient(CommonMessageFormatXml cmfData, Guid& patientKey, Boolean conditional)
+   at Dmr.LomondMessaging.CmfActivities.UpdatePatientRecordActivity.Execute(CmfMessage message)
+   at Dmr.LomondMessaging.CmfActivities.CmfActivityExecutorTransform.Apply(Message message)
+   at Dmr.LomondMessaging.Transformations.TransformExecutor.Apply(IMessageTransform transform, Message message)
+   --- End of inner exception stack trace ---
+   at Dmr.LomondMessaging.Transformations.TransformExecutor.Apply(IMessageTransform transform, Message message)
+   at Dmr.LomondMessaging.Transformations.CompositeTransform.Apply(Message message)
+   at Dmr.LomondMessaging.Pipeline.processMessage(Message message)

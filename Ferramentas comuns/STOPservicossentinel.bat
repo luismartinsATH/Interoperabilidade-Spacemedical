@@ -1,0 +1,9 @@
+net stop AppDiscovery
+net stop DicomService
+net stop SentinelMessagingService
+net stop SentinelRdtStartService
+net stop RestingECGFileService
+net stop ScpImportService
+net stop XdtService
+net stop IISADMIN
+net stop W3SVC

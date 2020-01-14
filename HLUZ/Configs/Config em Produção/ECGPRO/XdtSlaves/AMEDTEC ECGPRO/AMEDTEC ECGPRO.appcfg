@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SlaveApplicationConfig xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+  <ApplicationExe>C:\Program Files (x86)\AMEDTEC ECGpro\s05Main.exe</ApplicationExe>
+  <ApplicationName>AMEDTEC ECGPRO</ApplicationName>
+  <SupportedTestModalities>
+    <XdtTestModality>
+      <GdtCode>ERGO01</GdtCode>
+      <Name>ESFORÇO</Name>
+    </XdtTestModality>
+  </SupportedTestModalities>
+</SlaveApplicationConfig>

@@ -1,0 +1,11 @@
+MSH|^~\&|Sentinel|CARDIOLOGY|EPIC|UC SAN DIEGO|20181206092528||ORU^R01|181206092528100007|T|2.3.1
+PID|||80003652^^^PID||LAB^CHERRY||19880420|O|||1319 PADA^^SAN DIMAS^CA^91773^US||(909)263-9443|||||33000081864
+PV1||I|||||||||||||||||33000081864||||||||||||||||||||||||||20181009172800
+OBR|1|187511793^EPIC|89fa9967-2932-431d-900f-950638de2088|CARD15^AMB 24 HR BLOOD PRESSURE MONITOR^SENTINEL^^AMB 24 HR BLOOD PRESSURE MONITOR|||20181010105000|||||||||TAUB^PAM^R.|||||||||C|||||||007^larry|||007^larry^^^^^larry
+OBX|1|NM|Systolic Average Blood Pressure^^SENTINELLRR||125|mmHg|||||C
+OBX|2|NM|Min Systolic Blood Pressure^^SENTINELLRR||115|mmHg|||||C
+OBX|3|NM|Max Systolic Blood Pressure^^SENTINELLRR||132|mmHg|||||C
+OBX|4|NM|Diastolic Average Blood Pressure^^SENTINELLRR||84|mmHg|||||C
+OBX|5|NM|Min Diastolic Blood Pressure^^SENTINELLRR||81|mmHg|||||C
+OBX|6|NM|Max Diastolic Blood Pressure^^SENTINELLRR||89|mmHg|||||C
+NTE|1|SI|This is a test of the ORU with the Base64 embeded PDF in OBX 5.5.brlarry seieroe.brNormal blood pressure .brlarry confirmed this report again.brconfirm again.br|Result Comments|||||||C

@@ -1,0 +1,5 @@
+// Modify the message variable below to pre process data
+//message = message.replace(/\\XE3\\/g, "ã");
+//message = message.replace(/\\XE7\\/g, "ç");
+//message = message.replace(/\\XE9\\/g, "é");
+//message = message.replace(/\\XE1\\/g, "á");

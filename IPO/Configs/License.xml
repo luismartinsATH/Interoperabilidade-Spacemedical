@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dmr-licensing xmlns="http://delmarreynolds.com/licensing/1.0">
+  <InstallationId>SPACEEQUIPAMENT020620190906</InstallationId>
+  <License>
+    <Version>10.0</Version>
+    <Title>0001-SPACEEQUIPAMENT</Title>
+    <RegisteredTo>S5892110</RegisteredTo>
+    <MaxLogincount>1</MaxLogincount>
+    <IsGlasgowAlgorithmLicensed>false</IsGlasgowAlgorithmLicensed>
+    <AreRestingRhythmTestsLicensed>false</AreRestingRhythmTestsLicensed>
+    <AreAbpTestsLicensed>true</AreAbpTestsLicensed>
+    <AreHolterTestsLicensed>true</AreHolterTestsLicensed>
+    <AreCustomTestsLicensed>false</AreCustomTestsLicensed>
+    <AreStressTestsLicensed>false</AreStressTestsLicensed>
+    <AreErgospirometryTestsLicensed>false</AreErgospirometryTestsLicensed>
+    <AreSpirometryTestsLicensed>false</AreSpirometryTestsLicensed>
+    <AreEventTestsLicensed>false</AreEventTestsLicensed>
+    <ArePlethysmographyTestsLicensed>false</ArePlethysmographyTestsLicensed>
+    <IsDicomImportExportLicensed>false</IsDicomImportExportLicensed>
+    <AreDicomWorkListsLicensed>false</AreDicomWorkListsLicensed>
+    <AreManualOrdersLicensed>true</AreManualOrdersLicensed>
+    <IsRemoteDataTransferLicensed>false</IsRemoteDataTransferLicensed>
+    <AreHL7OruMdmMessagesLicensed>false</AreHL7OruMdmMessagesLicensed>
+    <AreHL7AdtMessagesLicensed>false</AreHL7AdtMessagesLicensed>
+    <AreHL7OrdersLicensed>false</AreHL7OrdersLicensed>
+    <AreCasesLicensed>false</AreCasesLicensed>
+    <IsExternalDatabaseSupportLicensed>false</IsExternalDatabaseSupportLicensed>
+    <IsSingleSignOnLicensed>false</IsSingleSignOnLicensed>
+    <AreMultipleSitesAndMobileSitesLicensed>false</AreMultipleSitesAndMobileSitesLicensed>
+    <IsXDTSlaveLicensed>false</IsXDTSlaveLicensed>
+    <IsXDTMasterLicensed>false</IsXDTMasterLicensed>
+    <ActivatedOnDateTime>03/14/2019 10:57:34</ActivatedOnDateTime>
+    <ActivationCode>B4BD34B78F8F89</ActivationCode>
+  </License>
+</dmr-licensing>

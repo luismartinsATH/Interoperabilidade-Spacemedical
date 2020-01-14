@@ -1,0 +1,15 @@
+/% Servidor %/
+
+SRVSPACE - IP: 192.168.10.117
+User: chmtroot\space
+Password: Space2019
+
+SQL Express 2008 R2
+SA Password - AMEDTEC ECGpr0
+
+
+/% Estações de Trabalho %/
+
+Computador Abrantes - 192.168.106.180
+
+Computador Torres Novas - 192.168.40.251
