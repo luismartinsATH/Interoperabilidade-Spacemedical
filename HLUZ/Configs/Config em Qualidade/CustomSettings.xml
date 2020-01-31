@@ -1,0 +1,378 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CustomSettings>
+  <!-- Enable or disable the IHE service (available under Services/IHE/Transactions.ashx) -->
+  <IHEEnabled>
+    false
+  </IHEEnabled>
+
+  <!-- Enable or disable the Demo Resting/Rhythm Ecg Acquire mode -->
+  <EnableDemoEcgAcquireMode>
+    false
+  </EnableDemoEcgAcquireMode>
+  
+  <!-- Declare Spacelabs test types supported by external applications.-->
+
+  <ExternalTestTypes>
+  </ExternalTestTypes>
+  
+  <!-- Declare custom test types supported by this installation.-->
+  
+  <CustomTestTypes>
+  </CustomTestTypes>
+  
+  <!-- Defines settings relating to active directory. -->
+
+  <ActiveDirectory>
+    <!-- Specifies the domain for the active directory server.-->
+    <Domain>domain</Domain>
+    <!-- Specfies the full path to the organisational unit that contains the AD users. -->
+    <LDAPConnectionPath>path</LDAPConnectionPath>
+    <!-- Filter used to search active directory ($SEARCHTERM is replaced by whatever the user types) -->
+    <Filter>(&amp;(|(sn=$SEARCHTERM)(sAMAccountName=$SEARCHTERM))(!(userAccountControl:1.2.840.113556.1.4.803:=2)))</Filter>
+  </ActiveDirectory>
+
+  <!-- Override the default setting for displaying pacing spikes in rhythm and 12-lead Ecg -->
+  <DisplayPacingSpikes>
+    true
+  </DisplayPacingSpikes>
+
+  <!-- The local patient number namespace (patient ids are unique within a namespace). -->
+  <LocalPatientNumberNamespace>Default</LocalPatientNumberNamespace>
+
+  <!-- Will trigger reminders to set the case number -->
+  <CaseNumbersShouldBeSet>false</CaseNumbersShouldBeSet>
+
+  <!-- Display options for the Resting Ecg Review module. These options are for display only and do not affect the format of pdf reports.-->
+  <RestingEcgDisplayOptions>
+    <!-- 
+      Override the default setting for the resting ecg review module's display layout.
+      RestingEcgDisplayLayout option is only configurable for 12-Lead Resting Ecg.
+      Use one of the following settings... 
+      ThreeByFour
+      FourByThree
+      SixByTwo
+      SixByOneByTwoPages
+      TwelveByOne 
+    -->
+    <RestingEcgDisplayLayout>ThreeByFour</RestingEcgDisplayLayout>
+    
+    <!-- 
+      Override the default setting for the resting ecg review module's ecg rate in mm/s.
+      Use one of the following settings...
+      Fifty 
+      SixPointTwoFive
+      TwelvePointFive
+      TwentyFive
+      OneHundred
+    -->
+    <RestingEcgRate>TwentyFive</RestingEcgRate>
+    
+  </RestingEcgDisplayOptions>
+ 
+  <RemoteDataTransfer>
+
+    <!-- Remote Data Transfer will check for queued files to send this often in seconds (default 300 seconds). -->
+    <FileTransferPollInterval>300</FileTransferPollInterval>
+
+    <!-- Remote Data Transfer will check remote sites for data to be returned this often in seconds (default 900 seconds). -->
+    <RemoteSitePollInterval>900</RemoteSitePollInterval>
+
+    <!-- Remote Data Transfer will check to package and send data this often in seconds (default 900 seconds). -->
+    <RemoteSiteSendPollInterval>900</RemoteSiteSendPollInterval>
+   
+    <!--
+      This is the compression to do to a Holter recording when you are sending it through RDT.
+      Note, 12 lead Lifecard CF recordings cannot be compressed and the original recording will be sent.
+      
+      None - Leave the recording as it is (default).
+      LosslessCompression - Compress ECG with no loss of precision (only applicable to Aria and Lifecard CF as EVO is already in this format).
+      LossyCompressionRetain11Bits - Compress ECG retaining 11 bits of data (least lossy but largest file size).
+      LossyCompressionRetain10Bits - Compress ECG retaining 10 bits of data (second least lossy).
+      LossyCompressionRetain9Bits - Compress ECG retaining 9 bits of data (second most lossy).
+      LossyCompressionRetain8Bits - Compress ECG retaining 8 bits of data (most lossy but smallest file size).
+    -->
+    <HolterRecordingCompression>None</HolterRecordingCompression>
+
+    <!-- The number of days to retry a transfer before failing. By default this is 7.-->
+    <NumberOfDaysToRetryTransfers>7</NumberOfDaysToRetryTransfers>
+
+    <!-- The name of the Sentinel role which is used for RDT. Any users with this role will not be able to login to Sentinel.-->
+    <RoleName>RDT</RoleName>
+    
+  </RemoteDataTransfer>
+
+  <!-- The report overlay is displayed in the top right-hand corner of the pdf report.
+       If this section is removed or commented out, Sentinel will use localised resource strings for Unconfirmed
+       or Declined reports. -->
+  <ReportOverlay>
+    <!-- Overlay for an unconfirmed report. -->
+    <Unconfirmed>Não confirmado</Unconfirmed>
+    <PreviousUnconfirmed>ECG não confirmado anterior</PreviousUnconfirmed>
+    <!-- Overlay for a confirmed report. -->
+    <Confirmed>Confirmado</Confirmed>
+    <PreviousConfirmed>ECG confirmado anterior</PreviousConfirmed>
+    <!-- Overlay for a confirmed amended report. -->
+    <ConfirmedAmended>Reconfirmado</ConfirmedAmended>
+    <PreviousConfirmedAmended>ECG reconfirmado anterior</PreviousConfirmedAmended>
+    <!-- Overlay for a declined report. -->
+    <Declined>Recusado</Declined>
+    <PreviousDeclined>ECG anterior recusada</PreviousDeclined>
+    <!-- Overlay for a completed report. -->
+    <Completed>Completado</Completed>
+    <PreviousCompleted>ECG anterior completado</PreviousCompleted>
+  </ReportOverlay>
+ 
+  <HolterWorkflow>
+    
+    <!-- Set this to false to force the user to confirm the patient identity for every Holter test -->
+    <AutoAssociateAttachedPatient>true</AutoAssociateAttachedPatient>
+
+    <!-- The following section defines the rules for matching patients during auto associate. -->
+    <AutoAssociateRules>
+      <IncludePatientNumber>true</IncludePatientNumber>
+      <IncludeGivenName>true</IncludeGivenName>
+      <IncludeFamilyName>true</IncludeFamilyName>
+      <IncludeDateOfBirth>false</IncludeDateOfBirth>
+    </AutoAssociateRules>
+
+    <!-- Set this to true to automatically identify patients based on predefined rules when downloading
+         new Holter recordings. 
+         
+         Note: This setting is only applied if AutoAssociateAttachedPatient is set to true.
+    -->
+    <AutoIdentifyAttachedPatient>false</AutoIdentifyAttachedPatient>
+
+    <!-- The following section defines the rules specifying what data must be present in order
+         to AutoIdentify the patient for a test. 
+         
+         Note: PatientNumber is mandatory. To configure AutoIdentify on PatientNumbers only
+         set all AutoIdentifyRules to false.
+    -->
+    <AutoIdentifyRules>
+      <RequireGivenName>true</RequireGivenName>
+      <RequireFamilyName>true</RequireFamilyName>
+      <RequireDateOfBirth>false</RequireDateOfBirth>
+    </AutoIdentifyRules>
+    
+  </HolterWorkflow>
+
+  <BloodPressureWorkflow>
+    
+    <!-- Set this to false to force the user to confirm the patient identity for every Blood Pressure test -->
+    <AutoAssociateAttachedPatient>true</AutoAssociateAttachedPatient>
+
+    <!-- The following section defines the rules for matching patients during auto associate. -->
+    <AutoAssociateRules>
+      <IncludePatientNumber>true</IncludePatientNumber>
+      <IncludeGivenName>false</IncludeGivenName>
+      <IncludeFamilyName>false</IncludeFamilyName>
+      <IncludeDateOfBirth>false</IncludeDateOfBirth>
+    </AutoAssociateRules>
+
+    <!-- Set this to true to automatically identify patients based on predefined rules when downloading
+         new Blood Pressure recordings. 
+         
+         Note: This setting is only applied if AutoAssociateAttachedPatient is set to true.
+    -->
+    <AutoIdentifyAttachedPatient>true</AutoIdentifyAttachedPatient>
+
+    <!-- The following section defines the rules specifying what data must be present in order
+         to AutoIdentify the patient for a test. 
+         
+         Note: PatientNumber is mandatory. To configure AutoIdentify on PatientNumbers only
+         set all AutoIdentifyRules to false.
+    -->
+    <AutoIdentifyRules>
+      <RequireGivenName>false</RequireGivenName>
+      <RequireFamilyName>false</RequireFamilyName>
+      <RequireDateOfBirth>false</RequireDateOfBirth>
+    </AutoIdentifyRules>
+    
+    <AverageCalculationUsesHourlyAverages>true</AverageCalculationUsesHourlyAverages>
+    
+    <!--Exclusion of readings at the beginning of a blood pressure recording: 
+    Options are None, WithinMinutes,NumberOfReadings 
+    None: no readings excluded
+    WithinMinutes: readings within ExcludeReadingsInFirstMinutes of first measurements excluded
+    NumberOfReadings: first NumberOfReadingsToExclude measurements excluded
+    -->
+    <BloodPressureReadingsExclusion>None</BloodPressureReadingsExclusion>
+    <ExcludeReadingsInFirstMinutes>30</ExcludeReadingsInFirstMinutes>
+    <NumberOfReadingsToExclude>5</NumberOfReadingsToExclude>
+    <MorningBloodPressureEnabled>false</MorningBloodPressureEnabled>
+
+  </BloodPressureWorkflow>
+
+  <StressWorkflow>
+
+    <!--  The following settings are not currently supported for Stress ECG -->
+    
+    <!-- Set this to false to force the user to confirm the patient identity for every Stress test -->
+    <AutoAssociateAttachedPatient>false</AutoAssociateAttachedPatient>
+
+    <!-- The following section defines the rules for matching patients during auto associate. -->
+    <AutoAssociateRules>
+      <IncludePatientNumber>true</IncludePatientNumber>
+      <IncludeGivenName>true</IncludeGivenName>
+      <IncludeFamilyName>true</IncludeFamilyName>
+      <IncludeDateOfBirth>false</IncludeDateOfBirth>
+    </AutoAssociateRules>
+
+    <!-- Set this to true to automatically identify patients based on predefined rules when downloading
+         new Stress ECG recordings. 
+         
+         Note: This setting is only applied if AutoAssociateAttachedPatient is set to true.
+    -->
+    <AutoIdentifyAttachedPatient>false</AutoIdentifyAttachedPatient>
+
+    <!-- The following section defines the rules specifying what data must be present in order
+         to AutoIdentify the patient for a test. 
+         
+         Note: PatientNumber is mandatory. To configure AutoIdentify on PatientNumbers only
+         set all AutoIdentifyRules to false.
+    -->
+    <AutoIdentifyRules>
+      <RequireGivenName>true</RequireGivenName>
+      <RequireFamilyName>true</RequireFamilyName>
+      <RequireDateOfBirth>false</RequireDateOfBirth>
+    </AutoIdentifyRules>
+
+    <CreatePdfOnAcquire>true</CreatePdfOnAcquire>
+        
+  </StressWorkflow>
+
+  <RhythmWorkflow>
+
+    <!-- Set this to false to force the user to confirm the patient identity for every Rhythm test -->
+    <AutoAssociateAttachedPatient>false</AutoAssociateAttachedPatient>
+
+    <!-- The following section defines the rules for matching patients during auto associate. -->
+    <AutoAssociateRules>
+      <IncludePatientNumber>true</IncludePatientNumber>
+      <IncludeGivenName>true</IncludeGivenName>
+      <IncludeFamilyName>true</IncludeFamilyName>
+      <IncludeDateOfBirth>false</IncludeDateOfBirth>
+    </AutoAssociateRules>
+
+    <!-- Set this to true to automatically identify patients based on predefined rules when downloading
+         new Rhythm ECG recordings. 
+         
+         Note: This setting is only applied if AutoAssociateAttachedPatient is set to true.
+    -->
+    <AutoIdentifyAttachedPatient>false</AutoIdentifyAttachedPatient>
+
+    <!-- The following section defines the rules specifying what data must be present in order
+         to AutoIdentify the patient for a test. 
+         
+         Note: PatientNumber is mandatory. To configure AutoIdentify on PatientNumbers only
+         set all AutoIdentifyRules to false.
+    -->
+    <AutoIdentifyRules>
+      <RequireGivenName>true</RequireGivenName>
+      <RequireFamilyName>true</RequireFamilyName>
+      <RequireDateOfBirth>false</RequireDateOfBirth>
+    </AutoIdentifyRules>
+    
+  </RhythmWorkflow>
+
+  <RestingWorkflow>
+
+    <!-- Set this to false to force the user to confirm the patient identity for every Resting ECG test -->
+    <AutoAssociateAttachedPatient>false</AutoAssociateAttachedPatient>
+
+    <!-- The following section defines the rules for matching patients during auto associate. -->
+    <AutoAssociateRules>
+      <IncludePatientNumber>true</IncludePatientNumber>
+      <IncludeGivenName>true</IncludeGivenName>
+      <IncludeFamilyName>true</IncludeFamilyName>
+      <IncludeDateOfBirth>false</IncludeDateOfBirth>
+    </AutoAssociateRules>
+
+    <!-- Set this to true to automatically identify patients based on predefined rules when downloading
+         new Resting 12 Lead ECG recordings. 
+         
+         Note: This setting is only applied if AutoAssociateAttachedPatient is set to true.
+    -->
+    <AutoIdentifyAttachedPatient>false</AutoIdentifyAttachedPatient>
+
+    <!-- The following section defines the rules specifying what data must be present in order
+         to AutoIdentify the patient for a test. 
+         
+         Note: PatientNumber is mandatory. To configure AutoIdentify on PatientNumbers only
+         set all AutoIdentifyRules to false.
+    -->
+    <AutoIdentifyRules>
+      <RequireGivenName>true</RequireGivenName>
+      <RequireFamilyName>true</RequireFamilyName>
+      <RequireDateOfBirth>false</RequireDateOfBirth>
+    </AutoIdentifyRules>
+    
+  </RestingWorkflow>
+
+  <CustomWorkflow>
+
+    <!-- Set this to false to force the user to confirm the patient identity for every custom test -->
+    <AutoAssociateAttachedPatient>true</AutoAssociateAttachedPatient>
+
+    <!-- The following section defines the rules for matching patients during auto associate. -->
+    <AutoAssociateRules>
+      <IncludePatientNumber>true</IncludePatientNumber>
+      <IncludeGivenName>false</IncludeGivenName>
+      <IncludeFamilyName>false</IncludeFamilyName>
+      <IncludeDateOfBirth>false</IncludeDateOfBirth>
+    </AutoAssociateRules>
+
+    <!-- Set this to true to automatically identify patients based on predefined rules when importing
+    custom test types from XDT. 
+         
+         Note: This setting is only applied if AutoAssociateAttachedPatient is set to true.
+    -->
+    <AutoIdentifyAttachedPatient>true</AutoIdentifyAttachedPatient>
+
+    <!-- The following section defines the rules specifying what data must be present in order
+         to AutoIdentify the patient for a test. 
+         
+         Note: PatientNumber is mandatory. To configure AutoIdentify on PatientNumbers only
+         set all AutoIdentifyRules to false.
+    -->
+    <AutoIdentifyRules>
+      <RequireGivenName>false</RequireGivenName>
+      <RequireFamilyName>false</RequireFamilyName>
+      <RequireDateOfBirth>false</RequireDateOfBirth>
+    </AutoIdentifyRules>
+
+  </CustomWorkflow>
+
+  <GlasgowAlgorithm>
+    <QtcAlgorithm>Hodge</QtcAlgorithm>
+  </GlasgowAlgorithm>
+
+  <!-- The frequency of the AC power line in the local region. Used to determine what filter to apply to unfiltered ECG when analyzing.
+		Valid values are...
+		0  = unspecified: Sentinel should guess based on language and region settings,
+		50 = 50Hz,
+		60 = 60Hz,
+		-1 = none; don't apply any AC power line filtering
+  -->
+  <LocalACPowerFrequency>0</LocalACPowerFrequency>
+  
+  <!-- User defined field settings. -->
+  <!-- The Sentinel Web Server needs to be restarted after changing the user defined fields. -->
+  <UserDefinedFields>
+    <PatientField1DisplayName>Nome do campo 1</PatientField1DisplayName>
+    <PatientField2DisplayName>Nome do campo 2</PatientField2DisplayName>
+    <PatientField3DisplayName>Nome do campo 3</PatientField3DisplayName>
+    <PatientField4DisplayName>Nome do campo 4</PatientField4DisplayName>
+    <TestField1DisplayName>Nome do campo 1</TestField1DisplayName>
+    <TestField2DisplayName>Nome do campo 2</TestField2DisplayName>
+    <TestField3DisplayName>Nome do campo 3</TestField3DisplayName>
+    <TestField4DisplayName>Nome do campo 4</TestField4DisplayName>
+  </UserDefinedFields>
+
+  <!-- Default setting for the pacemaker field. 
+       This can be set to one of the following values: UnknownIfFitted, NoneFitted, UnknownPacemaker
+  -->
+  <PacemakerDefault>UnknownIfFitted</PacemakerDefault>
+
+</CustomSettings>
+
