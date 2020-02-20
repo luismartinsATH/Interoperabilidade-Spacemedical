@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<DataPurgeConfiguration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <LogsFolder>C:\ProgramData\Del Mar Reynolds Medical\Sentinel\1.0\Logs</LogsFolder>
+
+  <DataPurgeRules>
+    <!--
+    <DataPurgeRule Name="Example">   This name appears in the logs for reference.
+
+      <Facilities>
+
+        List the ABBREVIATION for each facility to be purged
+		    If an entry for #ALL# exists, data from all facilities will be deleted
+		    At least one entry must be present.
+
+        <Facility>#ALL#</Facility>
+
+      </Facilities>
+
+      <Wards>
+
+        List the wards to be purged
+		    If an entry for #ALL# exists, data from all wards will be deleted
+		    At least one entry must be present.
+        
+        <Ward>#ALL#</Ward>
+
+      </Wards>
+
+      <DataCategories>
+
+        List the data categories to be purged
+		    Valid values are: 
+				"#ALL#", 
+				"HolterEcg", 
+				"HolterAnalysis", 
+				"StressEcg"
+
+        If an entry for #ALL# exists, data from all data categories will be deleted
+		    At least one entry must be present.
+
+        <DataCategory>#ALL#</DataCategory>
+        
+      </DataCategories>
+
+      The workflow state that may have data purged
+		        Workflow states map to test states as follows:
+		              Complete => Confirmed, ConfirmedAmended, Completed
+	  	            Incomplete => Data Aquired, Unconfirmed, Rejected
+	  	  	        Cancelled => Cancelled
+
+      <WorkflowState>Complete</WorkflowState>
+
+      The minimum age of any data to be purged (in days).
+
+		  The resulting date is checked against the test creation, recording start and clinical data creation.
+		  All 3 must be earlier than the resulting date, or the data is not deleted. 
+		  This is a required field.
+      
+      <MinimumAgeInDays>21</MinimumAgeInDays>
+
+      The maximum age of any test to be checked for data to purge.
+
+      Only the test creation date is checked. 
+		  The purpose of this field is to prevent excessive database processing.
+		  The default value is 365.
+	  
+      <MaximumAgeInDays>365</MaximumAgeInDays>
+
+      The folder into which any exported tests are placed as SNTL files
+      
+      <ExportFolder>C:\ArchiveFolder</ExportFolder>
+
+      What action will be taken for each test matching this rule
+      - ExportTestsToSntlFile
+      - DeleteRecordingsAndAnalyses
+      - NoActionTaken
+      Multiple actions can be taken by listing them with spaces between them.
+
+      <ActionsToBeTaken>DeleteRecordingsAndAnalyses ExportTestsToSntlFiles</ActionsToBeTaken>
+
+    </DataPurgeRule>
+    -->
+  </DataPurgeRules>
+</DataPurgeConfiguration>

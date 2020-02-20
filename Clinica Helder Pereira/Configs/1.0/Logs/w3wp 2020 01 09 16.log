@@ -1,0 +1,251 @@
+
+16:34:16.262 1dbc71b2f732ea119bf404d9f5ac0876 System.IO.FileNotFoundException: C:\Program Files (x86)\Del Mar Reynolds Medical\Report\ABP\spacelogo.jpg
+   em Spacelabs.Shared.ReportGenerator.Shapes.BlockShapeBase.drawImage(ICanvas canvas, RectangleD imageBounds, String imageName) em C:\TFROOT\Root\Main\Shared\Deliverables\Libraries\ReportGenerator\Shapes\BlockShapeBase.cs:line 276
+   em Spacelabs.Shared.ReportGenerator.Shapes.BlockShapeBase.drawBlock(ICanvas canvas, RectangleD bounds, RenderStatus status) em C:\TFROOT\Root\Main\Shared\Deliverables\Libraries\ReportGenerator\Shapes\BlockShapeBase.cs:line 200
+   em Spacelabs.Shared.ReportGenerator.Shapes.BlockShapeBase.Render(ICanvas canvas, RenderStatus status) em C:\TFROOT\Root\Main\Shared\Deliverables\Libraries\ReportGenerator\Shapes\BlockShapeBase.cs:line 137
+   em Spacelabs.Shared.ReportGenerator.Sections.PageRenderer.renderPageContent(ICanvas pageCanvas, IEnumerable`1 shapesToRender, RenderStatus status) em C:\TFROOT\Root\Main\Shared\Deliverables\Libraries\ReportGenerator\Sections\PageRenderer.cs:line 169
+   em Spacelabs.Shared.ReportGenerator.Sections.PageRenderer.RenderPage(ICanvas pageCanvas, Page page, RenderStatus status) em C:\TFROOT\Root\Main\Shared\Deliverables\Libraries\ReportGenerator\Sections\PageRenderer.cs:line 107
+   em Spacelabs.Shared.ReportGenerator.Sections.SectionRendererBase.RenderOrCountPagesInSection(ICanvas pageCanvas, Section section, RenderStatus status) em C:\TFROOT\Root\Main\Shared\Deliverables\Libraries\ReportGenerator\Sections\SectionRendererBase.cs:line 66
+   em Spacelabs.Shared.ReportGenerator.Sections.ReportRenderer.renderPagesInReport(ICanvas canvas, ReportFormat reportFormat, Int32 pageCount) em C:\TFROOT\Root\Main\Shared\Deliverables\Libraries\ReportGenerator\Sections\ReportRenderer.cs:line 190
+   em Spacelabs.Shared.ReportGenerator.Sections.ReportRenderer.Render(String pdfFilename) em C:\TFROOT\Root\Main\Shared\Deliverables\Libraries\ReportGenerator\Sections\ReportRenderer.cs:line 118
+   em Spacelabs.Shared.ReportGenerator.ReportCollator.Render(IReportDetails reportDetails, String reportFilename) em C:\TFROOT\Root\Main\Shared\Deliverables\Libraries\ReportGenerator\ReportCollator.cs:line 80
+   em Spacelabs.Abp.AbpReportGenerator.AbpReportGenerator.GeneratePdfReport(AbpReportRequestDetails reportDetails, AbpDataSet dataSourceSet, TestRecord test, String reportPdfFilename) em C:\TFROOT\Root\Main\ABP\Deliverables\Libraries\AbpReportGenerator\AbpReportGenerator.cs:line 108
+   em Spacelabs.Abp.AbpReportGenerator.AbpReportGenerator.GenerateAbpReportToFile(ReportRecord report, IAccelerometerDataCollection accelerometerData, AbpAnalyses analyses, IAbpAnalysisData reviewData, MorningBloodPressureSettings mbpSettings, Boolean isComfortAndChildModeApplicable, Boolean isChildModeEnabled, Int32 comfortModeMmHg, Signer signer, String formatFilename, String destinationPath, Boolean useHourlyAverages) em C:\TFROOT\Root\Main\ABP\Deliverables\Libraries\AbpReportGenerator\AbpReportGenerator.cs:line 152
+   em Spacelabs.Lomond.Server.Operations.BloodPressureOperations.GetVirtualAbpReport(ReportRecord report, String reportFolder, BloodPressureReadingSettings settings, OperationContext context) em C:\TFROOT\Root\Main\Lomond\Deliverables\Libraries\Server\Operations\BloodPressureOperations.cs:line 89
+   em Spacelabs.Lomond.Server.Operations.ReportOperations.GetReport(ReportRecord report, Boolean isPreviousEcg, String destinationFilePath, OperationContext context) em C:\TFROOT\Root\Main\Lomond\Deliverables\Libraries\Server\Operations\ReportOperations.cs:line 90
+   em Spacelabs.Lomond.WebPortal.Controllers.UiController.GetPdf(String reportKey, String sessionKey) em C:\TFROOT\Root\Main\Lomond\Deliverables\Applications\WebPortal\WebPortal\Controllers\UiController.cs:line 115
+WEB REQUEST
+   Url: http://localhost/Sentinel/UI/GetPdf?reportKey=b2659b784c914ffa87cf0fbcb497f389&sessionKey=1dbc71b2f732ea119bf404d9f5ac0876
+   UserAgent: Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko
+   Client IP Address: ::1
+   Client DNS Name: ::1
+   Ajax Request: False
+   Browser Javascript Version: 3.0
+   Browser Operating System: WinNT
+   Client Certificate: 
+WEB SESSION
+   Is New Session: False
+   Timeout (minutes): 1
+   Session ID: h4bn2krc2kydewnyttz3y1i3
+   Culture (from LCID): pt-PT
+
+16:34:21.011 1dbc71b2f732ea119bf404d9f5ac0876 System.IndexOutOfRangeException: Índice fora dos limites da matriz.
+   em Spacelabs.Lomond.Server.Presentation.CommandRequestFactories.DataGridCommandRequestFactory.prepareCellDataInGridColumns(IWebServer webServer, ImmutableCollection`1 columns, ImmutableCollection`1 rows) em C:\TFROOT\Root\Main\Lomond\Deliverables\Libraries\Server\Presentation\CommandRequestFactories\DataGridCommandRequestFactory.cs:line 184
+   em Spacelabs.Lomond.Server.Presentation.CommandRequestFactories.DataGridCommandRequestFactory.GetNewPageOfResultsPayload(IWebServer webServer, String dataGridId, PageOfSearchResults pageOfSearchResults) em C:\TFROOT\Root\Main\Lomond\Deliverables\Libraries\Server\Presentation\CommandRequestFactories\DataGridCommandRequestFactory.cs:line 31
+   em Spacelabs.Lomond.Server.Presentation.Commands.DataGridCommands.DataGridSearchCommand.ExecuteSearch(IWebServer webServer, DataGridSearchRequestCriteria dataGridSearchRequestCriteria) em C:\TFROOT\Root\Main\Lomond\Deliverables\Libraries\Server\Presentation\Commands\DataGridCommands\DataGridSearchCommand.cs:line 105
+   em Spacelabs.Lomond.Server.Presentation.Commands.DataGridCommands.DataGridSearchCommand.CreateSearchCommandResult(IWebServer webServer, DataGridSearchRequestCriteria dataGridSearchRequestCriteria) em C:\TFROOT\Root\Main\Lomond\Deliverables\Libraries\Server\Presentation\Commands\DataGridCommands\DataGridSearchCommand.cs:line 77
+   em Spacelabs.Lomond.Server.Presentation.Commands.DataGridCommands.DataGridCurrentPageOfResultsCommand.OnExecute(ICommandContext commandContext) em C:\TFROOT\Root\Main\Lomond\Deliverables\Libraries\Server\Presentation\Commands\DataGridCommands\DataGridCurrentPageOfResultsCommand.cs:line 44
+   em Spacelabs.Lomond.Server.Presentation.Commands.SynchronousCommandBase.Execute(IWebServer webServer) em C:\TFROOT\Root\Main\Lomond\Deliverables\Libraries\Server\Presentation\Commands\SynchronousCommandBase.cs:line 52
+   em Spacelabs.Lomond.Server.Presentation.WebServerExtensions.ExecuteCommands(IWebServer webServer, IEnumerable`1 commands) em C:\TFROOT\Root\Main\Lomond\Deliverables\Libraries\Server\Presentation\IWebServer.cs:line 154
+   em Spacelabs.Lomond.Server.Presentation.Commands.SwmEventExecutor.HandleEventWithoutConfirmation(IWebServer webServer, SwmEvent swmEvent) em C:\TFROOT\Root\Main\Lomond\Deliverables\Libraries\Server\Presentation\Commands\SwmEventExecutor.cs:line 18
+   em Spacelabs.Lomond.WebPortal.Controllers.SwmController.Index() em C:\TFROOT\Root\Main\Lomond\Deliverables\Applications\WebPortal\WebPortal\Controllers\SwmController.cs:line 70
+WEB REQUEST
+   Url: http://localhost/Sentinel/UI/Index?Page=AuditTrail/SearchDiagnosticAuditTrail
+   UserAgent: Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko
+   Client IP Address: ::1
+   Client DNS Name: ::1
+   Ajax Request: False
+   Browser Javascript Version: 3.0
+   Browser Operating System: WinNT
+   Client Certificate: 
+WEB SESSION
+   Is New Session: False
+   Timeout (minutes): 1
+   Session ID: h4bn2krc2kydewnyttz3y1i3
+   Culture (from LCID): pt-PT
+
+16:34:22.605 1dbc71b2f732ea119bf404d9f5ac0876 System.IndexOutOfRangeException: Índice fora dos limites da matriz.
+   em Spacelabs.Lomond.Server.Presentation.CommandRequestFactories.DataGridCommandRequestFactory.prepareCellDataInGridColumns(IWebServer webServer, ImmutableCollection`1 columns, ImmutableCollection`1 rows) em C:\TFROOT\Root\Main\Lomond\Deliverables\Libraries\Server\Presentation\CommandRequestFactories\DataGridCommandRequestFactory.cs:line 184
+   em Spacelabs.Lomond.Server.Presentation.CommandRequestFactories.DataGridCommandRequestFactory.GetNewPageOfResultsPayload(IWebServer webServer, String dataGridId, PageOfSearchResults pageOfSearchResults) em C:\TFROOT\Root\Main\Lomond\Deliverables\Libraries\Server\Presentation\CommandRequestFactories\DataGridCommandRequestFactory.cs:line 31
+   em Spacelabs.Lomond.Server.Presentation.Commands.DataGridCommands.DataGridSearchCommand.ExecuteSearch(IWebServer webServer, DataGridSearchRequestCriteria dataGridSearchRequestCriteria) em C:\TFROOT\Root\Main\Lomond\Deliverables\Libraries\Server\Presentation\Commands\DataGridCommands\DataGridSearchCommand.cs:line 105
+   em Spacelabs.Lomond.Server.Presentation.Commands.DataGridCommands.DataGridSearchCommand.CreateSearchCommandResult(IWebServer webServer, DataGridSearchRequestCriteria dataGridSearchRequestCriteria) em C:\TFROOT\Root\Main\Lomond\Deliverables\Libraries\Server\Presentation\Commands\DataGridCommands\DataGridSearchCommand.cs:line 77
+   em Spacelabs.Lomond.Server.Presentation.Commands.DataGridCommands.DataGridCurrentPageOfResultsCommand.OnExecute(ICommandContext commandContext) em C:\TFROOT\Root\Main\Lomond\Deliverables\Libraries\Server\Presentation\Commands\DataGridCommands\DataGridCurrentPageOfResultsCommand.cs:line 44
+   em Spacelabs.Lomond.Server.Presentation.Commands.SynchronousCommandBase.Execute(IWebServer webServer) em C:\TFROOT\Root\Main\Lomond\Deliverables\Libraries\Server\Presentation\Commands\SynchronousCommandBase.cs:line 52
+   em Spacelabs.Lomond.Server.Presentation.WebServerExtensions.ExecuteCommands(IWebServer webServer, IEnumerable`1 commands) em C:\TFROOT\Root\Main\Lomond\Deliverables\Libraries\Server\Presentation\IWebServer.cs:line 154
+   em Spacelabs.Lomond.Server.Presentation.Commands.SwmEventExecutor.HandleEventWithoutConfirmation(IWebServer webServer, SwmEvent swmEvent) em C:\TFROOT\Root\Main\Lomond\Deliverables\Libraries\Server\Presentation\Commands\SwmEventExecutor.cs:line 18
+   em Spacelabs.Lomond.WebPortal.Controllers.SwmController.Index() em C:\TFROOT\Root\Main\Lomond\Deliverables\Applications\WebPortal\WebPortal\Controllers\SwmController.cs:line 70
+WEB REQUEST
+   Url: http://localhost/Sentinel/UI/Index?Page=AuditTrail/SearchDiagnosticAuditTrail
+   UserAgent: Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko
+   Client IP Address: ::1
+   Client DNS Name: ::1
+   Ajax Request: False
+   Browser Javascript Version: 3.0
+   Browser Operating System: WinNT
+   Client Certificate: 
+WEB SESSION
+   Is New Session: False
+   Timeout (minutes): 1
+   Session ID: h4bn2krc2kydewnyttz3y1i3
+   Culture (from LCID): pt-PT
+
+16:34:23.136 1dbc71b2f732ea119bf404d9f5ac0876 System.IndexOutOfRangeException: Índice fora dos limites da matriz.
+   em Spacelabs.Lomond.Server.Presentation.CommandRequestFactories.DataGridCommandRequestFactory.prepareCellDataInGridColumns(IWebServer webServer, ImmutableCollection`1 columns, ImmutableCollection`1 rows) em C:\TFROOT\Root\Main\Lomond\Deliverables\Libraries\Server\Presentation\CommandRequestFactories\DataGridCommandRequestFactory.cs:line 184
+   em Spacelabs.Lomond.Server.Presentation.CommandRequestFactories.DataGridCommandRequestFactory.GetNewPageOfResultsPayload(IWebServer webServer, String dataGridId, PageOfSearchResults pageOfSearchResults) em C:\TFROOT\Root\Main\Lomond\Deliverables\Libraries\Server\Presentation\CommandRequestFactories\DataGridCommandRequestFactory.cs:line 31
+   em Spacelabs.Lomond.Server.Presentation.Commands.DataGridCommands.DataGridSearchCommand.ExecuteSearch(IWebServer webServer, DataGridSearchRequestCriteria dataGridSearchRequestCriteria) em C:\TFROOT\Root\Main\Lomond\Deliverables\Libraries\Server\Presentation\Commands\DataGridCommands\DataGridSearchCommand.cs:line 105
+   em Spacelabs.Lomond.Server.Presentation.Commands.DataGridCommands.DataGridSearchCommand.CreateSearchCommandResult(IWebServer webServer, DataGridSearchRequestCriteria dataGridSearchRequestCriteria) em C:\TFROOT\Root\Main\Lomond\Deliverables\Libraries\Server\Presentation\Commands\DataGridCommands\DataGridSearchCommand.cs:line 77
+   em Spacelabs.Lomond.Server.Presentation.Commands.DataGridCommands.DataGridCurrentPageOfResultsCommand.OnExecute(ICommandContext commandContext) em C:\TFROOT\Root\Main\Lomond\Deliverables\Libraries\Server\Presentation\Commands\DataGridCommands\DataGridCurrentPageOfResultsCommand.cs:line 44
+   em Spacelabs.Lomond.Server.Presentation.Commands.SynchronousCommandBase.Execute(IWebServer webServer) em C:\TFROOT\Root\Main\Lomond\Deliverables\Libraries\Server\Presentation\Commands\SynchronousCommandBase.cs:line 52
+   em Spacelabs.Lomond.Server.Presentation.WebServerExtensions.ExecuteCommands(IWebServer webServer, IEnumerable`1 commands) em C:\TFROOT\Root\Main\Lomond\Deliverables\Libraries\Server\Presentation\IWebServer.cs:line 154
+   em Spacelabs.Lomond.Server.Presentation.Commands.SwmEventExecutor.HandleEventWithoutConfirmation(IWebServer webServer, SwmEvent swmEvent) em C:\TFROOT\Root\Main\Lomond\Deliverables\Libraries\Server\Presentation\Commands\SwmEventExecutor.cs:line 18
+   em Spacelabs.Lomond.WebPortal.Controllers.SwmController.Index() em C:\TFROOT\Root\Main\Lomond\Deliverables\Applications\WebPortal\WebPortal\Controllers\SwmController.cs:line 70
+WEB REQUEST
+   Url: http://localhost/Sentinel/UI/Index?Page=AuditTrail/SearchDiagnosticAuditTrail
+   UserAgent: Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko
+   Client IP Address: ::1
+   Client DNS Name: ::1
+   Ajax Request: False
+   Browser Javascript Version: 3.0
+   Browser Operating System: WinNT
+   Client Certificate: 
+WEB SESSION
+   Is New Session: False
+   Timeout (minutes): 1
+   Session ID: h4bn2krc2kydewnyttz3y1i3
+   Culture (from LCID): pt-PT
+
+16:34:23.355 1dbc71b2f732ea119bf404d9f5ac0876 System.IndexOutOfRangeException: Índice fora dos limites da matriz.
+   em Spacelabs.Lomond.Server.Presentation.CommandRequestFactories.DataGridCommandRequestFactory.prepareCellDataInGridColumns(IWebServer webServer, ImmutableCollection`1 columns, ImmutableCollection`1 rows) em C:\TFROOT\Root\Main\Lomond\Deliverables\Libraries\Server\Presentation\CommandRequestFactories\DataGridCommandRequestFactory.cs:line 184
+   em Spacelabs.Lomond.Server.Presentation.CommandRequestFactories.DataGridCommandRequestFactory.GetNewPageOfResultsPayload(IWebServer webServer, String dataGridId, PageOfSearchResults pageOfSearchResults) em C:\TFROOT\Root\Main\Lomond\Deliverables\Libraries\Server\Presentation\CommandRequestFactories\DataGridCommandRequestFactory.cs:line 31
+   em Spacelabs.Lomond.Server.Presentation.Commands.DataGridCommands.DataGridSearchCommand.ExecuteSearch(IWebServer webServer, DataGridSearchRequestCriteria dataGridSearchRequestCriteria) em C:\TFROOT\Root\Main\Lomond\Deliverables\Libraries\Server\Presentation\Commands\DataGridCommands\DataGridSearchCommand.cs:line 105
+   em Spacelabs.Lomond.Server.Presentation.Commands.DataGridCommands.DataGridSearchCommand.CreateSearchCommandResult(IWebServer webServer, DataGridSearchRequestCriteria dataGridSearchRequestCriteria) em C:\TFROOT\Root\Main\Lomond\Deliverables\Libraries\Server\Presentation\Commands\DataGridCommands\DataGridSearchCommand.cs:line 77
+   em Spacelabs.Lomond.Server.Presentation.Commands.DataGridCommands.DataGridCurrentPageOfResultsCommand.OnExecute(ICommandContext commandContext) em C:\TFROOT\Root\Main\Lomond\Deliverables\Libraries\Server\Presentation\Commands\DataGridCommands\DataGridCurrentPageOfResultsCommand.cs:line 44
+   em Spacelabs.Lomond.Server.Presentation.Commands.SynchronousCommandBase.Execute(IWebServer webServer) em C:\TFROOT\Root\Main\Lomond\Deliverables\Libraries\Server\Presentation\Commands\SynchronousCommandBase.cs:line 52
+   em Spacelabs.Lomond.Server.Presentation.WebServerExtensions.ExecuteCommands(IWebServer webServer, IEnumerable`1 commands) em C:\TFROOT\Root\Main\Lomond\Deliverables\Libraries\Server\Presentation\IWebServer.cs:line 154
+   em Spacelabs.Lomond.Server.Presentation.Commands.SwmEventExecutor.HandleEventWithoutConfirmation(IWebServer webServer, SwmEvent swmEvent) em C:\TFROOT\Root\Main\Lomond\Deliverables\Libraries\Server\Presentation\Commands\SwmEventExecutor.cs:line 18
+   em Spacelabs.Lomond.WebPortal.Controllers.SwmController.Index() em C:\TFROOT\Root\Main\Lomond\Deliverables\Applications\WebPortal\WebPortal\Controllers\SwmController.cs:line 70
+WEB REQUEST
+   Url: http://localhost/Sentinel/UI/Index?Page=AuditTrail/SearchDiagnosticAuditTrail
+   UserAgent: Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko
+   Client IP Address: ::1
+   Client DNS Name: ::1
+   Ajax Request: False
+   Browser Javascript Version: 3.0
+   Browser Operating System: WinNT
+   Client Certificate: 
+WEB SESSION
+   Is New Session: False
+   Timeout (minutes): 1
+   Session ID: h4bn2krc2kydewnyttz3y1i3
+   Culture (from LCID): pt-PT
+
+16:34:23.511 1dbc71b2f732ea119bf404d9f5ac0876 System.IndexOutOfRangeException: Índice fora dos limites da matriz.
+   em Spacelabs.Lomond.Server.Presentation.CommandRequestFactories.DataGridCommandRequestFactory.prepareCellDataInGridColumns(IWebServer webServer, ImmutableCollection`1 columns, ImmutableCollection`1 rows) em C:\TFROOT\Root\Main\Lomond\Deliverables\Libraries\Server\Presentation\CommandRequestFactories\DataGridCommandRequestFactory.cs:line 184
+   em Spacelabs.Lomond.Server.Presentation.CommandRequestFactories.DataGridCommandRequestFactory.GetNewPageOfResultsPayload(IWebServer webServer, String dataGridId, PageOfSearchResults pageOfSearchResults) em C:\TFROOT\Root\Main\Lomond\Deliverables\Libraries\Server\Presentation\CommandRequestFactories\DataGridCommandRequestFactory.cs:line 31
+   em Spacelabs.Lomond.Server.Presentation.Commands.DataGridCommands.DataGridSearchCommand.ExecuteSearch(IWebServer webServer, DataGridSearchRequestCriteria dataGridSearchRequestCriteria) em C:\TFROOT\Root\Main\Lomond\Deliverables\Libraries\Server\Presentation\Commands\DataGridCommands\DataGridSearchCommand.cs:line 105
+   em Spacelabs.Lomond.Server.Presentation.Commands.DataGridCommands.DataGridSearchCommand.CreateSearchCommandResult(IWebServer webServer, DataGridSearchRequestCriteria dataGridSearchRequestCriteria) em C:\TFROOT\Root\Main\Lomond\Deliverables\Libraries\Server\Presentation\Commands\DataGridCommands\DataGridSearchCommand.cs:line 77
+   em Spacelabs.Lomond.Server.Presentation.Commands.DataGridCommands.DataGridCurrentPageOfResultsCommand.OnExecute(ICommandContext commandContext) em C:\TFROOT\Root\Main\Lomond\Deliverables\Libraries\Server\Presentation\Commands\DataGridCommands\DataGridCurrentPageOfResultsCommand.cs:line 44
+   em Spacelabs.Lomond.Server.Presentation.Commands.SynchronousCommandBase.Execute(IWebServer webServer) em C:\TFROOT\Root\Main\Lomond\Deliverables\Libraries\Server\Presentation\Commands\SynchronousCommandBase.cs:line 52
+   em Spacelabs.Lomond.Server.Presentation.WebServerExtensions.ExecuteCommands(IWebServer webServer, IEnumerable`1 commands) em C:\TFROOT\Root\Main\Lomond\Deliverables\Libraries\Server\Presentation\IWebServer.cs:line 154
+   em Spacelabs.Lomond.Server.Presentation.Commands.SwmEventExecutor.HandleEventWithoutConfirmation(IWebServer webServer, SwmEvent swmEvent) em C:\TFROOT\Root\Main\Lomond\Deliverables\Libraries\Server\Presentation\Commands\SwmEventExecutor.cs:line 18
+   em Spacelabs.Lomond.WebPortal.Controllers.SwmController.Index() em C:\TFROOT\Root\Main\Lomond\Deliverables\Applications\WebPortal\WebPortal\Controllers\SwmController.cs:line 70
+WEB REQUEST
+   Url: http://localhost/Sentinel/UI/Index?Page=AuditTrail/SearchDiagnosticAuditTrail
+   UserAgent: Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko
+   Client IP Address: ::1
+   Client DNS Name: ::1
+   Ajax Request: False
+   Browser Javascript Version: 3.0
+   Browser Operating System: WinNT
+   Client Certificate: 
+WEB SESSION
+   Is New Session: False
+   Timeout (minutes): 1
+   Session ID: h4bn2krc2kydewnyttz3y1i3
+   Culture (from LCID): pt-PT
+
+16:35:34.705  System.NullReferenceException: A referência de objecto não foi definida como uma instância de um objecto.
+   em Spacelabs.Lomond.WebPortal.Operations.WebServer.get_LoginInfo() em C:\TFROOT\Root\Main\Lomond\Deliverables\Applications\WebPortal\WebPortal\Operations\WebServer.cs:line 425
+   em Spacelabs.Lomond.WebPortal.Operations.WebServer.CreateWebServerForWeb(HttpRequestBase request, HttpSessionStateBase session, HttpContextBase context, SessionType sessionType) em C:\TFROOT\Root\Main\Lomond\Deliverables\Applications\WebPortal\WebPortal\Operations\WebServer.cs:line 297
+   em Spacelabs.Lomond.WebPortal.Controllers.SwmController.Index() em C:\TFROOT\Root\Main\Lomond\Deliverables\Applications\WebPortal\WebPortal\Controllers\SwmController.cs:line 60
+WEB REQUEST
+   Url: http://localhost/Sentinel/UI/Index?Page=Home
+   UserAgent: Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko
+   Client IP Address: ::1
+   Client DNS Name: ::1
+   Ajax Request: False
+   Browser Javascript Version: 3.0
+   Browser Operating System: WinNT
+   Client Certificate: 
+WEB SESSION
+   Is New Session: True
+   Timeout (minutes): 1
+   Session ID: h4bn2krc2kydewnyttz3y1i3
+   Culture (from LCID): pt-PT
+
+16:35:35.783  System.NullReferenceException: A referência de objecto não foi definida como uma instância de um objecto.
+   em Spacelabs.Lomond.WebPortal.Operations.WebServer.get_LoginInfo() em C:\TFROOT\Root\Main\Lomond\Deliverables\Applications\WebPortal\WebPortal\Operations\WebServer.cs:line 425
+   em Spacelabs.Lomond.WebPortal.Operations.WebServer.CreateWebServerForWeb(HttpRequestBase request, HttpSessionStateBase session, HttpContextBase context, SessionType sessionType) em C:\TFROOT\Root\Main\Lomond\Deliverables\Applications\WebPortal\WebPortal\Operations\WebServer.cs:line 297
+   em Spacelabs.Lomond.WebPortal.Controllers.SwmController.Index() em C:\TFROOT\Root\Main\Lomond\Deliverables\Applications\WebPortal\WebPortal\Controllers\SwmController.cs:line 60
+WEB REQUEST
+   Url: http://localhost/Sentinel/UI/Index?Page=Home
+   UserAgent: Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko
+   Client IP Address: ::1
+   Client DNS Name: ::1
+   Ajax Request: False
+   Browser Javascript Version: 3.0
+   Browser Operating System: WinNT
+   Client Certificate: 
+WEB SESSION
+   Is New Session: False
+   Timeout (minutes): 1
+   Session ID: h4bn2krc2kydewnyttz3y1i3
+   Culture (from LCID): pt-PT
+
+16:35:47.484 b7e4a50efe32ea119bf404d9f5ac0876 System.IndexOutOfRangeException: Índice fora dos limites da matriz.
+   em Spacelabs.Lomond.Server.Presentation.CommandRequestFactories.DataGridCommandRequestFactory.prepareCellDataInGridColumns(IWebServer webServer, ImmutableCollection`1 columns, ImmutableCollection`1 rows) em C:\TFROOT\Root\Main\Lomond\Deliverables\Libraries\Server\Presentation\CommandRequestFactories\DataGridCommandRequestFactory.cs:line 184
+   em Spacelabs.Lomond.Server.Presentation.CommandRequestFactories.DataGridCommandRequestFactory.GetNewPageOfResultsPayload(IWebServer webServer, String dataGridId, PageOfSearchResults pageOfSearchResults) em C:\TFROOT\Root\Main\Lomond\Deliverables\Libraries\Server\Presentation\CommandRequestFactories\DataGridCommandRequestFactory.cs:line 31
+   em Spacelabs.Lomond.Server.Presentation.Commands.DataGridCommands.DataGridSearchCommand.ExecuteSearch(IWebServer webServer, DataGridSearchRequestCriteria dataGridSearchRequestCriteria) em C:\TFROOT\Root\Main\Lomond\Deliverables\Libraries\Server\Presentation\Commands\DataGridCommands\DataGridSearchCommand.cs:line 105
+   em Spacelabs.Lomond.Server.Presentation.Commands.DataGridCommands.DataGridSearchCommand.CreateSearchCommandResult(IWebServer webServer, DataGridSearchRequestCriteria dataGridSearchRequestCriteria) em C:\TFROOT\Root\Main\Lomond\Deliverables\Libraries\Server\Presentation\Commands\DataGridCommands\DataGridSearchCommand.cs:line 77
+   em Spacelabs.Lomond.Server.Presentation.Commands.DataGridCommands.DataGridCurrentPageOfResultsCommand.OnExecute(ICommandContext commandContext) em C:\TFROOT\Root\Main\Lomond\Deliverables\Libraries\Server\Presentation\Commands\DataGridCommands\DataGridCurrentPageOfResultsCommand.cs:line 44
+   em Spacelabs.Lomond.Server.Presentation.Commands.SynchronousCommandBase.Execute(IWebServer webServer) em C:\TFROOT\Root\Main\Lomond\Deliverables\Libraries\Server\Presentation\Commands\SynchronousCommandBase.cs:line 52
+   em Spacelabs.Lomond.Server.Presentation.WebServerExtensions.ExecuteCommands(IWebServer webServer, IEnumerable`1 commands) em C:\TFROOT\Root\Main\Lomond\Deliverables\Libraries\Server\Presentation\IWebServer.cs:line 154
+   em Spacelabs.Lomond.Server.Presentation.Commands.SwmEventExecutor.HandleEventWithoutConfirmation(IWebServer webServer, SwmEvent swmEvent) em C:\TFROOT\Root\Main\Lomond\Deliverables\Libraries\Server\Presentation\Commands\SwmEventExecutor.cs:line 18
+   em Spacelabs.Lomond.WebPortal.Controllers.SwmController.Index() em C:\TFROOT\Root\Main\Lomond\Deliverables\Applications\WebPortal\WebPortal\Controllers\SwmController.cs:line 70
+WEB REQUEST
+   Url: http://localhost/Sentinel/UI/Index?Page=AuditTrail/SearchDiagnosticAuditTrail
+   UserAgent: Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko
+   Client IP Address: ::1
+   Client DNS Name: ::1
+   Ajax Request: False
+   Browser Javascript Version: 3.0
+   Browser Operating System: WinNT
+   Client Certificate: 
+WEB SESSION
+   Is New Session: False
+   Timeout (minutes): 1
+   Session ID: h4bn2krc2kydewnyttz3y1i3
+   Culture (from LCID): pt-PT
+
+16:35:52.765 b7e4a50efe32ea119bf404d9f5ac0876 System.IO.FileNotFoundException: C:\Program Files (x86)\Del Mar Reynolds Medical\Report\ABP\spacelogo.jpg
+   em Spacelabs.Shared.ReportGenerator.Shapes.BlockShapeBase.drawImage(ICanvas canvas, RectangleD imageBounds, String imageName) em C:\TFROOT\Root\Main\Shared\Deliverables\Libraries\ReportGenerator\Shapes\BlockShapeBase.cs:line 276
+   em Spacelabs.Shared.ReportGenerator.Shapes.BlockShapeBase.drawBlock(ICanvas canvas, RectangleD bounds, RenderStatus status) em C:\TFROOT\Root\Main\Shared\Deliverables\Libraries\ReportGenerator\Shapes\BlockShapeBase.cs:line 200
+   em Spacelabs.Shared.ReportGenerator.Shapes.BlockShapeBase.Render(ICanvas canvas, RenderStatus status) em C:\TFROOT\Root\Main\Shared\Deliverables\Libraries\ReportGenerator\Shapes\BlockShapeBase.cs:line 137
+   em Spacelabs.Shared.ReportGenerator.Sections.PageRenderer.renderPageContent(ICanvas pageCanvas, IEnumerable`1 shapesToRender, RenderStatus status) em C:\TFROOT\Root\Main\Shared\Deliverables\Libraries\ReportGenerator\Sections\PageRenderer.cs:line 169
+   em Spacelabs.Shared.ReportGenerator.Sections.PageRenderer.RenderPage(ICanvas pageCanvas, Page page, RenderStatus status) em C:\TFROOT\Root\Main\Shared\Deliverables\Libraries\ReportGenerator\Sections\PageRenderer.cs:line 107
+   em Spacelabs.Shared.ReportGenerator.Sections.SectionRendererBase.RenderOrCountPagesInSection(ICanvas pageCanvas, Section section, RenderStatus status) em C:\TFROOT\Root\Main\Shared\Deliverables\Libraries\ReportGenerator\Sections\SectionRendererBase.cs:line 66
+   em Spacelabs.Shared.ReportGenerator.Sections.ReportRenderer.renderPagesInReport(ICanvas canvas, ReportFormat reportFormat, Int32 pageCount) em C:\TFROOT\Root\Main\Shared\Deliverables\Libraries\ReportGenerator\Sections\ReportRenderer.cs:line 190
+   em Spacelabs.Shared.ReportGenerator.Sections.ReportRenderer.Render(String pdfFilename) em C:\TFROOT\Root\Main\Shared\Deliverables\Libraries\ReportGenerator\Sections\ReportRenderer.cs:line 118
+   em Spacelabs.Shared.ReportGenerator.ReportCollator.Render(IReportDetails reportDetails, String reportFilename) em C:\TFROOT\Root\Main\Shared\Deliverables\Libraries\ReportGenerator\ReportCollator.cs:line 80
+   em Spacelabs.Abp.AbpReportGenerator.AbpReportGenerator.GeneratePdfReport(AbpReportRequestDetails reportDetails, AbpDataSet dataSourceSet, TestRecord test, String reportPdfFilename) em C:\TFROOT\Root\Main\ABP\Deliverables\Libraries\AbpReportGenerator\AbpReportGenerator.cs:line 108
+   em Spacelabs.Abp.AbpReportGenerator.AbpReportGenerator.GenerateAbpReportToFile(ReportRecord report, IAccelerometerDataCollection accelerometerData, AbpAnalyses analyses, IAbpAnalysisData reviewData, MorningBloodPressureSettings mbpSettings, Boolean isComfortAndChildModeApplicable, Boolean isChildModeEnabled, Int32 comfortModeMmHg, Signer signer, String formatFilename, String destinationPath, Boolean useHourlyAverages) em C:\TFROOT\Root\Main\ABP\Deliverables\Libraries\AbpReportGenerator\AbpReportGenerator.cs:line 152
+   em Spacelabs.Lomond.Server.Operations.BloodPressureOperations.GetVirtualAbpReport(ReportRecord report, String reportFolder, BloodPressureReadingSettings settings, OperationContext context) em C:\TFROOT\Root\Main\Lomond\Deliverables\Libraries\Server\Operations\BloodPressureOperations.cs:line 89
+   em Spacelabs.Lomond.Server.Operations.ReportOperations.GetReport(ReportRecord report, Boolean isPreviousEcg, String destinationFilePath, OperationContext context) em C:\TFROOT\Root\Main\Lomond\Deliverables\Libraries\Server\Operations\ReportOperations.cs:line 90
+   em Spacelabs.Lomond.WebPortal.Controllers.UiController.GetPdf(String reportKey, String sessionKey) em C:\TFROOT\Root\Main\Lomond\Deliverables\Applications\WebPortal\WebPortal\Controllers\UiController.cs:line 115
+WEB REQUEST
+   Url: http://localhost/Sentinel/UI/GetPdf?reportKey=b2659b784c914ffa87cf0fbcb497f389&sessionKey=b7e4a50efe32ea119bf404d9f5ac0876
+   UserAgent: Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko
+   Client IP Address: ::1
+   Client DNS Name: ::1
+   Ajax Request: False
+   Browser Javascript Version: 3.0
+   Browser Operating System: WinNT
+   Client Certificate: 
+WEB SESSION
+   Is New Session: False
+   Timeout (minutes): 1
+   Session ID: h4bn2krc2kydewnyttz3y1i3
+   Culture (from LCID): pt-PT
+
+16:42:42.002  Application shutting down
+16:45:34.958  Application starting

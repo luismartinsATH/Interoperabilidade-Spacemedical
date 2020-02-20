@@ -1,0 +1,84 @@
+﻿<?xml version="1.0"?>
+<ExportReportData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <PrinterPath>\\PRINTSERVER\Printer</PrinterPath>
+  <!--
+    DateFormat examples:
+    dd MMM yyyy HH:mm    -> 14 Jan 2007 15:30
+    d/M/yy h:mm tt       -> 14/1/07 3:30 PM
+    MM/dd/yyy            -> 01/14/2007  
+    MMMM d, yyyy hh:mm t -> January 14, 2007 03:30 P  
+  -->
+  <DateFormat>dd MMM yyyy HH:mm</DateFormat>
+  <!--
+   If DocumentType is empty it will not be displayed in the header text
+  -->
+  <DocumentType>ECGHLT</DocumentType>
+  <!--
+    Valid TableName/ColumnName combinations are:
+    
+    Patient/PatientNumber
+    Patient/FamilyName
+    Report/CreationDate
+    Test/StartDate
+    Test/RecordingStartDateTime
+    Report/Status
+    StaffMember/Pager
+    StaffMember/StaffNumber
+  -->
+  <IndexItem>
+    <Name>MCNO:</Name>
+    <Default>Unknown</Default>
+    <TableName>Patient</TableName>
+    <ColumnName>PatientNumber</ColumnName>
+  </IndexItem>
+  <IndexItem>
+    <Name>LName:</Name>
+    <Default>Unknown</Default>
+    <TableName>Patient</TableName>
+    <ColumnName>FamilyName</ColumnName>
+  </IndexItem>
+  <IndexItem>
+    <Name>ProcDT:</Name>
+    <Default>Unknown</Default>
+    <TableName>Report</TableName>
+    <ColumnName>CreationDate</ColumnName>
+  </IndexItem>
+  <IndexItem>
+    <Name>EncDT:</Name>
+    <Default>Unknown</Default>
+    <TableName>Test</TableName>
+    <ColumnName>RecordingStartDateTime</ColumnName>
+  </IndexItem>
+  <IndexItem>
+    <Name>Status:</Name>
+    <Default>Unknown</Default>
+    <TableName>Report</TableName>
+    <ColumnName>Status</ColumnName>
+  </IndexItem>
+  <IndexItem>
+    <Name>Pager:</Name>
+    <Default>Unknown</Default>
+    <TableName>StaffMember</TableName>
+    <ColumnName>Pager</ColumnName>
+  </IndexItem>
+  <!--
+    No reports will be sent via the ICE COLD interface if the test to which they
+    belong is associated with a facility named in an ExcludeFacility element.
+    
+    More than one facility can be excluded.
+  -->
+  <ExcludeFacility>No-Report Clinic</ExcludeFacility>
+
+  <ExportAllReportTypes>true</ExportAllReportTypes>
+  <!-- 
+    To export particular report types, list the Sentinel identifier for each report type
+    in a <ReportType/> element.
+  -->
+  <!-- e.g. Impresario short report -->
+  <ReportType>4655c5dffd6541d795ca5ea39534495b</ReportType>
+  <!-- 
+    Set <IncludeSignatures/> to "true" to print the names of report confirmers on the exported reports.
+    In some cases, this requires appending a separate page.
+  -->
+  <IncludeSignatures>true</IncludeSignatures>
+</ExportReportData>
