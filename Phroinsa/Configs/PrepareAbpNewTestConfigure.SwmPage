@@ -109,7 +109,15 @@
                   <Option Value="Unknown" DisplayName="#GenderUnknown#"/>
                 </Options>
               </DropDownList>
-			  <TextBox Id="Patient_Ethnicity" FieldSettings="ABP_PFT_Patient_Ethnicity"/>
+			  <DropDownList Id="Patient_Ethnicity" FieldSettings="ABP_PFT_Patient_Ethnicity">
+				<Options>
+                  <Option Value="Caucásico" DisplayName="Caucásico"/>
+                  <Option Value="Afro-Americano" DisplayName="Afro-Americano"/>
+                  <Option Value="Oriental" DisplayName="Oriental"/>
+				  <Option Value="Hispánico" DisplayName="Hispánico"/>
+				  <Option Value="Otra raza" DisplayName="Otra raza"/>
+                </Options>
+			  </DropDownList>
               <TextBox Id="Patient_BirthDate" DataType="DateOnly" FieldSettings="ABP_PFT_Patient_BirthDate"/>
             </DataEntry>
           </Content>
