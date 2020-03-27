@@ -27,11 +27,15 @@ where
 test.RecorderSerial='1394522'
 and Test.FacilityKey is Null
 
-
-
-
 --localização Setubal
 update Test set FacilityKey='{875277A0-988D-477C-A557-E8E2C179DBC9}' , DownloadFacilityKey='{875277A0-988D-477C-A557-E8E2C179DBC9}'
 where 
 test.RecorderSerial='5002463'
 and Test.FacilityKey is Null
+
+--localização Coimbra
+update Test set FacilityKey='{48A52DB5-0A89-4448-B5D3-98E43F6A1095}' , DownloadFacilityKey='{48A52DB5-0A89-4448-B5D3-98E43F6A1095}'
+where 
+test.RecorderSerial='123456789'
+and Test.FacilityKey is Null
+

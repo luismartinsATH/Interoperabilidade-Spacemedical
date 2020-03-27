@@ -13,13 +13,13 @@
       <Patient>
         <PatientID>
 		  <Organisation>  
-			<xsl:call-template name="ExtractORG"/>
+  			<xsl:call-template name="ExtractORG"/>
 		  </Organisation>
-          <PatientNumber>
+      <PatientNumber>
             <xsl:call-template name="ExtractPatientID"/>
-          </PatientNumber>
-          <PatientNumber2></PatientNumber2>
-        </PatientID>
+      </PatientNumber>
+      <PatientNumber2></PatientNumber2>
+      </PatientID>
         <GivenName>
 <!--           <xsl:call-template name="ExtractPatientGivenName"/>-->        
 		</GivenName>
