@@ -958,21 +958,21 @@ return;</undeployScript>
                 </lastModified>
                 <contextSet>
                   <delegate>
+                    <contextType>GLOBAL_POSTPROCESSOR</contextType>
+                    <contextType>CHANNEL_BATCH</contextType>
+                    <contextType>CHANNEL_PREPROCESSOR</contextType>
+                    <contextType>DESTINATION_RESPONSE_TRANSFORMER</contextType>
                     <contextType>GLOBAL_PREPROCESSOR</contextType>
                     <contextType>CHANNEL_UNDEPLOY</contextType>
-                    <contextType>DESTINATION_DISPATCHER</contextType>
-                    <contextType>SOURCE_FILTER_TRANSFORMER</contextType>
-                    <contextType>GLOBAL_UNDEPLOY</contextType>
-                    <contextType>GLOBAL_DEPLOY</contextType>
-                    <contextType>SOURCE_RECEIVER</contextType>
-                    <contextType>DESTINATION_RESPONSE_TRANSFORMER</contextType>
-                    <contextType>CHANNEL_BATCH</contextType>
-                    <contextType>CHANNEL_DEPLOY</contextType>
-                    <contextType>CHANNEL_PREPROCESSOR</contextType>
                     <contextType>DESTINATION_FILTER_TRANSFORMER</contextType>
-                    <contextType>CHANNEL_POSTPROCESSOR</contextType>
-                    <contextType>GLOBAL_POSTPROCESSOR</contextType>
+                    <contextType>SOURCE_FILTER_TRANSFORMER</contextType>
                     <contextType>CHANNEL_ATTACHMENT</contextType>
+                    <contextType>CHANNEL_POSTPROCESSOR</contextType>
+                    <contextType>GLOBAL_DEPLOY</contextType>
+                    <contextType>CHANNEL_DEPLOY</contextType>
+                    <contextType>DESTINATION_DISPATCHER</contextType>
+                    <contextType>GLOBAL_UNDEPLOY</contextType>
+                    <contextType>SOURCE_RECEIVER</contextType>
                   </delegate>
                 </contextSet>
                 <properties class="com.mirth.connect.model.codetemplates.BasicCodeTemplateProperties">
@@ -998,21 +998,21 @@ function yyyyMMddHHmm(string) {
                 </lastModified>
                 <contextSet>
                   <delegate>
+                    <contextType>GLOBAL_POSTPROCESSOR</contextType>
+                    <contextType>CHANNEL_BATCH</contextType>
+                    <contextType>CHANNEL_PREPROCESSOR</contextType>
+                    <contextType>DESTINATION_RESPONSE_TRANSFORMER</contextType>
                     <contextType>GLOBAL_PREPROCESSOR</contextType>
                     <contextType>CHANNEL_UNDEPLOY</contextType>
-                    <contextType>DESTINATION_DISPATCHER</contextType>
-                    <contextType>SOURCE_FILTER_TRANSFORMER</contextType>
-                    <contextType>GLOBAL_UNDEPLOY</contextType>
-                    <contextType>GLOBAL_DEPLOY</contextType>
-                    <contextType>SOURCE_RECEIVER</contextType>
-                    <contextType>DESTINATION_RESPONSE_TRANSFORMER</contextType>
-                    <contextType>CHANNEL_BATCH</contextType>
-                    <contextType>CHANNEL_DEPLOY</contextType>
-                    <contextType>CHANNEL_PREPROCESSOR</contextType>
                     <contextType>DESTINATION_FILTER_TRANSFORMER</contextType>
-                    <contextType>CHANNEL_POSTPROCESSOR</contextType>
-                    <contextType>GLOBAL_POSTPROCESSOR</contextType>
+                    <contextType>SOURCE_FILTER_TRANSFORMER</contextType>
                     <contextType>CHANNEL_ATTACHMENT</contextType>
+                    <contextType>CHANNEL_POSTPROCESSOR</contextType>
+                    <contextType>GLOBAL_DEPLOY</contextType>
+                    <contextType>CHANNEL_DEPLOY</contextType>
+                    <contextType>DESTINATION_DISPATCHER</contextType>
+                    <contextType>GLOBAL_UNDEPLOY</contextType>
+                    <contextType>SOURCE_RECEIVER</contextType>
                   </delegate>
                 </contextSet>
                 <properties class="com.mirth.connect.model.codetemplates.BasicCodeTemplateProperties">
@@ -1044,10 +1044,10 @@ function yyyyMMddHHmmss(string) {
                 <contextSet>
                   <delegate>
                     <contextType>DESTINATION_RESPONSE_TRANSFORMER</contextType>
-                    <contextType>SOURCE_RECEIVER</contextType>
-                    <contextType>DESTINATION_DISPATCHER</contextType>
                     <contextType>DESTINATION_FILTER_TRANSFORMER</contextType>
+                    <contextType>DESTINATION_DISPATCHER</contextType>
                     <contextType>SOURCE_FILTER_TRANSFORMER</contextType>
+                    <contextType>SOURCE_RECEIVER</contextType>
                   </delegate>
                 </contextSet>
                 <properties class="com.mirth.connect.model.codetemplates.BasicCodeTemplateProperties">
@@ -1139,10 +1139,10 @@ function sortHL7Node(node) {
                 <contextSet>
                   <delegate>
                     <contextType>DESTINATION_RESPONSE_TRANSFORMER</contextType>
-                    <contextType>SOURCE_RECEIVER</contextType>
-                    <contextType>DESTINATION_DISPATCHER</contextType>
                     <contextType>DESTINATION_FILTER_TRANSFORMER</contextType>
+                    <contextType>DESTINATION_DISPATCHER</contextType>
                     <contextType>SOURCE_FILTER_TRANSFORMER</contextType>
+                    <contextType>SOURCE_RECEIVER</contextType>
                   </delegate>
                 </contextSet>
                 <properties class="com.mirth.connect.model.codetemplates.BasicCodeTemplateProperties">
@@ -1169,21 +1169,21 @@ function formatHL7Date(string) {
                 </lastModified>
                 <contextSet>
                   <delegate>
+                    <contextType>GLOBAL_POSTPROCESSOR</contextType>
+                    <contextType>CHANNEL_BATCH</contextType>
+                    <contextType>CHANNEL_PREPROCESSOR</contextType>
+                    <contextType>DESTINATION_RESPONSE_TRANSFORMER</contextType>
                     <contextType>GLOBAL_PREPROCESSOR</contextType>
                     <contextType>CHANNEL_UNDEPLOY</contextType>
-                    <contextType>DESTINATION_DISPATCHER</contextType>
-                    <contextType>SOURCE_FILTER_TRANSFORMER</contextType>
-                    <contextType>GLOBAL_UNDEPLOY</contextType>
-                    <contextType>GLOBAL_DEPLOY</contextType>
-                    <contextType>SOURCE_RECEIVER</contextType>
-                    <contextType>DESTINATION_RESPONSE_TRANSFORMER</contextType>
-                    <contextType>CHANNEL_BATCH</contextType>
-                    <contextType>CHANNEL_DEPLOY</contextType>
-                    <contextType>CHANNEL_PREPROCESSOR</contextType>
                     <contextType>DESTINATION_FILTER_TRANSFORMER</contextType>
-                    <contextType>CHANNEL_POSTPROCESSOR</contextType>
-                    <contextType>GLOBAL_POSTPROCESSOR</contextType>
+                    <contextType>SOURCE_FILTER_TRANSFORMER</contextType>
                     <contextType>CHANNEL_ATTACHMENT</contextType>
+                    <contextType>CHANNEL_POSTPROCESSOR</contextType>
+                    <contextType>GLOBAL_DEPLOY</contextType>
+                    <contextType>CHANNEL_DEPLOY</contextType>
+                    <contextType>DESTINATION_DISPATCHER</contextType>
+                    <contextType>GLOBAL_UNDEPLOY</contextType>
+                    <contextType>SOURCE_RECEIVER</contextType>
                   </delegate>
                 </contextSet>
                 <properties class="com.mirth.connect.model.codetemplates.BasicCodeTemplateProperties">
@@ -1245,21 +1245,21 @@ function getCurrentLocalTimestamp() {
                 </lastModified>
                 <contextSet>
                   <delegate>
+                    <contextType>GLOBAL_POSTPROCESSOR</contextType>
+                    <contextType>CHANNEL_BATCH</contextType>
+                    <contextType>CHANNEL_PREPROCESSOR</contextType>
+                    <contextType>DESTINATION_RESPONSE_TRANSFORMER</contextType>
                     <contextType>GLOBAL_PREPROCESSOR</contextType>
                     <contextType>CHANNEL_UNDEPLOY</contextType>
-                    <contextType>DESTINATION_DISPATCHER</contextType>
-                    <contextType>SOURCE_FILTER_TRANSFORMER</contextType>
-                    <contextType>GLOBAL_UNDEPLOY</contextType>
-                    <contextType>GLOBAL_DEPLOY</contextType>
-                    <contextType>SOURCE_RECEIVER</contextType>
-                    <contextType>DESTINATION_RESPONSE_TRANSFORMER</contextType>
-                    <contextType>CHANNEL_BATCH</contextType>
-                    <contextType>CHANNEL_DEPLOY</contextType>
-                    <contextType>CHANNEL_PREPROCESSOR</contextType>
                     <contextType>DESTINATION_FILTER_TRANSFORMER</contextType>
-                    <contextType>CHANNEL_POSTPROCESSOR</contextType>
-                    <contextType>GLOBAL_POSTPROCESSOR</contextType>
+                    <contextType>SOURCE_FILTER_TRANSFORMER</contextType>
                     <contextType>CHANNEL_ATTACHMENT</contextType>
+                    <contextType>CHANNEL_POSTPROCESSOR</contextType>
+                    <contextType>GLOBAL_DEPLOY</contextType>
+                    <contextType>CHANNEL_DEPLOY</contextType>
+                    <contextType>DESTINATION_DISPATCHER</contextType>
+                    <contextType>GLOBAL_UNDEPLOY</contextType>
+                    <contextType>SOURCE_RECEIVER</contextType>
                   </delegate>
                 </contextSet>
                 <properties class="com.mirth.connect.model.codetemplates.BasicCodeTemplateProperties">
@@ -1299,10 +1299,10 @@ function GetChannelState(channel_id) {
                 <contextSet>
                   <delegate>
                     <contextType>DESTINATION_RESPONSE_TRANSFORMER</contextType>
-                    <contextType>SOURCE_RECEIVER</contextType>
-                    <contextType>DESTINATION_DISPATCHER</contextType>
                     <contextType>DESTINATION_FILTER_TRANSFORMER</contextType>
+                    <contextType>DESTINATION_DISPATCHER</contextType>
                     <contextType>SOURCE_FILTER_TRANSFORMER</contextType>
+                    <contextType>SOURCE_RECEIVER</contextType>
                   </delegate>
                 </contextSet>
                 <properties class="com.mirth.connect.model.codetemplates.BasicCodeTemplateProperties">
@@ -1330,10 +1330,10 @@ Nd.millisecond=Nd.milliseconds=Md,Nd.utcOffset=Na,Nd.utc=Pa,Nd.local=Qa,Nd.parse
                 <contextSet>
                   <delegate>
                     <contextType>DESTINATION_RESPONSE_TRANSFORMER</contextType>
-                    <contextType>SOURCE_RECEIVER</contextType>
-                    <contextType>DESTINATION_DISPATCHER</contextType>
                     <contextType>DESTINATION_FILTER_TRANSFORMER</contextType>
+                    <contextType>DESTINATION_DISPATCHER</contextType>
                     <contextType>SOURCE_FILTER_TRANSFORMER</contextType>
+                    <contextType>SOURCE_RECEIVER</contextType>
                   </delegate>
                 </contextSet>
                 <properties class="com.mirth.connect.model.codetemplates.BasicCodeTemplateProperties">
@@ -1377,10 +1377,10 @@ function stopOnErrorCount(cid, errorCount) {
                 <contextSet>
                   <delegate>
                     <contextType>CHANNEL_BATCH</contextType>
-                    <contextType>CHANNEL_UNDEPLOY</contextType>
-                    <contextType>CHANNEL_DEPLOY</contextType>
                     <contextType>CHANNEL_PREPROCESSOR</contextType>
                     <contextType>CHANNEL_POSTPROCESSOR</contextType>
+                    <contextType>CHANNEL_UNDEPLOY</contextType>
+                    <contextType>CHANNEL_DEPLOY</contextType>
                     <contextType>CHANNEL_ATTACHMENT</contextType>
                   </delegate>
                 </contextSet>
@@ -4118,21 +4118,21 @@ return;</undeployScript>
                 </lastModified>
                 <contextSet>
                   <delegate>
+                    <contextType>GLOBAL_POSTPROCESSOR</contextType>
+                    <contextType>CHANNEL_BATCH</contextType>
+                    <contextType>CHANNEL_PREPROCESSOR</contextType>
+                    <contextType>DESTINATION_RESPONSE_TRANSFORMER</contextType>
                     <contextType>GLOBAL_PREPROCESSOR</contextType>
                     <contextType>CHANNEL_UNDEPLOY</contextType>
-                    <contextType>DESTINATION_DISPATCHER</contextType>
-                    <contextType>SOURCE_FILTER_TRANSFORMER</contextType>
-                    <contextType>GLOBAL_UNDEPLOY</contextType>
-                    <contextType>GLOBAL_DEPLOY</contextType>
-                    <contextType>SOURCE_RECEIVER</contextType>
-                    <contextType>DESTINATION_RESPONSE_TRANSFORMER</contextType>
-                    <contextType>CHANNEL_BATCH</contextType>
-                    <contextType>CHANNEL_DEPLOY</contextType>
-                    <contextType>CHANNEL_PREPROCESSOR</contextType>
                     <contextType>DESTINATION_FILTER_TRANSFORMER</contextType>
-                    <contextType>CHANNEL_POSTPROCESSOR</contextType>
-                    <contextType>GLOBAL_POSTPROCESSOR</contextType>
+                    <contextType>SOURCE_FILTER_TRANSFORMER</contextType>
                     <contextType>CHANNEL_ATTACHMENT</contextType>
+                    <contextType>CHANNEL_POSTPROCESSOR</contextType>
+                    <contextType>GLOBAL_DEPLOY</contextType>
+                    <contextType>CHANNEL_DEPLOY</contextType>
+                    <contextType>DESTINATION_DISPATCHER</contextType>
+                    <contextType>GLOBAL_UNDEPLOY</contextType>
+                    <contextType>SOURCE_RECEIVER</contextType>
                   </delegate>
                 </contextSet>
                 <properties class="com.mirth.connect.model.codetemplates.BasicCodeTemplateProperties">
@@ -4158,21 +4158,21 @@ function yyyyMMddHHmm(string) {
                 </lastModified>
                 <contextSet>
                   <delegate>
+                    <contextType>GLOBAL_POSTPROCESSOR</contextType>
+                    <contextType>CHANNEL_BATCH</contextType>
+                    <contextType>CHANNEL_PREPROCESSOR</contextType>
+                    <contextType>DESTINATION_RESPONSE_TRANSFORMER</contextType>
                     <contextType>GLOBAL_PREPROCESSOR</contextType>
                     <contextType>CHANNEL_UNDEPLOY</contextType>
-                    <contextType>DESTINATION_DISPATCHER</contextType>
-                    <contextType>SOURCE_FILTER_TRANSFORMER</contextType>
-                    <contextType>GLOBAL_UNDEPLOY</contextType>
-                    <contextType>GLOBAL_DEPLOY</contextType>
-                    <contextType>SOURCE_RECEIVER</contextType>
-                    <contextType>DESTINATION_RESPONSE_TRANSFORMER</contextType>
-                    <contextType>CHANNEL_BATCH</contextType>
-                    <contextType>CHANNEL_DEPLOY</contextType>
-                    <contextType>CHANNEL_PREPROCESSOR</contextType>
                     <contextType>DESTINATION_FILTER_TRANSFORMER</contextType>
-                    <contextType>CHANNEL_POSTPROCESSOR</contextType>
-                    <contextType>GLOBAL_POSTPROCESSOR</contextType>
+                    <contextType>SOURCE_FILTER_TRANSFORMER</contextType>
                     <contextType>CHANNEL_ATTACHMENT</contextType>
+                    <contextType>CHANNEL_POSTPROCESSOR</contextType>
+                    <contextType>GLOBAL_DEPLOY</contextType>
+                    <contextType>CHANNEL_DEPLOY</contextType>
+                    <contextType>DESTINATION_DISPATCHER</contextType>
+                    <contextType>GLOBAL_UNDEPLOY</contextType>
+                    <contextType>SOURCE_RECEIVER</contextType>
                   </delegate>
                 </contextSet>
                 <properties class="com.mirth.connect.model.codetemplates.BasicCodeTemplateProperties">
@@ -4204,10 +4204,10 @@ function yyyyMMddHHmmss(string) {
                 <contextSet>
                   <delegate>
                     <contextType>DESTINATION_RESPONSE_TRANSFORMER</contextType>
-                    <contextType>SOURCE_RECEIVER</contextType>
-                    <contextType>DESTINATION_DISPATCHER</contextType>
                     <contextType>DESTINATION_FILTER_TRANSFORMER</contextType>
+                    <contextType>DESTINATION_DISPATCHER</contextType>
                     <contextType>SOURCE_FILTER_TRANSFORMER</contextType>
+                    <contextType>SOURCE_RECEIVER</contextType>
                   </delegate>
                 </contextSet>
                 <properties class="com.mirth.connect.model.codetemplates.BasicCodeTemplateProperties">
@@ -4299,10 +4299,10 @@ function sortHL7Node(node) {
                 <contextSet>
                   <delegate>
                     <contextType>DESTINATION_RESPONSE_TRANSFORMER</contextType>
-                    <contextType>SOURCE_RECEIVER</contextType>
-                    <contextType>DESTINATION_DISPATCHER</contextType>
                     <contextType>DESTINATION_FILTER_TRANSFORMER</contextType>
+                    <contextType>DESTINATION_DISPATCHER</contextType>
                     <contextType>SOURCE_FILTER_TRANSFORMER</contextType>
+                    <contextType>SOURCE_RECEIVER</contextType>
                   </delegate>
                 </contextSet>
                 <properties class="com.mirth.connect.model.codetemplates.BasicCodeTemplateProperties">
@@ -4329,21 +4329,21 @@ function formatHL7Date(string) {
                 </lastModified>
                 <contextSet>
                   <delegate>
+                    <contextType>GLOBAL_POSTPROCESSOR</contextType>
+                    <contextType>CHANNEL_BATCH</contextType>
+                    <contextType>CHANNEL_PREPROCESSOR</contextType>
+                    <contextType>DESTINATION_RESPONSE_TRANSFORMER</contextType>
                     <contextType>GLOBAL_PREPROCESSOR</contextType>
                     <contextType>CHANNEL_UNDEPLOY</contextType>
-                    <contextType>DESTINATION_DISPATCHER</contextType>
-                    <contextType>SOURCE_FILTER_TRANSFORMER</contextType>
-                    <contextType>GLOBAL_UNDEPLOY</contextType>
-                    <contextType>GLOBAL_DEPLOY</contextType>
-                    <contextType>SOURCE_RECEIVER</contextType>
-                    <contextType>DESTINATION_RESPONSE_TRANSFORMER</contextType>
-                    <contextType>CHANNEL_BATCH</contextType>
-                    <contextType>CHANNEL_DEPLOY</contextType>
-                    <contextType>CHANNEL_PREPROCESSOR</contextType>
                     <contextType>DESTINATION_FILTER_TRANSFORMER</contextType>
-                    <contextType>CHANNEL_POSTPROCESSOR</contextType>
-                    <contextType>GLOBAL_POSTPROCESSOR</contextType>
+                    <contextType>SOURCE_FILTER_TRANSFORMER</contextType>
                     <contextType>CHANNEL_ATTACHMENT</contextType>
+                    <contextType>CHANNEL_POSTPROCESSOR</contextType>
+                    <contextType>GLOBAL_DEPLOY</contextType>
+                    <contextType>CHANNEL_DEPLOY</contextType>
+                    <contextType>DESTINATION_DISPATCHER</contextType>
+                    <contextType>GLOBAL_UNDEPLOY</contextType>
+                    <contextType>SOURCE_RECEIVER</contextType>
                   </delegate>
                 </contextSet>
                 <properties class="com.mirth.connect.model.codetemplates.BasicCodeTemplateProperties">
@@ -4405,21 +4405,21 @@ function getCurrentLocalTimestamp() {
                 </lastModified>
                 <contextSet>
                   <delegate>
+                    <contextType>GLOBAL_POSTPROCESSOR</contextType>
+                    <contextType>CHANNEL_BATCH</contextType>
+                    <contextType>CHANNEL_PREPROCESSOR</contextType>
+                    <contextType>DESTINATION_RESPONSE_TRANSFORMER</contextType>
                     <contextType>GLOBAL_PREPROCESSOR</contextType>
                     <contextType>CHANNEL_UNDEPLOY</contextType>
-                    <contextType>DESTINATION_DISPATCHER</contextType>
-                    <contextType>SOURCE_FILTER_TRANSFORMER</contextType>
-                    <contextType>GLOBAL_UNDEPLOY</contextType>
-                    <contextType>GLOBAL_DEPLOY</contextType>
-                    <contextType>SOURCE_RECEIVER</contextType>
-                    <contextType>DESTINATION_RESPONSE_TRANSFORMER</contextType>
-                    <contextType>CHANNEL_BATCH</contextType>
-                    <contextType>CHANNEL_DEPLOY</contextType>
-                    <contextType>CHANNEL_PREPROCESSOR</contextType>
                     <contextType>DESTINATION_FILTER_TRANSFORMER</contextType>
-                    <contextType>CHANNEL_POSTPROCESSOR</contextType>
-                    <contextType>GLOBAL_POSTPROCESSOR</contextType>
+                    <contextType>SOURCE_FILTER_TRANSFORMER</contextType>
                     <contextType>CHANNEL_ATTACHMENT</contextType>
+                    <contextType>CHANNEL_POSTPROCESSOR</contextType>
+                    <contextType>GLOBAL_DEPLOY</contextType>
+                    <contextType>CHANNEL_DEPLOY</contextType>
+                    <contextType>DESTINATION_DISPATCHER</contextType>
+                    <contextType>GLOBAL_UNDEPLOY</contextType>
+                    <contextType>SOURCE_RECEIVER</contextType>
                   </delegate>
                 </contextSet>
                 <properties class="com.mirth.connect.model.codetemplates.BasicCodeTemplateProperties">
@@ -4459,10 +4459,10 @@ function GetChannelState(channel_id) {
                 <contextSet>
                   <delegate>
                     <contextType>DESTINATION_RESPONSE_TRANSFORMER</contextType>
-                    <contextType>SOURCE_RECEIVER</contextType>
-                    <contextType>DESTINATION_DISPATCHER</contextType>
                     <contextType>DESTINATION_FILTER_TRANSFORMER</contextType>
+                    <contextType>DESTINATION_DISPATCHER</contextType>
                     <contextType>SOURCE_FILTER_TRANSFORMER</contextType>
+                    <contextType>SOURCE_RECEIVER</contextType>
                   </delegate>
                 </contextSet>
                 <properties class="com.mirth.connect.model.codetemplates.BasicCodeTemplateProperties">
@@ -4490,10 +4490,10 @@ Nd.millisecond=Nd.milliseconds=Md,Nd.utcOffset=Na,Nd.utc=Pa,Nd.local=Qa,Nd.parse
                 <contextSet>
                   <delegate>
                     <contextType>DESTINATION_RESPONSE_TRANSFORMER</contextType>
-                    <contextType>SOURCE_RECEIVER</contextType>
-                    <contextType>DESTINATION_DISPATCHER</contextType>
                     <contextType>DESTINATION_FILTER_TRANSFORMER</contextType>
+                    <contextType>DESTINATION_DISPATCHER</contextType>
                     <contextType>SOURCE_FILTER_TRANSFORMER</contextType>
+                    <contextType>SOURCE_RECEIVER</contextType>
                   </delegate>
                 </contextSet>
                 <properties class="com.mirth.connect.model.codetemplates.BasicCodeTemplateProperties">
@@ -4537,10 +4537,10 @@ function stopOnErrorCount(cid, errorCount) {
                 <contextSet>
                   <delegate>
                     <contextType>CHANNEL_BATCH</contextType>
-                    <contextType>CHANNEL_UNDEPLOY</contextType>
-                    <contextType>CHANNEL_DEPLOY</contextType>
                     <contextType>CHANNEL_PREPROCESSOR</contextType>
                     <contextType>CHANNEL_POSTPROCESSOR</contextType>
+                    <contextType>CHANNEL_UNDEPLOY</contextType>
+                    <contextType>CHANNEL_DEPLOY</contextType>
                     <contextType>CHANNEL_ATTACHMENT</contextType>
                   </delegate>
                 </contextSet>
@@ -4851,21 +4851,21 @@ return;</undeployScript>
                 </lastModified>
                 <contextSet>
                   <delegate>
+                    <contextType>GLOBAL_POSTPROCESSOR</contextType>
+                    <contextType>CHANNEL_BATCH</contextType>
+                    <contextType>CHANNEL_PREPROCESSOR</contextType>
+                    <contextType>DESTINATION_RESPONSE_TRANSFORMER</contextType>
                     <contextType>GLOBAL_PREPROCESSOR</contextType>
                     <contextType>CHANNEL_UNDEPLOY</contextType>
-                    <contextType>DESTINATION_DISPATCHER</contextType>
-                    <contextType>SOURCE_FILTER_TRANSFORMER</contextType>
-                    <contextType>GLOBAL_UNDEPLOY</contextType>
-                    <contextType>GLOBAL_DEPLOY</contextType>
-                    <contextType>SOURCE_RECEIVER</contextType>
-                    <contextType>DESTINATION_RESPONSE_TRANSFORMER</contextType>
-                    <contextType>CHANNEL_BATCH</contextType>
-                    <contextType>CHANNEL_DEPLOY</contextType>
-                    <contextType>CHANNEL_PREPROCESSOR</contextType>
                     <contextType>DESTINATION_FILTER_TRANSFORMER</contextType>
-                    <contextType>CHANNEL_POSTPROCESSOR</contextType>
-                    <contextType>GLOBAL_POSTPROCESSOR</contextType>
+                    <contextType>SOURCE_FILTER_TRANSFORMER</contextType>
                     <contextType>CHANNEL_ATTACHMENT</contextType>
+                    <contextType>CHANNEL_POSTPROCESSOR</contextType>
+                    <contextType>GLOBAL_DEPLOY</contextType>
+                    <contextType>CHANNEL_DEPLOY</contextType>
+                    <contextType>DESTINATION_DISPATCHER</contextType>
+                    <contextType>GLOBAL_UNDEPLOY</contextType>
+                    <contextType>SOURCE_RECEIVER</contextType>
                   </delegate>
                 </contextSet>
                 <properties class="com.mirth.connect.model.codetemplates.BasicCodeTemplateProperties">
@@ -4891,21 +4891,21 @@ function yyyyMMddHHmm(string) {
                 </lastModified>
                 <contextSet>
                   <delegate>
+                    <contextType>GLOBAL_POSTPROCESSOR</contextType>
+                    <contextType>CHANNEL_BATCH</contextType>
+                    <contextType>CHANNEL_PREPROCESSOR</contextType>
+                    <contextType>DESTINATION_RESPONSE_TRANSFORMER</contextType>
                     <contextType>GLOBAL_PREPROCESSOR</contextType>
                     <contextType>CHANNEL_UNDEPLOY</contextType>
-                    <contextType>DESTINATION_DISPATCHER</contextType>
-                    <contextType>SOURCE_FILTER_TRANSFORMER</contextType>
-                    <contextType>GLOBAL_UNDEPLOY</contextType>
-                    <contextType>GLOBAL_DEPLOY</contextType>
-                    <contextType>SOURCE_RECEIVER</contextType>
-                    <contextType>DESTINATION_RESPONSE_TRANSFORMER</contextType>
-                    <contextType>CHANNEL_BATCH</contextType>
-                    <contextType>CHANNEL_DEPLOY</contextType>
-                    <contextType>CHANNEL_PREPROCESSOR</contextType>
                     <contextType>DESTINATION_FILTER_TRANSFORMER</contextType>
-                    <contextType>CHANNEL_POSTPROCESSOR</contextType>
-                    <contextType>GLOBAL_POSTPROCESSOR</contextType>
+                    <contextType>SOURCE_FILTER_TRANSFORMER</contextType>
                     <contextType>CHANNEL_ATTACHMENT</contextType>
+                    <contextType>CHANNEL_POSTPROCESSOR</contextType>
+                    <contextType>GLOBAL_DEPLOY</contextType>
+                    <contextType>CHANNEL_DEPLOY</contextType>
+                    <contextType>DESTINATION_DISPATCHER</contextType>
+                    <contextType>GLOBAL_UNDEPLOY</contextType>
+                    <contextType>SOURCE_RECEIVER</contextType>
                   </delegate>
                 </contextSet>
                 <properties class="com.mirth.connect.model.codetemplates.BasicCodeTemplateProperties">
@@ -4937,10 +4937,10 @@ function yyyyMMddHHmmss(string) {
                 <contextSet>
                   <delegate>
                     <contextType>DESTINATION_RESPONSE_TRANSFORMER</contextType>
-                    <contextType>SOURCE_RECEIVER</contextType>
-                    <contextType>DESTINATION_DISPATCHER</contextType>
                     <contextType>DESTINATION_FILTER_TRANSFORMER</contextType>
+                    <contextType>DESTINATION_DISPATCHER</contextType>
                     <contextType>SOURCE_FILTER_TRANSFORMER</contextType>
+                    <contextType>SOURCE_RECEIVER</contextType>
                   </delegate>
                 </contextSet>
                 <properties class="com.mirth.connect.model.codetemplates.BasicCodeTemplateProperties">
@@ -5032,10 +5032,10 @@ function sortHL7Node(node) {
                 <contextSet>
                   <delegate>
                     <contextType>DESTINATION_RESPONSE_TRANSFORMER</contextType>
-                    <contextType>SOURCE_RECEIVER</contextType>
-                    <contextType>DESTINATION_DISPATCHER</contextType>
                     <contextType>DESTINATION_FILTER_TRANSFORMER</contextType>
+                    <contextType>DESTINATION_DISPATCHER</contextType>
                     <contextType>SOURCE_FILTER_TRANSFORMER</contextType>
+                    <contextType>SOURCE_RECEIVER</contextType>
                   </delegate>
                 </contextSet>
                 <properties class="com.mirth.connect.model.codetemplates.BasicCodeTemplateProperties">
@@ -5062,21 +5062,21 @@ function formatHL7Date(string) {
                 </lastModified>
                 <contextSet>
                   <delegate>
+                    <contextType>GLOBAL_POSTPROCESSOR</contextType>
+                    <contextType>CHANNEL_BATCH</contextType>
+                    <contextType>CHANNEL_PREPROCESSOR</contextType>
+                    <contextType>DESTINATION_RESPONSE_TRANSFORMER</contextType>
                     <contextType>GLOBAL_PREPROCESSOR</contextType>
                     <contextType>CHANNEL_UNDEPLOY</contextType>
-                    <contextType>DESTINATION_DISPATCHER</contextType>
-                    <contextType>SOURCE_FILTER_TRANSFORMER</contextType>
-                    <contextType>GLOBAL_UNDEPLOY</contextType>
-                    <contextType>GLOBAL_DEPLOY</contextType>
-                    <contextType>SOURCE_RECEIVER</contextType>
-                    <contextType>DESTINATION_RESPONSE_TRANSFORMER</contextType>
-                    <contextType>CHANNEL_BATCH</contextType>
-                    <contextType>CHANNEL_DEPLOY</contextType>
-                    <contextType>CHANNEL_PREPROCESSOR</contextType>
                     <contextType>DESTINATION_FILTER_TRANSFORMER</contextType>
-                    <contextType>CHANNEL_POSTPROCESSOR</contextType>
-                    <contextType>GLOBAL_POSTPROCESSOR</contextType>
+                    <contextType>SOURCE_FILTER_TRANSFORMER</contextType>
                     <contextType>CHANNEL_ATTACHMENT</contextType>
+                    <contextType>CHANNEL_POSTPROCESSOR</contextType>
+                    <contextType>GLOBAL_DEPLOY</contextType>
+                    <contextType>CHANNEL_DEPLOY</contextType>
+                    <contextType>DESTINATION_DISPATCHER</contextType>
+                    <contextType>GLOBAL_UNDEPLOY</contextType>
+                    <contextType>SOURCE_RECEIVER</contextType>
                   </delegate>
                 </contextSet>
                 <properties class="com.mirth.connect.model.codetemplates.BasicCodeTemplateProperties">
@@ -5138,21 +5138,21 @@ function getCurrentLocalTimestamp() {
                 </lastModified>
                 <contextSet>
                   <delegate>
+                    <contextType>GLOBAL_POSTPROCESSOR</contextType>
+                    <contextType>CHANNEL_BATCH</contextType>
+                    <contextType>CHANNEL_PREPROCESSOR</contextType>
+                    <contextType>DESTINATION_RESPONSE_TRANSFORMER</contextType>
                     <contextType>GLOBAL_PREPROCESSOR</contextType>
                     <contextType>CHANNEL_UNDEPLOY</contextType>
-                    <contextType>DESTINATION_DISPATCHER</contextType>
-                    <contextType>SOURCE_FILTER_TRANSFORMER</contextType>
-                    <contextType>GLOBAL_UNDEPLOY</contextType>
-                    <contextType>GLOBAL_DEPLOY</contextType>
-                    <contextType>SOURCE_RECEIVER</contextType>
-                    <contextType>DESTINATION_RESPONSE_TRANSFORMER</contextType>
-                    <contextType>CHANNEL_BATCH</contextType>
-                    <contextType>CHANNEL_DEPLOY</contextType>
-                    <contextType>CHANNEL_PREPROCESSOR</contextType>
                     <contextType>DESTINATION_FILTER_TRANSFORMER</contextType>
-                    <contextType>CHANNEL_POSTPROCESSOR</contextType>
-                    <contextType>GLOBAL_POSTPROCESSOR</contextType>
+                    <contextType>SOURCE_FILTER_TRANSFORMER</contextType>
                     <contextType>CHANNEL_ATTACHMENT</contextType>
+                    <contextType>CHANNEL_POSTPROCESSOR</contextType>
+                    <contextType>GLOBAL_DEPLOY</contextType>
+                    <contextType>CHANNEL_DEPLOY</contextType>
+                    <contextType>DESTINATION_DISPATCHER</contextType>
+                    <contextType>GLOBAL_UNDEPLOY</contextType>
+                    <contextType>SOURCE_RECEIVER</contextType>
                   </delegate>
                 </contextSet>
                 <properties class="com.mirth.connect.model.codetemplates.BasicCodeTemplateProperties">
@@ -5192,10 +5192,10 @@ function GetChannelState(channel_id) {
                 <contextSet>
                   <delegate>
                     <contextType>DESTINATION_RESPONSE_TRANSFORMER</contextType>
-                    <contextType>SOURCE_RECEIVER</contextType>
-                    <contextType>DESTINATION_DISPATCHER</contextType>
                     <contextType>DESTINATION_FILTER_TRANSFORMER</contextType>
+                    <contextType>DESTINATION_DISPATCHER</contextType>
                     <contextType>SOURCE_FILTER_TRANSFORMER</contextType>
+                    <contextType>SOURCE_RECEIVER</contextType>
                   </delegate>
                 </contextSet>
                 <properties class="com.mirth.connect.model.codetemplates.BasicCodeTemplateProperties">
@@ -5223,10 +5223,10 @@ Nd.millisecond=Nd.milliseconds=Md,Nd.utcOffset=Na,Nd.utc=Pa,Nd.local=Qa,Nd.parse
                 <contextSet>
                   <delegate>
                     <contextType>DESTINATION_RESPONSE_TRANSFORMER</contextType>
-                    <contextType>SOURCE_RECEIVER</contextType>
-                    <contextType>DESTINATION_DISPATCHER</contextType>
                     <contextType>DESTINATION_FILTER_TRANSFORMER</contextType>
+                    <contextType>DESTINATION_DISPATCHER</contextType>
                     <contextType>SOURCE_FILTER_TRANSFORMER</contextType>
+                    <contextType>SOURCE_RECEIVER</contextType>
                   </delegate>
                 </contextSet>
                 <properties class="com.mirth.connect.model.codetemplates.BasicCodeTemplateProperties">
@@ -5270,10 +5270,10 @@ function stopOnErrorCount(cid, errorCount) {
                 <contextSet>
                   <delegate>
                     <contextType>CHANNEL_BATCH</contextType>
-                    <contextType>CHANNEL_UNDEPLOY</contextType>
-                    <contextType>CHANNEL_DEPLOY</contextType>
                     <contextType>CHANNEL_PREPROCESSOR</contextType>
                     <contextType>CHANNEL_POSTPROCESSOR</contextType>
+                    <contextType>CHANNEL_UNDEPLOY</contextType>
+                    <contextType>CHANNEL_DEPLOY</contextType>
                     <contextType>CHANNEL_ATTACHMENT</contextType>
                   </delegate>
                 </contextSet>

@@ -772,15 +772,15 @@
  	  <xsl:choose>
         <xsl:when test="$campo">
            <xsl:value-of select="$campo"/>
-      </xsl:when>
-      <xsl:otherwise>
-        <xsl:call-template name="SelectToken"> <!-- Devolve o cód de exame original do HIS, armazenado em PROCEDURE [LMM] 14042020 -->
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:call-template name="SelectToken"> <!-- Devolve o cód de exame original do HIS, armazenado em PROCEDURE [LMM] 14042020 -->
             <xsl:with-param name="text" select="$procedure1"/>
             <xsl:with-param name="delimiter" select="$Delimitador"/>
             <xsl:with-param name="requiredIndex" select="$Indice1"/>
             <xsl:with-param name="currentIndex" select="$Indice2"/>
-        </xsl:call-template>  
-      </xsl:otherwise>
+          </xsl:call-template>  
+        </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
 
@@ -792,8 +792,8 @@
       <xsl:when test="contains($procedure, 'CARDHOLT3')">CARDHOLT3</xsl:when>
       <xsl:when test="starts-with($procedure, '18752-6^LN')">Exercise Tolerance Test</xsl:when>
       <xsl:when test="starts-with($procedure, '11524-0^LN')">Resting ECG</xsl:when>
-      <xsl:when test="starts-with($procedure, '40301')">11524-0</xsl:when>
-      <xsl:when test="starts-with($procedure, '40301F')">11524-0</xsl:when>
+      <xsl:when test="starts-with($procedure, '40301')">40301</xsl:when>
+      <xsl:when test="starts-with($procedure, '40301F')">40301</xsl:when>
       <xsl:when test="starts-with($procedure, 'Rhythm^00')">Rhythm ECG</xsl:when>
       <xsl:when test="starts-with($procedure, 'Ergospirometry^00')">Ergospirometry</xsl:when>
       <xsl:when test="starts-with($procedure, 'Event^00')">Event ECG</xsl:when>
