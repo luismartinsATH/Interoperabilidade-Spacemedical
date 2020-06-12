@@ -1,0 +1,42 @@
+•	Foi parametrizado o acesso VPN Fortigate para a empresa Spacemedical.
+•	Acesso: https://213.58.177.206
+•	Utilizador: spacemedical
+•	Pass: mesma de domínio CHLN
+•	Tem acesso ao servidor vs669sta (172.31.12.17) por RDP.
+•	Podem aceder através do portal ou com o cliente Forticlient.
+
+
+
+
+
+SERVIDOR	VS669STA
+
+Ethernet 1
+IP:		172.16.131.6
+SUB:		255.255.255.0
+GATEWAY:	172.16.131.254
+
+Ethernet 0
+IP:		172.31.12.17
+SUB:		255.255.0.0
+Gateway:	172.31.0.254
+
+USER: 		CHLN\spacemedical
+Password: 	spacemedical,,
+----------------------------------------------------------------------
+Sysgen password: SLService
+----------------------------------------------------------------------
+SQL SERVER 2012 sa password: FAMELamotaélinda69
+----------------------------------------------------------------------
+portal password: FAMELamotaélinda69
+----------------------------------------------------------------------
+HL7 Ip Output: 			172.31.10.87:9556
+----------------------------------------------------------------------
+CAMA	CAMA2			172.16.131.131		00a0aa00000c
+CAMA	CAMA3			172.16.131.135		00a0aa00000d
+CAMA	CAM04			172.16.131.22		00a0aa00000e
+CAMA	CAMA5			172.16.131.18		00a0aa00000f
+CAMA	CAMA6			172.16.131.129		00a0aa000010
+CENTRAL	WINDOWS-LRPJPRIU	172.16.131.21 		0001296bcb3e
+	WIN-0VJCMUGE4I6		172.16.131.25 		000c29ecb198
+
