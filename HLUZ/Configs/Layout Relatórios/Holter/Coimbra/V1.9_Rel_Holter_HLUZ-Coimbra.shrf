@@ -109,7 +109,7 @@
 		</TranslationEntry>
 		<TranslationEntry>
 			<Untranslated>ReportTitleLabel</Untranslated>
-			<Translated>Relatório Holter MOD - Cardioteste</Translated>
+			<Translated>Relatório Holter - HLUZ Coimbra</Translated>
 		</TranslationEntry>
 		<TranslationEntry>
 			<Untranslated>ReportKeywordsLabel</Untranslated>
@@ -21510,9 +21510,15 @@
 </TranslationEntry>
 
 <TranslationEntry>
+    <Untranslated>PatientEventTimeText</Untranslated>
+    <Translated>{#FormatTime#(Row.StartTime, ReportAnnotationSettings.TimeDisplayFormatForceLong, Recording.StartDateAndTime)} {Row.OutsideOfAnalysis? '*' : ''}</Translated>
+</TranslationEntry>
+
+<!-- <TranslationEntry>
 	<Untranslated>PatientEventTimeText</Untranslated>
 	<Translated>{Row.WantRowToBeHighlighted? _PatientEventTimeBold_ : _PatientEventTimeRegular_}</Translated>
-</TranslationEntry>
+</TranslationEntry> -->
+
 <TranslationEntry>
 	<Untranslated>PatientEventTimeBold</Untranslated>
 	<Translated>[b]{#FormatTime#(Row.StartTime, ReportAnnotationSettings.TimeDisplayFormatForceLong, Recording.StartDateAndTime)} {Row.OutsideOfAnalysis? '*' : ''}[/b]</Translated>
@@ -21524,7 +21530,7 @@
 
 <TranslationEntry>
 	<Untranslated>PatientEventNameText</Untranslated>
-	<Translated>{Row.WantRowToBeHighlighted? _PatientEventNameBold_ : _PatientEventNameRegular_}</Translated>
+	<Translated>{Row.EventName}</Translated>
 </TranslationEntry>
 <TranslationEntry>
 	<Untranslated>PatientEventNameBold</Untranslated>
@@ -21537,7 +21543,7 @@
 
 <TranslationEntry>
 	<Untranslated>PatientEventSymptomText</Untranslated>
-	<Translated>{Row.WantRowToBeHighlighted? _PatientEventSymptomBold_ : _PatientEventSymptomRegular_}</Translated>
+	<Translated>{Row.Symptom}</Translated>
 </TranslationEntry>
 <TranslationEntry>
 	<Untranslated>PatientEventSymptomBold</Untranslated>
@@ -21550,7 +21556,7 @@
 
 <TranslationEntry>
 	<Untranslated>PatientEventActivityText</Untranslated>
-	<Translated>{Row.WantRowToBeHighlighted? _PatientEventActivityBold_ : _PatientEventActivityRegular_}</Translated>
+	<Translated>{Row.Activity}</Translated>
 </TranslationEntry>
 <TranslationEntry>
 	<Untranslated>PatientEventActivityBold</Untranslated>
@@ -21563,7 +21569,7 @@
 
 <TranslationEntry>
 	<Untranslated>PatientEventStatusText</Untranslated>
-	<Translated>{Row.WantRowToBeHighlighted? _PatientEventStatusBold_ : _PatientEventStatusRegular_}</Translated>
+	<Translated>{Row.Status}</Translated>
 </TranslationEntry>
 <TranslationEntry>
 	<Untranslated>PatientEventStatusBold</Untranslated>

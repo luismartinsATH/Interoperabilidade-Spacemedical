@@ -2569,6 +2569,7 @@
 	<Translated>{#FormatTime#(Row.StartTime, ReportAnnotationSettings.TimeDisplayFormatForceLong, Recording.StartDateAndTime)} {Row.OutsideOfAnalysis? '*' : ''}</Translated>
 </TranslationEntry>
 
+
 <TranslationEntry>
 	<Untranslated>PatientEventNameText</Untranslated>
 	<Translated>{Row.WantRowToBeHighlighted? _PatientEventNameBold_ : _PatientEventNameRegular_}</Translated>
@@ -21510,9 +21511,15 @@
 </TranslationEntry>
 
 <TranslationEntry>
+    <Untranslated>PatientEventTimeText</Untranslated>
+    <Translated>{#FormatTime#(Row.StartTime, ReportAnnotationSettings.TimeDisplayFormatForceLong, Recording.StartDateAndTime)} {Row.OutsideOfAnalysis? '*' : ''}</Translated>
+</TranslationEntry>
+
+<!-- <TranslationEntry>
 	<Untranslated>PatientEventTimeText</Untranslated>
 	<Translated>{Row.WantRowToBeHighlighted? _PatientEventTimeBold_ : _PatientEventTimeRegular_}</Translated>
-</TranslationEntry>
+</TranslationEntry> -->
+
 <TranslationEntry>
 	<Untranslated>PatientEventTimeBold</Untranslated>
 	<Translated>[b]{#FormatTime#(Row.StartTime, ReportAnnotationSettings.TimeDisplayFormatForceLong, Recording.StartDateAndTime)} {Row.OutsideOfAnalysis? '*' : ''}[/b]</Translated>
@@ -21522,10 +21529,11 @@
 	<Translated>{#FormatTime#(Row.StartTime, ReportAnnotationSettings.TimeDisplayFormatForceLong, Recording.StartDateAndTime)} {Row.OutsideOfAnalysis? '*' : ''}</Translated>
 </TranslationEntry>
 
-<TranslationEntry>
+<!-- <TranslationEntry>
 	<Untranslated>PatientEventNameText</Untranslated>
 	<Translated>{Row.WantRowToBeHighlighted? _PatientEventNameBold_ : _PatientEventNameRegular_}</Translated>
-</TranslationEntry>
+</TranslationEntry> -->
+
 <TranslationEntry>
 	<Untranslated>PatientEventNameBold</Untranslated>
 	<Translated>[b]{Row.EventName}[/b]</Translated>
@@ -21535,10 +21543,11 @@
 	<Translated>{Row.EventName}</Translated>
 </TranslationEntry>
 
-<TranslationEntry>
+<!-- <TranslationEntry>
 	<Untranslated>PatientEventSymptomText</Untranslated>
 	<Translated>{Row.WantRowToBeHighlighted? _PatientEventSymptomBold_ : _PatientEventSymptomRegular_}</Translated>
-</TranslationEntry>
+</TranslationEntry> -->
+
 <TranslationEntry>
 	<Untranslated>PatientEventSymptomBold</Untranslated>
 	<Translated>[b]{Row.Symptom}[/b]</Translated>
@@ -21548,23 +21557,26 @@
 	<Translated>{Row.Symptom}</Translated>
 </TranslationEntry>
 
-<TranslationEntry>
+<!-- <TranslationEntry>
 	<Untranslated>PatientEventActivityText</Untranslated>
 	<Translated>{Row.WantRowToBeHighlighted? _PatientEventActivityBold_ : _PatientEventActivityRegular_}</Translated>
-</TranslationEntry>
-<TranslationEntry>
+</TranslationEntry> -->
+
+<!-- <TranslationEntry>
 	<Untranslated>PatientEventActivityBold</Untranslated>
 	<Translated>[b]{Row.Activity}[/b]</Translated>
-</TranslationEntry>
+</TranslationEntry> -->
+
 <TranslationEntry>
 	<Untranslated>PatientEventActivityRegular</Untranslated>
 	<Translated>{Row.Activity}</Translated>
 </TranslationEntry>
 
-<TranslationEntry>
+<!-- <TranslationEntry>
 	<Untranslated>PatientEventStatusText</Untranslated>
 	<Translated>{Row.WantRowToBeHighlighted? _PatientEventStatusBold_ : _PatientEventStatusRegular_}</Translated>
-</TranslationEntry>
+</TranslationEntry> -->
+
 <TranslationEntry>
 	<Untranslated>PatientEventStatusBold</Untranslated>
 	<Translated>[b]{Row.Status}[/b]</Translated>
@@ -29016,23 +29028,40 @@
 				<Property Name='CellFont' Value='Segoeui.ttf,9pt,black'/>
 			</Property>
 			<Property Name='Column'>
-				<Property Name='Width' Value='0.12' />
+				<Property Name='Width' Value='0.10' />
 				<Property Name='CellAlignment' Value='MiddleRight' />
 				<Property Name='RightPadding' Value='0' />
 			</Property>
 			<Property Name='Column'>
+				<Property Name='Width' Value='0.075' />
+			</Property>
+			<Property Name='Column'>
 				<Property Name='Width' Value='0.07' />
+				<Property Name='CellFont' Value='Segoeui.ttf,8pt,black'/>
+			</Property>
+			<Property Name='Column'>
+				<Property Name='Width' Value='0.03' />
+				<Property Name='CellAlignment' Value='MiddleLeft' />
 			</Property>
 			<Property Name='Column'>
 				<Property Name='Width' Value='0.08' />
+
 			</Property>
 			<Property Name='Column'>
-				<Property Name='Width' Value='0.1' />
-				<Property Name='CellAlignment' Value='MiddleRight' />
+				<Property Name='Width' Value='0.03' />
+
 			</Property>
 			<Property Name='Column'>
-				<Property Name='Width' Value='0.1' />
-				<Property Name='CellAlignment' Value='MiddleLeft' />
+				<Property Name='Width' Value='0.05' />
+
+			</Property>
+			<Property Name='Column'>
+				<Property Name='Width' Value='0.03' />
+
+			</Property>
+			<Property Name='Column'>
+				<Property Name='Width' Value='0.04' />
+
 			</Property>
 
 			<Property Name='Row'>
@@ -29050,12 +29079,24 @@
 				</Property>
 				<Property Name='Cell'>
 					<Property Name='Content' Value='_AgeLabel_' />
-				</Property>
+				</Property>			
 				<Property Name='Cell'>
 					<Property Name='Content' Value='_GenderLabel_' />
 				</Property>
 				<Property Name='Cell'>
 					<Property Name='Content' Value='{Patient.Gender}'/>
+				</Property>
+				<Property Name='Cell'>
+					<Property Name='Content' Value='_HeightLabel_' />
+				</Property>
+				<Property Name='Cell'>
+					<Property Name='Content' Value='{Patient.Height}'/>
+				</Property>
+				<Property Name='Cell'>
+					<Property Name='Content' Value='_WeightLabel_' />
+				</Property>
+				<Property Name='Cell'>
+					<Property Name='Content' Value='{Patient.Weight}'/>
 				</Property>
 			</Property>
 		</Property>
