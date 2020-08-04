@@ -1,0 +1,4253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ReportFormat>
+
+  <!-- ******************************************************************************************************** 
+       ************                             REPORT PROPERTIES                                 *************
+       ******************************************************************************************************** -->
+
+  <Property Name="name" Value="Twelve Lead Immediate Print Report"/>
+  <Property Name='Author' Value='Spacelabs Healthcare'/>
+  <Property Name='Subject' Value='{_ReportSubjectLabel_}'/>
+  <Property Name='Title' Value='{_ReportTitleLabel_}'/>
+  <Property Name='Keywords' Value='{_ReportKeywordsLabel_}'/>
+  <Property Name='Creator' Value='{_ReportCreatorLabel_}'/>
+  <Property Name='Version' Value='1.0'/>
+
+
+  <!-- ******************************************************************************************************** 
+       ************            NEUTRAL (IE. ALL REGION) ENGLISH TRANSLATIONS START HERE           *************
+       ******************************************************************************************************** -->
+
+  <Translation CultureName='En'>
+
+    <!-- date and time formats -->
+
+    <TranslationEntry>
+      <Untranslated>RecordingTimeFormatLabel</Untranslated>
+      <Translated>ddd HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ShortDateTimeFormatLabel</Untranslated>
+      <Translated>ddd HH:mm</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>DateOnlyFormatLabel</Untranslated>
+      <Translated>ddd dd MMM yyyy</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>FullDateAndTimeFormatLabel</Untranslated>
+      <Translated>ddd dd MMM yyyy HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecordingDayFormatLabel</Untranslated>
+      <Translated>ddd dd</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>TimeFormatLabel</Untranslated>
+      <Translated>HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>HrMinFormatLabel</Untranslated>
+      <Translated>D \day H \hr M \min s \sec</Translated>
+    </TranslationEntry>
+
+    <!-- report property translations -->
+
+    <TranslationEntry>
+      <Untranslated>ReportSubjectLabel</Untranslated>
+      <Translated>Immediate Print 12 lead {Product.Name} Report</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReportTitleLabel</Untranslated>
+      <Translated>Immediate Print 12 Lead Report</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReportKeywordsLabel</Untranslated>
+      <Translated>Holter, 12 lead, resting, ECG, report, {Product.Name}, Spacelabs Healthcare</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReportCreatorLabel</Untranslated>
+      <Translated>{Product.Name} Report Generator {Product.Version}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReportNameLabel</Untranslated>
+      <Translated>Immediate Print 12 Lead Report</Translated>
+    </TranslationEntry>
+
+    <!-- twelve lead event report section translations -->
+
+    <TranslationEntry>
+      <Untranslated>TwelveLeadStripsReportSectionTitleLabel</Untranslated>
+      <Translated>12 Lead Strips Report Section</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>TwelveLeadStripLabel</Untranslated>
+      <Translated>12 Lead Strip at </Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>TwelveLeadFindingsOverflowTitleLabel</Untranslated>
+      <Translated>Interpretations and Findings (continued)</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RRLabel</Untranslated>
+      <Translated>RR:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>HRLabel</Untranslated>
+      <Translated>HR:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>P/QRS/TLabel</Untranslated>
+      <Translated>P/QRS/T:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>QRSLabel</Untranslated>
+      <Translated>QRS:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>QTRLabel</Untranslated>
+      <Translated>QTR:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>QT/QTcLabel</Untranslated>
+      <Translated>QT/QTc:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>SokolowLyonIndexLabel</Untranslated>
+      <Translated>Sokolow-Lyon Index:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>P/PRLabel</Untranslated>
+      <Translated>P/PR:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>LewisIndexLabel</Untranslated>
+      <Translated>Lewis Index:</Translated>
+    </TranslationEntry>
+
+    <!-- footer translations -->
+
+    <TranslationEntry>
+      <Untranslated>ReportGenerationDateLabel</Untranslated>
+      <Translated>Generated On {Report.CreatedDateAndTime,_FullDateAndTimeFormatLabel_}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ProductVersionLabel</Untranslated>
+      <Translated>{Product.Name} version {Product.Version}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PageMofNLabel</Untranslated>
+      <Translated>Page {PageNumber} of {PageCount}</Translated>
+    </TranslationEntry>
+
+    <!-- header translations -->
+
+    <TranslationEntry>
+      <Untranslated>HolterReportTitleLabel</Untranslated>
+      <Translated>Immediate Print 12 Lead Report</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>IDLabel</Untranslated>
+      <Translated>ID:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>OrderLabel</Untranslated>
+      <Translated>Order:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>CaseLabel</Untranslated>
+      <Translated>Case:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecordedLabel</Untranslated>
+      <Translated>Recorded:</Translated>
+    </TranslationEntry>
+
+    <!-- patient details table (on front page and in 12 lead event pages) -->
+
+    <TranslationEntry>
+      <Untranslated>PatientID2Label</Untranslated>
+      <Translated>Patient ID2:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientID3Label</Untranslated>
+      <Translated>Patient ID3:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>DateOfBirthLabel</Untranslated>
+      <Translated>Date of Birth:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>AgeLabel</Untranslated>
+      <Translated>({Patient.AgeInYears} years)</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>GenderLabel</Untranslated>
+      <Translated>Gender:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>WardLabel</Untranslated>
+      <Translated>Ward:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecorderNoLabel</Untranslated>
+      <Translated>Recorder No.:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecordingLengthLabel</Untranslated>
+      <Translated>Recording Length:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>AnalysisDateLabel</Untranslated>
+      <Translated>Analysis Date:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>OperatorLabel</Untranslated>
+      <Translated>Analysis Technician:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReferringPhysicianLabel</Untranslated>
+      <Translated>Referring Physician:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>HospitalLabel</Untranslated>
+      <Translated>Hospital / Practice:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientLabel</Untranslated>
+      <Translated>Patient</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>HeightLabel</Untranslated>
+      <Translated>Patient Height:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>WeightLabel</Untranslated>
+      <Translated>Patient Weight:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>NationalIDLabel</Untranslated>
+      <Translated>National ID:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>AnalysedLengthLabel</Untranslated>
+      <Translated>Analyzed Length:</Translated>
+    </TranslationEntry>
+
+    <!-- general translations (used throughout the report) -->
+
+    <TranslationEntry>
+      <Untranslated>BPM</Untranslated>
+      <Translated>BPM</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>beats</Untranslated>
+      <Translated>beats</Translated>
+    </TranslationEntry>
+
+    <!-- patient gender translations -->
+
+    <TranslationEntry>
+      <Untranslated>PatientGenderFemale</Untranslated>
+      <Translated>Female</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientGenderMale</Untranslated>
+      <Translated>Male</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientGenderUnknown</Untranslated>
+      <Translated>Unknown</Translated>
+    </TranslationEntry>
+
+    <!-- patient pacemaker translations -->
+
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeAtrial</Untranslated>
+      <Translated>Atrial</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeDual</Untranslated>
+      <Translated>Dual</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeVentricular</Untranslated>
+      <Translated>Ventricular</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeNone</Untranslated>
+      <Translated>None</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeUnknown</Untranslated>
+      <Translated>Unknown</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeUnknownIfFitted</Untranslated>
+      <Translated>Not known if fitted</Translated>
+    </TranslationEntry>
+
+  </Translation>
+
+  <!-- *********************************************************************************************************
+       ********                          ENGLISH UK TRANSLATIONS START HERE                             ******** 
+       ********************************************************************************************************* -->
+  <Translation CultureName='En-Gb'>
+
+    <TranslationEntry>
+      <Untranslated>NationalIDLabel</Untranslated>
+      <Translated>NHS Number:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>AnalysedLengthLabel</Untranslated>
+      <Translated>Analysed Length:</Translated>
+    </TranslationEntry>
+
+  </Translation>
+
+  <!-- ***************************** GERMAN TRANSLATIONS START HERE ****************************** -->
+
+ <Translation CultureName='De'>
+
+    <!-- date and time formats -->
+
+    <TranslationEntry>
+      <Untranslated>RecordingTimeFormatLabel</Untranslated>
+      <Translated>ddd HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ShortDateTimeFormatLabel</Untranslated>
+      <Translated>ddd HH:mm</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>DateOnlyFormatLabel</Untranslated>
+      <Translated>ddd dd MMM yyyy</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>FullDateAndTimeFormatLabel</Untranslated>
+      <Translated>ddd dd MMM yyyy HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecordingDayFormatLabel</Untranslated>
+      <Translated>ddd dd</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>TimeFormatLabel</Untranslated>
+      <Translated>HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>HrMinFormatLabel</Untranslated>
+      <Translated>D Tag H \St\d. M \Min. s \Sek.</Translated>
+    </TranslationEntry>
+
+    <!-- report property translations -->
+
+    <TranslationEntry>
+      <Untranslated>ReportSubjectLabel</Untranslated>
+      <Translated>{Product.Name} 12-Kanal-Bericht sofort drucken</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReportTitleLabel</Untranslated>
+      <Translated>12-Kanal-Bericht sofort drucken</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReportKeywordsLabel</Untranslated>
+      <Translated>Langzeit-EKG, 12-Kanal, Ruhe, EKG, Bericht, {Product.Name}, Spacelabs Healthcare</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReportCreatorLabel</Untranslated>
+      <Translated>{Product.Name} Bericht-Generator {Product.Version}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReportNameLabel</Untranslated>
+      <Translated>12-Kanal-Bericht sofort drucken</Translated>
+    </TranslationEntry>
+
+    <!-- twelve lead event report section translations -->
+
+    <TranslationEntry>
+      <Untranslated>TwelveLeadStripsReportSectionTitleLabel</Untranslated>
+      <Translated>Berichtabschnitt 12-Kanal-Streifen</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>TwelveLeadStripLabel</Untranslated>
+      <Translated>12-Kanal-Streifen um </Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>TwelveLeadFindingsOverflowTitleLabel</Untranslated>
+      <Translated>Befunde und Auswertungen (Forts.)</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RRLabel</Untranslated>
+      <Translated>RR:</Translated>
+    </TranslationEntry>
+   <TranslationEntry>
+     <Untranslated>HRLabel</Untranslated>
+     <Translated>HF:</Translated>
+   </TranslationEntry>
+   <TranslationEntry>
+      <Untranslated>P/QRS/TLabel</Untranslated>
+      <Translated>P/QRS/T:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>QRSLabel</Untranslated>
+      <Translated>QRS:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>QTRLabel</Untranslated>
+      <Translated>QTR:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>QT/QTcLabel</Untranslated>
+      <Translated>QT/QTc:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>SokolowLyonIndexLabel</Untranslated>
+      <Translated>Sokolow-Lyon-Index:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>P/PRLabel</Untranslated>
+      <Translated>P/PR:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>LewisIndexLabel</Untranslated>
+      <Translated>Lewis-Index:</Translated>
+    </TranslationEntry>
+
+    <!-- footer translations -->
+
+    <TranslationEntry>
+      <Untranslated>ReportGenerationDateLabel</Untranslated>
+      <Translated>Erstellt am {Report.CreatedDateAndTime,_FullDateAndTimeFormatLabel_}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ProductVersionLabel</Untranslated>
+      <Translated>{Product.Name} Version {Product.Version}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PageMofNLabel</Untranslated>
+      <Translated>Seite {PageNumber} von {PageCount}</Translated>
+    </TranslationEntry>
+
+    <!-- header translations -->
+
+    <TranslationEntry>
+      <Untranslated>HolterReportTitleLabel</Untranslated>
+      <Translated>12-Kanal-Bericht sofort drucken</Translated>
+    </TranslationEntry>
+   <TranslationEntry>
+     <Untranslated>Lead</Untranslated>
+     <Translated>Kanal</Translated>
+   </TranslationEntry>
+   <TranslationEntry>
+     <Untranslated>EcgStripHrTitleLabel</Untranslated>
+     <Translated>1 Min. HF {PrintElement.OneMinHeartRate,'0'} {_BPM_}</Translated>
+   </TranslationEntry>
+   <TranslationEntry>
+      <Untranslated>IDLabel</Untranslated>
+      <Translated>ID:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>OrderLabel</Untranslated>
+      <Translated>Anordnung:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>CaseLabel</Untranslated>
+      <Translated>Fall:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecordedLabel</Untranslated>
+      <Translated>Aufgezeichnet:</Translated>
+    </TranslationEntry>
+
+    <!-- patient details table (on front page and in 12 lead event pages) -->
+
+    <TranslationEntry>
+      <Untranslated>PatientID2Label</Untranslated>
+      <Translated>Patienten-ID 2:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientID3Label</Untranslated>
+      <Translated>Patienten-ID 3:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>DateOfBirthLabel</Untranslated>
+      <Translated>Geburtsdatum:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>AgeLabel</Untranslated>
+      <Translated>({Patient.AgeInYears} Jahre)</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>GenderLabel</Untranslated>
+      <Translated>Geschlecht:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>WardLabel</Untranslated>
+      <Translated>Station:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecorderNoLabel</Untranslated>
+      <Translated>Rekorder-Nr.:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecordingLengthLabel</Untranslated>
+      <Translated>Aufzeichnungslänge:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>AnalysisDateLabel</Untranslated>
+      <Translated>Analysedatum:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>OperatorLabel</Untranslated>
+      <Translated>Analysetechniker:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReferringPhysicianLabel</Untranslated>
+      <Translated>Anfordernder Arzt:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>HospitalLabel</Untranslated>
+      <Translated>Krankenhaus/Praxis:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientLabel</Untranslated>
+      <Translated>Patient</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>HeightLabel</Untranslated>
+      <Translated>Größe:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>WeightLabel</Untranslated>
+      <Translated>Gewicht:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>NationalIDLabel</Untranslated>
+      <Translated>Nationale ID:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>AnalysedLengthLabel</Untranslated>
+      <Translated>Analysierte Länge:</Translated>
+    </TranslationEntry>
+
+    <!-- general translations (used throughout the report) -->
+
+    <TranslationEntry>
+      <Untranslated>BPM</Untranslated>
+      <Translated>1/min.</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>beats</Untranslated>
+      <Translated>QRS</Translated>
+    </TranslationEntry>
+
+    <!-- patient gender translations -->
+
+    <TranslationEntry>
+      <Untranslated>PatientGenderFemale</Untranslated>
+      <Translated>Weiblich</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientGenderMale</Untranslated>
+      <Translated>Männlich</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientGenderUnknown</Untranslated>
+      <Translated>Unbekannt</Translated>
+    </TranslationEntry>
+
+    <!-- patient pacemaker translations -->
+
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeAtrial</Untranslated>
+      <Translated>Atrial</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeDual</Untranslated>
+      <Translated>Dual</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeVentricular</Untranslated>
+      <Translated>Ventrikulär</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeNone</Untranslated>
+      <Translated>Keine</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeUnknown</Untranslated>
+      <Translated>Unbekannt</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeUnknownIfFitted</Untranslated>
+      <Translated>Unbekannt, ob vorhanden</Translated>
+    </TranslationEntry>
+
+  </Translation>
+
+ <!-- ***************************** DANISH TRANSLATIONS START HERE ****************************** -->
+
+  <Translation CultureName='Da'>
+
+    <!-- date and time formats -->
+
+    <TranslationEntry>
+      <Untranslated>RecordingTimeFormatLabel</Untranslated>
+      <Translated>ddd HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ShortDateTimeFormatLabel</Untranslated>
+      <Translated>ddd HH:mm</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>DateOnlyFormatLabel</Untranslated>
+      <Translated>ddd dd MMM yyyy</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>FullDateAndTimeFormatLabel</Untranslated>
+      <Translated>ddd dd MMM yyyy HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecordingDayFormatLabel</Untranslated>
+      <Translated>ddd dd</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>TimeFormatLabel</Untranslated>
+      <Translated>HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>HrMinFormatLabel</Untranslated>
+      <Translated>D \dag H ti\me M \min. s \sek.</Translated>
+    </TranslationEntry>
+
+    <!-- report property translations -->
+
+    <TranslationEntry>
+      <Untranslated>ReportSubjectLabel</Untranslated>
+      <Translated>Øjeblikkelig udskrift af 12 kanaler {Product.Name} rapport</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReportTitleLabel</Untranslated>
+      <Translated>Øjeblikkelig udskrift af 12 kanaler rapport</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReportKeywordsLabel</Untranslated>
+      <Translated>Holter, 12 kanaler, hvile, EKG, rapport, {Product.Name}, Spacelabs Healthcare</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReportCreatorLabel</Untranslated>
+      <Translated>{Product.Name} Rapportgenerator {Product.Version}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReportNameLabel</Untranslated>
+      <Translated>Øjeblikkelig udskrift af 12 kanaler rapport</Translated>
+    </TranslationEntry>
+
+    <!-- twelve lead event report section translations -->
+
+    <TranslationEntry>
+      <Untranslated>TwelveLeadStripsReportSectionTitleLabel</Untranslated>
+      <Translated>12 kanaler strimmel rapportsektion</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>TwelveLeadStripLabel</Untranslated>
+      <Translated>12 kanaler strimmel ved </Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>TwelveLeadFindingsOverflowTitleLabel</Untranslated>
+      <Translated>Fortolkninger og resultater (fortsat)</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RRLabel</Untranslated>
+      <Translated>RR:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>HRLabel</Untranslated>
+      <Translated>HF:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>P/QRS/TLabel</Untranslated>
+      <Translated>P/QRS/T:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>QRSLabel</Untranslated>
+      <Translated>QRS:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>QTRLabel</Untranslated>
+      <Translated>QTR:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>QT/QTcLabel</Untranslated>
+      <Translated>QT/QTc:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>SokolowLyonIndexLabel</Untranslated>
+      <Translated>Sokolow-Lyon-indeks:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>P/PRLabel</Untranslated>
+      <Translated>P/PR:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>LewisIndexLabel</Untranslated>
+      <Translated>Lewis-indeks:</Translated>
+    </TranslationEntry>
+
+    <!-- footer translations -->
+
+    <TranslationEntry>
+      <Untranslated>ReportGenerationDateLabel</Untranslated>
+      <Translated>Genereret d. {Report.CreatedDateAndTime,_FullDateAndTimeFormatLabel_}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ProductVersionLabel</Untranslated>
+      <Translated>{Product.Name} version {Product.Version}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PageMofNLabel</Untranslated>
+      <Translated>Side {PageNumber} af {PageCount}</Translated>
+    </TranslationEntry>
+
+    <!-- header translations -->
+
+    <TranslationEntry>
+      <Untranslated>HolterReportTitleLabel</Untranslated>
+      <Translated>Øjeblikkelig udskrift af 12 kanaler rapport</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>IDLabel</Untranslated>
+      <Translated>ID:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>OrderLabel</Untranslated>
+      <Translated>Anmodning:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>CaseLabel</Untranslated>
+      <Translated>Post:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecordedLabel</Untranslated>
+      <Translated>Optaget:</Translated>
+    </TranslationEntry>
+
+    <!-- patient details table (on front page and in 12 lead event pages) -->
+
+    <TranslationEntry>
+      <Untranslated>PatientID2Label</Untranslated>
+      <Translated>Patient-ID2:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientID3Label</Untranslated>
+      <Translated>Patient-ID3:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>DateOfBirthLabel</Untranslated>
+      <Translated>Fødselsdato:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>AgeLabel</Untranslated>
+      <Translated>({Patient.AgeInYears} år)</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>GenderLabel</Untranslated>
+      <Translated>Køn:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>WardLabel</Untranslated>
+      <Translated>Afd.:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecorderNoLabel</Untranslated>
+      <Translated>Optagernr.:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecordingLengthLabel</Untranslated>
+      <Translated>Optagelsesvarighed:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>AnalysisDateLabel</Untranslated>
+      <Translated>Dato for analyse:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>OperatorLabel</Untranslated>
+      <Translated>Analysetekniker:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReferringPhysicianLabel</Untranslated>
+      <Translated>Henvisende læge:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>HospitalLabel</Untranslated>
+      <Translated>Hospital/klinik:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientLabel</Untranslated>
+      <Translated>Patient</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>HeightLabel</Untranslated>
+      <Translated>Højde:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>WeightLabel</Untranslated>
+      <Translated>Vægt:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>NationalIDLabel</Untranslated>
+      <Translated>Nationalt ID:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>AnalysedLengthLabel</Untranslated>
+      <Translated>Analyseret varighed:</Translated>
+    </TranslationEntry>
+
+    <!-- general translations (used throughout the report) -->
+
+    <TranslationEntry>
+      <Untranslated>BPM</Untranslated>
+      <Translated>slag/min.</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>beats</Untranslated>
+      <Translated>slag</Translated>
+    </TranslationEntry>
+
+    <!-- patient gender translations -->
+
+    <TranslationEntry>
+      <Untranslated>PatientGenderFemale</Untranslated>
+      <Translated>Kvinde</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientGenderMale</Untranslated>
+      <Translated>Mand</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientGenderUnknown</Untranslated>
+      <Translated>Ukendt</Translated>
+    </TranslationEntry>
+
+    <!-- patient pacemaker translations -->
+
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeAtrial</Untranslated>
+      <Translated>Atriel</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeDual</Untranslated>
+      <Translated>Dobbelt</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeVentricular</Untranslated>
+      <Translated>Ventrikulær</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeNone</Untranslated>
+      <Translated>Ingen</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeUnknown</Untranslated>
+      <Translated>Ukendt</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeUnknownIfFitted</Untranslated>
+      <Translated>Ukendt om installeret</Translated>
+    </TranslationEntry>
+
+  </Translation>
+
+ <!-- ***************************** SPANISH TRANSLATIONS START HERE ****************************** -->
+
+  <Translation CultureName='Es'>
+
+    <!-- date and time formats -->
+
+    <TranslationEntry>
+      <Untranslated>RecordingTimeFormatLabel</Untranslated>
+      <Translated>ddd HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ShortDateTimeFormatLabel</Untranslated>
+      <Translated>ddd HH:mm</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>DateOnlyFormatLabel</Untranslated>
+      <Translated>ddd dd MMM yyyy</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>FullDateAndTimeFormatLabel</Untranslated>
+      <Translated>ddd dd MMM yyyy HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecordingDayFormatLabel</Untranslated>
+      <Translated>ddd dd</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>TimeFormatLabel</Untranslated>
+      <Translated>HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>HrMinFormatLabel</Untranslated>
+      <Translated>D \día H \hr M \min s \seg</Translated>
+    </TranslationEntry>
+
+    <!-- report property translations -->
+
+    <TranslationEntry>
+      <Untranslated>ReportSubjectLabel</Untranslated>
+      <Translated>Informe {Product.Name} de 12 derivaciones de impresión inmediata</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReportTitleLabel</Untranslated>
+      <Translated>Informe de 12 derivaciones de impresión inmediata</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReportKeywordsLabel</Untranslated>
+      <Translated>Holter, 12 derivaciones, en reposo, ECG, informe {Product.Name}, Spacelabs Healthcare</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReportCreatorLabel</Untranslated>
+      <Translated>Generador de informe {Product.Name} {Product.Version}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReportNameLabel</Untranslated>
+      <Translated>Informe de 12 derivaciones de impresión inmediata</Translated>
+    </TranslationEntry>
+
+    <!-- twelve lead event report section translations -->
+
+    <TranslationEntry>
+      <Untranslated>TwelveLeadStripsReportSectionTitleLabel</Untranslated>
+      <Translated>Tiras de 12 derivaciones</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>TwelveLeadStripLabel</Untranslated>
+      <Translated>Tira de 12 derivaciones </Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>TwelveLeadFindingsOverflowTitleLabel</Untranslated>
+      <Translated>Hallazgos e interpretaciones (continuado)</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RRLabel</Untranslated>
+      <Translated>RR:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>HRLabel</Untranslated>
+      <Translated>FC:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>P/QRS/TLabel</Untranslated>
+      <Translated>P/QRS/T:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>QRSLabel</Untranslated>
+      <Translated>QRS:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>QTRLabel</Untranslated>
+      <Translated>QTR:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>QT/QTcLabel</Untranslated>
+      <Translated>QT/QTc:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>SokolowLyonIndexLabel</Untranslated>
+      <Translated>Índice Sokolow Lyon:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>P/PRLabel</Untranslated>
+      <Translated>P/PR:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>LewisIndexLabel</Untranslated>
+      <Translated>Índice Lewis:</Translated>
+    </TranslationEntry>
+
+    <!-- footer translations -->
+
+    <TranslationEntry>
+      <Untranslated>ReportGenerationDateLabel</Untranslated>
+      <Translated>Generado {Report.CreatedDateAndTime,_FullDateAndTimeFormatLabel_}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ProductVersionLabel</Untranslated>
+      <Translated>{Product.Name} versión {Product.Version}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PageMofNLabel</Untranslated>
+      <Translated>Página {PageNumber} de {PageCount}</Translated>
+    </TranslationEntry>
+
+    <!-- header translations -->
+
+    <TranslationEntry>
+      <Untranslated>HolterReportTitleLabel</Untranslated>
+      <Translated>Impresión inmediata - 12 derivaciones</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>Lead</Untranslated>
+      <Translated>Derivación</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>EcgStripHrTitleLabel</Untranslated>
+      <Translated>1 min FC {PrintElement.OneMinHeartRate,'0'} LPM</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>IDLabel</Untranslated>
+      <Translated>ID:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>OrderLabel</Untranslated>
+      <Translated>Pedido:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>CaseLabel</Untranslated>
+      <Translated>Caso:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecordedLabel</Untranslated>
+      <Translated>Grabado:</Translated>
+    </TranslationEntry>
+
+    <!-- patient details table (on front page and in 12 lead event pages) -->
+
+    <TranslationEntry>
+      <Untranslated>PatientID2Label</Untranslated>
+      <Translated>ID2 de paciente:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientID3Label</Untranslated>
+      <Translated>ID3 de paciente:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>DateOfBirthLabel</Untranslated>
+      <Translated>Fecha de nacimiento:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>AgeLabel</Untranslated>
+      <Translated>({Patient.AgeInYears} años)</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>GenderLabel</Untranslated>
+      <Translated>Sexo:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>WardLabel</Untranslated>
+      <Translated>Pabellón:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecorderNoLabel</Untranslated>
+      <Translated>Nº Grabadora:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecordingLengthLabel</Untranslated>
+      <Translated>Duración de grabación:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>AnalysisDateLabel</Untranslated>
+      <Translated>Fecha de análisis:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>OperatorLabel</Untranslated>
+      <Translated>Técnico de análisis:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReferringPhysicianLabel</Untranslated>
+      <Translated>Médico referente:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>HospitalLabel</Untranslated>
+      <Translated>Hospital / Centro:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientLabel</Untranslated>
+      <Translated>Paciente</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>HeightLabel</Untranslated>
+      <Translated>Altura:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>WeightLabel</Untranslated>
+      <Translated>Peso:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>NationalIDLabel</Untranslated>
+      <Translated>ID nacional:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>AnalysedLengthLabel</Untranslated>
+      <Translated>Duración analizado:</Translated>
+    </TranslationEntry>
+
+    <!-- general translations (used throughout the report) -->
+
+    <TranslationEntry>
+      <Untranslated>BPM</Untranslated>
+      <Translated>LPM</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>beats</Untranslated>
+      <Translated>latidos</Translated>
+    </TranslationEntry>
+
+    <!-- patient gender translations -->
+
+    <TranslationEntry>
+      <Untranslated>PatientGenderFemale</Untranslated>
+      <Translated>Mujer</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientGenderMale</Untranslated>
+      <Translated>Hombre</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientGenderUnknown</Untranslated>
+      <Translated>Desconocido</Translated>
+    </TranslationEntry>
+
+    <!-- patient pacemaker translations -->
+
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeAtrial</Untranslated>
+      <Translated>Auricular</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeDual</Untranslated>
+      <Translated>Doble</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeVentricular</Untranslated>
+      <Translated>Ventricular</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeNone</Untranslated>
+      <Translated>Ninguno</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeUnknown</Untranslated>
+      <Translated>Desconocido</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeUnknownIfFitted</Untranslated>
+      <Translated>No se sabe si está colocado</Translated>
+    </TranslationEntry>
+
+  </Translation>
+
+ <!-- ***************************** FRENCH TRANSLATIONS START HERE ****************************** -->
+
+  <Translation CultureName='Fr'>
+
+    <!-- date and time formats -->
+
+    <TranslationEntry>
+      <Untranslated>RecordingTimeFormatLabel</Untranslated>
+      <Translated>ddd HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ShortDateTimeFormatLabel</Untranslated>
+      <Translated>ddd HH:mm</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>DateOnlyFormatLabel</Untranslated>
+      <Translated>ddd dd MMM yyyy</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>FullDateAndTimeFormatLabel</Untranslated>
+      <Translated>ddd dd MMM yyyy HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecordingDayFormatLabel</Untranslated>
+      <Translated>ddd dd</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>TimeFormatLabel</Untranslated>
+      <Translated>HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>HrMinFormatLabel</Untranslated>
+      <Translated>D jour H \h M \mn s \s</Translated>
+    </TranslationEntry>
+
+    <!-- report property translations -->
+
+    <TranslationEntry>
+      <Untranslated>ReportSubjectLabel</Untranslated>
+      <Translated>Impression immédiate rapport 12 dérivations {Product.Name}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReportTitleLabel</Untranslated>
+      <Translated>Impression immédiate rapport 12 dérivations</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReportKeywordsLabel</Untranslated>
+      <Translated>Holter, 12 dérivations, de repos, ECG, rapport, {Product.Name}, Spacelabs Healthcare</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReportCreatorLabel</Untranslated>
+      <Translated>Générateur de rapport {Product.Name} {Product.Version}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReportNameLabel</Untranslated>
+      <Translated>Impression immédiate rapport 12 dérivations</Translated>
+    </TranslationEntry>
+
+    <!-- twelve lead event report section translations -->
+
+    <TranslationEntry>
+      <Untranslated>TwelveLeadStripsReportSectionTitleLabel</Untranslated>
+      <Translated>Section de rapport de bandes 12 dérivations</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>TwelveLeadStripLabel</Untranslated>
+      <Translated>Bande 12 dérivations à</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>TwelveLeadFindingsOverflowTitleLabel</Untranslated>
+      <Translated>Interprétations et résultats (suite)</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RRLabel</Untranslated>
+      <Translated>RR :</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>HRLabel</Untranslated>
+      <Translated>FC:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>P/QRS/TLabel</Untranslated>
+      <Translated>P/QRS/T :</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>QRSLabel</Untranslated>
+      <Translated>QRS :</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>QTRLabel</Untranslated>
+      <Translated>QTR :</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>QT/QTcLabel</Untranslated>
+      <Translated>QT/QTc :</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>SokolowLyonIndexLabel</Untranslated>
+      <Translated>Indice de Sokolow Lyon :</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>P/PRLabel</Untranslated>
+      <Translated>P/PR :</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>LewisIndexLabel</Untranslated>
+      <Translated>Indice de Lewis :</Translated>
+    </TranslationEntry>
+
+    <!-- footer translations -->
+
+    <TranslationEntry>
+      <Untranslated>ReportGenerationDateLabel</Untranslated>
+      <Translated>Généré le {Report.CreatedDateAndTime,_FullDateAndTimeFormatLabel_}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ProductVersionLabel</Untranslated>
+      <Translated>{Product.Name} version {Product.Version}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PageMofNLabel</Untranslated>
+      <Translated>Page {PageNumber} de {PageCount}</Translated>
+    </TranslationEntry>
+
+    <!-- header translations -->
+
+    <TranslationEntry>
+      <Untranslated>HolterReportTitleLabel</Untranslated>
+      <Translated>Impression immédiate 12 dérivations</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>Lead</Untranslated>
+      <Translated>Dérivation</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>EcgStripHrTitleLabel</Untranslated>
+      <Translated>FC 1 mn {PrintElement.OneMinHeartRate,'0'} BPM</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>IDLabel</Untranslated>
+      <Translated>ID :</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>OrderLabel</Untranslated>
+      <Translated>Ordre :</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>CaseLabel</Untranslated>
+      <Translated>Dossier :</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecordedLabel</Untranslated>
+      <Translated>Enregistré :</Translated>
+    </TranslationEntry>
+
+    <!-- patient details table (on front page and in 12 lead event pages) -->
+
+    <TranslationEntry>
+      <Untranslated>PatientID2Label</Untranslated>
+      <Translated>ID2 patient :</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientID3Label</Untranslated>
+      <Translated>ID3 patient :</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>DateOfBirthLabel</Untranslated>
+      <Translated>Date de naissance :</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>AgeLabel</Untranslated>
+      <Translated>({Patient.AgeInYears} ans)</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>GenderLabel</Untranslated>
+      <Translated>Sexe :</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>WardLabel</Untranslated>
+      <Translated>Chambre :</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecorderNoLabel</Untranslated>
+      <Translated>Numéro enregistreur :</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecordingLengthLabel</Untranslated>
+      <Translated>Longueur d’enregistrement :</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>AnalysisDateLabel</Untranslated>
+      <Translated>Date d’analyse :</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>OperatorLabel</Untranslated>
+      <Translated>Technicien d’analyse :</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReferringPhysicianLabel</Untranslated>
+      <Translated>Médecin référent :</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>HospitalLabel</Untranslated>
+      <Translated>Hôpital/Site :</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientLabel</Untranslated>
+      <Translated>Patient</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>HeightLabel</Untranslated>
+      <Translated>Taille :</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>WeightLabel</Untranslated>
+      <Translated>Poids :</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>NationalIDLabel</Untranslated>
+      <Translated>Numéro d'Assuré :</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>AnalysedLengthLabel</Untranslated>
+      <Translated>Longueur d’analyse :</Translated>
+    </TranslationEntry>
+
+    <!-- general translations (used throughout the report) -->
+
+    <TranslationEntry>
+      <Untranslated>BPM</Untranslated>
+      <Translated>BPM</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>beats</Untranslated>
+      <Translated>battements</Translated>
+    </TranslationEntry>
+
+    <!-- patient gender translations -->
+
+    <TranslationEntry>
+      <Untranslated>PatientGenderFemale</Untranslated>
+      <Translated>Féminin</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientGenderMale</Untranslated>
+      <Translated>Masculin</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientGenderUnknown</Untranslated>
+      <Translated>Inconnu</Translated>
+    </TranslationEntry>
+
+    <!-- patient pacemaker translations -->
+
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeAtrial</Untranslated>
+      <Translated>Auriculaire</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeDual</Untranslated>
+      <Translated>Double</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeVentricular</Untranslated>
+      <Translated>Ventriculaire</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeNone</Untranslated>
+      <Translated>Sans</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeUnknown</Untranslated>
+      <Translated>Inconnu</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeUnknownIfFitted</Untranslated>
+      <Translated>Pose non établie</Translated>
+    </TranslationEntry>
+
+  </Translation>
+
+  <!-- ***************************** ITALIAN TRANSLATIONS START HERE ****************************** -->
+
+  <Translation CultureName='It'>
+
+    <!-- date and time formats -->
+
+    <TranslationEntry>
+      <Untranslated>RecordingTimeFormatLabel</Untranslated>
+      <Translated>ddd HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ShortDateTimeFormatLabel</Untranslated>
+      <Translated>ddd HH:mm</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>DateOnlyFormatLabel</Untranslated>
+      <Translated>ddd dd MMM yyyy</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>FullDateAndTimeFormatLabel</Untranslated>
+      <Translated>ddd dd MMM yyyy HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecordingDayFormatLabel</Untranslated>
+      <Translated>ddd dd</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>TimeFormatLabel</Untranslated>
+      <Translated>HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>HrMinFormatLabel</Untranslated>
+      <Translated>D giorno H ora M \min s \sec</Translated>
+    </TranslationEntry>
+
+    <!-- report property translations -->
+
+    <TranslationEntry>
+      <Untranslated>ReportSubjectLabel</Untranslated>
+      <Translated>Stampa immediata referto {Product.Name} 12 derivaz.</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReportTitleLabel</Untranslated>
+      <Translated>Stampa immediata referto 12 derivaz.</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReportKeywordsLabel</Untranslated>
+      <Translated>Holter, 12 derivaz., riposo, ECG, referto, {Product.Name}, Spacelabs Healthcare</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReportCreatorLabel</Untranslated>
+      <Translated>{Product.Name} Generatore referto {Product.Version}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReportNameLabel</Untranslated>
+      <Translated>Stampa immediata referto 12 derivaz.</Translated>
+    </TranslationEntry>
+
+    <!-- twelve lead event report section translations -->
+
+    <TranslationEntry>
+      <Untranslated>TwelveLeadStripsReportSectionTitleLabel</Untranslated>
+      <Translated>Sezione referto striscia 12 derivaz.</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>TwelveLeadStripLabel</Untranslated>
+      <Translated>Striscia 12 derivaz. alle</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>TwelveLeadFindingsOverflowTitleLabel</Untranslated>
+      <Translated>Interpretazioni e risultati (continua)</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RRLabel</Untranslated>
+      <Translated>RR:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>HRLabel</Untranslated>
+      <Translated>FC:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>P/QRS/TLabel</Untranslated>
+      <Translated>P/QRS/T:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>QRSLabel</Untranslated>
+      <Translated>QRS:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>QTRLabel</Untranslated>
+      <Translated>QTR:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>QT/QTcLabel</Untranslated>
+      <Translated>QT/QTc:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>SokolowLyonIndexLabel</Untranslated>
+      <Translated>Indice Sokolow Lyons:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>P/PRLabel</Untranslated>
+      <Translated>P/PR:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>LewisIndexLabel</Untranslated>
+      <Translated>Indice Lewis:</Translated>
+    </TranslationEntry>
+
+    <!-- footer translations -->
+
+    <TranslationEntry>
+      <Untranslated>ReportGenerationDateLabel</Untranslated>
+      <Translated>Eseguito {Report.CreatedDateAndTime,_FullDateAndTimeFormatLabel_}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ProductVersionLabel</Untranslated>
+      <Translated>{Product.Name} versione {Product.Version}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PageMofNLabel</Untranslated>
+      <Translated>Pagina {PageNumber} di {PageCount}</Translated>
+    </TranslationEntry>
+
+    <!-- header translations -->
+
+    <TranslationEntry>
+      <Untranslated>HolterReportTitleLabel</Untranslated>
+      <Translated>Stampa immediata referto 12 derivaz.</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>IDLabel</Untranslated>
+      <Translated>ID:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>OrderLabel</Untranslated>
+      <Translated>Ordine:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>CaseLabel</Untranslated>
+      <Translated>Caso:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecordedLabel</Untranslated>
+      <Translated>Registrato:</Translated>
+    </TranslationEntry>
+
+    <!-- patient details table (on front page and in 12 lead event pages) -->
+
+    <TranslationEntry>
+      <Untranslated>PatientID2Label</Untranslated>
+      <Translated>ID2 paziente:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientID3Label</Untranslated>
+      <Translated>ID3 paziente:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>DateOfBirthLabel</Untranslated>
+      <Translated>Data di nascita:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>AgeLabel</Untranslated>
+      <Translated>({Patient.AgeInYears} anni)</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>GenderLabel</Untranslated>
+      <Translated>Sesso:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>WardLabel</Untranslated>
+      <Translated>Reparto:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecorderNoLabel</Untranslated>
+      <Translated>N. registratore:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecordingLengthLabel</Untranslated>
+      <Translated>Durata registrazione:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>AnalysisDateLabel</Untranslated>
+      <Translated>Data analisi:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>OperatorLabel</Untranslated>
+      <Translated>Tecnico Analista:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReferringPhysicianLabel</Untranslated>
+      <Translated>Medico di riferimento:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>HospitalLabel</Untranslated>
+      <Translated>Ospedale/Studio med.:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientLabel</Untranslated>
+      <Translated>Paziente</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>HeightLabel</Untranslated>
+      <Translated>Altezza:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>WeightLabel</Untranslated>
+      <Translated>Peso:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>NationalIDLabel</Untranslated>
+      <Translated>Codice Fiscale:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>AnalysedLengthLabel</Untranslated>
+      <Translated>Lunghezza analizzata:</Translated>
+    </TranslationEntry>
+
+    <!-- general translations (used throughout the report) -->
+
+    <TranslationEntry>
+      <Untranslated>BPM</Untranslated>
+      <Translated>BPM</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>beats</Untranslated>
+      <Translated>battiti</Translated>
+    </TranslationEntry>
+
+    <!-- patient gender translations -->
+
+    <TranslationEntry>
+      <Untranslated>PatientGenderFemale</Untranslated>
+      <Translated>Femmina</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientGenderMale</Untranslated>
+      <Translated>Maschio</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientGenderUnknown</Untranslated>
+      <Translated>Sconosciuto</Translated>
+    </TranslationEntry>
+
+    <!-- patient pacemaker translations -->
+
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeAtrial</Untranslated>
+      <Translated>Atriale</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeDual</Untranslated>
+      <Translated>Doppio</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeVentricular</Untranslated>
+      <Translated>Ventricolare</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeNone</Untranslated>
+      <Translated>Nessuno</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeUnknown</Untranslated>
+      <Translated>Sconosciuto</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeUnknownIfFitted</Untranslated>
+      <Translated>Presenza non nota</Translated>
+    </TranslationEntry>
+
+  </Translation>
+
+  <!-- ***************************** DUTCH TRANSLATIONS START HERE ****************************** -->
+
+  <Translation CultureName='Nl'>
+
+    <!-- date and time formats -->
+
+    <TranslationEntry>
+      <Untranslated>RecordingTimeFormatLabel</Untranslated>
+      <Translated>ddd HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ShortDateTimeFormatLabel</Untranslated>
+      <Translated>ddd HH:mm</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>DateOnlyFormatLabel</Untranslated>
+      <Translated>ddd dd MMM yyyy</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>FullDateAndTimeFormatLabel</Untranslated>
+      <Translated>ddd dd MMM yyyy HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecordingDayFormatLabel</Untranslated>
+      <Translated>ddd dd</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>TimeFormatLabel</Untranslated>
+      <Translated>HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>HrMinFormatLabel</Untranslated>
+      <Translated>D \dag H uur M \min. s \sec.</Translated>
+    </TranslationEntry>
+
+    <!-- report property translations -->
+
+    <TranslationEntry>
+      <Untranslated>ReportSubjectLabel</Untranslated>
+      <Translated>Direct {Product.Name}-rapport 12 afleidingen afdrukken</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReportTitleLabel</Untranslated>
+      <Translated>Direct 12-afleidingenrapport afdrukken</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReportKeywordsLabel</Untranslated>
+      <Translated>Holter, 12 afleidingen, rust, ECG, rapport, {Product.Name}, Spacelabs Healthcare</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReportCreatorLabel</Untranslated>
+      <Translated>{Product.Name} Rapportgenerator {Product.Version}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReportNameLabel</Untranslated>
+      <Translated>Direct 12-afleidingenrapport afdrukken</Translated>
+    </TranslationEntry>
+
+    <!-- twelve lead event report section translations -->
+
+    <TranslationEntry>
+      <Untranslated>TwelveLeadStripsReportSectionTitleLabel</Untranslated>
+      <Translated>Rapportonderdeel 12-afleidingenstroken</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>TwelveLeadStripLabel</Untranslated>
+      <Translated>12-afleidingenstrook op </Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>TwelveLeadFindingsOverflowTitleLabel</Untranslated>
+      <Translated>Interpretaties en bevindingen (vervolg)</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RRLabel</Untranslated>
+      <Translated>RR:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>HRLabel</Untranslated>
+      <Translated>HF:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>P/QRS/TLabel</Untranslated>
+      <Translated>P/QRS/T:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>QRSLabel</Untranslated>
+      <Translated>QRS:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>QTRLabel</Untranslated>
+      <Translated>QTR:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>QT/QTcLabel</Untranslated>
+      <Translated>QT/QTc:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>SokolowLyonIndexLabel</Untranslated>
+      <Translated>Sokolow-Lyon-index:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>P/PRLabel</Untranslated>
+      <Translated>P/PR:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>LewisIndexLabel</Untranslated>
+      <Translated>Lewis-index</Translated>
+    </TranslationEntry>
+
+    <!-- footer translations -->
+
+    <TranslationEntry>
+      <Untranslated>ReportGenerationDateLabel</Untranslated>
+      <Translated>Gegenereerd op {Report.CreatedDateAndTime,_FullDateAndTimeFormatLabel_}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ProductVersionLabel</Untranslated>
+      <Translated>{Product.Name} versie {Product.Version}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PageMofNLabel</Untranslated>
+      <Translated>Pagina {PageNumber} van {PageCount}</Translated>
+    </TranslationEntry>
+
+    <!-- header translations -->
+
+    <TranslationEntry>
+      <Untranslated>HolterReportTitleLabel</Untranslated>
+      <Translated>Direct 12-afleidingenrapport afdrukken</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>Lead</Untranslated>
+      <Translated>Kanal</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>EcgStripHrTitleLabel</Untranslated>
+      <Translated>HF 1 min. {PrintElement.OneMinHeartRate,'0'} SPM</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>IDLabel</Untranslated>
+      <Translated>ID:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>OrderLabel</Untranslated>
+      <Translated>Aanvraag:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>CaseLabel</Untranslated>
+      <Translated>Casus:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecordedLabel</Untranslated>
+      <Translated>Geregistreerd:</Translated>
+    </TranslationEntry>
+
+    <!-- patient details table (on front page and in 12 lead event pages) -->
+
+    <TranslationEntry>
+      <Untranslated>PatientID2Label</Untranslated>
+      <Translated>Patiënt-ID2:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientID3Label</Untranslated>
+      <Translated>Patiënt-ID3:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>DateOfBirthLabel</Untranslated>
+      <Translated>Geboortedatum:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>AgeLabel</Untranslated>
+      <Translated>({Patient.AgeInYears} jaar)</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>GenderLabel</Untranslated>
+      <Translated>Geslacht:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>WardLabel</Untranslated>
+      <Translated>Afdeling:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecorderNoLabel</Untranslated>
+      <Translated>Recordernr.:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecordingLengthLabel</Untranslated>
+      <Translated>Registratielengte:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>AnalysisDateLabel</Untranslated>
+      <Translated>Analysedatum:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>OperatorLabel</Untranslated>
+      <Translated>Analysetechnicus:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReferringPhysicianLabel</Untranslated>
+      <Translated>Behandelend arts:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>HospitalLabel</Untranslated>
+      <Translated>Ziekenhuis/praktijk:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientLabel</Untranslated>
+      <Translated>Patiënt</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>HeightLabel</Untranslated>
+      <Translated>Lengte:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>WeightLabel</Untranslated>
+      <Translated>Gewicht:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>NationalIDLabel</Untranslated>
+      <Translated>BSN:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>AnalysedLengthLabel</Untranslated>
+      <Translated>Geanalyseerde lengte:</Translated>
+    </TranslationEntry>
+
+    <!-- general translations (used throughout the report) -->
+
+    <TranslationEntry>
+      <Untranslated>BPM</Untranslated>
+      <Translated>SPM</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>beats</Untranslated>
+      <Translated>slagen</Translated>
+    </TranslationEntry>
+
+    <!-- patient gender translations -->
+
+    <TranslationEntry>
+      <Untranslated>PatientGenderFemale</Untranslated>
+      <Translated>Vrouw</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientGenderMale</Untranslated>
+      <Translated>Man</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientGenderUnknown</Untranslated>
+      <Translated>Onbekend</Translated>
+    </TranslationEntry>
+
+    <!-- patient pacemaker translations -->
+
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeAtrial</Untranslated>
+      <Translated>Atriaal</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeDual</Untranslated>
+      <Translated>Dubbel</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeVentricular</Untranslated>
+      <Translated>Ventriculair</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeNone</Untranslated>
+      <Translated>Geen</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeUnknown</Untranslated>
+      <Translated>Onbekend</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeUnknownIfFitted</Untranslated>
+      <Translated>Aanwezigheid onbekend</Translated>
+    </TranslationEntry>
+
+  </Translation>
+
+  <!-- ***************************** POLISH TRANSLATIONS START HERE ****************************** -->
+
+  <Translation CultureName='Pl'>
+
+    <!-- date and time formats -->
+
+    <TranslationEntry>
+      <Untranslated>RecordingTimeFormatLabel</Untranslated>
+      <Translated>ddd HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ShortDateTimeFormatLabel</Untranslated>
+      <Translated>ddd HH:mm</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>DateOnlyFormatLabel</Untranslated>
+      <Translated>ddd dd MMM yyyy</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>FullDateAndTimeFormatLabel</Untranslated>
+      <Translated>ddd dd MMM yyyy HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecordingDayFormatLabel</Untranslated>
+      <Translated>ddd dd</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>TimeFormatLabel</Untranslated>
+      <Translated>HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>HrMinFormatLabel</Untranslated>
+      <Translated>D \dzień H godz. m \min s \s</Translated>
+    </TranslationEntry>
+
+    <!-- report property translations -->
+
+    <TranslationEntry>
+      <Untranslated>ReportSubjectLabel</Untranslated>
+      <Translated>Natychmiastowy wydruk raportu 12 odprowadzeń {Product.Name}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReportTitleLabel</Untranslated>
+      <Translated>Natychmiastowy wydruk raportu 12 odprowadzeń</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReportKeywordsLabel</Untranslated>
+      <Translated>Holter, 12 odprowadzeń, spoczynkowe, EKG, raport, {Product.Name}, Spacelabs Healthcare</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReportCreatorLabel</Untranslated>
+      <Translated>{Product.Name} Generator raportów {Product.Version}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReportNameLabel</Untranslated>
+      <Translated>Natychmiastowy wydruk raportu 12 odprowadzeń</Translated>
+    </TranslationEntry>
+
+    <!-- twelve lead event report section translations -->
+
+    <TranslationEntry>
+      <Untranslated>TwelveLeadStripsReportSectionTitleLabel</Untranslated>
+      <Translated>Sekcja raportu - wykresy 12 odprowadzeń</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>TwelveLeadStripLabel</Untranslated>
+      <Translated>Wykres 12 odprowadzeń w </Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>TwelveLeadFindingsOverflowTitleLabel</Untranslated>
+      <Translated>Interpretacje i wnioski (ciąg dalszy)</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RRLabel</Untranslated>
+      <Translated>RR:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>HRLabel</Untranslated>
+      <Translated>HR:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>P/QRS/TLabel</Untranslated>
+      <Translated>P/QRS/T:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>QRSLabel</Untranslated>
+      <Translated>QRS:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>QTRLabel</Untranslated>
+      <Translated>QTR:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>QT/QTcLabel</Untranslated>
+      <Translated>QT/QTc:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>SokolowLyonIndexLabel</Untranslated>
+      <Translated>Wsk. Sokołowa-Lyona:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>P/PRLabel</Untranslated>
+      <Translated>P/PR:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>LewisIndexLabel</Untranslated>
+      <Translated>Wskaźnik Lewisa:</Translated>
+    </TranslationEntry>
+
+    <!-- footer translations -->
+
+    <TranslationEntry>
+      <Untranslated>ReportGenerationDateLabel</Untranslated>
+      <Translated>Wygenerowano {Report.CreatedDateAndTime,_FullDateAndTimeFormatLabel_}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ProductVersionLabel</Untranslated>
+      <Translated>{Product.Name} wersja {Product.Version}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PageMofNLabel</Untranslated>
+      <Translated>Strona {PageNumber} z {PageCount}</Translated>
+    </TranslationEntry>
+
+    <!-- header translations -->
+
+    <TranslationEntry>
+      <Untranslated>HolterReportTitleLabel</Untranslated>
+      <Translated>Natychmiastowy wydruk 12 odprowadzeń</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>IDLabel</Untranslated>
+      <Translated>ID:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>OrderLabel</Untranslated>
+      <Translated>Zlecenie:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>CaseLabel</Untranslated>
+      <Translated>Przypadek:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecordedLabel</Untranslated>
+      <Translated>Zarejestrowane:</Translated>
+    </TranslationEntry>
+
+    <!-- patient details table (on front page and in 12 lead event pages) -->
+
+    <TranslationEntry>
+      <Untranslated>PatientID2Label</Untranslated>
+      <Translated>ID2 pacjenta:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientID3Label</Untranslated>
+      <Translated>ID3 pacjenta:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>DateOfBirthLabel</Untranslated>
+      <Translated>Data urodzenia:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>AgeLabel</Untranslated>
+      <Translated>({Patient.AgeInYears} lat(a))</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>GenderLabel</Untranslated>
+      <Translated>Płeć:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>WardLabel</Untranslated>
+      <Translated>Oddział:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecorderNoLabel</Untranslated>
+      <Translated>Nr rejestratora:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecordingLengthLabel</Untranslated>
+      <Translated>Długość zapisu:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>AnalysisDateLabel</Untranslated>
+      <Translated>Data analizy:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>OperatorLabel</Untranslated>
+      <Translated>Analizujący:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReferringPhysicianLabel</Untranslated>
+      <Translated>Lekarz kierujący:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>HospitalLabel</Untranslated>
+      <Translated>Szpital/poradnia:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientLabel</Untranslated>
+      <Translated>Pacjent</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>HeightLabel</Untranslated>
+      <Translated>Wzrost:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>WeightLabel</Untranslated>
+      <Translated>Waga:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>NationalIDLabel</Untranslated>
+      <Translated>PESEL:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>AnalysedLengthLabel</Untranslated>
+      <Translated>Czas trwania analizo.:</Translated>
+    </TranslationEntry>
+
+    <!-- general translations (used throughout the report) -->
+
+    <TranslationEntry>
+      <Untranslated>BPM</Untranslated>
+      <Translated>ud./min</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>beats</Untranslated>
+      <Translated>pobudzeń</Translated>
+    </TranslationEntry>
+
+    <!-- patient gender translations -->
+
+    <TranslationEntry>
+      <Untranslated>PatientGenderFemale</Untranslated>
+      <Translated>Kobieta</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientGenderMale</Untranslated>
+      <Translated>Mężczyzna</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientGenderUnknown</Untranslated>
+      <Translated>Nieznane</Translated>
+    </TranslationEntry>
+
+    <!-- patient pacemaker translations -->
+
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeAtrial</Untranslated>
+      <Translated>Przedsionkowe</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeDual</Untranslated>
+      <Translated>Dwujamowe</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeVentricular</Untranslated>
+      <Translated>Komorowe</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeNone</Untranslated>
+      <Translated>Brak</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeUnknown</Untranslated>
+      <Translated>Nieznane</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeUnknownIfFitted</Untranslated>
+      <Translated>Nie wiadomo, czy zaimplantowany</Translated>
+    </TranslationEntry>
+
+  </Translation>
+
+  <!-- ***************************** BRAZILIAN-PORTUGUESE TRANSLATIONS START HERE ****************************** -->
+
+  <Translation CultureName='Pt'>
+
+    <!-- date and time formats -->
+
+    <TranslationEntry>
+      <Untranslated>RecordingTimeFormatLabel</Untranslated>
+      <Translated>ddd HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ShortDateTimeFormatLabel</Untranslated>
+      <Translated>ddd HH:mm</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>DateOnlyFormatLabel</Untranslated>
+      <Translated>ddd dd MMM yyyy</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>FullDateAndTimeFormatLabel</Untranslated>
+      <Translated>ddd dd MMM yyyy HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecordingDayFormatLabel</Untranslated>
+      <Translated>ddd dd</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>TimeFormatLabel</Untranslated>
+      <Translated>HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>HrMinFormatLabel</Untranslated>
+      <Translated>D \dia H \hr M \min s \seg</Translated>
+    </TranslationEntry>
+
+    <!-- report property translations -->
+
+    <TranslationEntry>
+      <Untranslated>ReportSubjectLabel</Untranslated>
+      <Translated>Impressão Imediata do Relatório de {Product.Name} 12 Derivações</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReportTitleLabel</Untranslated>
+      <Translated>Impressão Imediata do Relatório de 12 Derivações</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReportKeywordsLabel</Untranslated>
+      <Translated>Holter, 12 derivações, repouso, ECG, relatório, {Product.Name}, Spacelabs Healthcare</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReportCreatorLabel</Untranslated>
+      <Translated>{Product.Name} Gerador de Relatórios {Product.Version}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReportNameLabel</Untranslated>
+      <Translated>Impressão Imediata do Relatório de 12 Derivações</Translated>
+    </TranslationEntry>
+
+    <!-- twelve lead event report section translations -->
+
+    <TranslationEntry>
+      <Untranslated>TwelveLeadStripsReportSectionTitleLabel</Untranslated>
+      <Translated>Secção de Relatório de Tiras de 12 Derivações</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>TwelveLeadStripLabel</Untranslated>
+      <Translated>Tira de 12 Derivações em </Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>TwelveLeadFindingsOverflowTitleLabel</Untranslated>
+      <Translated>Interpretações e Conclusões (continuação)</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RRLabel</Untranslated>
+      <Translated>RR:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>HRLabel</Untranslated>
+      <Translated>FC:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>P/QRS/TLabel</Untranslated>
+      <Translated>P/QRS/T:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>QRSLabel</Untranslated>
+      <Translated>QRS:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>QTRLabel</Untranslated>
+      <Translated>QTR:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>QT/QTcLabel</Untranslated>
+      <Translated>QT/QTc:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>SokolowLyonIndexLabel</Untranslated>
+      <Translated>Índice Sokolow-Lyon:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>P/PRLabel</Untranslated>
+      <Translated>P/Pulsação:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>LewisIndexLabel</Untranslated>
+      <Translated>Índice Lewis:</Translated>
+    </TranslationEntry>
+
+    <!-- footer translations -->
+
+    <TranslationEntry>
+      <Untranslated>ReportGenerationDateLabel</Untranslated>
+      <Translated>Gerado Em {Report.CreatedDateAndTime,_FullDateAndTimeFormatLabel_}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ProductVersionLabel</Untranslated>
+      <Translated>{Product.Name} versão {Product.Version}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PageMofNLabel</Untranslated>
+      <Translated>Página {PageNumber} de {PageCount}</Translated>
+    </TranslationEntry>
+
+    <!-- header translations -->
+
+    <TranslationEntry>
+      <Untranslated>HolterReportTitleLabel</Untranslated>
+      <Translated>Impressão Imediata de 12 Derivações</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>IDLabel</Untranslated>
+      <Translated>Identificação:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>OrderLabel</Untranslated>
+      <Translated>Referência:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>CaseLabel</Untranslated>
+      <Translated>Caso:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecordedLabel</Untranslated>
+      <Translated>Registrado:</Translated>
+    </TranslationEntry>
+
+    <!-- patient details table (on front page and in 12 lead event pages) -->
+
+    <TranslationEntry>
+      <Untranslated>PatientID2Label</Untranslated>
+      <Translated>ID2 do Paciente:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientID3Label</Untranslated>
+      <Translated>ID3 do Paciente:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>DateOfBirthLabel</Untranslated>
+      <Translated>Data de nascimento:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>AgeLabel</Untranslated>
+      <Translated>({Patient.AgeInYears} anos)</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>GenderLabel</Untranslated>
+      <Translated>Sexo:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>WardLabel</Untranslated>
+      <Translated>Ala:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecorderNoLabel</Untranslated>
+      <Translated>Registrador N.o:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecordingLengthLabel</Untranslated>
+      <Translated>Comprimento do Registro:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>AnalysisDateLabel</Untranslated>
+      <Translated>Data de Análise:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>OperatorLabel</Untranslated>
+      <Translated>Técnico de Análise:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReferringPhysicianLabel</Untranslated>
+      <Translated>Médico de referência:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>HospitalLabel</Untranslated>
+      <Translated>Hospital / Clínica:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientLabel</Untranslated>
+      <Translated>Paciente</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>HeightLabel</Untranslated>
+      <Translated>Altura:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>WeightLabel</Untranslated>
+      <Translated>Peso:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>NationalIDLabel</Untranslated>
+      <Translated>Identidade nacional:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>AnalysedLengthLabel</Untranslated>
+      <Translated>Duração analisada:</Translated>
+    </TranslationEntry>
+
+    <!-- general translations (used throughout the report) -->
+
+    <TranslationEntry>
+      <Untranslated>BPM</Untranslated>
+      <Translated>BPM</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>beats</Untranslated>
+      <Translated>batim.</Translated>
+    </TranslationEntry>
+
+    <!-- patient gender translations -->
+
+    <TranslationEntry>
+      <Untranslated>PatientGenderFemale</Untranslated>
+      <Translated>Feminino</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientGenderMale</Untranslated>
+      <Translated>Masculino</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientGenderUnknown</Untranslated>
+      <Translated>Desconhecido</Translated>
+    </TranslationEntry>
+
+    <!-- patient pacemaker translations -->
+
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeAtrial</Untranslated>
+      <Translated>Atrial</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeDual</Untranslated>
+      <Translated>Duplo</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeVentricular</Untranslated>
+      <Translated>Ventricular</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeNone</Untranslated>
+      <Translated>inexistente</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeUnknown</Untranslated>
+      <Translated>Desconhecido</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeUnknownIfFitted</Untranslated>
+      <Translated>Desconhecimento quanto a marca-passo colocado</Translated>
+    </TranslationEntry>
+
+  </Translation>
+
+  <!-- ***************************** PORTUGUESE-PORTUGUESE TRANSLATIONS START HERE ****************************** -->
+
+  <Translation CultureName='Pt-PT'>
+
+    <!-- date and time formats -->
+
+    <TranslationEntry>
+      <Untranslated>RecordingTimeFormatLabel</Untranslated>
+      <Translated>ddd HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ShortDateTimeFormatLabel</Untranslated>
+      <Translated>ddd HH:mm</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>DateOnlyFormatLabel</Untranslated>
+      <Translated>ddd dd MMM yyyy</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>FullDateAndTimeFormatLabel</Untranslated>
+      <Translated>ddd dd MMM yyyy HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecordingDayFormatLabel</Untranslated>
+      <Translated>ddd dd</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>TimeFormatLabel</Untranslated>
+      <Translated>HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>HrMinFormatLabel</Untranslated>
+      <Translated>D \dia H \hr M \min s \seg</Translated>
+    </TranslationEntry>
+
+    <!-- report property translations -->
+
+    <TranslationEntry>
+      <Untranslated>ReportSubjectLabel</Untranslated>
+      <Translated>Impressão Imediata do Relatório de {Product.Name} 12 Derivações</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReportTitleLabel</Untranslated>
+      <Translated>Impressão Imediata do Relatório de 12 Derivações</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReportKeywordsLabel</Untranslated>
+      <Translated>Holter, 12 derivações, repouso, ECG, relatório, {Product.Name}, Spacelabs Healthcare</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReportCreatorLabel</Untranslated>
+      <Translated>{Product.Name} Gerador de Relatórios {Product.Version}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReportNameLabel</Untranslated>
+      <Translated>Impressão Imediata do Relatório de 12 Derivações</Translated>
+    </TranslationEntry>
+
+    <!-- twelve lead event report section translations -->
+
+    <TranslationEntry>
+      <Untranslated>TwelveLeadStripsReportSectionTitleLabel</Untranslated>
+      <Translated>Secção de Relatório de Tiras de 12 Derivações</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>TwelveLeadStripLabel</Untranslated>
+      <Translated>Tira de 12 Derivações em </Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>TwelveLeadFindingsOverflowTitleLabel</Untranslated>
+      <Translated>Interpretações e Conclusões (continuação)</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RRLabel</Untranslated>
+      <Translated>RR:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>HRLabel</Untranslated>
+      <Translated>FC:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>P/QRS/TLabel</Untranslated>
+      <Translated>P/QRS/T:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>QRSLabel</Untranslated>
+      <Translated>QRS:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>QTRLabel</Untranslated>
+      <Translated>QTR:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>QT/QTcLabel</Untranslated>
+      <Translated>QT/QTc:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>SokolowLyonIndexLabel</Untranslated>
+      <Translated>Índice Sokolow-Lyon:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>P/PRLabel</Untranslated>
+      <Translated>P/PR:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>LewisIndexLabel</Untranslated>
+      <Translated>Índice Lewis:</Translated>
+    </TranslationEntry>
+
+    <!-- footer translations -->
+
+    <TranslationEntry>
+      <Untranslated>ReportGenerationDateLabel</Untranslated>
+      <Translated>Criado Em {Report.CreatedDateAndTime,_FullDateAndTimeFormatLabel_}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ProductVersionLabel</Untranslated>
+      <Translated>{Product.Name} versão {Product.Version}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PageMofNLabel</Untranslated>
+      <Translated>Página {PageNumber} de {PageCount}</Translated>
+    </TranslationEntry>
+
+    <!-- header translations -->
+
+    <TranslationEntry>
+      <Untranslated>HolterReportTitleLabel</Untranslated>
+      <Translated>Impressão Imediata de 12 Derivações</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>IDLabel</Untranslated>
+      <Translated>Identificação:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>OrderLabel</Untranslated>
+      <Translated>Referência:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>CaseLabel</Untranslated>
+      <Translated>Caso:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecordedLabel</Untranslated>
+      <Translated>Gravado:</Translated>
+    </TranslationEntry>
+
+    <!-- patient details table (on front page and in 12 lead event pages) -->
+
+    <TranslationEntry>
+      <Untranslated>PatientID2Label</Untranslated>
+      <Translated>ID2 do Paciente:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientID3Label</Untranslated>
+      <Translated>ID3 do Paciente:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>DateOfBirthLabel</Untranslated>
+      <Translated>Data de nascimento:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>AgeLabel</Untranslated>
+      <Translated>({Patient.AgeInYears} anos)</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>GenderLabel</Untranslated>
+      <Translated>Sexo:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>WardLabel</Untranslated>
+      <Translated>Ala:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecorderNoLabel</Untranslated>
+      <Translated>Registador N.o:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecordingLengthLabel</Untranslated>
+      <Translated>Comprimento do Registo:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>AnalysisDateLabel</Untranslated>
+      <Translated>Data de Análise:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>OperatorLabel</Untranslated>
+      <Translated>Técnico de Análise:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReferringPhysicianLabel</Untranslated>
+      <Translated>Médico de referência:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>HospitalLabel</Untranslated>
+      <Translated>Hospital / Clínica:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientLabel</Untranslated>
+      <Translated>Paciente</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>HeightLabel</Untranslated>
+      <Translated>Altura:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>WeightLabel</Untranslated>
+      <Translated>Peso:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>NationalIDLabel</Untranslated>
+      <Translated>Identidade nacional:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>AnalysedLengthLabel</Untranslated>
+      <Translated>Duração analisada:</Translated>
+    </TranslationEntry>
+
+    <!-- general translations (used throughout the report) -->
+
+    <TranslationEntry>
+      <Untranslated>BPM</Untranslated>
+      <Translated>BPM</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>beats</Untranslated>
+      <Translated>batim.</Translated>
+    </TranslationEntry>
+
+    <!-- patient gender translations -->
+
+    <TranslationEntry>
+      <Untranslated>PatientGenderFemale</Untranslated>
+      <Translated>Feminino</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientGenderMale</Untranslated>
+      <Translated>Masculino</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientGenderUnknown</Untranslated>
+      <Translated>Desconhecido</Translated>
+    </TranslationEntry>
+
+    <!-- patient pacemaker translations -->
+
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeAtrial</Untranslated>
+      <Translated>Auricular</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeDual</Untranslated>
+      <Translated>Duplo</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeVentricular</Untranslated>
+      <Translated>Ventricular</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeNone</Untranslated>
+      <Translated>inexistente</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeUnknown</Untranslated>
+      <Translated>Desconhecido</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeUnknownIfFitted</Untranslated>
+      <Translated>Desconhecimento quanto a pacemaker colocado</Translated>
+    </TranslationEntry>
+
+  </Translation>
+
+  <!-- ***************************** RUSSIAN TRANSLATIONS START HERE ****************************** -->
+
+  <Translation CultureName='Ru'>
+
+    <!-- date and time formats -->
+
+    <TranslationEntry>
+      <Untranslated>RecordingTimeFormatLabel</Untranslated>
+      <Translated>ddd HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ShortDateTimeFormatLabel</Untranslated>
+      <Translated>ddd HH:mm</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>DateOnlyFormatLabel</Untranslated>
+      <Translated>ddd dd MMM yyyy</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>FullDateAndTimeFormatLabel</Untranslated>
+      <Translated>ddd dd MMM yyyy HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecordingDayFormatLabel</Untranslated>
+      <Translated>ddd dd</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>TimeFormatLabel</Untranslated>
+      <Translated>HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>HrMinFormatLabel</Untranslated>
+      <Translated>D \день H \час M \минуты s \секунды</Translated>
+    </TranslationEntry>
+
+    <!-- report property translations -->
+
+    <TranslationEntry>
+      <Untranslated>ReportSubjectLabel</Untranslated>
+      <Translated>Быстрая печать 12 отведениях</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReportTitleLabel</Untranslated>
+      <Translated>Быстрая печать 12 отведениях</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReportKeywordsLabel</Untranslated>
+      <Translated>ЭКГ по Холтеру, ЭКГ в 12 отведениях, ЭКГ покоя, ЭКГ, отчете, {Product.Name}, Spacelabs Healthcare</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReportCreatorLabel</Untranslated>
+      <Translated>{Product.Name} Report Generator {Product.Version}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReportNameLabel</Untranslated>
+      <Translated>Быстрая печать 12 отведениях</Translated>
+    </TranslationEntry>
+
+    <!-- twelve lead event report section translations -->
+
+   <TranslationEntry>
+      <Untranslated>TwelveLeadStripsReportSectionTitleLabel</Untranslated>
+      <Translated>Отрезки в 12 отведениях</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>TwelveLeadStripLabel</Untranslated>
+      <Translated>Отрезок в 12 отведениях - </Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>TwelveLeadFindingsOverflowTitleLabel</Untranslated>
+      <Translated>Интерпретации и выводы (продолжение)</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RRLabel</Untranslated>
+      <Translated>RR:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>HRLabel</Untranslated>
+      <Translated>ЧСС:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>P/QRS/TLabel</Untranslated>
+      <Translated>P/QRS/T:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>QRSLabel</Untranslated>
+      <Translated>QRS:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>QTRLabel</Untranslated>
+      <Translated>QTR:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>QT/QTcLabel</Untranslated>
+      <Translated>QT/QTc:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>SokolowLyonIndexLabel</Untranslated>
+      <Translated>Индекс Соколова-Лайона:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>P/PRLabel</Untranslated>
+      <Translated>P/PR:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>LewisIndexLabel</Untranslated>
+      <Translated>Индекс Льюиса:</Translated>
+    </TranslationEntry>
+
+    <!-- footer translations -->
+
+    <TranslationEntry>
+      <Untranslated>ReportGenerationDateLabel</Untranslated>
+      <Translated>Создано {Report.CreatedDateAndTime,_FullDateAndTimeFormatLabel_}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ProductVersionLabel</Untranslated>
+      <Translated>{Product.Name}, версия {Product.Version}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PageMofNLabel</Untranslated>
+      <Translated>Стр. {PageNumber} из {PageCount}</Translated>
+    </TranslationEntry>
+
+    <!-- header translations -->
+
+    <TranslationEntry>
+      <Untranslated>HolterReportTitleLabel</Untranslated>
+      <Translated>Быстрая печать 12 отведениях</Translated>
+    </TranslationEntry>
+
+    <TranslationEntry>
+      <Untranslated>IDLabel</Untranslated>
+      <Translated>Идентификатор:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>OrderLabel</Untranslated>
+      <Translated>Направление:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>CaseLabel</Untranslated>
+      <Translated>Обследование:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecordedLabel</Untranslated>
+      <Translated>Записано:</Translated>
+    </TranslationEntry>
+
+    <!-- patient details table (on front page and in 12 lead event pages) -->
+
+    <TranslationEntry>
+      <Untranslated>PatientID2Label</Untranslated>
+      <Translated>Ид. 2 пациента:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientID3Label</Untranslated>
+      <Translated>Ид. 3 пациента:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>DateOfBirthLabel</Untranslated>
+      <Translated>Дата рождения:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>AgeLabel</Untranslated>
+      <Translated>(возраст: {Patient.AgeInYears})</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>GenderLabel</Untranslated>
+      <Translated>Пол:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>WardLabel</Untranslated>
+      <Translated>Палата:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecorderNoLabel</Untranslated>
+      <Translated>Устройство записи №:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecordingLengthLabel</Untranslated>
+      <Translated>Длина записи:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>AnalysisDateLabel</Untranslated>
+      <Translated>Дата анализа:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>OperatorLabel</Untranslated>
+      <Translated>Выполнивший анализ техник:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReferringPhysicianLabel</Untranslated>
+      <Translated>Направивший врач:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>HospitalLabel</Untranslated>
+      <Translated>Лечебное учреждение:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientLabel</Untranslated>
+      <Translated>Пациент</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>HeightLabel</Untranslated>
+      <Translated>Рост:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>WeightLabel</Untranslated>
+      <Translated>Вес:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>NationalIDLabel</Untranslated>
+      <Translated>Национальный идентификатор:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>AnalysedLengthLabel</Untranslated>
+      <Translated>Длина анализа:</Translated>
+    </TranslationEntry>
+
+    <!-- general translations (used throughout the report) -->
+
+    <TranslationEntry>
+      <Untranslated>BPM</Untranslated>
+      <Translated>уд/мин</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>beats</Untranslated>
+      <Translated>сокр.</Translated>
+    </TranslationEntry>
+
+    <!-- patient gender translations -->
+
+    <TranslationEntry>
+      <Untranslated>PatientGenderFemale</Untranslated>
+      <Translated>Женский</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientGenderMale</Untranslated>
+      <Translated>Мужской</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientGenderUnknown</Untranslated>
+      <Translated>Неизвестно</Translated>
+    </TranslationEntry>
+
+    <!-- patient pacemaker translations -->
+
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeAtrial</Untranslated>
+      <Translated>Предсердное</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeDual</Untranslated>
+      <Translated>Двухкамерное</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeVentricular</Untranslated>
+      <Translated>Желудочковое</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeNone</Untranslated>
+      <Translated>Нет</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeUnknown</Untranslated>
+      <Translated>Неизвестно</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeUnknownIfFitted</Untranslated>
+      <Translated>Факт установки неизвестен</Translated>
+    </TranslationEntry>
+
+   </Translation>
+
+ <!-- ***************************** SWEDISH TRANSLATIONS START HERE ****************************** -->
+
+  <Translation CultureName='Sv'>
+
+    <!-- date and time formats -->
+
+    <TranslationEntry>
+      <Untranslated>RecordingTimeFormatLabel</Untranslated>
+      <Translated>ddd HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ShortDateTimeFormatLabel</Untranslated>
+      <Translated>ddd HH:mm</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>DateOnlyFormatLabel</Untranslated>
+      <Translated>ddd dd MMM yyyy</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>FullDateAndTimeFormatLabel</Untranslated>
+      <Translated>ddd dd MMM yyyy HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecordingDayFormatLabel</Untranslated>
+      <Translated>ddd dd</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>TimeFormatLabel</Untranslated>
+      <Translated>HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>HrMinFormatLabel</Untranslated>
+      <Translated>D \dag H ti\m M \min s \sek</Translated>
+    </TranslationEntry>
+
+    <!-- report property translations -->
+
+    <TranslationEntry>
+      <Untranslated>ReportSubjectLabel</Untranslated>
+      <Translated>Skriv ut {Product.Name} 12-avledningsrapport direkt</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReportTitleLabel</Untranslated>
+      <Translated>Skriv ut 12-avledningsrapport direkt</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReportKeywordsLabel</Untranslated>
+      <Translated>Holter, 12-avlednings, vilo, EKG, rapport, {Product.Name}, Spacelabs Healthcare</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReportCreatorLabel</Untranslated>
+      <Translated>{Product.Name} rapportgenerator {Product.Version}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReportNameLabel</Untranslated>
+      <Translated>Skriv ut 12-avledningsrapport direkt</Translated>
+    </TranslationEntry>
+
+    <!-- twelve lead event report section translations -->
+
+    <TranslationEntry>
+      <Untranslated>TwelveLeadStripsReportSectionTitleLabel</Untranslated>
+      <Translated>Rapportsektion för 12-avledningsremsor</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>TwelveLeadStripLabel</Untranslated>
+      <Translated>12-avledningsremsa vid </Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>TwelveLeadFindingsOverflowTitleLabel</Untranslated>
+      <Translated>Tolkningar och slutsatser (fortsättning)</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RRLabel</Untranslated>
+      <Translated>RR:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>HRLabel</Untranslated>
+      <Translated>HF:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>P/QRS/TLabel</Untranslated>
+      <Translated>P/QRS/T:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>QRSLabel</Untranslated>
+      <Translated>QRS:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>QTRLabel</Untranslated>
+      <Translated>QTR:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>QT/QTcLabel</Untranslated>
+      <Translated>QT/QTc:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>SokolowLyonIndexLabel</Untranslated>
+      <Translated>Sokolow-Lyon-index:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>P/PRLabel</Untranslated>
+      <Translated>P/PR:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>LewisIndexLabel</Untranslated>
+      <Translated>Lewis-index:</Translated>
+    </TranslationEntry>
+
+    <!-- footer translations -->
+
+    <TranslationEntry>
+      <Untranslated>ReportGenerationDateLabel</Untranslated>
+      <Translated>Genererades {Report.CreatedDateAndTime,_FullDateAndTimeFormatLabel_}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ProductVersionLabel</Untranslated>
+      <Translated>{Product.Name} version {Product.Version}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PageMofNLabel</Untranslated>
+      <Translated>Sid {PageNumber} av {PageCount}</Translated>
+    </TranslationEntry>
+
+    <!-- header translations -->
+
+    <TranslationEntry>
+      <Untranslated>HolterReportTitleLabel</Untranslated>
+      <Translated>Skriv ut 12-avledningsrapport direkt</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>Lead</Untranslated>
+      <Translated>Avledning</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>EcgStripHrTitleLabel</Untranslated>
+      <Translated>1 min HF {PrintElement.OneMinHeartRate,'0'} SPM</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>IDLabel</Untranslated>
+      <Translated>ID:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>OrderLabel</Untranslated>
+      <Translated>Ordning:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>CaseLabel</Untranslated>
+      <Translated>Fall:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecordedLabel</Untranslated>
+      <Translated>Spelades in:</Translated>
+    </TranslationEntry>
+
+    <!-- patient details table (on front page and in 12 lead event pages) -->
+
+    <TranslationEntry>
+      <Untranslated>PatientID2Label</Untranslated>
+      <Translated>Patient-ID2:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientID3Label</Untranslated>
+      <Translated>Patient-ID3:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>DateOfBirthLabel</Untranslated>
+      <Translated>Födelsedatum:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>AgeLabel</Untranslated>
+      <Translated>({Patient.AgeInYears} år)</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>GenderLabel</Untranslated>
+      <Translated>Kön:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>WardLabel</Untranslated>
+      <Translated>Avdelning:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecorderNoLabel</Untranslated>
+      <Translated>Bandspelare nr:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecordingLengthLabel</Untranslated>
+      <Translated>Inspelningslängd:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>AnalysisDateLabel</Untranslated>
+      <Translated>Analysdatum:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>OperatorLabel</Untranslated>
+      <Translated>BMA:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReferringPhysicianLabel</Untranslated>
+      <Translated>Remitterande läkare:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>HospitalLabel</Untranslated>
+      <Translated>Sjukhus/vårdenhet:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientLabel</Untranslated>
+      <Translated>Patient</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>HeightLabel</Untranslated>
+      <Translated>Längd:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>WeightLabel</Untranslated>
+      <Translated>Vikt:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>NationalIDLabel</Untranslated>
+      <Translated>Nationellt ID:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>AnalysedLengthLabel</Untranslated>
+      <Translated>Analyserat längd:</Translated>
+    </TranslationEntry>
+
+    <!-- general translations (used throughout the report) -->
+
+    <TranslationEntry>
+      <Untranslated>BPM</Untranslated>
+      <Translated>SPM</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>beats</Untranslated>
+      <Translated>slag</Translated>
+    </TranslationEntry>
+
+    <!-- patient gender translations -->
+
+    <TranslationEntry>
+      <Untranslated>PatientGenderFemale</Untranslated>
+      <Translated>Kvinna</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientGenderMale</Untranslated>
+      <Translated>Man</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientGenderUnknown</Untranslated>
+      <Translated>Okänt</Translated>
+    </TranslationEntry>
+
+    <!-- patient pacemaker translations -->
+
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeAtrial</Untranslated>
+      <Translated>Förmaks</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeDual</Untranslated>
+      <Translated>Tvåkammar</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeVentricular</Untranslated>
+      <Translated>Ventrikulär</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeNone</Untranslated>
+      <Translated>Inga</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeUnknown</Untranslated>
+      <Translated>Okänt</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeUnknownIfFitted</Untranslated>
+      <Translated>Okänt om insatt</Translated>
+    </TranslationEntry>
+
+  </Translation>
+
+  <!-- ***************************** CHINESE TRANSLATIONS START HERE ****************************** -->
+
+  <Translation CultureName='Zh'>
+
+    <!-- date and time formats -->
+
+    <TranslationEntry>
+      <Untranslated>RecordingTimeFormatLabel</Untranslated>
+      <Translated>ddd HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>DateOnlyFormatLabel</Untranslated>
+      <Translated>yyyy/MM/dd</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>FullDateAndTimeFormatLabel</Untranslated>
+      <Translated>yyyy/MM/dd HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>HrMinFormatLabel</Untranslated>
+      <Translated>D 天 H 小时 M 分钟 s 秒</Translated>
+    </TranslationEntry>
+
+    <!-- report property translations -->
+
+    <TranslationEntry>
+      <Untranslated>ReportSubjectLabel</Untranslated>
+      <Translated>立即打印 12 导联{Product.Name}报告</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReportTitleLabel</Untranslated>
+      <Translated>立即打印 12 导联报告</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReportKeywordsLabel</Untranslated>
+      <Translated>动态，12 导联，静态，ECG，报告，{Product.Name}，Spacelabs Healthcare</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReportCreatorLabel</Untranslated>
+      <Translated>{Product.Name} 报告生成器 {Product.Version}</Translated>
+    </TranslationEntry>
+
+    <!-- twelve lead event report section translations -->
+
+    <TranslationEntry>
+      <Untranslated>TwelveLeadStripLabel</Untranslated>
+      <Translated>12 导联条形图，位于 </Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>TwelveLeadFindingsOverflowTitleLabel</Untranslated>
+      <Translated>解释及结果（续）</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RRLabel</Untranslated>
+      <Translated>RR：</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>HRLabel</Untranslated>
+      <Translated>心率：</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>P/QRS/TLabel</Untranslated>
+      <Translated>P/QRS/T：</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>QRSLabel</Untranslated>
+      <Translated>QRS：</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>QTRLabel</Untranslated>
+      <Translated>QTR：</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>QT/QTcLabel</Untranslated>
+      <Translated>QT/QTc：</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>SokolowLyonIndexLabel</Untranslated>
+      <Translated>Sokolow Lyon 指数：</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>P/PRLabel</Untranslated>
+      <Translated>P/PR：</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>LewisIndexLabel</Untranslated>
+      <Translated>Lewis 指数：</Translated>
+    </TranslationEntry>
+
+    <!-- footer translations -->
+
+    <TranslationEntry>
+      <Untranslated>ReportGenerationDateLabel</Untranslated>
+      <Translated>生成日期 {Report.CreatedDateAndTime,_FullDateAndTimeFormatLabel_}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ProductVersionLabel</Untranslated>
+      <Translated>{Product.Name} 版本 {Product.Version}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PageMofNLabel</Untranslated>
+      <Translated>第 {PageNumber} 页，共 {PageCount} 页</Translated>
+    </TranslationEntry>
+
+    <!-- header translations -->
+
+    <TranslationEntry>
+      <Untranslated>HolterReportTitleLabel</Untranslated>
+      <Translated>立即打印 12 导联报告</Translated>
+    </TranslationEntry>
+   <TranslationEntry>
+      <Untranslated>EcgStripHrTitleLabel</Untranslated>
+      <Translated>1 分钟心率 {PrintElement.OneMinHeartRate,'0'} 次心搏/分</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>IDLabel</Untranslated>
+      <Translated>患者 ID：</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>OrderLabel</Untranslated>
+      <Translated>需求检测 ID：</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>CaseLabel</Untranslated>
+      <Translated>病例：</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecordedLabel</Untranslated>
+      <Translated>记录：</Translated>
+    </TranslationEntry>
+
+    <!-- patient details table (on front page and in 12 lead event pages) -->
+
+    <TranslationEntry>
+      <Untranslated>PatientID2Label</Untranslated>
+      <Translated>第二 ID：</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientID3Label</Untranslated>
+      <Translated>第三 ID：</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>DateOfBirthLabel</Untranslated>
+      <Translated>出生日期：</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>AgeLabel</Untranslated>
+      <Translated>（{Patient.AgeInYears} 岁）</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>GenderLabel</Untranslated>
+      <Translated>性别：</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>WardLabel</Untranslated>
+      <Translated>病房：</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecorderNoLabel</Untranslated>
+      <Translated>记录仪号：</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecordingLengthLabel</Untranslated>
+      <Translated>记录长度：</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>AnalysisDateLabel</Untranslated>
+      <Translated>分析日期：</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>OperatorLabel</Untranslated>
+      <Translated>分析技师：</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReferringPhysicianLabel</Untranslated>
+      <Translated>转诊医生：</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>HospitalLabel</Untranslated>
+      <Translated>医院/诊所：</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientLabel</Untranslated>
+      <Translated>患者</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>HeightLabel</Untranslated>
+      <Translated>身高：</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>WeightLabel</Untranslated>
+      <Translated>体重：</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>NationalIDLabel</Untranslated>
+      <Translated>身份证号：</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>AnalysedLengthLabel</Untranslated>
+      <Translated>分析长度：</Translated>
+    </TranslationEntry>
+
+    <!-- general translations (used throughout the report) -->
+
+    <TranslationEntry>
+      <Untranslated>BPM</Untranslated>
+      <Translated>次心搏/分</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>beats</Untranslated>
+      <Translated>次</Translated>
+    </TranslationEntry>
+
+    <!-- patient gender translations -->
+
+    <TranslationEntry>
+      <Untranslated>PatientGenderFemale</Untranslated>
+      <Translated>女</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientGenderMale</Untranslated>
+      <Translated>男</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientGenderUnknown</Untranslated>
+      <Translated>未知</Translated>
+    </TranslationEntry>
+
+    <!-- patient pacemaker translations -->
+
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeAtrial</Untranslated>
+      <Translated>心房</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeDual</Untranslated>
+      <Translated>双腔</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeVentricular</Untranslated>
+      <Translated>心室</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeNone</Untranslated>
+      <Translated>无</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeUnknown</Untranslated>
+      <Translated>未知</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PacemakerTypeUnknownIfFitted</Untranslated>
+      <Translated>不清楚是否安装</Translated>
+    </TranslationEntry>
+
+  </Translation>
+
+  <PaintBox>
+
+    <!-- ******************************************************************************************************** 
+         ************       REPORT SETTINGS DEFINED HERE AFFECT HOW THE REPORT WILL APPEAR          *************
+         ******************************************************************************************************** -->
+
+    <!-- these settings allow some frequently changed settings to be prominent at the start of this report format
+         for convenient change to customer required values -->
+
+    <Settings>
+      
+    </Settings>
+
+    <!-- ******************************************************************************************************** 
+         ************        FONT, PEN, BRUSH, TABLESTYLE RESOURCE DEFINITIONS START HERE           *************
+         ******************************************************************************************************** -->
+
+    <!-- general resources and styles used throughout the report -->
+
+    <Resource Type='Font'>
+      <Property Name='Name' Value='SectionTitleFont'/>
+      <Property Name='Typeface' Value='Auto'/>
+      <Property Name='Size' Value='14'/>
+      <Property Name='Bold' Value='true'/>
+    </Resource>
+
+    <Style Name='BlockTableStyle'>
+      <Property Name='TitleFont' Value='Auto,10pt,Black,Bold'/>
+      <Property Name='CellPadding'>
+        <Property Name='Left' Value='0'/>
+      </Property>
+      <Property Name='TitlePadding'>
+        <Property Name='Top' Value='3'/>
+        <Property Name='Bottom' Value='1.5'/>
+      </Property>
+    </Style>
+    <Style Name='EcgStyle'>
+      <Property Name='MajorGraticulePen' Value='Salmon,0.2,0.2,0.3'/>
+      <Property Name='MinorGraticulePen' Value='Salmon,0.1,0.1,0.9'/>
+    </Style>
+    <Style Name='SectionTitleStyle'>
+      <Property Name='Alignment' Value='MiddleCentre'/>
+      <Property Name='Font' Value='SectionTitleFont'/>
+    </Style>
+    <Style Name='ShadedBlockStyle'>
+      <Property Name='BorderBrush' Value='aliceblue'/>
+      <Property Name='BorderCornerRadius' Value='1'/>
+    </Style>
+    <Style Name='FlowingTableStyle'>
+      <Property Name='LayoutFormat' Value='Flowing'/>
+      <Property Name='TitleFont' Value='Auto,10pt,Black,Bold'/>
+      <Property Name='OddRowBrush' Value='aliceblue'/>
+      <Property Name='HeaderBrush' Value='powderblue'/>
+      <Property Name='RowCornerRadius' Value='1'/>
+      <Property Name='HeaderCornerRadius' Value='1'/>
+      <Property Name='ColumnBorderPen' Value='DarkGray,0.05mm'/>
+      <Property Name='HeaderFont' Value='Auto,8pt,Black,Bold'/>
+      <Property Name='TitlePadding'>
+        <Property Name='Top' Value='2'/>
+        <Property Name='Bottom' Value='1.5'/>
+      </Property>
+    </Style>
+    <Style Name='SubTitleBlockStyle'>
+      <Property Name='Alignment' Value='MiddleCentre'/>
+      <Property Name='Padding'>
+        <Property Name='Top' Value='4'/>
+        <Property Name='Bottom' Value='2'/>
+      </Property>
+      <Property Name='Font' Value='Auto,10pt,Black,Bold'/>
+    </Style>
+
+    <!-- styles and resources used in headers -->
+
+    <Style Name='TorridonTitleStyle'>
+      <Property Name='Margin'>
+        <Property Name='Top' Value='3.8'/>
+      </Property>
+      <Property Name='Content' Value='{Product.Name}'/>
+      <Property Name='Font' Value='Auto,15.8pt,SteelBlue'/>
+      <Property Name='Alignment' Value='TopLeft'/>
+      <Property Name='Bounds' Value='TitleCell'/>
+    </Style>
+    <Style Name='HolterReportTitleStyle'>
+      <Property Name='Bounds' Value='TitleCell'/>
+      <Property Name='Margin'>
+        <Property Name='Top' Value='8.4'/>
+      </Property>
+      <Property Name='Content' Value='{_HolterReportTitleLabel_}'/>
+      <Property Name='Font' Value='Auto,10pt,SteelBlue'/>
+      <Property Name='Alignment' Value='TopLeft'/>
+    </Style>
+    <Style Name='LogoStyle'>
+      <Property Name='Bounds' Value='LogoCell'/>
+      <Property Name='Margin'>
+        <Property Name='Top' Value='3.6'/>
+        <Property Name='Right' Value='3.6'/>
+        <Property Name='Bottom' Value='1.1'/>
+      </Property>
+      <Property Name='Image' Value='SpacelabsLogo'/>
+    </Style>
+    <Style Name='PatientIdentificationTitleStyle'>
+      <Property Name='Bounds' Value='PatientNameCell'/>
+      <Property Name='Content' Value='{Patient.LastNameFirst}'/>
+      <Property Name='Font' Value='Auto,15.8pt,Black,Bold'/>
+      <Property Name='Margin'>
+        <Property Name='Top' Value='3.8'/>
+      </Property>
+      <Property Name='Alignment' Value='TopLeft'/>
+    </Style>
+    <Style Name='HeaderPatientIdentifierTableStyle'>
+      <Property Name='Margin'>
+        <Property Name='Top' Value='0.25' />
+        <Property Name='Bottom' Value='0' />
+      </Property>
+      <Property Name='Bounds' Value='PatientIdentifyingRow' />
+      <Property Name='Padding'>
+        <Property Name='Left' Value='1'/>
+        <Property Name='Right' Value='1'/>
+        <Property Name='Top' Value='1'/>
+      </Property>
+      <Property Name='CellFont' Value='Auto,8pt,black'/>
+      <Property Name='DataSource'>
+        <Property Name='Column'>
+          <Property Name='Width' Value='0.09' />
+          <Property Name='CellAlignment' Value='MiddleLeft' />
+        </Property>
+        <Property Name='Column'>
+          <Property Name='Width' Value='0.15' />
+          <Property Name='CellAlignment' Value='MiddleLeft' />
+        </Property>
+        <Property Name='Column'>
+          <Property Name='Width' Value='0.12' />
+          <Property Name='CellAlignment' Value='MiddleRight' />
+          <Property Name='RightPadding' Value='2' />
+        </Property>
+        <Property Name='Column'>
+          <Property Name='Width' Value='0.1' />
+        </Property>
+        <Property Name='Column'>
+          <Property Name='Width' Value='0.08' />
+        </Property>
+        <Property Name='Column'>
+          <Property Name='Width' Value='0.1' />
+          <Property Name='CellAlignment' Value='MiddleRight' />
+        </Property>
+        <Property Name='Column'>
+          <Property Name='Width' Value='0.1' />
+          <Property Name='CellAlignment' Value='MiddleLeft' />
+        </Property>
+
+        <Property Name='Row'>
+          <Property Name='Cell'>
+            <Property Name='Content' Value='{_IDLabel_}'/>
+          </Property>
+          <Property Name='Cell'>
+            <Property Name='Content' Value="{Patient.Id} {Patient.BelongsToMyOrganisation ? '' : ('('+Patient.Organisation+')')}"/>
+          </Property>
+          <Property Name='Cell'>
+            <Property Name='Content' Value='{_DateOfBirthLabel_}' />
+          </Property>
+          <Property Name='Cell'>
+            <Property Name='Content' Value="{Patient.DateOfBirth,_DateOnlyFormatLabel_} "/>
+          </Property>
+          <Property Name='Cell'>
+            <Property Name='Content' Value='_AgeLabel_' />
+          </Property>
+          <Property Name='Cell'>
+            <Property Name='Content' Value='_GenderLabel_' />
+          </Property>
+          <Property Name='Cell'>
+            <Property Name='Content' Value='{Patient.Gender}'/>
+          </Property>
+        </Property>
+      </Property>
+    </Style>
+
+        <!-- resources and styles used in footers -->
+
+    <Style Name='FooterReportCreatedDateStyle'>
+      <Property Name='Bounds' Value='GeneratedOnCell'/>
+      <Property Name='Content' Value="{_ReportGenerationDateLabel_}"/>
+      <Property Name='Font' Value='Auto,6pt'/>
+      <Property Name='Alignment' Value='BottomLeft'/>
+    </Style>
+    <Style Name='FooterTorridonVersionStyle'>
+      <Property Name='Bounds' Value='VersionCell'/>
+      <Property Name='Content' Value="{_ProductVersionLabel_}"/>
+      <Property Name='Font' Value='Auto,6pt'/>
+      <Property Name='Alignment' Value='BottomCentre'/>
+    </Style>
+    <Style Name='FooterPageMofNStyle'>
+      <Property Name='Bounds' Value='PageMofNCell'/>
+      <Property Name='Align' Value='BottomRight'/>
+      <Property Name='Font' Value='Auto,6pt'/>
+      <Property Name='Format' Value="{_PageMofNLabel_}"/>
+    </Style>
+
+  </PaintBox>
+
+  <!-- ******************************************************************************************************** 
+       ************                HEADERS APPEARING AT TOP OF PAGES START HERE                   *************
+       ******************************************************************************************************** -->
+
+  <Headers>
+
+    <!-- ********************************* HEADER LANDSCAPE NON-FRONT PAGES STARTS HERE ******************************** -->
+
+    <Header>
+      <Property Name='Name' Value='LandscapeHeader'/>
+      <Property Name='PageOrientation' Value='Landscape'/>
+      <Property Name='Margin'>
+        <Property Name='Left' Value='9'/>
+        <Property Name='Top' Value='5'/>
+        <Property Name='Right' Value='9'/>
+        <Property Name='Bottom' Value='5'/>
+      </Property>
+
+      <Layout>
+        <Row Name='TitleRow' Height='12.5'>
+          <Cell Name='LogoCell' Width='48'/>
+          <Cell Name='TitleCell' Width='67'/>
+          <Cell Name='PatientNameCell'/>
+        </Row>
+        <Row Name='PatientIdentifyingRow' Height='6'/>
+      </Layout>
+
+      <Shape Type='Block' Style='TorridonTitleStyle'/>
+      <Shape Type='Block' Style='HolterReportTitleStyle'/>
+      <Shape Type='Block' Style='LogoStyle'/>
+      <Shape Type='Block' Style='PatientIdentificationTitleStyle'/>
+      <Shape Type='Table' Style='ShadedBlockStyle,BlockTableStyle,HeaderPatientIdentifierTableStyle'/>
+
+    </Header>
+
+  </Headers>
+
+  <!-- ******************************************************************************************************** 
+       ************               FOOTERS APPEARING AT BOTTOM OF PAGES START HERE                 *************
+       ******************************************************************************************************** -->
+
+  <Footers>
+
+    <!-- footer used on landscape pages -->
+
+    <Footer>
+      <Property Name='Name' Value='LandscapeFooter'/>
+      <Property Name='PageOrientation' Value='Landscape'/>
+      <Property Name='Margin'>
+        <Property Name='Left' Value='9'/>
+        <Property Name='Top' Value='5'/>
+        <Property Name='Right' Value='9'/>
+        <Property Name='Bottom' Value='5'/>
+      </Property>
+
+      <Layout>
+        <Row Name='FooterRow' Height='5' Order='Bottom'>
+          <Cell Name='GeneratedOnCell' Width='51'/>
+          <Cell Name='VersionCell' Width='177'/>
+          <Cell Name='PageMofNCell'/>
+        </Row>
+      </Layout>
+
+      <Shape Type='Block' Style='FooterReportCreatedDateStyle'/>
+      <Shape Type='Block' Style='FooterTorridonVersionStyle'/>
+      <Shape Type='PageMofN' Style='FooterPageMofNStyle'/>
+
+    </Footer>
+
+  </Footers>
+
+
+
+
+  <!-- 
+       ******************************************************************************************************** 
+       ******************************************************************************************************** 
+       ******************************************************************************************************** 
+       ************                       MAIN CONTENT OF THE REPORT STARTS HERE                  *************
+       ******************************************************************************************************** 
+       ******************************************************************************************************** 
+       ******************************************************************************************************** 
+       -->
+
+
+
+
+
+  <Content>
+
+    <!-- ******************************************************************************************************** 
+         ************                 12 LEAD STRIP EVENTS TAGGED FOR PRINTING                      *************
+         ******************************************************************************************************** -->
+
+    <Section>
+      <Property Name='Name' Value='TwelveLeadStripsReportSectionTitleLabel'/>
+      <Property Name='HeaderName' Value='LandscapeHeader'/>
+      <Property Name='FooterName' Value='LandscapeFooter'/>
+      <Property Name='Margin'>
+        <Property Name='Left' Value='9'/>
+        <Property Name='Right' Value='9'/>
+        <Property Name='Top' Value='25'/>
+        <Property Name='Bottom' Value='9'/>
+      </Property>
+
+      <Collection>
+        <Property Name="Name" Value="TwelveLeadEvent"/>
+        <Property Name='Collection' Value='EventFamilies.TwelveLead.ImmediatePrintEvents'/>
+        <Page>
+          <Property Name='PageOrientation' Value='Landscape'/>
+
+          <Layout>
+            <Row Name='TopTableRowTop' Height='16'>
+              <Cell Name='FindingsCellTop' Width='42%'/>
+              <Cell Name='MeasurementsTableCell'/>
+            </Row>
+            <Row Name='TopTableRowBottom' Height='27'>
+              <Cell Name='FindingsCellBottom' Width='42%'/>
+              <Cell Name='DataTableCell'/>
+            </Row>
+            <Row Name='EcgRow'>
+              <Cell Name='EcgCell'/>
+              <Cell Name='TitleCell' Width='9'/>
+            </Row>
+            <Span Name='FindingsCell'>
+              <SpannedElement>FindingsCellTop</SpannedElement>
+              <SpannedElement>FindingsCellBottom</SpannedElement>
+            </Span>
+          </Layout>
+
+          <Shape Type='Text'>
+            <Property Name='Bounds' Value='TitleCell'/>
+            <Property Name='Content' Value="{_TwelveLeadStripLabel_} {TwelveLeadEvent.StartTime,_RecordingTimeFormatLabel_}"/>
+            <Property Name="Orientation" Value="90"/>
+            <Property Name="Position" Value="MiddleLeft"/>
+            <Property Name="Align" Value="BottomCentre"/>
+            <Property Name="Font" Value="Auto,14pt,Black"/>
+          </Shape>
+
+          <Shape Type='Comment' Style='ShadedBlockStyle'>
+            <Property Name='Bounds' Value='FindingsCell'/>
+            <Property Name='Padding'>
+              <Property Name='All' Value='1'/>
+            </Property>
+            <Property Name='Margin'>
+              <Property Name='Top' Value='1'/>
+              <Property Name='Bottom' Value='1'/>
+              <Property Name='Right' Value='1'/>
+            </Property>
+            <Property Name='OverflowTitle' Value="{_TwelveLeadFindingsOverflowTitleLabel_}"/>
+            <Property Name='Content' Value='{TwelveLeadEvent.Findings}'/>
+          </Shape>
+
+          <Shape Type='Table' Style='ShadedBlockStyle,BlockTableStyle'>
+            <Property Name='Bounds' Value='MeasurementsTableCell'/>
+            <Property Name='Padding'>
+              <Property Name='All' Value='1'/>
+            </Property>
+            <Property Name='Margin'>
+              <Property Name='Top' Value='1'/>
+              <Property Name='Bottom' Value='1'/>
+              <Property Name='Left' Value='1'/>
+            </Property>
+
+            <Property Name='DataSource'>
+
+              <Property Name='Column'>
+                <Property Name='LeftPadding' Value='1'/>
+                <Property Name='Width' Value='0.12'/>
+              </Property>
+              <Property Name='Column'>
+                <Property Name='Width' Value='0.18'/>
+                <Property Name='CellFont' Value='Auto,8pt,Black,Bold'/>
+              </Property>
+              <Property Name='Column'>
+                <Property Name='Width' Value='0.12'/>
+              </Property>
+              <Property Name='Column'>
+                <Property Name='Width' Value='0.18'/>
+                <Property Name='CellFont' Value='Auto,8pt,Black,Bold'/>
+              </Property>
+              <Property Name='Column'>
+                <Property Name='Width' Value='0.22'/>
+              </Property>
+              <Property Name='Column'>
+                <Property Name='Width' Value='0.18'/>
+                <Property Name='CellFont' Value='Auto,8pt,Black,Bold'/>
+              </Property>
+
+              <Property Name='Row'>
+                <Property Name='Cell'>
+                  <Property Name='Content' Value='_HRLabel_'/>
+                </Property>
+                <Property Name='Cell'>
+                  <Property Name='Content' Value='{TwelveLeadEvent.HR} _bpm_'/>
+                </Property>
+                <Property Name='Cell'>
+                  <Property Name='Content' Value='{_QT/QTcLabel_}'/>
+                </Property>
+                <Property Name='Cell'>
+                  <Property Name='Content' Value='{TwelveLeadEvent.QT} / {TwelveLeadEvent.QTc} ms'/>
+                </Property>
+                <Property Name='Cell'>
+                  <Property Name='Content' Value='{_P/PRLabel_}'/>
+                </Property>
+                <Property Name='Cell'>
+                  <Property Name='Content' Value='{TwelveLeadEvent.P} / {TwelveLeadEvent.PQ} ms'/>
+                </Property>
+              </Property>
+
+              <Property Name='Row'>
+                <Property Name='Cell'>
+                  <Property Name='Content' Value='{_RRLabel_}'/>
+                </Property>
+                <Property Name='Cell'>
+                  <Property Name='Content' Value='{TwelveLeadEvent.RR} ms'/>
+                </Property>
+                <Property Name='Cell'>
+                  <Property Name='Content' Value='{_P/QRS/TLabel_}'/>
+                </Property>
+                <Property Name='Cell'>
+                  <Property Name='Content' Value="{TwelveLeadEvent.AxisP}° / {TwelveLeadEvent.FrontalAxisQRS}° / {TwelveLeadEvent.FrontalAxisT}°"/>
+                </Property>
+                <Property Name='Cell'>
+                  <Property Name='Content' Value='{_SokolowLyonIndexLabel_}'/>
+                </Property>
+                <Property Name='Cell'>
+                  <Property Name='Content' Value="{TwelveLeadEvent.SokolowLyonIndex,'0.00'} mV"/>
+                </Property>
+              </Property>
+
+              <Property Name='Row'>
+                <Property Name='Cell'>
+                  <Property Name='Content' Value='{_QRSLabel_}'/>
+                </Property>
+                <Property Name='Cell'>
+                  <Property Name='Content' Value='{TwelveLeadEvent.QRS} ms'/>
+                </Property>
+                <Property Name='Cell'>
+                  <Property Name='Content' Value='{_QTRLabel_}'/>
+                </Property>
+                <Property Name='Cell'>
+                  <Property Name='Content' Value="{TwelveLeadEvent.QTR,'0'} ms"/>
+                </Property>
+                <Property Name='Cell'>
+                  <Property Name='Content' Value='{_LewisIndexLabel_}'/>
+                </Property>
+                <Property Name='Cell'>
+                  <Property Name='Content' Value="{TwelveLeadEvent.LewisIndex,'0.00'} mV"/>
+                </Property>
+              </Property>
+
+            </Property>
+          </Shape>
+
+          <Shape Type='Table' Style='ShadedBlockStyle,BlockTableStyle'>
+            <Property Name='Bounds' Value='DataTableCell'/>
+            <Property Name='Padding'>
+              <Property Name='All' Value='1'/>
+            </Property>
+            <Property Name='Margin'>
+              <Property Name='Top' Value='1'/>
+              <Property Name='Bottom' Value='1'/>
+              <Property Name='Left' Value='1'/>
+            </Property>
+
+            <Property Name='DataSource'>
+
+              <Property Name='Column'>
+                <Property Name='Width' Value='0.15'/>
+              </Property>
+              <Property Name='Column'>
+                <Property Name='Width' Value='0.18'/>
+                <Property Name='CellFont' Value='Auto,8pt,Black,Bold'/>
+              </Property>
+              <Property Name='Column'>
+                <Property Name='Width' Value='0.15'/>
+              </Property>
+              <Property Name='Column'>
+                <Property Name='Width' Value='0.18'/>
+                <Property Name='CellFont' Value='Auto,8pt,Black,Bold'/>
+              </Property>
+              <Property Name='Column'>
+                <Property Name='Width' Value='0.07'/>
+                <Property Name='CellFont' Value='Auto,8pt,Black,Bold'/>
+              </Property>
+
+              <Property Name='Row'>
+                <Property Name='Cell'>
+                  <Property Name='Content' Value='{_PatientID2Label_}'/>
+                </Property>
+                <Property Name='Cell'>
+                  <Property Name='Content' Value='{Patient.SecondaryId}'/>
+                </Property>
+                <Property Name='Cell'>
+                  <Property Name='Content' Value='{_RecorderNoLabel_}'/>
+                </Property>
+                <Property Name='Cell'>
+                  <Property Name='Content' Value='{Recording.RecorderSerialNumber}'/>
+                </Property>
+              </Property>
+
+              <Property Name='Row'>
+                <Property Name='Cell'>
+                  <Property Name='Content' Value='{_PatientID3Label_}'/>
+                </Property>
+                <Property Name='Cell'>
+                  <Property Name='Content' Value='{Patient.TertiaryId}'/>
+                </Property>
+                <Property Name='Cell'>
+                  <Property Name='Content' Value='{_AnalysisDateLabel_}'/>
+                </Property>
+                <Property Name='Cell'>
+                  <Property Name='Content' Value="{Test.AnalysisDateAndTime,_FullDateAndTimeFormatLabel_}"/>
+                </Property>
+                <Property Name="Cell"/>
+              </Property>
+
+              <Property Name='Row'>
+                <Property Name='Cell'>
+                  <Property Name='Content' Value='{_NationalIDLabel_}'/>
+                </Property>
+                <Property Name='Cell'>
+                  <Property Name='Content' Value='{Patient.NationalId}'/>
+                </Property>
+                <Property Name='Cell'>
+                  <Property Name='Content' Value='{_AnalysedLengthLabel_}'/>
+                </Property>
+                <Property Name='Cell'>
+                  <Property Name='Content' Value="{Recording.AnalysedLength,_HrMinFormatLabel_}"/>
+                </Property>
+              </Property>
+
+              <Property Name='Row'>
+                <Property Name='Cell'>
+                  <Property Name='Content' Value='{_WardLabel_}'/>
+                </Property>
+                <Property Name='Cell'>
+                  <Property Name='Content' Value='{Patient.Ward}'/>
+                </Property>
+                <Property Name='Cell'>
+                  <Property Name='Content' Value='{_OperatorLabel_}'/>
+                </Property>
+                <Property Name='Cell'>
+                  <Property Name='Content' Value='{AnalysisTechnician.LastNameFirst}'/>
+                </Property>
+                <Property Name='Cell'></Property>
+                <Property Name='Cell'/>
+              </Property>
+
+              <Property Name='Row'>
+                <Property Name='Cell'>
+                  <Property Name='Content' Value='{_HospitalLabel_}'/>
+                </Property>
+                <Property Name='Cell'>
+                  <Property Name='Content' Value='{AnalysisFacility.Name}'/>
+                </Property>
+                <Property Name='Cell'>
+                  <Property Name='Content' Value='_HeightLabel_'/>
+                </Property>
+                <Property Name='Cell'>
+                  <Property Name='Content' Value='{Patient.Height}'/>
+                </Property>
+              </Property>
+
+              <Property Name='Row'>
+                <Property Name='Cell'>
+                  <Property Name='Content' Value='{_ReferringPhysicianLabel_}'/>
+                </Property>
+                <Property Name='Cell'>
+                  <Property Name='Content' Value='{ReferringPhysician.LastNameFirst}'/>
+                </Property>
+                <Property Name='Cell'>
+                  <Property Name='Content' Value='_WeightLabel_'/>
+                </Property>
+                <Property Name='Cell'>
+                  <Property Name='Content' Value='{Patient.Weight}'/>
+                </Property>
+              </Property>
+
+            </Property>
+            <!-- end of data source property -->
+
+          </Shape>
+
+          <Shape Type='12LeadStrip' Style='EcgStyle'>
+            <Property Name='Bounds' Value='EcgRow'/>
+            <Property Name='Padding'>
+              <Property Name='Top' Value='1'/>
+              <Property Name='Bottom' Value='1'/>
+            </Property>
+            <Property Name='Event' Value='TwelveLeadEvent'/>
+            <Property Name='TraceNameFont' Value='Auto,14pt,Black'/>
+            <Property Name='PacingPulsesPen' Value='DarkBlue,0.2mm'/>
+            <Property Name='CalPulsePen' Value='Black,0.3mm'/>
+            <!--<Property Name='Format' Value='Format4x3'/>-->
+            <Property Name='LeadStartFormat' Value='Sequential'/>
+            <Property Name='StartOffset' Value='0'/>
+          </Shape>
+
+        </Page>
+        <!--Some of the 12 lead print formats allow two pages-->
+        <Page>
+          <Property Name='Enabled' Value='TwelveLeadEvent.IsTwoPageEvent'/>
+          <Property Name='PageOrientation' Value='Landscape'/>
+          <Layout>
+            <Row Name='EcgRow'>
+              <Cell Name='EcgCell'/>
+              <Cell Name='TitleCell' Width='9'/>
+            </Row>
+          </Layout>
+
+          <Shape Type='Text'>
+            <Property Name='Bounds' Value='TitleCell'/>
+            <Property Name='Content' Value="{_TwelveLeadStripLabel_} {TwelveLeadEvent.StartTime,_RecordingTimeFormatLabel_}"/>
+            <Property Name="Orientation" Value="90"/>
+            <Property Name="Position" Value="MiddleLeft"/>
+            <Property Name="Align" Value="BottomCentre"/>
+            <Property Name="Font" Value="Auto,14pt,Black"/>
+          </Shape>
+
+          <Shape Type='12LeadStrip' Style='EcgStyle'>
+            <Property Name='Bounds' Value='EcgRow'/>
+            <Property Name='Padding'>
+              <Property Name='Top' Value='1'/>
+              <Property Name='Bottom' Value='1'/>
+            </Property>
+            <Property Name='Enabled' Value='TwelveLeadEvent.IsTwoPageEvent'/>
+            <Property Name='PageToPrint' Value='1'/>
+            <Property Name='Event' Value='TwelveLeadEvent'/>
+            <Property Name='TraceNameFont' Value='Auto,14pt,Black'/>
+            <Property Name='PacingPulsesPen' Value='DarkBlue,0.2mm'/>
+            <Property Name='CalPulsePen' Value='Black,0.3mm'/>
+            <Property Name='LeadStartFormat' Value='Sequential'/>
+            <Property Name='StartOffset' Value='0'/>
+          </Shape>
+
+
+        </Page>
+
+      </Collection>
+
+    </Section>
+
+  </Content>
+</ReportFormat>

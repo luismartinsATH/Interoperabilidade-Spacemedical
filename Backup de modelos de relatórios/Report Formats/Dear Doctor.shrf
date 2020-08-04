@@ -1,0 +1,434 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ReportFormat>
+  <Property Name="name" Value="Example Dear Doctor Letter"/>
+  <Property Name='Author' Value='Spacelabs Healthcare'/>
+  <Property Name='Subject' Value='Example {Product.Name} Dear Doctor Letter'/>
+  <Property Name='Title' Value='Holter Dear Doctor Letter'/>
+  <Property Name='Keywords' Value='Holter, ECG, report, letter, {Product.Name}, Spacelabs Healthcare'/>
+  <Property Name='Creator' Value='{Product.Name} Report Generator {Product.Version}'/>
+  <Property Name='Version' Value='1.0'/>
+
+
+    <!-- ******************************************************************************************************** 
+       ************            NEUTRAL (IE. ALL REGION) ENGLISH TRANSLATIONS START HERE           *************
+       ******************************************************************************************************** -->
+
+    <Translation CultureName='En'>
+        <TranslationEntry>
+            <Untranslated>ReportNameLabel</Untranslated>
+            <Translated>Doctor's letter</Translated>
+        </TranslationEntry>
+      
+        <TranslationEntry>
+            <Untranslated>ReportTitleLabel</Untranslated>
+            <Translated>Sample doctor's letter</Translated>
+        </TranslationEntry>
+
+   </Translation>
+
+   <!-- ****************************************************************************************************** 
+        ************            GERMAN TRANSLATIONS START HERE                                   *************
+        ****************************************************************************************************** -->
+	   
+   <Translation CultureName='De'>
+        <TranslationEntry>
+            <Untranslated>ReportNameLabel</Untranslated>
+            <Translated>Arztbrief</Translated>
+        </TranslationEntry>
+      
+        <TranslationEntry>
+            <Untranslated>ReportTitleLabel</Untranslated>
+            <Translated>Arztbrief - Muster</Translated>
+        </TranslationEntry>
+   </Translation>
+
+  <!-- ****************************************************************************************************** 
+       ************              DANISH TRANSLATIONS START HERE                                 *************
+       ****************************************************************************************************** -->
+	   
+   <Translation CultureName='Da'>
+        <TranslationEntry>
+            <Untranslated>ReportNameLabel</Untranslated>
+            <Translated>Lægens brev</Translated>
+        </TranslationEntry>
+      
+        <TranslationEntry>
+            <Untranslated>ReportTitleLabel</Untranslated>
+            <Translated>Lægens brev - Eksempel</Translated>
+        </TranslationEntry>
+   </Translation>
+
+   <!-- ****************************************************************************************************** 
+        ************            SPANISH TRANSLATIONS START HERE                                  *************
+        ****************************************************************************************************** -->
+	   
+   <Translation CultureName='Es'>
+        <TranslationEntry>
+            <Untranslated>ReportNameLabel</Untranslated>
+            <Translated>Carta del médico</Translated>
+        </TranslationEntry>
+      
+        <TranslationEntry>
+            <Untranslated>ReportTitleLabel</Untranslated>
+            <Translated>Carta del médico - Ejemplo</Translated>
+        </TranslationEntry>
+   </Translation>
+
+   <!-- ****************************************************************************************************** 
+        ************            FRENCH TRANSLATIONS START HERE                                   *************
+        ****************************************************************************************************** -->
+	   
+   <Translation CultureName='Fr'>
+        <TranslationEntry>
+            <Untranslated>ReportNameLabel</Untranslated>
+            <Translated>Lettre du Médecin</Translated>
+        </TranslationEntry>
+      
+        <TranslationEntry>
+            <Untranslated>ReportTitleLabel</Untranslated>
+            <Translated>Lettre du Médecin - Exemple</Translated>
+        </TranslationEntry>
+   </Translation>
+   
+   <!-- ****************************************************************************************************** 
+        ************            ITALIAN TRANSLATIONS START HERE                                  *************
+        ****************************************************************************************************** -->
+	   
+   <Translation CultureName='It'>
+        <TranslationEntry>
+            <Untranslated>ReportNameLabel</Untranslated>
+            <Translated>Lettera del medico</Translated>
+        </TranslationEntry>
+      
+        <TranslationEntry>
+            <Untranslated>ReportTitleLabel</Untranslated>
+            <Translated>Lettera del medico - Esempio</Translated>
+        </TranslationEntry>
+   </Translation>
+
+   <!-- ****************************************************************************************************** 
+        ************            DUTCH TRANSLATIONS START HERE                                    *************
+        ****************************************************************************************************** -->
+	   
+   <Translation CultureName='Nl'>
+        <TranslationEntry>
+            <Untranslated>ReportNameLabel</Untranslated>
+            <Translated>Arts brief</Translated>
+        </TranslationEntry>
+      
+        <TranslationEntry>
+            <Untranslated>ReportTitleLabel</Untranslated>
+            <Translated>Arts brief - Voorbeeld</Translated>
+        </TranslationEntry>
+   </Translation>
+
+   <!-- ****************************************************************************************************** 
+        ************            POLISH TRANSLATIONS START HERE                                   *************
+        ****************************************************************************************************** -->
+	   
+   <Translation CultureName='Pl'>
+        <TranslationEntry>
+            <Untranslated>ReportNameLabel</Untranslated>
+            <Translated>List lekarza</Translated>
+        </TranslationEntry>
+      
+        <TranslationEntry>
+            <Untranslated>ReportTitleLabel</Untranslated>
+            <Translated>List lekarza - Przykład</Translated>
+        </TranslationEntry>
+   </Translation>
+   
+   <!-- ****************************************************************************************************** 
+        ************            PORTUGUESE TRANSLATIONS START HERE                               *************
+        ****************************************************************************************************** -->
+	   
+   <Translation CultureName='Pt'>
+        <TranslationEntry>
+            <Untranslated>ReportNameLabel</Untranslated>
+            <Translated>Carta do médico</Translated>
+        </TranslationEntry>
+      
+        <TranslationEntry>
+            <Untranslated>ReportTitleLabel</Untranslated>
+            <Translated>Carta do médico - Exemplo</Translated>
+        </TranslationEntry>
+   </Translation>
+
+   <!-- ****************************************************************************************************** 
+        ************            RUSSIAN TRANSLATIONS START HERE                                  *************
+        ****************************************************************************************************** -->
+	   
+   <Translation CultureName='Ru'>
+        <TranslationEntry>
+            <Untranslated>ReportNameLabel</Untranslated>
+            <Translated>Письмо врача</Translated>
+        </TranslationEntry>
+      
+        <TranslationEntry>
+            <Untranslated>ReportTitleLabel</Untranslated>
+            <Translated>Письмо врача - Пример</Translated>
+        </TranslationEntry>
+   </Translation>
+
+   <!-- ****************************************************************************************************** 
+        ************            SWEDISH TRANSLATIONS START HERE                                  *************
+        ****************************************************************************************************** -->
+	   
+   <Translation CultureName='Sv'>
+        <TranslationEntry>
+            <Untranslated>ReportNameLabel</Untranslated>
+            <Translated>Läkarens brev</Translated>
+        </TranslationEntry>
+      
+        <TranslationEntry>
+            <Untranslated>ReportTitleLabel</Untranslated>
+            <Translated>Läkarens brev - Exempel</Translated>
+        </TranslationEntry>
+   </Translation>
+
+   <!-- ****************************************************************************************************** 
+        ************            CHINESE TRANSLATIONS START HERE                                  *************
+        ****************************************************************************************************** -->
+	   
+   <Translation CultureName='Zh'>
+        <TranslationEntry>
+            <Untranslated>ReportNameLabel</Untranslated>
+            <Translated>诊断报告</Translated>
+        </TranslationEntry>
+      
+        <TranslationEntry>
+            <Untranslated>ReportTitleLabel</Untranslated>
+            <Translated>诊断报告模板</Translated>
+        </TranslationEntry>
+   </Translation>
+
+
+
+  <!-- this report format illustrates an example of a dear doctor letter report format. Dear doctor letter report formats can
+    (indeed should be) customized to the specific requirements of individual customers. -->
+  
+  <PaintBox>
+    <Style Name='ParagraphStyle'>
+      <Property Name='Alignment' Value='TopLeft'/>
+      <Property Name='Margin'>
+        <Property Name='Top' Value='2.5'/>
+        <Property Name='Bottom' Value='2.5'/>
+      </Property>
+      <Property Name='LayoutFormat' Value='Flowing'/>
+    </Style>
+  </PaintBox>
+
+  <Headers>
+    <Header>
+      <Property Name='Name' Value='LetterHeader'/>
+      <Property Name='Margin'>
+        <Property Name='Left' Value='4'/>
+        <Property Name='Top' Value='5'/>
+        <Property Name='Right' Value='4'/>
+        <Property Name='Bottom' Value='5'/>
+      </Property>
+
+      <Layout>
+        <Row Name='TitleRow1' Height='7.5'>
+          <Cell Name='LogoCellUpper' Width='46'/>
+          <Cell Name='TitleCellUpper'/>
+          <Cell Name='PageMofNCell'/>
+        </Row>
+        <Row Name='TitleRow2' Height='7.5'>
+          <Cell Name='LogoCellLower' Width='46'/>
+          <Cell Name='TitleCellLower'/>
+        </Row>
+        <Span Name='LogoCell'>
+          <SpannedElement>LogoCellUpper</SpannedElement>
+          <SpannedElement>LogoCellLower</SpannedElement>
+        </Span>
+        <Span Name='TitleRow'>
+          <SpannedElement>TitleRow1</SpannedElement>
+          <SpannedElement>TitleRow2</SpannedElement>
+        </Span>
+      </Layout>
+      
+      <Shape Type='Block'>
+        <Property Name='Bounds' Value='TitleCellUpper'/>
+        <Property Name='Margin'>
+          <Property Name='Right' Value='2'/>
+        </Property>
+        <Property Name='Content' Value='Spacelabs Healthcare {Product.Name}'/>
+        <Property Name='Font' Value='Helvetica,14pt'/>
+        <Property Name='Alignment' Value='MiddleRight'/>
+      </Shape>
+
+      <Shape Type='Block'>
+        <Property Name='Bounds' Value='TitleCellLower'/>
+        <Property Name='Margin'>
+          <Property Name='Right' Value='2'/>
+        </Property>
+        <Property Name='Content' Value='{AnalysisFacility.Name}'/>
+        <Property Name='Font' Value='Helvetica,12pt'/>
+        <Property Name='Alignment' Value='TopRight'/>
+      </Shape>
+
+      <Shape Type='Block'>
+        <Property Name='Bounds' Value='LogoCell'/>
+        <Property Name='Margin'>
+          <Property Name='All' Value='3.6'/>
+        </Property>
+        <Property Name='Image' Value='SpacelabsLogo'/>
+      </Shape>
+
+      <Shape Type='Box'>
+        <Property Name='Bounds' Value='TitleRow'/>
+        <Property Name='Pen' Value='Black,0.05mm'/>
+      </Shape>
+
+    </Header>
+  </Headers>
+
+  <!-- defining page footers -->
+
+  <Footers>
+    <Footer>
+      <Property Name='Margin'>
+        <Property Name='Left' Value='4'/>
+        <Property Name='Top' Value='5'/>
+        <Property Name='Right' Value='4'/>
+        <Property Name='Bottom' Value='5'/>
+      </Property>
+      <Property Name='Name' Value='StandardFooter'/>
+
+      <Layout>
+        <Row Name='TopRow' Height='1'/>
+        <Row Name='FooterRow' Height='3' Order='Bottom'>
+          <Cell Name='GeneratedOnCell' Width='33%'/>
+          <Cell Name='VersionCell' Width='34%'/>
+          <Cell Name='PageMofNCell' Width='33%'/>
+        </Row>
+        <Row Name='AboveFooterRow' Height='1' Order='Bottom'/>
+        <Span Name='BorderBoxRow'>
+          <SpannedElement>TopRow</SpannedElement>
+          <SpannedElement>AboveFooterRow</SpannedElement>
+        </Span>
+      </Layout>
+
+      <Shape Type='Box'>
+        <Property Name='Bounds' Value='BorderBoxRow'/>
+        <Property Name='Pen' Value='Black,0.05mm'/>
+      </Shape>
+
+      <Shape Type='Block'>
+        <Property Name='Bounds' Value='GeneratedOnCell'/>
+        <Property Name='Content' Value="Generated On {Report.CreatedDateAndTime,'ddd dd MMM yyyy HH:mm:ss'}"/>
+        <Property Name="Alignment" Value="BottomLeft"/>
+        <Property Name='Font' Value='Helvetica,6pt'/>
+      </Shape>
+
+      <Shape Type='Block'>
+        <Property Name='Bounds' Value='VersionCell'/>
+        <Property Name='Content' Value="{Product.Name} version {Product.Version}"/>
+        <Property Name='Font' Value='Helvetica,6pt'/>
+        <Property Name='Alignment' Value='BottomCentre'/>
+      </Shape>
+
+      <Shape Type='PageMofN'>
+        <Property Name='Bounds' Value='PageMofNCell'/>
+        <Property Name='Align' Value='BottomRight'/>
+        <Property Name='Font' Value='Helvetica,6pt'/>
+      </Shape>
+
+    </Footer>
+  </Footers>
+
+  <!-- defining main content of the report -->
+
+  <Content>
+
+    <Section>
+      <Property Name='Name' Value='_ReportTitleLabel_'/>
+      <Property Name='HeaderName' Value='LetterHeader'/>
+      <Property Name='FooterName' Value='StandardFooter'/>
+      <Property Name='Margin'>
+        <Property Name='Left' Value='15'/>
+        <Property Name='Top' Value='30'/>
+        <Property Name='Right' Value='15'/>
+        <Property Name='Bottom' Value='30'/>
+      </Property>
+
+      <Page>
+        <Layout>
+          <Row Name='AddressRow' Height='25'>
+            <Cell Name='RecepientAddressCell' Width='50%'/>
+            <Cell Name='SenderAddressCell' Width='50%'/>
+          </Row>
+          <Row Name='LetterBody' Height='170'/>
+          <Row Name='SignatureRow' Height='15'/>
+        </Layout>
+
+        <Shape Type='Block'>
+          <Property Name='Bounds' Value='RecepientAddressCell'/>
+          <Property Name='Content'>
+            {(ReferringPhysician.FirstNameFirst=null OR ReferringPhysician.FirstNameFirst='') ? '[referring physician name not known][br/]' : (ReferringPhysician.FirstNameFirst+',[br/]')}
+            {(ReferringPhysician.AddressLine1=null OR ReferringPhysician.AddressLine1='') ? '[referring physician address not known][br/]' : (ReferringPhysician.AddressLine1+',[br/]')}
+            {(ReferringPhysician.AddressLine2=null OR ReferringPhysician.AddressLine2='') ? '' : (ReferringPhysician.AddressLine2+',[br/]')}
+            {(ReferringPhysician.City=null OR ReferringPhysician.City='') ? '' : (ReferringPhysician.City+',[br/]')}
+            {(ReferringPhysician.CountyRegion=null OR ReferringPhysician.CountyRegion='') ? '' : (ReferringPhysician.CountyRegion+',[br/]')}
+            {(ReferringPhysician.PostZipCode=null OR ReferringPhysician.PostZipCode='') ? '' : (ReferringPhysician.PostZipCode+',[br/]')}
+          </Property>
+        </Shape>
+
+        <Shape Type='Block'>
+          <Property Name='Bounds' Value='SenderAddressCell'/>
+          <Property Name='Alignment' Value='TopRight'/>
+          <Property Name='Content'>
+            {(AnalysisFacility.Name=null OR AnalysisFacility.Name='(Unspecified)' OR AnalysisFacility.Name='') ? '[analysis facility name not known][br/]' : (AnalysisFacility.Name+',[br/]')}
+            {(AnalysisFacility.AddressLine1=null OR AnalysisFacility.AddressLine1='') ? '[analysis facility address not known]' : (AnalysisFacility.AddressLine1+',[br/]')}
+            {(AnalysisFacility.AddressLine2=null OR AnalysisFacility.AddressLine2='') ? '' : (AnalysisFacility.AddressLine2+',[br/]')}
+            {(AnalysisFacility.City=null OR AnalysisFacility.City='') ? '' : (AnalysisFacility.City+',[br/]')}
+            {(AnalysisFacility.CountyRegion=null OR AnalysisFacility.CountyRegion='') ? '' : (AnalysisFacility.CountyRegion+',[br/]')}
+            {(AnalysisFacility.PostZipCode=null OR AnalysisFacility.PostZipCode='') ? '' : (AnalysisFacility.PostZipCode+',[br/]')}
+          </Property>
+        </Shape>
+
+        <Shape Type='Block' Style='ParagraphStyle'>
+          <Property Name='Bounds' Value='LetterBody'/>
+          <Property Name='Content' Value='Dear Sir(s),'/>
+        </Shape>
+
+        <Shape Type='Block' Style='ParagraphStyle'>
+          <Property Name='Content'>
+            This letter is to inform you of the results of the Holter test conducted on {Recording.StartDateAndTime,'ddd dd MMM yyyy'} for your patient
+            {Patient.LastNameFirst=null ? '[name unknown]' : Patient.LastNameFirst} (Patient ID: {Patient.ID}{Patient.DateOfBirth=null ? '' : (', Date of Birth: '+(Patient.DateOfBirth,'dd MMM yyyy'))}).
+          </Property>
+        </Shape>
+
+        <Shape Type='Block' Style='ParagraphStyle'>
+          <Property Name='Content'>
+            {EventFamilies.Pause.Count>0 
+            ? 'The number of pauses were '+EventFamilies.Pause.Count+' with the longest pause lasting for '+(EventFamilies.Pause.Longest,'0.00')+' seconds.' 
+            : 'There were no pauses.'}
+          </Property>
+        </Shape>
+        
+        <Shape Type='Block' Style='ParagraphStyle'>
+          <Property Name='Content' Value='Yours sincerely,'/>
+        </Shape>
+
+        <Shape Type='Block' Style='ParagraphStyle'>
+          <Property Name='Margin'>
+            <Property Name='Top' Value='10'/>
+          </Property>
+          <Property Name='Content'>
+            {ResponsiblePhysician.FirstNameFirst=null ? '[responsible physician name not known]' : ResponsiblePhysician.FirstNameFirst} 
+            (Consultant)[br/]
+          </Property>
+        </Shape>
+
+        <Shape Type='Block' Style='ParagraphStyle'>
+          <Property Name='Content'>
+            On behalf of the Cardiology Department of 
+            {AnalysisFacility.Name=null OR AnalysisFacility.Name='(unspecified)' OR AnalysisFacility.Name='' ? '[analysis facility name not known]' : AnalysisFacility.Name}.
+          </Property>
+        </Shape>
+      </Page>
+    </Section>
+  </Content>
+</ReportFormat>
