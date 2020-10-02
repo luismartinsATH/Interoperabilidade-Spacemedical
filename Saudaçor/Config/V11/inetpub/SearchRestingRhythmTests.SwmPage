@@ -1,0 +1,678 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- this configuration file should not be edited. -->
+<!-- Data grid is drawn in the OnPageLoad event specified in the last element of the search criteria -->
+
+<Page PageKind="Search">
+
+  <OnPageLoad>
+    <Commands>
+      <Command Type="VerifyActiveWindowCommand"/>
+      <Command Type="ProhibitInvalidPageNameCommand"/>
+      <Command Type="ExtendLoginSessionCommand"/>
+      <Command Type="WriteUrlQueryParametersIntoFieldsCommand"/>
+      <Command Type="RemovePersistedFieldsIfNeededCommand"/>
+      <Command Type="FieldOnPageLoadCommand"/>
+      <Command Type="SupplyFieldValuesToWebPageCommand">
+        <AreInitialValues>true</AreInitialValues>
+      </Command>
+      <Command Type="SupplyFooterValuesToWebPageCommand">
+        <InstallationIdLabel>#Footer_InstallationId#</InstallationIdLabel>
+        <UsernameLabel>#Footer_Username#</UsernameLabel>
+      </Command>
+      <Command Type="ValidateCommand"/>
+    </Commands>
+  </OnPageLoad>
+
+  <Header>
+    <div class="navigation">
+      <include file="HeaderIcons/CommonHeaderIcons.SwmControl"/>
+      <include file="HeaderIcons/HomeIcon.SwmControl"/>
+      <span class="page-header-resting">#RestingAndRhythmHeading1#</span>
+      <span>#RestingAndRhythmHeading2#</span>
+      <span class="page-header-rhythm">#RestingAndRhythmHeading3#</span>
+    </div>
+  </Header>
+
+  <Footer>
+    <include file="CommonFooterIcons.SwmControl"/>
+  </Footer>
+
+  <Content>
+
+    <div class="col-group">
+      <div class="col-fixed">
+
+        <Menu class="Vertical">
+
+          <Item DisplayName="#EmergencyRestingAcquire#" Tooltip="#EmergencyRestingAcquireTooltip#" Id="Button_EmergencyRestingAcquire">
+            <OnClicked Id="Click Emergency ECG button">
+              <Commands>
+                <Command Type="AcquireEmergencyRestingPcEcgCommand"/>
+              </Commands>
+            </OnClicked>
+          </Item>
+
+          <Item DisplayName="#AllTestsAcquire#" Tooltip="#AllTestsAcquireTooltip#" Id="Button_Acquire">
+            <OnClicked Id="Click Acquire from order button">
+              <Commands>
+                <Command Type="AcquireForSelectedOrderCommand">
+                  <RestingPage>RestingRhythm/PrepareRestingOrder</RestingPage>
+                  <RhythmPage>RestingRhythm/PrepareRhythmOrder</RhythmPage>
+                  <CustomPage>XdtMaster/PrepareOrderedXdtMasterTest</CustomPage>
+                </Command>
+              </Commands>
+            </OnClicked>
+          </Item>
+
+          <Item DisplayName="#AcquireRecordingForPatient#" Id="Button_AcquireForPatient">
+            <OnClicked Id="Click Acquire for patient button">
+              <Commands>
+                <Command Type="NavigateToSearchForPatientToAcquireRestingRhythmCommand">
+                  <SearchForPatientPage>RestingRhythm/SelectPatientToConfigure</SearchForPatientPage>
+                </Command>
+              </Commands>
+            </OnClicked>
+          </Item>
+
+          <Item/>
+
+          <Item DisplayName="#BatchReviewTest#" Tooltip="#BatchReviewTestTooltip#" Id="Button_BatchRestingReview">
+            <OnClicked Id="Click Batch review button">
+              <Commands>
+                <Command Type="LaunchBatchedRestingReviewSmartClientCommand"/>
+              </Commands>
+            </OnClicked>
+          </Item>
+
+          <Item DisplayName="#ReviewTest#" Tooltip="#ReviewTestTooltip#" Id="Button_ReviewTest">
+            <OnClicked Id="Click Review test button">
+              <Commands>
+                <Command Type="AuditFromSelectedRowsCommand">
+                  <Activity>#ActivityReviewTest#</Activity>
+                  <AuditKind>Test</AuditKind>
+                </Command>
+                <Command Type="LaunchReviewTestSmartClientCommand"/>
+              </Commands>
+            </OnClicked>
+          </Item>
+
+          <Item DisplayName="#EditReport#" Tooltip="#EditReportTooltip#" Id="Button_EditReport">
+            <OnClicked Id="Click Review report button">
+              <Commands>
+                <Command Type="DoesSelectedTestHaveReports"/>
+                <Command Type="StartWorkflowAtPageCommand">
+                  <Permissions>ReviewAndPrint EditReportComments Sign</Permissions>
+                  <PageName>Report/EditReport</PageName>
+                  <QueryString>
+                    <CellOnSelectedRow ColumnId="Test_Key"/>
+                  </QueryString>
+                </Command>
+              </Commands>
+            </OnClicked>
+          </Item>
+
+          <Item/>
+
+          <Item DisplayName="#EditPatient#" Tooltip="#EditPatientTooltip#" Id="Button_EditPatient">
+            <OnClicked Id="Click Edit patient button">
+              <Commands>
+                <Command Type="StartWorkflowAtPageCommand">
+                  <Permissions>EditPatient</Permissions>
+                  <PageName>Patient/EditPatient</PageName>
+                  <QueryString>
+                    <CellOnSelectedRow ColumnId="Patient_Key"/>
+                  </QueryString>
+                </Command>
+              </Commands>
+            </OnClicked>
+          </Item>
+
+          <Item DisplayName="#EditTest#" Tooltip="#EditTestTooltip#" Id="Button_EditTestDetails">
+            <OnClicked Id="Click Edit test details button">
+              <Commands>
+                <Command Type="StartEditTestDetailsWorkflowCommand">
+                  <RestingPageName>RestingRhythm/EditRestingTestDetails</RestingPageName>
+                  <RhythmPageName>RestingRhythm/EditRhythmTestDetails</RhythmPageName>
+                  <CustomPageName>XdtMaster/EditCustomTestDetails</CustomPageName>
+                </Command>
+              </Commands>
+            </OnClicked>
+          </Item>
+
+          <Item DisplayName="#CompleteTests#" Tooltip="#CompleteTestsTooltip#" Id="Button_CompleteTests">
+            <OnClicked Id="Click Complete tests button">
+              <Commands>
+                <Command Type="AuditFromSelectedRowsCommand">
+                  <Activity>#ActivityCompleteTest#</Activity>
+                  <AuditKind>Test</AuditKind>
+                </Command>
+                <Command Type="CompleteSelectedTestCommand"/>
+                <Command Type="DataGridRefreshCommand"/>
+                <Command Type="SendXdtEventOnTestCompletedDatagridCommand"/>
+              </Commands>
+            </OnClicked>
+            <ConfirmationBox>
+              <Message>#CompleteTestConfirmation#</Message>
+            </ConfirmationBox>
+          </Item>
+
+          <Item/>
+
+          <Item DisplayName="#IdentifyPatientsWizard#" Tooltip="#IdentifyPatientsWizardTooltip#" Id="Button_IdentifyPatientsWizard">
+            <OnClicked Id="Click Identify patients button">
+              <Commands>
+                <Command Type="AreAnyTestsUnidentifiedCondition" Availability="DisabledIfNotSatisfied">
+                  <TestTypeName>#TestTypeResting#</TestTypeName>
+                  <TestTypeName2>#TestTypeRhythm#</TestTypeName2>
+                </Command>
+                <Command Type="IsExternalPatientSearchEnabledCondition" Availability="HiddenIfSatisfied"/>
+                <Command Type="StartWorkflowAtPageCommand">
+                  <Permissions>EditTestDetails</Permissions>
+                  <PageName>Patient/IdentifyPatientsWizard</PageName>
+                  <QueryString>
+                    <Value QueryStringParameterId="Reset" Value="true"/>
+                    <Value QueryStringParameterId="TestTypeName" Value="#TestTypeResting#"/>
+                    <Value QueryStringParameterId="TestTypeName2" Value="#TestTypeRhythm#"/>
+                  </QueryString>
+                </Command>
+              </Commands>
+            </OnClicked>
+          </Item>
+
+          <Item DisplayName="#IdentifyCasesWizard#" Tooltip="#IdentifyCasesWizardTooltip#" Id="Button_IdentifyCasesWizard">
+            <OnClicked Id="Click Identify cases button">
+              <Commands>
+                <Command Type="AreAnyTestsUnidentifiedCondition" Availability="DisabledIfNotSatisfied">
+                  <TestTypeName>#TestTypeResting#</TestTypeName>
+                  <TestTypeName2>#TestTypeRhythm#</TestTypeName2>
+                </Command>
+                <Command Type="StartWorkflowAtPageCommand" RequiresLicense="Cases">
+                  <Permissions>MoveTestToCase</Permissions>
+                  <PageName>Case/IdentifyCasesWizard</PageName>
+                  <QueryString>
+                    <Value QueryStringParameterId="Reset" Value="true"/>
+                    <Value QueryStringParameterId="TestTypeName" Value="#TestTypeResting#"/>
+                    <Value QueryStringParameterId="TestTypeName2" Value="#TestTypeRhythm#"/>
+                  </QueryString>
+                </Command>
+              </Commands>
+            </OnClicked>
+          </Item>
+
+          <Item DisplayName="#IdentifyOrdersWizard#" Tooltip="#IdentifyOrdersWizardTooltip#" Id="Button_IdentifyOrdersWizard">
+            <OnClicked Id="Click Identify order button">
+              <Commands>
+                <Command Type="AreAnyTestsUnidentifiedCondition" Availability="DisabledIfNotSatisfied">
+                  <TestTypeName>#TestTypeResting#</TestTypeName>
+                  <TestTypeName2>#TestTypeRhythm#</TestTypeName2>
+                </Command>
+                <Command Type="StartWorkflowAtPageCommand" RequiresLicense="Orders">
+                  <Permissions>MoveTestToOrder</Permissions>
+                  <PageName>Order/IdentifyOrderWizard</PageName>
+                  <QueryString>
+                    <Value QueryStringParameterId="Reset" Value="true"/>
+                    <Value QueryStringParameterId="TestTypeName" Value="#TestTypeResting#"/>
+                    <Value QueryStringParameterId="TestTypeName2" Value="#TestTypeRhythm#"/>
+                  </QueryString>
+                </Command>
+              </Commands>
+            </OnClicked>
+          </Item>
+
+          <Item DisplayName="#IdentifyPatientsWizardExternalSearch#" Tooltip="#IdentifyPatientsWizardExternalSearchTooltip#" Id="Button_IdentifyPatientsWizardExternalSearch">
+            <OnClicked Id="Click Identify patients (external) button">
+              <Commands>
+                <Command Type="AreAnyTestsUnidentifiedCondition" Availability="DisabledIfNotSatisfied">
+                  <TestTypeName>#TestTypeResting#</TestTypeName>
+                  <TestTypeName2>#TestTypeRhythm#</TestTypeName2>
+                </Command>
+                <Command Type="IsExternalPatientSearchEnabledCondition" Availability="HiddenIfNotSatisfied"/>
+                <Command Type="StartWorkflowAtPageCommand">
+                  <Permissions>EditTestDetails</Permissions>
+                  <PageName>Patient/IdentifyPatientsWizardExternalSearch</PageName>
+                  <QueryString>
+                    <Value QueryStringParameterId="Reset" Value="true"/>
+                    <Value QueryStringParameterId="TestTypeName" Value="#TestTypeResting#"/>
+                    <Value QueryStringParameterId="TestTypeName2" Value="#TestTypeRhythm#"/>
+                  </QueryString>
+                </Command>
+              </Commands>
+            </OnClicked>
+          </Item>
+
+          <Item DisplayName="#ChangePatient#" Tooltip="#ChangePatientTooltip#" Id="Button_ChangePatient">
+            <OnClicked Id="Click Change patient button">
+              <Commands>
+                <Command Type="StartWorkflowToMoveTestToPatientCommand">
+                  <PageName>Patient/SelectPatientForTest</PageName>
+                </Command>
+              </Commands>
+            </OnClicked>
+          </Item>
+
+          <Item DisplayName="#ChangeCase#" Tooltip="#ChangeCaseTooltip#" Id="Button_ChangeCase">
+            <OnClicked Id="Click Change case button">
+              <Commands>
+                <Command Type="StartWorkflowToMoveTestToCaseCommand" RequiresLicense="Cases">
+                  <PageName>Case/SelectCaseForTest</PageName>
+                </Command>
+              </Commands>
+            </OnClicked>
+          </Item>
+
+          <Item DisplayName="#ChangeOrder#" Tooltip="#ChangeOrderTooltip#" Id="Button_ChangeOrder">
+            <OnClicked Id="Click Change order button">
+              <Commands>
+                <Command Type="StartWorkflowToMoveTestToOrderCommand" RequiresLicense="Orders">
+                  <PageName>Order/SelectOrderForTest</PageName>
+                </Command>
+              </Commands>
+            </OnClicked>
+          </Item>
+
+          <Item/>
+
+          <Item DisplayName="#ImportExportMenu#" class="popupmenu" Id="Button_ImportExport">
+            <OnClicked Id="Click Import Export button">
+              <Commands>
+                <Command Type="PopupSupplyMenuItemsCommand">
+                  <Location>CentreRight</Location>
+                  <Menu Id="ImportExportMenu" class="Vertical">
+
+                    <Item DisplayName="#ImportFilesMenu#" Tooltip="#ImportFilesMenuTooltip#" Id="Button_Import">
+                      <OnClicked Id="Click Import files button">
+                        <Commands>
+                          <Command Type="LaunchImporterSmartClientCommand"/>
+                        </Commands>
+                      </OnClicked>
+                    </Item>
+
+                    <Item/>
+
+                    <Item DisplayName="#ExportTestToFacility#" Tooltip="#ExportTestToFacilityTooltip#" Id="Button_ExportTestToFacility">
+                      <OnClicked Id="Click Send to facility button">
+                        <Commands>
+                          <Command Type="CanExportSelectedTestToFacilityCondition"/>
+                          <Command Type="StartWorkflowAtPageCommand" RequiresLicense="RemoteDataTransfer">
+                            <Permissions>SendToFacility</Permissions>
+                            <PageName>Export/ExportTestToFacility</PageName>
+                            <QueryString>
+                              <CellOnSelectedRow ColumnId="Test_Key"/>
+                            </QueryString>
+                          </Command>
+                        </Commands>
+                      </OnClicked>
+                    </Item>
+
+                    <Item DisplayName="#ReturnReportsToExportFacility#" Tooltip="#ReturnReportsToExportFacilityTooltip#" Id="Button_ReturnReportsToExportFacility">
+                      <ConfirmationBox>
+                        <Message>#ReturnReportToExportFacilityConfirmation#</Message>
+                        <OkButton>#Ok#</OkButton>
+                        <CancelButton>#Cancel#</CancelButton>
+                      </ConfirmationBox>
+                      <OnClicked Id="Click Return reports button">
+                        <Commands>
+                          <Command Type="ReturnReportsToExportFacilityCommand"/>
+                          <Command Type="MessageBoxCommand">
+                            <Message>#ReturnReportsToExportFacilitySending#</Message>
+                            <OkButton>#Ok#</OkButton>
+                          </Command>
+                        </Commands>
+                      </OnClicked>
+                    </Item>
+
+                    <Item/>
+
+                    <Item DisplayName="#ExportSNTL#" Tooltip="#ExportSNTLTooltip#" Id="Button_ExportSNTL">
+                      <OnClicked Id="Click Export SNTL button">
+                        <Commands>
+                          <Command Type="ExportSelectedTestCommand">
+                            <ExportFormat>SNTL</ExportFormat>
+                          </Command>
+                        </Commands>
+                      </OnClicked>
+                    </Item>
+
+                    <Item DisplayName="#ExportDCM#" Tooltip="#ExportDCMTooltip#" Id="Button_ExportDCM">
+                      <OnClicked Id="Click Export DCM button">
+                        <Commands>
+                          <Command Type="ExportSelectedTestCommand">
+                            <ExportFormat>DCM</ExportFormat>
+                          </Command>
+                        </Commands>
+                      </OnClicked>
+                    </Item>
+
+                    <Item DisplayName="#ExportFDAXML#" Tooltip="#ExportFDAXMLTooltip#" Id="Button_ExportFDAXML">
+                      <OnClicked Id="Click Export FDA-XML button">
+                        <Commands>
+                          <Command Type="ExportSelectedTestCommand">
+                            <ExportFormat>FDAXML</ExportFormat>
+                          </Command>
+                        </Commands>
+                      </OnClicked>
+                    </Item>
+
+                    <Item DisplayName="#ExportSCP#" Tooltip="#ExportSCPTooltip#" Id="Button_ExportSCP">
+                      <OnClicked Id="Click Export SCP button">
+                        <Commands>
+                          <Command Type="ExportSelectedTestCommand">
+                            <ExportFormat>SCP</ExportFormat>
+                          </Command>
+                        </Commands>
+                      </OnClicked>
+                    </Item>
+
+                    <Item DisplayName="#ExportDMR#" Tooltip="#ExportDMRTooltip#" Id="Button_ExportDMR">
+                      <OnClicked Id="Click Export DMR button">
+                        <Commands>
+                          <Command Type="ExportSelectedTestCommand">
+                            <ExportFormat>DMR</ExportFormat>
+                          </Command>
+                        </Commands>
+                      </OnClicked>
+                    </Item>
+
+                  </Menu>
+                </Command>
+              </Commands>
+            </OnClicked>
+          </Item>
+
+          <Item DisplayName="#OtherActionsMenu#" class="popupmenu" Id="Button_OtherActions">
+            <OnClicked Id="Click Other actions button">
+              <Commands>
+                <Command Type="PopupSupplyMenuItemsCommand">
+                  <Location>CentreRight</Location>
+                  <Menu Id="RestingRhythmTestOtherActionMenu" class="Vertical">
+
+                    <Item DisplayName="#Delete#" Tooltip="#DeleteTestMenuTooltip#" Id="Button_DeleteTest">
+                      <OnClicked Id="Click Delete test button">
+                        <Commands>
+                          <Command Type="AuditFromSelectedRowsCommand">
+                            <Activity>#ActivityDeleteSelectedTest#</Activity>
+                            <AuditKind>Test</AuditKind>
+                          </Command>
+                          <Command Type="DeleteSelectedTestsCommand"/>
+                          <Command Type="DataGridRefreshCommand"/>
+                        </Commands>
+                      </OnClicked>
+                      <ConfirmationBox>
+                        <Message>#DeleteTestConfirmation#</Message>
+                      </ConfirmationBox>
+                    </Item>
+
+                    <Item/>
+
+                    <Item DisplayName="#HistoryMenu#" Tooltip="#HistoryMenuTooltip#" Id="Button_AuditForTest">
+                      <OnClicked Id="Click History button">
+                        <Commands>
+                          <Command Type="AuditSelectedRowCommand">
+                            <Activity>#ActivityHistory#</Activity>
+                          </Command>
+                          <Command Type="StartWorkflowAtPageCommand">
+                            <Permissions>Admin</Permissions>
+                            <PageName>AuditTrail/SearchAuditTrailForTest</PageName>
+                            <QueryString>
+                              <CellOnSelectedRow ColumnId="Test_Key"/>
+                            </QueryString>
+                          </Command>
+                        </Commands>
+                      </OnClicked>
+                    </Item>
+
+                  </Menu>
+                </Command>
+              </Commands>
+            </OnClicked>
+          </Item>
+
+        </Menu>
+
+      </div>
+      <div class="col-remainder">
+        <DataEntry>
+          <LabelsEnabled>false</LabelsEnabled>
+          <RadioButtons Id="UserSelectableFilter">
+            <Persist>true</Persist>
+            <ButtonStyle>TabStyle</ButtonStyle>
+            <OnPageLoad>
+              <Commands>
+                <Command Type="SupplyRoleDataGridFilterOptions" DataGridId="RestingRhythmTestsDataGrid"/>
+              </Commands>
+            </OnPageLoad>
+            <OnEditedValueChanged>
+              <Commands>
+                <Command Type="DataGridRoleFilterChangedCommand"/>
+              </Commands>
+            </OnEditedValueChanged>
+          </RadioButtons>
+        </DataEntry>
+
+        <Portlet>
+          <Header DisplayName="#SearchCriteria#"/>
+          <Content>
+            <table>
+              <tr>
+                <td>
+                  <DataEntry>
+                    <TextBox Id="Criterion_Id" DisplayName="#Patient_Id#">
+                      <Persist>true</Persist>
+                    </TextBox>
+                    <TextBox Id="Criterion_PatientSecondId" DisplayName="#Patient_SecondId#">
+                      <Persist>true</Persist>
+                    </TextBox>
+                    <TextBox Id="Criterion_PatientThirdId" DisplayName="#Patient_ThirdId#">
+                      <Persist>true</Persist>
+                    </TextBox>
+                    <TextBox Id="Criterion_PatientNationalId" DisplayName="#Patient_NationalId#">
+                      <Persist>true</Persist>
+                    </TextBox>
+                  </DataEntry>
+                </td>
+                <td>
+                  <DataEntry>
+                    <TextBox Id="Criterion_TestOrderId" DisplayName="#Test_OrderId#">
+                      <Persist>true</Persist>
+                    </TextBox>
+                    <TextBox Id="Criterion_PatientFirstName">
+                      <Persist>true</Persist>
+                    </TextBox>
+                    <TextBox Id="Criterion_PatientLastName">
+                      <Persist>true</Persist>
+                    </TextBox>
+					<TextBox Id="Criterion_TestResponsibleStaffName" DisplayName="#Test_Responsible_Staff_Name#"> <!-- [LMM] - adição de novo campo de pesquisa -->
+                      <Persist>true</Persist>
+                    </TextBox>					
+                  </DataEntry>
+                </td>
+                <td>
+                  <DataEntry>
+                    <TextBox Id="Criterion_PatientBirthDate" DataType="DateOnly">
+                      <Persist>true</Persist>
+                    </TextBox>
+                    <TextBox Id="Criterion_TestWard">
+                      <Persist>true</Persist>
+                    </TextBox>
+                    <DropDownList DataType="TimeRangeOption" Id="Criterion_TimeRange" >
+                      <DefaultValue>UseLastMonth</DefaultValue>
+                      <Persist>true</Persist>
+                      <Options>
+                        <Option Value="UseLastMonth" DisplayName="#LastMonth#"/>
+                        <Option Value="UseLastThreeMonths" DisplayName="#LastThreeMonths#"/>
+                        <Option Value="UseLastSixMonths" DisplayName="#LastSixMonths#"/>
+                        <Option Value="UseLastYear" DisplayName="#LastYear#"/>
+                        <Option Value="UseAllTime" DisplayName="#AllTime#"/>
+                      </Options>
+
+                      <OnPageLoad>
+                        <Commands>
+                          <Command Type="WriteSearchSettingsIntoFieldsCommand"/>
+                          <Command Type="DataGridCurrentPageOfResultsCommand"/>
+                        </Commands>
+                      </OnPageLoad>
+                    </DropDownList>
+                    <DropDownList Id="Criterion_TestTypeName">
+                      <Persist>true</Persist>
+                      <Options>
+                        <Option DisplayName=""/>
+                        <Option DisplayName="#TestTypeResting#"/>
+                        <Option DisplayName="#TestTypeRhythm#"/>
+                      </Options>
+                    </DropDownList>
+                  </DataEntry>
+                </td>
+                <include file="UserControls/SearchCriteriaButtonCell.SwmControl"/>
+              </tr>
+            </table>
+          </Content>
+        </Portlet>
+
+        <DataGrid Id="RestingRhythmTestsDataGrid" OnDblClickRowAsynchronous="false">
+
+          <OnSearch>
+            <Commands>
+              <Command Type="DataGridSearchCommand">
+                <DatabaseQuery>
+                  <UserSelectableFilterId>UserSelectableFilter</UserSelectableFilterId>
+                  <TextColumn Id="Patient_Key" DataType="Key" IsHidden="true"/>
+                  <TextColumn Id="Test_Key" DataType="Key" IsHidden="true"/>
+                  <TextColumn Id="Case_Key" DataType="Key" IsHidden="true"/>
+                  <ImageColumn Id="Test_PatientInfoStatus" DataType="PickList" Heading="">
+                    <!-- blank heading -->
+                    <Value DatabaseValue="10" UiValue="QuestionMark-Icon01.png" UiImageTooltip="#ImageTooltipUnidentifiedPatient#"/>
+                    <Value DatabaseValue="20" UiValue=""/>
+                    <!-- if test identified cell is blank -->
+                  </ImageColumn>
+                  <TextColumn Id="Patient_Id" IsSortable="true"/>
+                  <TextColumn Id="Patient_FirstName" IsSortable="true"/>
+                  <TextColumn Id="Patient_LastName" IsSortable="true"/>
+                  <TextColumn Id="Case_Number" IsSortable="true"/>
+                  <TextColumn Id="Patient_NationalId" IsSortable="true"/>
+                  <TextColumn Id="Test_OrderId" IsSortable="true"/>
+                  <InvariantDateTimeColumn Id="Test_RecordingStartDateTime" DataType="InvariantDateTime" CssStyle="width: 11em;" IsSortable="true"/>
+                  <TextColumn Id="Patient_Organisation" IsSortable="true"/>
+                  <TextColumn Id="Test_StatusPickList" DataType="PickList" IsSortable="true">
+                    <Value DatabaseValue="0" UiValue="#TestStateInvalid#"/>
+                    <Value DatabaseValue="20" UiValue="#TestStateNewTest#"/>
+                    <Value DatabaseValue="40" UiValue="#TestStateDataAcquired#"/>
+                    <Value DatabaseValue="60" UiValue="#TestStateUnconfirmed#"/>
+                    <Value DatabaseValue="70" UiValue="#TestStateConfirmed#"/>
+                    <Value DatabaseValue="80" UiValue="#TestStateConfirmedAmended#"/>
+                    <Value DatabaseValue="100" UiValue="#TestStateDeclined#"/>
+                    <Value DatabaseValue="120" UiValue="#TestStateConfigured#"/>
+                    <Value DatabaseValue="140" UiValue="#TestStateCancelled#"/>
+                    <Value DatabaseValue="160" UiValue="#TestStateCompleted#"/>
+                    <Value DatabaseValue="180" UiValue="#TestStatePurged#"/>
+                  </TextColumn>
+                  <ImageColumn Id="Test_TypeName" DataType="PickList" Heading="" IsSortable="true">
+                    <Value DatabaseValue="#TestTypeResting#" UiValue="Modalities/24x24-Resting-Icon01.png" UiImageTooltip="#ImageTooltipResting#"/>
+                    <Value DatabaseValue="#TestTypeRhythm#" UiValue="Modalities/24x24-Rhythm-Icon01.png" UiImageTooltip="#ImageTooltipRhythm#"/>
+                    <DefaultValue UiValue=""/>
+                  </ImageColumn>
+                  <ImageColumn Id="Test_UnconfirmedReportCount" DataType="PickList" Heading="">
+                    <Value DatabaseValue="0" UiValue="" />
+                    <Value DatabaseValue="1" UiValue="Reports/ReportCountIcons-Unconfirmed-s.png" UiImageTooltip="#ImageTooltipOneUnconfirmedReport#"/>
+                    <Value DatabaseValue="2" UiValue="Reports/ReportCountIcons-Unconfirmed-s2.png" UiImageTooltip="#ImageTooltipTwoUnconfirmedReports#"/>
+                    <Value DatabaseValue="3" UiValue="Reports/ReportCountIcons-Unconfirmed-s3.png" UiImageTooltip="#ImageTooltipThreeUnconfirmedReports#"/>
+                    <Value DatabaseValue="4" UiValue="Reports/ReportCountIcons-Unconfirmed-s4.png" UiImageTooltip="#ImageTooltipFourUnconfirmedReports#"/>
+                    <DefaultValue UiValue="Reports/ReportCountIcons-Unconfirmed-s5plus.png" UiImageTooltip="#ImageTooltipFiveOrMoreUnconfirmedReports#"/>
+                  </ImageColumn>
+                  <ImageColumn Id="Test_ConfirmedReportCount" DataType="PickList" Heading="" >
+                    <Value DatabaseValue="0" UiValue=""/>
+                    <Value DatabaseValue="1" UiValue="Reports/ReportCountIcons-Confirmed-s.png" UiImageTooltip="#ImageTooltipOneConfirmedReport#"/>
+                    <Value DatabaseValue="2" UiValue="Reports/ReportCountIcons-Confirmed-s2.png" UiImageTooltip="#ImageTooltipTwoConfirmedReports#"/>
+                    <Value DatabaseValue="3" UiValue="Reports/ReportCountIcons-Confirmed-s3.png" UiImageTooltip="#ImageTooltipThreeConfirmedReports#"/>
+                    <Value DatabaseValue="4" UiValue="Reports/ReportCountIcons-Confirmed-s4.png" UiImageTooltip="#ImageTooltipFourConfirmedReports#"/>
+                    <DefaultValue UiValue="Reports/ReportCountIcons-Confirmed-s5plus.png" UiImageTooltip="#ImageTooltipFiveOrMoreConfirmedReports#"/>
+                  </ImageColumn>
+                  <ImageColumn Id="Test_DeclinedReportCount" DataType="PickList" Heading="" >
+                    <Value DatabaseValue="0" UiValue=""/>
+                    <Value DatabaseValue="1" UiValue="Reports/ReportCountIcons-Declined-s.png" UiImageTooltip="#ImageTooltipOneDeclinedReport#"/>
+                    <Value DatabaseValue="2" UiValue="Reports/ReportCountIcons-Declined-s2.png" UiImageTooltip="#ImageTooltipTwoDeclinedReports#"/>
+                    <Value DatabaseValue="3" UiValue="Reports/ReportCountIcons-Declined-s3.png" UiImageTooltip="#ImageTooltipThreeDeclinedReports#"/>
+                    <Value DatabaseValue="4" UiValue="Reports/ReportCountIcons-Declined-s4.png" UiImageTooltip="#ImageTooltipFourDeclinedReports#"/>
+                    <DefaultValue UiValue="Reports/ReportCountIcons-Declined-s5plus.png" UiImageTooltip="#ImageTooltipFiveOrMoreDeclinedReports#"/>
+                  </ImageColumn>
+                  <View>WebGridTestView</View>
+                  <Criteria>
+                    <ColumnStartsWithField ColumnId="Patient_Id" FieldId="Criterion_Id"/>
+                    <ColumnStartsWithField ColumnId="Patient_SecondId" FieldId="Criterion_PatientSecondId"/>
+                    <ColumnStartsWithField ColumnId="Patient_ThirdId" FieldId="Criterion_PatientThirdId"/>
+                    <ColumnStartsWithField ColumnId="Patient_NationalId" FieldId="Criterion_PatientNationalId"/>
+                    <ColumnStartsWithField ColumnId="Test_OrderId" FieldId="Criterion_TestOrderId"/>
+                    <ColumnStartsWithField ColumnId="Patient_LastName" FieldId="Criterion_PatientLastName"/>
+                    <ColumnStartsWithField ColumnId="Patient_FirstName" FieldId="Criterion_PatientFirstName"/>
+                    <ColumnStartsWithField ColumnId="Test_Responsible_Staff_Name" FieldId="Criterion_TestResponsibleStaffName"/>	<!-- [LMM] - Adição de novo campo de pesquisa	 -->						
+                    <ColumnEqualsField ColumnId="Patient_BirthDate" FieldId="Criterion_PatientBirthDate"/>
+                    <ColumnStartsWithField ColumnId="Test_Ward" FieldId="Criterion_TestWard"/>
+                    <ColumnEqualsField ColumnId="Test_TypeName" FieldId="Criterion_TestTypeName"/>
+                    <Or>
+                      <!-- using type name means that custom tests with a type name of resting or rhythm will match -->
+                      <ColumnEqualsValue ColumnId="Test_TypeName" Value="#TestTypeResting#"/>
+                      <ColumnEqualsValue ColumnId="Test_TypeName" Value="#TestTypeRhythm#"/>
+                      <ColumnEqualsValue ColumnId="Test_TypePickList" Value="2"/>
+                      <ColumnEqualsValue ColumnId="Test_TypePickList" Value="5"/>
+                    </Or>
+                    <DateColumnIsGreaterThanOrEqualField ColumnId="Test_Updated_DateTime" FieldId="Criterion_TimeRange"/>
+                  </Criteria>
+                  <SortOrder>Descending</SortOrder>
+                  <SortColumn>Test_RecordingStartDateTime</SortColumn>
+                  <MaxResultCount>20</MaxResultCount>
+                </DatabaseQuery>
+              </Command>
+            </Commands>
+          </OnSearch>
+
+          <OnFirstPage>
+            <Commands>
+              <Command Type="DataGridFirstPageOfResultsCommand"/>
+              <Command Type="ValidateCommand"/>
+            </Commands>
+          </OnFirstPage>
+          <OnNextPage>
+            <Commands>
+              <Command Type="DataGridRequestedPageOfResultsCommand"/>
+              <Command Type="ValidateCommand"/>
+            </Commands>
+          </OnNextPage>
+          <OnPrevPage>
+            <Commands>
+              <Command Type="DataGridRequestedPageOfResultsCommand"/>
+              <Command Type="ValidateCommand"/>
+            </Commands>
+          </OnPrevPage>
+          <OnSort>
+            <Commands>
+              <Command Type="DataGridRequestedPageOfResultsCommand"/>
+              <Command Type="ValidateCommand"/>
+            </Commands>
+          </OnSort>
+          <OnDblClickRow>
+            <Commands>
+              <Command Type="AuditFromSelectedRowsCommand">
+                <Activity>#ActivityReviewTest#</Activity>
+                <AuditKind>Test</AuditKind>
+              </Command>
+              <Command Type="LaunchReviewTestSmartClientCommand"/>
+            </Commands>
+          </OnDblClickRow>
+
+          <OnRefresh>
+            <Commands>
+              <Command Type="DataGridRefreshCommand"/>
+            </Commands>
+          </OnRefresh>
+
+          <OnSelectedRowsChanged>
+            <Commands>
+              <Command Type="ValidateCommand"/>
+            </Commands>
+          </OnSelectedRowsChanged>
+
+        </DataGrid>
+      </div>
+    </div>
+  </Content>
+</Page>

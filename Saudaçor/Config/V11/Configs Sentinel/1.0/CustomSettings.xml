@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CustomSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<PacemakerDefault>UnknownIfFitted</PacemakerDefault>
+<CustomTestTypes/>
+<ExternalTestTypes/>
+<HolterWorkflow>
+<AutoAssociateAttachedPatient>true</AutoAssociateAttachedPatient>
+<AutoAssociateRules>
+<IncludePatientNumber>true</IncludePatientNumber>
+<IncludeGivenName>true</IncludeGivenName>
+<IncludeFamilyName>true</IncludeFamilyName>
+<IncludeDateOfBirth>false</IncludeDateOfBirth>
+</AutoAssociateRules>
+<AutoIdentifyAttachedPatient>false</AutoIdentifyAttachedPatient>
+<AutoIdentifyRules>
+<RequireGivenName>true</RequireGivenName>
+<RequireFamilyName>true</RequireFamilyName>
+<RequireDateOfBirth>false</RequireDateOfBirth>
+</AutoIdentifyRules>
+</HolterWorkflow>
+<BloodPressureWorkflow>
+<AutoAssociateAttachedPatient>true</AutoAssociateAttachedPatient>
+<AutoAssociateRules>
+<IncludePatientNumber>true</IncludePatientNumber>
+<IncludeGivenName>false</IncludeGivenName>
+<IncludeFamilyName>false</IncludeFamilyName>
+<IncludeDateOfBirth>false</IncludeDateOfBirth>
+</AutoAssociateRules>
+<AutoIdentifyAttachedPatient>true</AutoIdentifyAttachedPatient>
+<AutoIdentifyRules>
+<RequireGivenName>false</RequireGivenName>
+<RequireFamilyName>false</RequireFamilyName>
+<RequireDateOfBirth>false</RequireDateOfBirth>
+</AutoIdentifyRules>
+<AverageCalculationUsesHourlyAverages>true</AverageCalculationUsesHourlyAverages>
+<BloodPressureReadingsExclusion>None</BloodPressureReadingsExclusion>
+<ExcludeReadingsInFirstMinutes>30</ExcludeReadingsInFirstMinutes>
+<NumberOfReadingsToExclude>5</NumberOfReadingsToExclude>
+<MorningBloodPressureEnabled>false</MorningBloodPressureEnabled>
+</BloodPressureWorkflow>
+<StressWorkflow>
+<AutoAssociateAttachedPatient>false</AutoAssociateAttachedPatient>
+<AutoAssociateRules>
+<IncludePatientNumber>true</IncludePatientNumber>
+<IncludeGivenName>true</IncludeGivenName>
+<IncludeFamilyName>true</IncludeFamilyName>
+<IncludeDateOfBirth>false</IncludeDateOfBirth>
+</AutoAssociateRules>
+<AutoIdentifyAttachedPatient>false</AutoIdentifyAttachedPatient>
+<AutoIdentifyRules>
+<RequireGivenName>true</RequireGivenName>
+<RequireFamilyName>true</RequireFamilyName>
+<RequireDateOfBirth>false</RequireDateOfBirth>
+</AutoIdentifyRules>
+<CreatePdfOnAcquire>true</CreatePdfOnAcquire>
+</StressWorkflow>
+<RhythmWorkflow>
+<AutoAssociateAttachedPatient>true</AutoAssociateAttachedPatient>
+<AutoAssociateRules>
+<IncludePatientNumber>true</IncludePatientNumber>
+<IncludeGivenName>false</IncludeGivenName>
+<IncludeFamilyName>false</IncludeFamilyName>
+<IncludeDateOfBirth>false</IncludeDateOfBirth>
+</AutoAssociateRules>
+<AutoIdentifyAttachedPatient>true</AutoIdentifyAttachedPatient>
+<AutoIdentifyRules>
+<RequireGivenName>false</RequireGivenName>
+<RequireFamilyName>false</RequireFamilyName>
+<RequireDateOfBirth>false</RequireDateOfBirth>
+</AutoIdentifyRules>
+</RhythmWorkflow>
+<RestingWorkflow>
+<AutoAssociateAttachedPatient>true</AutoAssociateAttachedPatient>  <!--[LMM 06042017]-->
+<AutoAssociateRules>
+<IncludePatientNumber>true</IncludePatientNumber>
+<IncludeGivenName>false</IncludeGivenName>     <!--[LMM 06042017]-->
+<IncludeFamilyName>false</IncludeFamilyName>    <!--[LMM 06042017]-->
+<IncludeDateOfBirth>false</IncludeDateOfBirth>
+</AutoAssociateRules>
+<AutoIdentifyAttachedPatient>true</AutoIdentifyAttachedPatient>   <!--[LMM 06042017]-->
+<AutoIdentifyRules>
+<RequireGivenName>false</RequireGivenName>     <!--[LMM 06042017]-->
+<RequireFamilyName>false</RequireFamilyName>    <!--[LMM 06042017]-->
+<RequireDateOfBirth>false</RequireDateOfBirth>   <!--[LMM 06042017]-->
+</AutoIdentifyRules>
+</RestingWorkflow>
+<GlasgowAlgorithm>
+<QtcAlgorithm>Hodge</QtcAlgorithm>
+</GlasgowAlgorithm>
+<CustomWorkflow>
+<AutoAssociateAttachedPatient>true</AutoAssociateAttachedPatient>
+<AutoAssociateRules>
+<IncludePatientNumber>true</IncludePatientNumber>
+<IncludeGivenName>false</IncludeGivenName>
+<IncludeFamilyName>false</IncludeFamilyName>
+<IncludeDateOfBirth>false</IncludeDateOfBirth>
+</AutoAssociateRules>
+<AutoIdentifyAttachedPatient>true</AutoIdentifyAttachedPatient>
+<AutoIdentifyRules>
+<RequireGivenName>false</RequireGivenName>
+<RequireFamilyName>false</RequireFamilyName>
+<RequireDateOfBirth>false</RequireDateOfBirth>
+</AutoIdentifyRules>
+</CustomWorkflow>
+<ActiveDirectory>
+<LDAPConnectionPath>path</LDAPConnectionPath>
+<Domain>domain</Domain>
+<Filter>(&amp;(|(sn=$SEARCHTERM)(sAMAccountName=$SEARCHTERM))(!(userAccountControl:1.2.840.113556.1.4.803:=2)))</Filter>
+</ActiveDirectory>
+<ReportOverlay>
+<Unconfirmed>Não confirmado</Unconfirmed>
+<PreviousUnconfirmed>ECG não confirmado anterior</PreviousUnconfirmed>
+<Confirmed>Confirmado</Confirmed>
+<PreviousConfirmed>ECG confirmado anterior</PreviousConfirmed>
+<Declined>Recusado</Declined>
+<PreviousDeclined>ECG anterior recusada</PreviousDeclined>
+<Completed>Completado</Completed>
+<PreviousCompleted>ECG anterior completado</PreviousCompleted>
+<ConfirmedAmended>Reconfirmado</ConfirmedAmended>
+<PreviousConfirmedAmended>ECG reconfirmado anterior</PreviousConfirmedAmended>
+</ReportOverlay>
+<RemoteDataTransfer>
+<FileTransferPollInterval>300</FileTransferPollInterval>
+<RemoteSitePollInterval>900</RemoteSitePollInterval>
+<RemoteSiteSendPollInterval>900</RemoteSiteSendPollInterval>
+<HolterRecordingCompression>None</HolterRecordingCompression>
+<NumberOfDaysToRetryTransfers>7</NumberOfDaysToRetryTransfers>
+<RoleName>RDT</RoleName>
+</RemoteDataTransfer>
+<RestingEcgDisplayOptions>
+<RestingEcgDisplayLayout>ThreeByFour</RestingEcgDisplayLayout>
+<RestingEcgRate>TwentyFive</RestingEcgRate>
+</RestingEcgDisplayOptions>
+<IHEEnabled>true</IHEEnabled>    <!--[LMM 06042017]-->
+<DisplayPacingSpikes>true</DisplayPacingSpikes>
+<LocalPatientNumberNamespace>Default</LocalPatientNumberNamespace>
+<LocalACPowerFrequency>0</LocalACPowerFrequency>
+<UserDefinedFields>
+<PatientField1DisplayName>Nome do campo 1</PatientField1DisplayName>
+<PatientField2DisplayName>Nome do campo 2</PatientField2DisplayName>
+<PatientField3DisplayName>Nome do campo 3</PatientField3DisplayName>
+<PatientField4DisplayName>Nome do campo 4</PatientField4DisplayName>
+<TestField1DisplayName>Nome do campo 1</TestField1DisplayName>
+<TestField2DisplayName>Nome do campo 2</TestField2DisplayName>
+<TestField3DisplayName>Nome do campo 3</TestField3DisplayName>
+<TestField4DisplayName>Nome do campo 4</TestField4DisplayName>
+</UserDefinedFields>
+<EnableDemoEcgAcquireMode>true</EnableDemoEcgAcquireMode>
+</CustomSettings>
+
+
+
