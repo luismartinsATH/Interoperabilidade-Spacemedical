@@ -1,0 +1,1983 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ReportFormat>
+  <Property Name="name" Value="Immediate Print Report"/>
+
+  <Property Name='Author' Value='Spacelabs Healthcare'/>
+  <Property Name='Subject' Value='{Product.Name} Immediate Print Report'/>
+  <Property Name='Title' Value='Immediate Print Report'/>
+  <Property Name='Keywords' Value='Holter, ECG, report, {Product.Name}, Spacelabs Healthcare'/>
+  <Property Name='Creator' Value='{Product.Name} Report Generator {Product.Version}'/>
+  <Property Name='Version' Value='1.0'/>
+  
+  <PaintBox>
+
+    <!-- general resources and styles used throughout the report -->
+
+    <Style Name='BlockTableStyle'>
+      <Property Name='TitleFont' Value='Auto,10pt,Black,Bold'/>
+      <Property Name='CellPadding'>
+        <Property Name='Left' Value='0'/>
+      </Property>
+      <Property Name='TitlePadding'>
+        <Property Name='Top' Value='3'/>
+        <Property Name='Bottom' Value='1.5'/>
+      </Property>
+    </Style>
+
+    <Style Name='EcgStyle'>
+      <Property Name='MajorGraticulePen' Value='Salmon,0.2,0.2,0.3'/>
+      <Property Name='MinorGraticulePen' Value='Salmon,0.1,0.1,0.9'/>
+    </Style>
+
+    <Style Name='ShadedBlockStyle'>
+      <Property Name='BorderBrush' Value='aliceblue'/>
+      <Property Name='BorderCornerRadius' Value='1'/>
+      <Property Name='Padding'>
+        <Property Name='Top' Value='0.75'/>
+        <Property Name='Bottom' Value='0.75'/>
+        <Property Name='Left' Value='1'/>
+        <Property Name='Right' Value='1'/>
+      </Property>
+    </Style>
+
+    <!-- styles and resources used in headers -->
+
+    <Style Name='PatientIdentificationTitleStyle'>
+      <Property Name='Margin'>
+        <Property Name='Top' Value='0.0'/>
+      </Property>
+      <Property Name='Content' Value='{Patient.LastNameFirst}'/>
+      <Property Name='Font' Value='Auto,14.0pt,Black,Bold'/>
+      <Property Name='Alignment' Value='TopRight'/>
+      <Property Name='Bounds' Value='PatientNameCell'/>
+    </Style>
+
+    <Style Name='HolterReportTitleStyle'>
+      <Property Name='Margin'>
+        <Property Name='Top' Value='8.0'/>
+      </Property>
+      <Property Name='Content' Value='_ReportSubjectLabel_'/>
+      <Property Name='Font' Value='Auto,8pt,Black'/>
+      <Property Name='Alignment' Value='TopRight'/>
+      <Property Name='Bounds' Value='PatientNameCell'/>
+    </Style>
+
+    <Style Name='ShadedHeaderStyle'>
+      <Property Name='BorderBrush' Value='paleturquoise'/>
+      <Property Name='Padding'>
+        <Property Name='Top' Value='1.5'/>
+        <Property Name='Bottom' Value='1'/>
+        <Property Name='Left' Value='2'/>
+        <Property Name='Right' Value='2'/>
+      </Property>
+    </Style>
+
+    <Style Name='HeaderLeftRow1Style'>
+      <Property Name='Margin'>
+        <Property Name='Top' Value='0.0'/>
+      </Property>
+      <Property Name='Content' Value="{Product.Name}"/>
+      <Property Name='Font' Value='Auto,14pt,Black.Bold'/>
+      <Property Name='Alignment' Value='TopLeft'/>
+      <Property Name='Bounds' Value='TitleCell'/>
+    </Style>
+
+    <Style Name='HeaderLeftRow2Style'>
+      <Property Name='Margin'>
+        <Property Name='Top' Value='7.75'/>
+      </Property>
+      <Property Name='Content' Value="{AnalysisFacility.Name}"/>
+      <Property Name='Font' Value='Auto,10pt,Black.Bold'/>
+      <Property Name='Alignment' Value='TopLeft'/>
+      <Property Name='Bounds' Value='TitleCell'/>
+    </Style>
+
+    <Style Name='UserHeaderLeftRow1Style'>
+      <Property Name='Margin'>
+        <Property Name='Top' Value='0'/>
+      </Property>
+      <Property Name='Padding'>
+        <Property Name='Top' Value='1'/>
+        <Property Name='Bottom' Value='1'/>
+        <Property Name='Left' Value='2'/>
+        <Property Name='Right' Value='2'/>
+      </Property>
+      <Property Name='Content' Value="{Headers.TopHeaderText}"/>
+      <Property Name='Alignment' Value='TopLeft'/>
+      <Property Name='Bounds' Value='TitleCell'/>
+    </Style>
+
+    <Style Name='UserHeaderLeftRow2Style'>
+      <Property Name='Margin'>
+        <Property Name='Top' Value='5.0'/>
+      </Property>
+      <Property Name='Padding'>
+        <Property Name='Top' Value='1'/>
+        <Property Name='Bottom' Value='1'/>
+        <Property Name='Left' Value='2'/>
+        <Property Name='Right' Value='2'/>
+      </Property>
+      <Property Name='Content' Value="{Headers.MiddleHeaderText}"/>
+      <Property Name='Alignment' Value='TopLeft'/>
+      <Property Name='Bounds' Value='TitleCell'/>
+    </Style>
+
+    <Style Name='UserHeaderLeftRow3Style'>
+      <Property Name='Margin'>
+        <Property Name='Top' Value='10.0'/>
+      </Property>
+      <Property Name='Padding'>
+        <Property Name='Top' Value='1'/>
+        <Property Name='Bottom' Value='1'/>
+        <Property Name='Left' Value='2'/>
+        <Property Name='Right' Value='2'/>
+      </Property>
+      <Property Name='Content' Value="{Headers.BottomHeaderText}"/>
+      <Property Name='Alignment' Value='MiddleLeft'/>
+      <Property Name='Bounds' Value='TitleCell'/>
+    </Style>
+
+    <Style Name='LogoStyle'>
+      <Property Name='Bounds' Value='LogoCell'/>
+      <Property Name='Margin'>
+        <Property Name='Top' Value='3.6'/>
+        <Property Name='Right' Value='3.6'/>
+        <Property Name='Bottom' Value='1.1'/>
+      </Property>
+      <Property Name='Image' Value='SpacelabsLogo'/>
+    </Style>
+
+    <Style Name='HeaderPatientIdentifierTableStyle'>
+      <Property Name='Margin'>
+        <Property Name='Top' Value='0.25' />
+        <Property Name='Bottom' Value='0' />
+      </Property>
+      <Property Name='Bounds' Value='PatientIdentifyingRow' />
+      <Property Name='Padding'>
+        <Property Name='Left' Value='1'/>
+        <Property Name='Right' Value='1'/>
+        <Property Name='Top' Value='1'/>
+      </Property>
+      <Property Name='CellFont' Value='Auto,8pt,black'/>
+      <Property Name='DataSource'>
+        <Property Name='Column'>
+          <Property Name='Width' Value='0.09' />
+          <Property Name='CellAlignment' Value='MiddleLeft' />
+        </Property>
+        <Property Name='Column'>
+          <Property Name='Width' Value='0.15' />
+          <Property Name='CellAlignment' Value='MiddleLeft' />
+        </Property>
+        <Property Name='Column'>
+          <Property Name='Width' Value='0.12' />
+          <Property Name='CellAlignment' Value='MiddleRight' />
+          <Property Name='RightPadding' Value='2' />
+        </Property>
+        <Property Name='Column'>
+          <Property Name='Width' Value='0.1' />
+        </Property>
+        <Property Name='Column'>
+          <Property Name='Width' Value='0.08' />
+        </Property>
+        <Property Name='Column'>
+          <Property Name='Width' Value='0.1' />
+          <Property Name='CellAlignment' Value='MiddleRight' />
+        </Property>
+        <Property Name='Column'>
+          <Property Name='Width' Value='0.1' />
+          <Property Name='CellAlignment' Value='MiddleLeft' />
+        </Property>
+
+        <Property Name='Row'>
+          <Property Name='Cell'>
+            <Property Name='Content' Value='{_IDLabel_}'/>
+          </Property>
+          <Property Name='Cell'>
+            <Property Name='Content' Value="{Patient.Id} {Patient.BelongsToMyOrganisation ? '' : ('('+Patient.Organisation+')')}"/>
+          </Property>
+          <Property Name='Cell'>
+            <Property Name='Content' Value='{_DateOfBirthLabel_}' />
+          </Property>
+          <Property Name='Cell'>
+            <Property Name='Content' Value="{Patient.DateOfBirth,_DateOnlyFormatLabel_} "/>
+          </Property>
+          <Property Name='Cell'>
+            <Property Name='Content' Value='_AgeLabel_' />
+          </Property>
+          <Property Name='Cell'>
+            <Property Name='Content' Value='_GenderLabel_' />
+          </Property>
+          <Property Name='Cell'>
+            <Property Name='Content' Value='{Patient.Gender}'/>
+          </Property>
+        </Property>
+      </Property>
+    </Style>
+
+    <!-- resources and styles used in footers -->
+
+    <Style Name='FooterReportCreatedDateStyle'>
+      <Property Name='Bounds' Value='GeneratedOnCell'/>
+      <Property Name='Content' Value="{_ReportGenerationDateLabel_}"/>
+      <Property Name='Font' Value='Auto,6pt'/>
+      <Property Name='Alignment' Value='BottomLeft'/>
+    </Style>
+    <Style Name='FooterLogoStyle'>
+      <Property Name='Bounds' Value='LogoCell'/>
+      <Property Name='Image' Value='SpacelabsLogo'/>
+    </Style>
+    <Style Name='FooterTorridonVersionStyle'>
+      <Property Name='Bounds' Value='VersionCell'/>
+      <Property Name='Margin'>
+        <Property Name='Left' Value='2.0'/>
+      </Property>
+      <Property Name='Content' Value="{_ProductVersionLabel_}"/>
+      <Property Name='Font' Value='Auto,6pt'/>
+      <Property Name='Alignment' Value='BottomLeft'/>
+    </Style>
+    <Style Name='FooterPageMofNStyle'>
+      <Property Name='Bounds' Value='PageMofNCell'/>
+      <Property Name='Align' Value='BottomRight'/>
+      <Property Name='Font' Value='Auto,6pt'/>
+      <Property Name='Format' Value="{_PageMofNLabel_}"/>
+    </Style>
+
+    <!-- these settings allow some frequently changed settings to be prominent at the start of this report format
+         for convenient change to customer required values -->
+
+    <Settings>
+
+      <!-- this setting determines whether the time of a row in the full disclosure section will be included or not -->
+      <Property Name='ShowStartTimeOfEachEcgStrip' Value='true'/>
+
+      <!-- set the length of strips based on the culture of the report. 
+           nb. 8 sec strips do not fit on A4 paper with sufficent margins to be sure of all printers never clipping -->
+      <Property Name='StandardStripDuration' Value="Report.PageSize='Letter' ? 8 : 7.8"/>
+
+      <!-- set the height of full scale ECG strips based on the size of the page. 
+           Letter page size is shorter than A4 and 3 full scale strips should fit on a page. The heights are in millimetres -->
+      <Property Name='FullScaleStripHeight' Value="Report.PageSize='Letter' ? 85 : 80"/>
+
+    </Settings>
+  </PaintBox>
+
+  <!-- defining translations -->
+
+  <Translation CultureName='En'>
+
+    <!-- date and time formats -->
+
+    <TranslationEntry>
+      <Untranslated>RecordingTimeFormatLabel</Untranslated>
+      <Translated>ddd HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ShortDateTimeFormatLabel</Untranslated>
+      <Translated>ddd HH:mm</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>DateOnlyFormatLabel</Untranslated>
+      <Translated>ddd dd MMM yyyy</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>FullDateAndTimeFormatLabel</Untranslated>
+      <Translated>ddd dd MMM yyyy HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecordingDayFormatLabel</Untranslated>
+      <Translated>ddd dd</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>DurationFormatLabel</Untranslated>
+      <Translated>HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>HrMinFormatLabel</Untranslated>
+      <Translated>D \day H \hr M \min s \sec</Translated>
+    </TranslationEntry>
+
+    <!-- footer translations -->
+
+    <TranslationEntry>
+      <Untranslated>ReportGenerationDateLabel</Untranslated>
+      <Translated>Generated On {Report.CreatedDateAndTime,_FullDateAndTimeFormatLabel_}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ProductVersionLabel</Untranslated>
+      <Translated>{Product.Name} version {Product.Version}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PageMofNLabel</Untranslated>
+      <Translated>Page {PageNumber} of {PageCount}</Translated>
+    </TranslationEntry>
+
+    <!-- header translations -->
+
+    <TranslationEntry>
+      <Untranslated>ReportSubjectLabel</Untranslated>
+      <Translated>{Recording.TraceCount} _LeadOrChannel_ Immediate Print</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReportTitleLabel</Untranslated>
+      <Translated>Immediate Print</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>LeadOrChannel</Untranslated>
+      <Translated>- {Recording.TraceCount > 3? _Lead_ : _Channel_}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>Lead</Untranslated>
+      <Translated>Lead</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>Channel</Untranslated>
+      <Translated>Channel</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>EcgStripHrTitleLabel</Untranslated>
+      <Translated>1 min HR {PrintElement.OneMinHeartRate,'0'} BPM</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>IDLabel</Untranslated>
+      <Translated>ID:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>OrderLabel</Untranslated>
+      <Translated>Order:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>CaseLabel</Untranslated>
+      <Translated>Case:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecordedLabel</Untranslated>
+      <Translated>Recorded:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>DateOfBirthLabel</Untranslated>
+      <Translated>Date of Birth:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>AgeLabel</Untranslated>
+      <Translated>({Patient.AgeInYears} years)</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>GenderLabel</Untranslated>
+      <Translated>Gender:</Translated>
+    </TranslationEntry>
+
+    <!-- patient gender translations -->
+
+    <TranslationEntry>
+      <Untranslated>PatientGenderFemale</Untranslated>
+      <Translated>Female</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientGenderMale</Untranslated>
+      <Translated>Male</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientGenderUnknown</Untranslated>
+      <Translated>Unknown</Translated>
+    </TranslationEntry>
+  </Translation>
+
+   <!-- ***************************** GERMAN TRANSLATIONS START HERE ****************************** -->
+
+ <Translation CultureName='De'>
+
+    <!-- date and time formats -->
+
+    <TranslationEntry>
+      <Untranslated>RecordingTimeFormatLabel</Untranslated>
+      <Translated>ddd HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ShortDateTimeFormatLabel</Untranslated>
+      <Translated>ddd HH:mm</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>DateOnlyFormatLabel</Untranslated>
+      <Translated>ddd dd MMM yyyy</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>FullDateAndTimeFormatLabel</Untranslated>
+      <Translated>ddd dd MMM yyyy HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecordingDayFormatLabel</Untranslated>
+      <Translated>ddd dd</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>DurationFormatLabel</Untranslated>
+      <Translated>HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>HrMinFormatLabel</Untranslated>
+      <Translated>D Tag H \St\d. M \Min. s \Sek.</Translated>
+    </TranslationEntry>
+
+    <!-- footer translations -->
+
+    <TranslationEntry>
+      <Untranslated>ReportGenerationDateLabel</Untranslated>
+      <Translated>Erstellt am {Report.CreatedDateAndTime,_FullDateAndTimeFormatLabel_}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ProductVersionLabel</Untranslated>
+      <Translated>{Product.Name} Version {Product.Version}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PageMofNLabel</Untranslated>
+      <Translated>Seite {PageNumber} von {PageCount}</Translated>
+    </TranslationEntry>
+
+    <!-- header translations -->
+
+    <TranslationEntry>
+      <Untranslated>ReportSubjectLabel</Untranslated>
+      <Translated>{Recording.TraceCount}-Kanal sofort drucken</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReportTitleLabel</Untranslated>
+      <Translated>Sofort-Drucken</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>LeadOrChannel</Untranslated>
+      <Translated>- {Recording.TraceCount > 3? _Lead_ : _Channel_}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>Lead</Untranslated>
+      <Translated>Ableitung</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>Channel</Untranslated>
+      <Translated>Kanal</Translated>
+    </TranslationEntry>
+   <TranslationEntry>
+     <Untranslated>EcgStripHrTitleLabel</Untranslated>
+     <Translated>1 Min. HF {PrintElement.OneMinHeartRate,'0'} {_BPM_}</Translated>
+   </TranslationEntry>
+   <TranslationEntry>
+      <Untranslated>IDLabel</Untranslated>
+      <Translated>ID:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>OrderLabel</Untranslated>
+      <Translated>Anordnung:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>CaseLabel</Untranslated>
+      <Translated>Fall:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecordedLabel</Untranslated>
+      <Translated>Aufgezeichnet:</Translated>
+    </TranslationEntry>
+   <TranslationEntry>
+     <Untranslated>DateOfBirthLabel</Untranslated>
+     <Translated>Geburtsdatum:</Translated>
+   </TranslationEntry>
+   <TranslationEntry>
+     <Untranslated>AgeLabel</Untranslated>
+     <Translated>({Patient.AgeInYears} Jahre)</Translated>
+   </TranslationEntry>
+   <TranslationEntry>
+     <Untranslated>GenderLabel</Untranslated>
+     <Translated>Geschlecht:</Translated>
+   </TranslationEntry>
+
+   <!-- patient gender translations -->
+
+   <TranslationEntry>
+     <Untranslated>PatientGenderFemale</Untranslated>
+     <Translated>Weiblich</Translated>
+   </TranslationEntry>
+   <TranslationEntry>
+     <Untranslated>PatientGenderMale</Untranslated>
+     <Translated>Männlich</Translated>
+   </TranslationEntry>
+   <TranslationEntry>
+     <Untranslated>PatientGenderUnknown</Untranslated>
+     <Translated>Unbekannt</Translated>
+   </TranslationEntry>
+  </Translation>
+
+  <!-- ***************************** DANISH TRANSLATIONS START HERE ****************************** -->
+
+  <Translation CultureName='Da'>
+
+    <!-- date and time formats -->
+
+    <TranslationEntry>
+      <Untranslated>RecordingTimeFormatLabel</Untranslated>
+      <Translated>ddd HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ShortDateTimeFormatLabel</Untranslated>
+      <Translated>ddd HH:mm</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>DateOnlyFormatLabel</Untranslated>
+      <Translated>ddd dd MMM yyyy</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>FullDateAndTimeFormatLabel</Untranslated>
+      <Translated>ddd dd MMM yyyy HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecordingDayFormatLabel</Untranslated>
+      <Translated>ddd dd</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>DurationFormatLabel</Untranslated>
+      <Translated>HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>HrMinFormatLabel</Untranslated>
+      <Translated>D \dag H ti\me M \min. s \sek.</Translated>
+    </TranslationEntry>
+
+    <!-- footer translations -->
+
+    <TranslationEntry>
+      <Untranslated>ReportGenerationDateLabel</Untranslated>
+      <Translated>Genereret d. {Report.CreatedDateAndTime,_FullDateAndTimeFormatLabel_}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ProductVersionLabel</Untranslated>
+      <Translated>{Product.Name} version {Product.Version}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PageMofNLabel</Untranslated>
+      <Translated>Side {PageNumber} af {PageCount}</Translated>
+    </TranslationEntry>
+
+    <!-- header translations -->
+
+    <TranslationEntry>
+      <Untranslated>ReportSubjectLabel</Untranslated>
+      <Translated>Øjeblikkelig udskrift {Recording.TraceCount} kanaler</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReportTitleLabel</Untranslated>
+      <Translated>Øjeblikkelig udskrift</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>LeadOrChannel</Untranslated>
+      <Translated>- {Recording.TraceCount > 3? _Lead_ : _Channel_}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>Lead</Untranslated>
+      <Translated>Afledning</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>Channel</Untranslated>
+      <Translated>Kanal</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>EcgStripHrTitleLabel</Untranslated>
+      <Translated>1 min. HF: {PrintElement.OneMinHeartRate,'0'} BPM</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>IDLabel</Untranslated>
+      <Translated>ID:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>OrderLabel</Untranslated>
+      <Translated>Anmodning:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>CaseLabel</Untranslated>
+      <Translated>Post:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecordedLabel</Untranslated>
+      <Translated>Optaget:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>DateOfBirthLabel</Untranslated>
+      <Translated>Fødselsdato:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>AgeLabel</Untranslated>
+      <Translated>({Patient.AgeInYears} år)</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>GenderLabel</Untranslated>
+      <Translated>Køn:</Translated>
+    </TranslationEntry>
+
+    <!-- patient gender translations -->
+
+    <TranslationEntry>
+      <Untranslated>PatientGenderFemale</Untranslated>
+      <Translated>Kvinde</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientGenderMale</Untranslated>
+      <Translated>Mand</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientGenderUnknown</Untranslated>
+      <Translated>Ukendt</Translated>
+    </TranslationEntry>
+  </Translation>
+
+ <!-- ***************************** SPANISH TRANSLATIONS START HERE ****************************** -->
+
+  <Translation CultureName='Es'>
+
+    <!-- date and time formats -->
+
+    <TranslationEntry>
+      <Untranslated>RecordingTimeFormatLabel</Untranslated>
+      <Translated>ddd HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ShortDateTimeFormatLabel</Untranslated>
+      <Translated>ddd HH:mm</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>DateOnlyFormatLabel</Untranslated>
+      <Translated>ddd dd MMM yyyy</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>FullDateAndTimeFormatLabel</Untranslated>
+      <Translated>ddd dd MMM yyyy HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecordingDayFormatLabel</Untranslated>
+      <Translated>ddd dd</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>DurationFormatLabel</Untranslated>
+      <Translated>HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>HrMinFormatLabel</Untranslated>
+      <Translated>D \día H \hr M \min s \seg</Translated>
+    </TranslationEntry>
+
+    <!-- footer translations -->
+
+    <TranslationEntry>
+      <Untranslated>ReportGenerationDateLabel</Untranslated>
+      <Translated>Generado {Report.CreatedDateAndTime,_FullDateAndTimeFormatLabel_}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ProductVersionLabel</Untranslated>
+      <Translated>{Product.Name} versión {Product.Version}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PageMofNLabel</Untranslated>
+      <Translated>Página {PageNumber} de {PageCount}</Translated>
+    </TranslationEntry>
+
+    <!-- header translations -->
+
+    <TranslationEntry>
+      <Untranslated>ReportSubjectLabel</Untranslated>
+      <Translated>{Recording.TraceCount} derivación impresión inmediata</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReportTitleLabel</Untranslated>
+      <Translated>Imprimir inmediato</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>LeadOrChannel</Untranslated>
+      <Translated>- {Recording.TraceCount > 3? _Lead_ : _Channel_}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>Lead</Untranslated>
+      <Translated>Derivación</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>Channel</Untranslated>
+      <Translated>Canal</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>EcgStripHrTitleLabel</Untranslated>
+      <Translated>1 min FC {PrintElement.OneMinHeartRate,'0'} LPM</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>IDLabel</Untranslated>
+      <Translated>ID:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>OrderLabel</Untranslated>
+      <Translated>Pedido:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>CaseLabel</Untranslated>
+      <Translated>Caso:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecordedLabel</Untranslated>
+      <Translated>Grabado:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>DateOfBirthLabel</Untranslated>
+      <Translated>Fecha de nacimiento:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>AgeLabel</Untranslated>
+      <Translated>({Patient.AgeInYears} años)</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>GenderLabel</Untranslated>
+      <Translated>Sexo:</Translated>
+    </TranslationEntry>
+
+    <TranslationEntry>
+      <Untranslated>PatientGenderFemale</Untranslated>
+      <Translated>Mujer</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientGenderMale</Untranslated>
+      <Translated>Hombre</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientGenderUnknown</Untranslated>
+      <Translated>Desconocido</Translated>
+    </TranslationEntry>
+  </Translation>
+
+ <!-- ***************************** FRENCH TRANSLATIONS START HERE ****************************** -->
+
+  <Translation CultureName='Fr'>
+
+    <!-- date and time formats -->
+
+    <TranslationEntry>
+      <Untranslated>RecordingTimeFormatLabel</Untranslated>
+      <Translated>ddd HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ShortDateTimeFormatLabel</Untranslated>
+      <Translated>ddd HH:mm</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>DateOnlyFormatLabel</Untranslated>
+      <Translated>ddd dd MMM yyyy</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>FullDateAndTimeFormatLabel</Untranslated>
+      <Translated>ddd dd MMM yyyy HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecordingDayFormatLabel</Untranslated>
+      <Translated>ddd ddd</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>DurationFormatLabel</Untranslated>
+      <Translated>HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>HrMinFormatLabel</Untranslated>
+      <Translated>D jour H \h M \mn s \s</Translated>
+    </TranslationEntry>
+
+    <!-- footer translations -->
+
+    <TranslationEntry>
+      <Untranslated>ReportGenerationDateLabel</Untranslated>
+      <Translated>Généré le {Report.CreatedDateAndTime,_FullDateAndTimeFormatLabel_}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ProductVersionLabel</Untranslated>
+      <Translated>{Product.Name} version {Product.Version}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PageMofNLabel</Untranslated>
+      <Translated>Page {PageNumber} de {PageCount}</Translated>
+    </TranslationEntry>
+
+    <!-- header translations -->
+
+    <TranslationEntry>
+      <Untranslated>ReportSubjectLabel</Untranslated>
+      <Translated>Impression immédiate {Recording.TraceCount} dérivations</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReportTitleLabel</Untranslated>
+      <Translated>Impression immédiate</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>LeadOrChannel</Untranslated>
+      <Translated>- {Recording.TraceCount > 3? _Lead_ : _Channel_}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>Lead</Untranslated>
+      <Translated>Dérivation</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>Channel</Untranslated>
+      <Translated>Voie</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>EcgStripHrTitleLabel</Untranslated>
+      <Translated>FC 1 mn {PrintElement.OneMinHeartRate,'0'} BPM</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>IDLabel</Untranslated>
+      <Translated>ID :</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>OrderLabel</Untranslated>
+      <Translated>Ordre :</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>CaseLabel</Untranslated>
+      <Translated>Dossier :</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecordedLabel</Untranslated>
+      <Translated>Enregistré :</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>DateOfBirthLabel</Untranslated>
+      <Translated>Date de naissance :</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>AgeLabel</Untranslated>
+      <Translated>({Patient.AgeInYears} ans)</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>GenderLabel</Untranslated>
+      <Translated>Sexe :</Translated>
+    </TranslationEntry>
+
+    <!-- patient gender translations -->
+
+    <TranslationEntry>
+      <Untranslated>PatientGenderFemale</Untranslated>
+      <Translated>Féminin</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientGenderMale</Untranslated>
+      <Translated>Masculin</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientGenderUnknown</Untranslated>
+      <Translated>Inconnu</Translated>
+    </TranslationEntry>
+  </Translation>
+
+  <!-- ***************************** ITALIAN TRANSLATIONS START HERE ****************************** -->
+
+  <Translation CultureName='It'>
+
+    <!-- date and time formats -->
+
+    <TranslationEntry>
+      <Untranslated>RecordingTimeFormatLabel</Untranslated>
+      <Translated>ddd HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ShortDateTimeFormatLabel</Untranslated>
+      <Translated>ddd HH:mm</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>DateOnlyFormatLabel</Untranslated>
+      <Translated>ddd dd MMM yyyy</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>FullDateAndTimeFormatLabel</Untranslated>
+      <Translated>ddd dd MMM yyyy HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecordingDayFormatLabel</Untranslated>
+      <Translated>ddd dd</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>DurationFormatLabel</Untranslated>
+      <Translated>HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>HrMinFormatLabel</Untranslated>
+      <Translated>D giorno H ora M \min s \sec</Translated>
+    </TranslationEntry>
+
+    <!-- footer translations -->
+
+    <TranslationEntry>
+      <Untranslated>ReportGenerationDateLabel</Untranslated>
+      <Translated>Eseguito {Report.CreatedDateAndTime,_FullDateAndTimeFormatLabel_}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ProductVersionLabel</Untranslated>
+      <Translated>{Product.Name} versione {Product.Version}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PageMofNLabel</Untranslated>
+      <Translated>Pagina {PageNumber} di {PageCount}</Translated>
+    </TranslationEntry>
+
+    <!-- header translations -->
+
+    <TranslationEntry>
+      <Untranslated>ReportSubjectLabel</Untranslated>
+      <Translated>Stampa immediata {Recording.TraceCount} derivaz.</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReportTitleLabel</Untranslated>
+      <Translated>Stampa immediata</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>LeadOrChannel</Untranslated>
+      <Translated>- {Recording.TraceCount > 3? _Lead_ : _Channel_}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>Lead</Untranslated>
+      <Translated>Derivazione</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>Channel</Untranslated>
+      <Translated>Canale</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>EcgStripHrTitleLabel</Untranslated>
+      <Translated>1 min FC: {PrintElement.OneMinHeartRate,'0'} BPM</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>IDLabel</Untranslated>
+      <Translated>ID:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>OrderLabel</Untranslated>
+      <Translated>Ordine:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>CaseLabel</Untranslated>
+      <Translated>Caso:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecordedLabel</Untranslated>
+      <Translated>Registrato:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>DateOfBirthLabel</Untranslated>
+      <Translated>Data di nascita:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>AgeLabel</Untranslated>
+      <Translated>({Patient.AgeInYears} anni)</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>GenderLabel</Untranslated>
+      <Translated>Sesso:</Translated>
+    </TranslationEntry>
+
+    <!-- patient gender translations -->
+
+    <TranslationEntry>
+      <Untranslated>PatientGenderFemale</Untranslated>
+      <Translated>Femmina</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientGenderMale</Untranslated>
+      <Translated>Maschio</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientGenderUnknown</Untranslated>
+      <Translated>Sconosciuto</Translated>
+    </TranslationEntry>
+  </Translation>
+
+  <!-- ***************************** DUTCH TRANSLATIONS START HERE ****************************** -->
+
+  <Translation CultureName='Nl'>
+
+    <!-- date and time formats -->
+
+    <TranslationEntry>
+      <Untranslated>RecordingTimeFormatLabel</Untranslated>
+      <Translated>ddd HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ShortDateTimeFormatLabel</Untranslated>
+      <Translated>ddd HH:mm</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>DateOnlyFormatLabel</Untranslated>
+      <Translated>ddd dd MMM yyyy</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>FullDateAndTimeFormatLabel</Untranslated>
+      <Translated>ddd dd MMM yyyy HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecordingDayFormatLabel</Untranslated>
+      <Translated>ddd dd</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>DurationFormatLabel</Untranslated>
+      <Translated>HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>HrMinFormatLabel</Untranslated>
+      <Translated>D \dag H uur M \min. s \sec.</Translated>
+    </TranslationEntry>
+
+    <!-- footer translations -->
+
+    <TranslationEntry>
+      <Untranslated>ReportGenerationDateLabel</Untranslated>
+      <Translated>Gegenereerd op {Report.CreatedDateAndTime,_FullDateAndTimeFormatLabel_}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ProductVersionLabel</Untranslated>
+      <Translated>{Product.Name} versie {Product.Version}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PageMofNLabel</Untranslated>
+      <Translated>Pagina {PageNumber} van {PageCount}</Translated>
+    </TranslationEntry>
+
+    <!-- header translations -->
+
+    <TranslationEntry>
+      <Untranslated>ReportSubjectLabel</Untranslated>
+      <Translated>Direct {Recording.TraceCount}-afleidingen afdrukken</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReportTitleLabel</Untranslated>
+      <Translated>Direct afdrukken</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>LeadOrChannel</Untranslated>
+      <Translated>- {Recording.TraceCount > 3? _Lead_ : _Channel_}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>Lead</Untranslated>
+      <Translated>Afleiding</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>Channel</Untranslated>
+      <Translated>Kanaal</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>EcgStripHrTitleLabel</Untranslated>
+      <Translated>HF 1 min. {PrintElement.OneMinHeartRate,'0'} SPM</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>IDLabel</Untranslated>
+      <Translated>ID:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>OrderLabel</Untranslated>
+      <Translated>Aanvraag:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>CaseLabel</Untranslated>
+      <Translated>Casus:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecordedLabel</Untranslated>
+      <Translated>Geregistreerd:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>DateOfBirthLabel</Untranslated>
+      <Translated>Geboortedatum:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>AgeLabel</Untranslated>
+      <Translated>({Patient.AgeInYears} jaar)</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>GenderLabel</Untranslated>
+      <Translated>Geslacht:</Translated>
+    </TranslationEntry>
+
+    <!-- patient gender translations -->
+
+    <TranslationEntry>
+      <Untranslated>PatientGenderFemale</Untranslated>
+      <Translated>Vrouw</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientGenderMale</Untranslated>
+      <Translated>Man</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientGenderUnknown</Untranslated>
+      <Translated>Onbekend</Translated>
+    </TranslationEntry>
+  </Translation>
+
+   <!-- ***************************** POLISH TRANSLATIONS START HERE ****************************** -->
+
+  <Translation CultureName='Pl'>
+
+    <!-- date and time formats -->
+
+    <TranslationEntry>
+      <Untranslated>RecordingTimeFormatLabel</Untranslated>
+      <Translated>ddd HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ShortDateTimeFormatLabel</Untranslated>
+      <Translated>ddd HH:mm</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>DateOnlyFormatLabel</Untranslated>
+      <Translated>ddd dd MMM yyyy</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>FullDateAndTimeFormatLabel</Untranslated>
+      <Translated>ddd dd MMM yyyy HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecordingDayFormatLabel</Untranslated>
+      <Translated>ddd dd</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>DurationFormatLabel</Untranslated>
+      <Translated>HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>HrMinFormatLabel</Untranslated>
+      <Translated>D \dzień H godz. m \min s \s</Translated>
+    </TranslationEntry>
+
+    <!-- footer translations -->
+
+    <TranslationEntry>
+      <Untranslated>ReportGenerationDateLabel</Untranslated>
+      <Translated>Wygenerowano {Report.CreatedDateAndTime,_FullDateAndTimeFormatLabel_}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ProductVersionLabel</Untranslated>
+      <Translated>{Product.Name} wersja {Product.Version}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PageMofNLabel</Untranslated>
+      <Translated>Strona {PageNumber} z {PageCount}</Translated>
+    </TranslationEntry>
+
+    <!-- header translations -->
+
+    <TranslationEntry>
+      <Untranslated>ReportSubjectLabel</Untranslated>
+      <Translated>Natychmiastowy wydruk {Recording.TraceCount} odprowadzeń</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReportTitleLabel</Untranslated>
+      <Translated>Natychmiastowy wydruk</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>LeadOrChannel</Untranslated>
+      <Translated>- {Recording.TraceCount > 3? _Lead_ : _Channel_}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>Lead</Untranslated>
+      <Translated>Odprowadzenie</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>Channel</Untranslated>
+      <Translated>Kanał</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>EcgStripHrTitleLabel</Untranslated>
+      <Translated>HR 1 min: {PrintElement.OneMinHeartRate,'0'} BPM</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>IDLabel</Untranslated>
+      <Translated>ID:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>OrderLabel</Untranslated>
+      <Translated>Zlecenie:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>CaseLabel</Untranslated>
+      <Translated>Przypadek:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecordedLabel</Untranslated>
+      <Translated>Zarejestrowane:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>DateOfBirthLabel</Untranslated>
+      <Translated>Data urodzenia:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>AgeLabel</Untranslated>
+      <Translated>({Patient.AgeInYears} lat(a))</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>GenderLabel</Untranslated>
+      <Translated>Płeć:</Translated>
+    </TranslationEntry>
+
+    <!-- patient gender translations -->
+
+    <TranslationEntry>
+      <Untranslated>PatientGenderFemale</Untranslated>
+      <Translated>Kobieta</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientGenderMale</Untranslated>
+      <Translated>Mężczyzna</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientGenderUnknown</Untranslated>
+      <Translated>Nieznane</Translated>
+    </TranslationEntry>
+  </Translation>
+
+  <!-- ***************************** BRAZILIAN-PORTUGUESE TRANSLATIONS START HERE ****************************** -->
+
+  <Translation CultureName='Pt'>
+
+    <!-- date and time formats -->
+
+    <TranslationEntry>
+      <Untranslated>RecordingTimeFormatLabel</Untranslated>
+      <Translated>ddd HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ShortDateTimeFormatLabel</Untranslated>
+      <Translated>ddd HH:mm</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>DateOnlyFormatLabel</Untranslated>
+      <Translated>ddd dd MMM yyyy</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>FullDateAndTimeFormatLabel</Untranslated>
+      <Translated>ddd dd MMM yyyy HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecordingDayFormatLabel</Untranslated>
+      <Translated>ddd dd</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>DurationFormatLabel</Untranslated>
+      <Translated>HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>HrMinFormatLabel</Untranslated>
+      <Translated>D \dia H \hr M \min s \seg</Translated>
+    </TranslationEntry>
+
+    <!-- footer translations -->
+
+    <TranslationEntry>
+      <Untranslated>ReportGenerationDateLabel</Untranslated>
+      <Translated>Gerado Em {Report.CreatedDateAndTime,_FullDateAndTimeFormatLabel_}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ProductVersionLabel</Untranslated>
+      <Translated>{Product.Name} versão {Product.Version}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PageMofNLabel</Untranslated>
+      <Translated>Página {PageNumber} de {PageCount}</Translated>
+    </TranslationEntry>
+
+    <!-- header translations -->
+
+    <TranslationEntry>
+      <Untranslated>ReportSubjectLabel</Untranslated>
+      <Translated>Impressão Imediata de {Recording.TraceCount} Derivações</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReportTitleLabel</Untranslated>
+      <Translated>Impressão Imediata</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>LeadOrChannel</Untranslated>
+      <Translated>- {Recording.TraceCount > 3? _Lead_ : _Channel_}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>Lead</Untranslated>
+      <Translated>Derivação</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>Channel</Untranslated>
+      <Translated>Canal</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>EcgStripHrTitleLabel</Untranslated>
+      <Translated>1 min FC: {PrintElement.OneMinHeartRate,'0'} BPM</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>IDLabel</Untranslated>
+      <Translated>Identificação:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>OrderLabel</Untranslated>
+      <Translated>Referência:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>CaseLabel</Untranslated>
+      <Translated>Caso:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecordedLabel</Untranslated>
+      <Translated>Registrado:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>DateOfBirthLabel</Untranslated>
+      <Translated>Data de nascimento:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>AgeLabel</Untranslated>
+      <Translated>({Patient.AgeInYears} anos)</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>GenderLabel</Untranslated>
+      <Translated>Sexo:</Translated>
+    </TranslationEntry>
+
+    <!-- patient gender translations -->
+
+    <TranslationEntry>
+      <Untranslated>PatientGenderFemale</Untranslated>
+      <Translated>Feminino</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientGenderMale</Untranslated>
+      <Translated>Masculino</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientGenderUnknown</Untranslated>
+      <Translated>Desconhecido</Translated>
+    </TranslationEntry>
+  </Translation>
+
+  <!-- ***************************** PORTUGUESE-PORTUGUESE TRANSLATIONS START HERE ****************************** -->
+
+  <Translation CultureName='Pt-PT'>
+
+    <!-- date and time formats -->
+
+    <TranslationEntry>
+      <Untranslated>RecordingTimeFormatLabel</Untranslated>
+      <Translated>ddd HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ShortDateTimeFormatLabel</Untranslated>
+      <Translated>ddd HH:mm</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>DateOnlyFormatLabel</Untranslated>
+      <Translated>ddd dd MMM yyyy</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>FullDateAndTimeFormatLabel</Untranslated>
+      <Translated>ddd dd MMM yyyy HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecordingDayFormatLabel</Untranslated>
+      <Translated>ddd dd</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>DurationFormatLabel</Untranslated>
+      <Translated>HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>HrMinFormatLabel</Untranslated>
+      <Translated>D \dia H \hr M \min s \seg</Translated>
+    </TranslationEntry>
+
+    <!-- footer translations -->
+
+    <TranslationEntry>
+      <Untranslated>ReportGenerationDateLabel</Untranslated>
+      <Translated>Criado Em {Report.CreatedDateAndTime,_FullDateAndTimeFormatLabel_}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ProductVersionLabel</Untranslated>
+      <Translated>{Product.Name} versão {Product.Version}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PageMofNLabel</Untranslated>
+      <Translated>Página {PageNumber} de {PageCount}</Translated>
+    </TranslationEntry>
+
+    <!-- header translations -->
+
+    <TranslationEntry>
+      <Untranslated>ReportSubjectLabel</Untranslated>
+      <Translated>Impressão Imediata de {Recording.TraceCount} Derivações</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReportTitleLabel</Untranslated>
+      <Translated>Impressão Imediata</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>LeadOrChannel</Untranslated>
+      <Translated>- {Recording.TraceCount > 3? _Lead_ : _Channel_}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>Lead</Untranslated>
+      <Translated>Derivação</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>Channel</Untranslated>
+      <Translated>Canal</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>IDLabel</Untranslated>
+      <Translated>Identificação:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>OrderLabel</Untranslated>
+      <Translated>Referência:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>CaseLabel</Untranslated>
+      <Translated>Caso:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecordedLabel</Untranslated>
+      <Translated>Gravado:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>DateOfBirthLabel</Untranslated>
+      <Translated>Data de nascimento:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>AgeLabel</Untranslated>
+      <Translated>({Patient.AgeInYears} anos)</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>GenderLabel</Untranslated>
+      <Translated>Sexo:</Translated>
+    </TranslationEntry>
+
+    <!-- patient gender translations -->
+
+    <TranslationEntry>
+      <Untranslated>PatientGenderFemale</Untranslated>
+      <Translated>Feminino</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientGenderMale</Untranslated>
+      <Translated>Masculino</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientGenderUnknown</Untranslated>
+      <Translated>Desconhecido</Translated>
+    </TranslationEntry>
+  </Translation>
+
+  <!-- ***************************** RUSSIAN TRANSLATIONS START HERE ****************************** -->
+
+  <Translation CultureName='Ru'>
+
+    <!-- date and time formats -->
+
+    <TranslationEntry>
+      <Untranslated>RecordingTimeFormatLabel</Untranslated>
+      <Translated>ddd HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ShortDateTimeFormatLabel</Untranslated>
+      <Translated>ddd HH:mm</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>DateOnlyFormatLabel</Untranslated>
+      <Translated>ddd dd MMM yyyy</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>FullDateAndTimeFormatLabel</Untranslated>
+      <Translated>ddd dd MMM yyyy HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecordingDayFormatLabel</Untranslated>
+      <Translated>ddd dd</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>DurationFormatLabel</Untranslated>
+      <Translated>HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>HrMinFormatLabel</Untranslated>
+      <Translated>D \день H \час M \минуты s \секунды</Translated>
+    </TranslationEntry>
+
+    <!-- footer translations -->
+
+    <TranslationEntry>
+      <Untranslated>ReportGenerationDateLabel</Untranslated>
+      <Translated>Создано {Report.CreatedDateAndTime,_FullDateAndTimeFormatLabel_}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ProductVersionLabel</Untranslated>
+      <Translated>{Product.Name}, версия {Product.Version}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PageMofNLabel</Untranslated>
+      <Translated>Стр. {PageNumber} из {PageCount}</Translated>
+    </TranslationEntry>
+
+    <!-- header translations -->
+
+    <TranslationEntry>
+      <Untranslated>ReportSubjectLabel</Untranslated>
+      <Translated>Быстрая печать {Recording.TraceCount} отведениях</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReportTitleLabel</Untranslated>
+      <Translated>Быстрая печать</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>LeadOrChannel</Untranslated>
+      <Translated>- {Recording.TraceCount > 3? _Lead_ : _Channel_}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>Lead</Untranslated>
+      <Translated>Отведение</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>Channel</Untranslated>
+      <Translated>Канал</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>EcgStripHrTitleLabel</Untranslated>
+      <Translated>ЧСС за 1 мин. {PrintElement.OneMinHeartRate,'0'} уд./мин</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>IDLabel</Untranslated>
+      <Translated>Идентификатор:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>OrderLabel</Untranslated>
+      <Translated>Направление:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>CaseLabel</Untranslated>
+      <Translated>Обследование:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecordedLabel</Untranslated>
+      <Translated>Записано:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>DateOfBirthLabel</Untranslated>
+      <Translated>Дата рождения:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>AgeLabel</Untranslated>
+      <Translated>(возраст: {Patient.AgeInYears})</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>GenderLabel</Untranslated>
+      <Translated>Пол:</Translated>
+    </TranslationEntry>
+
+    <!-- patient gender translations -->
+
+    <TranslationEntry>
+      <Untranslated>PatientGenderFemale</Untranslated>
+      <Translated>Женский</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientGenderMale</Untranslated>
+      <Translated>Мужской</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientGenderUnknown</Untranslated>
+      <Translated>Неизвестно</Translated>
+    </TranslationEntry>
+  </Translation>
+
+  <!-- ***************************** SWEDISH TRANSLATIONS START HERE ****************************** -->
+
+  <Translation CultureName='Sv'>
+
+    <!-- date and time formats -->
+
+    <TranslationEntry>
+      <Untranslated>RecordingTimeFormatLabel</Untranslated>
+      <Translated>ddd HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ShortDateTimeFormatLabel</Untranslated>
+      <Translated>ddd HH:mm</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>DateOnlyFormatLabel</Untranslated>
+      <Translated>ddd dd MMM yyyy</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>FullDateAndTimeFormatLabel</Untranslated>
+      <Translated>ddd dd MMM yyyy HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecordingDayFormatLabel</Untranslated>
+      <Translated>ddd dd</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>DurationFormatLabel</Untranslated>
+      <Translated>HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>HrMinFormatLabel</Untranslated>
+      <Translated>D \dag H ti\m M \min s \sek</Translated>
+    </TranslationEntry>
+
+    <!-- footer translations -->
+
+    <TranslationEntry>
+      <Untranslated>ReportGenerationDateLabel</Untranslated>
+      <Translated>Genererades {Report.CreatedDateAndTime,_FullDateAndTimeFormatLabel_}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ProductVersionLabel</Untranslated>
+      <Translated>{Product.Name} version {Product.Version}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PageMofNLabel</Untranslated>
+      <Translated>Sid {PageNumber} av {PageCount}</Translated>
+    </TranslationEntry>
+
+    <!-- header translations -->
+
+    <TranslationEntry>
+      <Untranslated>ReportSubjectLabel</Untranslated>
+      <Translated>Skriv ut {Recording.TraceCount} avledning direkt</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReportTitleLabel</Untranslated>
+      <Translated>Skriv ut direkt</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>LeadOrChannel</Untranslated>
+      <Translated>- {Recording.TraceCount > 3? _Lead_ : _Channel_}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>Lead</Untranslated>
+      <Translated>Avledning</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>Channel</Untranslated>
+      <Translated>Kanal</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>EcgStripHrTitleLabel</Untranslated>
+      <Translated>1 min HF {PrintElement.OneMinHeartRate,'0'} SPM</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>IDLabel</Untranslated>
+      <Translated>ID:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>OrderLabel</Untranslated>
+      <Translated>Ordning:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>CaseLabel</Untranslated>
+      <Translated>Fall:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecordedLabel</Untranslated>
+      <Translated>Spelades in:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>DateOfBirthLabel</Untranslated>
+      <Translated>Födelsedatum:</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>AgeLabel</Untranslated>
+      <Translated>({Patient.AgeInYears} år)</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>GenderLabel</Untranslated>
+      <Translated>Kön:</Translated>
+    </TranslationEntry>
+
+    <!-- patient gender translations -->
+
+    <TranslationEntry>
+      <Untranslated>PatientGenderFemale</Untranslated>
+      <Translated>Kvinna</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientGenderMale</Untranslated>
+      <Translated>Man</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientGenderUnknown</Untranslated>
+      <Translated>Okänt</Translated>
+    </TranslationEntry>
+  </Translation>
+
+  <!-- ***************************** CHINESE TRANSLATIONS START HERE ****************************** -->
+
+  <Translation CultureName='Zh'>
+
+    <!-- date and time formats -->
+
+    <TranslationEntry>
+      <Untranslated>RecordingTimeFormatLabel</Untranslated>
+      <Translated>ddd HH:mm:ss</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>DateOnlyFormatLabel</Untranslated>
+      <Translated>yyyy MMM ddd dd</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>FullDateAndTimeFormatLabel</Untranslated>
+      <Translated>yyyy/MM/dd HH:mm:ss</Translated>
+    </TranslationEntry>
+
+    <!-- footer translations -->
+
+    <TranslationEntry>
+      <Untranslated>ReportGenerationDateLabel</Untranslated>
+      <Translated>生成日期 {Report.CreatedDateAndTime,_FullDateAndTimeFormatLabel_}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ProductVersionLabel</Untranslated>
+      <Translated>{Product.Name} 版本 {Product.Version}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PageMofNLabel</Untranslated>
+      <Translated>第 {PageNumber} 页，共 {PageCount} 页</Translated>
+    </TranslationEntry>
+
+    <!-- header translations -->
+
+    <TranslationEntry>
+      <Untranslated>ReportSubjectLabel</Untranslated>
+      <Translated>立即打印 {Recording.TraceCount}导联</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>ReportTitleLabel</Untranslated>
+      <Translated>立即打印</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>LeadOrChannel</Untranslated>
+      <Translated>- {Recording.TraceCount > 3? _Lead_ : _Channel_}</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>Lead</Untranslated>
+      <Translated>导联</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>Channel</Untranslated>
+      <Translated>通道</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>EcgStripHrTitleLabel</Untranslated>
+      <Translated>1 分钟心率 {PrintElement.OneMinHeartRate,'0'} 次心搏/分</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>IDLabel</Untranslated>
+      <Translated>患者 ID：</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>OrderLabel</Untranslated>
+      <Translated>需求检测 ID：</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>CaseLabel</Untranslated>
+      <Translated>病例：</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>RecordedLabel</Untranslated>
+      <Translated>记录：</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>DateOfBirthLabel</Untranslated>
+      <Translated>出生日期：</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>AgeLabel</Untranslated>
+      <Translated>({Patient.AgeInYears}岁)</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>GenderLabel</Untranslated>
+      <Translated>性别：</Translated>
+    </TranslationEntry>
+
+    <!-- patient gender translations -->
+
+    <TranslationEntry>
+      <Untranslated>PatientGenderFemale</Untranslated>
+      <Translated>女</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientGenderMale</Untranslated>
+      <Translated>男</Translated>
+    </TranslationEntry>
+    <TranslationEntry>
+      <Untranslated>PatientGenderUnknown</Untranslated>
+      <Translated>未知</Translated>
+    </TranslationEntry>
+  </Translation>
+
+   <!-- defining page headers -->
+
+  <Headers>
+    <Header>
+      <Property Name='Name' Value='Header'/>
+      <Property Name='Margin'>
+        <Property Name='Left' Value='5'/>
+        <Property Name='Top' Value='5'/>
+        <Property Name='Right' Value='5'/>
+        <Property Name='Bottom' Value='5'/>
+      </Property>
+
+      <Layout>
+        <Row Name='TitleRow' Height='13.0'>
+          <Cell Name='TitleCell' Width='90'/>
+
+          <Cell Name='PatientNameCell'/>
+        </Row>
+        <Row Name='PatientIdentifyingRow' Height='6'/>
+      </Layout>
+
+      <Shape Type='Block' Style='ShadedHeaderStyle,HeaderLeftRow1Style'>
+        <Property Name='Name' Value='FixedHeaderLeftRow1'/>
+        <Property Name='Enabled' Value='Headers.EnableUserHeaders ? false : true'/>
+      </Shape>
+
+      <Shape Type='Block' Style='ShadedHeaderStyle,HeaderLeftRow2Style'>
+        <Property Name='Name' Value='FixedHeaderLeftRow2'/>
+        <Property Name='Enabled' Value='Headers.EnableUserHeaders ? false : true'/>
+      </Shape>
+
+      <Shape Type='Block' Style='ShadedHeaderStyle,UserHeaderLeftRow1Style'>
+        <Property Name='Name' Value='UserHeaderLeftRow1LargeFont'/>
+        <Property Name='Enabled' Value='Headers.EnableUserHeaders and Headers.TopHeaderFontSize = 12 ? true : false'/>
+        <Property Name='Font' Value='Auto,12pt,Black.Bold'/>
+      </Shape>
+
+      <Shape Type='Block' Style='ShadedHeaderStyle,UserHeaderLeftRow1Style'>
+        <Property Name='Name' Value='UserHeaderLeftRow1MediumFont'/>
+        <Property Name='Enabled' Value='Headers.EnableUserHeaders and Headers.TopHeaderFontSize = 10 ? true : false'/>
+        <Property Name='Font' Value='Auto,10pt,Black.Bold'/>
+      </Shape>
+
+      <Shape Type='Block' Style='ShadedHeaderStyle,UserHeaderLeftRow1Style'>
+        <Property Name='Name' Value='UserHeaderLeftRow1SmallFont'/>
+        <Property Name='Enabled' Value='Headers.EnableUserHeaders and Headers.TopHeaderFontSize = 8 ? true : false'/>
+        <Property Name='Font' Value='Auto,8pt,Black.Bold'/>
+      </Shape>
+
+      <Shape Type='Block' Style='ShadedHeaderStyle,UserHeaderLeftRow2Style'>
+        <Property Name='Name' Value='UserHeaderLeftRow2LargeFont'/>
+        <Property Name='Enabled' Value='Headers.EnableUserHeaders and Headers.MiddleHeaderFontSize = 12 ? true : false'/>
+        <Property Name='Font' Value='Auto,12pt,Black.Bold'/>
+      </Shape>
+
+      <Shape Type='Block' Style='ShadedHeaderStyle,UserHeaderLeftRow2Style'>
+        <Property Name='Name' Value='UserHeaderLeftRow2MediumFont'/>
+        <Property Name='Enabled' Value='Headers.EnableUserHeaders and Headers.MiddleHeaderFontSize = 10 ? true : false'/>
+        <Property Name='Font' Value='Auto,10pt,Black.Bold'/>
+      </Shape>
+
+      <Shape Type='Block' Style='ShadedHeaderStyle,UserHeaderLeftRow2Style'>
+        <Property Name='Name' Value='UserHeaderLeftRow2SmallFont'/>
+        <Property Name='Enabled' Value='Headers.EnableUserHeaders and Headers.MiddleHeaderFontSize = 8 ? true : false'/>
+        <Property Name='Font' Value='Auto,8pt,Black.Bold'/>
+      </Shape>
+
+      <Shape Type='Block' Style='ShadedHeaderStyle,UserHeaderLeftRow3Style'>
+        <Property Name='Name' Value='UserHeaderLeftRow3LargeFont'/>
+        <Property Name='Enabled' Value='Headers.EnableUserHeaders and Headers.BottomHeaderFontSize = 12 ? true : false'/>
+        <Property Name='Font' Value='Auto,12pt,Black.Bold'/>
+      </Shape>
+
+      <Shape Type='Block' Style='ShadedHeaderStyle,UserHeaderLeftRow3Style'>
+        <Property Name='Name' Value='UserHeaderLeftRow3MediumFont'/>
+        <Property Name='Enabled' Value='Headers.EnableUserHeaders and Headers.BottomHeaderFontSize = 10 ? true : false'/>
+        <Property Name='Font' Value='Auto,10pt,Black.Bold'/>
+      </Shape>
+
+      <Shape Type='Block' Style='ShadedHeaderStyle,UserHeaderLeftRow3Style'>
+        <Property Name='Name' Value='UserHeaderLeftRow3SmallFont'/>
+        <Property Name='Enabled' Value='Headers.EnableUserHeaders and Headers.BottomHeaderFontSize = 8 ? true : false'/>
+        <Property Name='Font' Value='Auto,8pt,Black.Bold'/>
+      </Shape>
+
+      <Shape Type='Block' Style='ShadedHeaderStyle,PatientIdentificationTitleStyle'/>
+      <Shape Type='Block' Style='ShadedHeaderStyle,HolterReportTitleStyle'/>
+      <Shape Type='Table' Style='ShadedBlockStyle,BlockTableStyle,HeaderPatientIdentifierTableStyle'/>
+
+    </Header>
+
+  </Headers>
+
+  <!-- defining page footers -->
+
+  <Footers>
+
+    <!-- footer used on ecg strip pages (different page margins) -->
+
+    <Footer>
+      <Property Name='Name' Value='Footer'/>
+      <Property Name='Margin'>
+        <Property Name='Left' Value='5'/>
+        <Property Name='Top' Value='5'/>
+        <Property Name='Right' Value='5'/>
+        <Property Name='Bottom' Value='5'/>
+      </Property>
+
+      <Layout>
+        <Row Name='FooterRow' Height='5' Order='Bottom'>
+          <Cell Name='LogoCell' Width='22'/>
+          <Cell Name='VersionCell' Width='60'/>
+          <Cell Name='GeneratedOnCell' Width='40'/>
+          <Cell Name='PageMofNCell'/>
+        </Row>
+      </Layout>
+
+      <Shape Type='Block' Style='FooterLogoStyle'/>
+      <Shape Type='Block' Style='FooterReportCreatedDateStyle'/>
+      <Shape Type='Block' Style='FooterTorridonVersionStyle'/>
+      <Shape Type='PageMofN' Style='FooterPageMofNStyle'/>
+
+    </Footer>
+  </Footers>
+
+  <!-- defining main content of the report -->
+
+  <Content>
+
+    <Section>
+      <Property Name='Name' Value='FrontPage'/>
+      <Property Name='HeaderName' Value='Header'/>
+      <Property Name='FooterName' Value='Footer'/>
+      <Property Name='Margin'>
+        <Property Name='Left' Value='7'/>
+        <Property Name='Top' Value='30'/>
+        <Property Name='Right' Value='5'/>
+        <Property Name='Bottom' Value='15'/>
+      </Property>
+
+        <Page>
+
+        <Layout>
+          <Row Name='EcgRow'/>
+        </Layout>
+
+        <Shape Type='Ecg' Style='EcgStyle'>
+          <Property Name='Bounds' Value='EcgRow'/>
+          <Property Name='ShowStartTimeOfEachEcgStrip' Value='ShowStartTimeOfEachEcgStrip'/>
+          <Property Name='StripDuration' Value="ShowStartTimeOfEachEcgStrip ? (Report.PageSize='Letter' ? 7.31 : 7.5) : StandardStripDuration"/>
+          <Property Name='MarginForStartTimeOfEachEcgStrip' Value="ShowStartTimeOfEachEcgStrip ? 5.5 : 0"/>
+          <Property Name='StandardStripDuration' Value="StandardStripDuration"/>
+          <Property Name='PrintElements' Value='Events.PrintElementsForImmediatePrint'/>
+          <Property Name='LeftTitle' Value="{PrintElement.TimeOfNote,_RecordingTimeFormatLabel_}"/>
+          <Property Name='LeftTitle' Value=" _EcgStripHrTitleLabel_"/>
+		      <Property Name="LeftTitle" Value=" {PrintElement.TraceSettings.Count >1? '' :_LeadOrChannel_ } {PrintElement.TraceSettings.Count >1? '' : Recording.TraceNames[PrintElement.TraceSettings[0].TraceIndex]}"/>
+          <Property Name='FullScaleHeight' Value='FullScaleStripHeight'/>
+          <Property Name='MaxTracesInStripFullScaleHeight' Value='12'/>
+          <Property Name='DisableCalPulseSkew' Value='false'/>
+          <Property Name='PaddingBetweenChannels' Value='0.5'/>
+          <Property Name='ShowEcgTraceGain' Value='true'/>
+          <Property Name='WantCalibrationPulsesOnSingleChannel' Value="true"/>
+        </Shape>
+          
+      </Page>
+
+    </Section>
+  </Content>
+</ReportFormat>
