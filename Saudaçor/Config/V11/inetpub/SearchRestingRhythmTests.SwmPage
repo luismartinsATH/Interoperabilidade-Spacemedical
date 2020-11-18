@@ -604,7 +604,7 @@
                     <ColumnStartsWithField ColumnId="Test_OrderId" FieldId="Criterion_TestOrderId"/>
                     <ColumnStartsWithField ColumnId="Patient_LastName" FieldId="Criterion_PatientLastName"/>
                     <ColumnStartsWithField ColumnId="Patient_FirstName" FieldId="Criterion_PatientFirstName"/>
-                    <ColumnStartsWithField ColumnId="Test_Responsible_Staff_Name" FieldId="Criterion_TestResponsibleStaffName"/>	<!-- [LMM] - Adição de novo campo de pesquisa	 -->						
+                    <ColumnContainsField   ColumnId="Test_Responsible_Staff_Name" FieldId="Criterion_TestResponsibleStaffName"/>	<!-- [LMM] - Adição de novo campo de pesquisa	 -->						
                     <ColumnEqualsField ColumnId="Patient_BirthDate" FieldId="Criterion_PatientBirthDate"/>
                     <ColumnStartsWithField ColumnId="Test_Ward" FieldId="Criterion_TestWard"/>
                     <ColumnEqualsField ColumnId="Test_TypeName" FieldId="Criterion_TestTypeName"/>

@@ -29457,7 +29457,7 @@
 
 		<Layout>
 			<Row Name='TitleRow' Height='15.0'>
-				<Cell Name='TitleCell' Width='54'/>
+				<Cell Name='TitleCell' Width='25'/>
 
 				<Cell Name='PatientNameCell'/>
 			</Row>
@@ -29548,7 +29548,7 @@
 
 		<Layout>
 			<Row Name='TitleRow' Height='15.0'>
-				<Cell Name='TitleCell' Width='54'/>
+				<Cell Name='TitleCell' Width='25'/>
 
 				<Cell Name='PatientNameCell'/>
 			</Row>
@@ -29877,14 +29877,15 @@
 				<Row Name='AFArrhythmiaTitleCell' Enabled='EventFamilies.AF.HasAFEvents' Height='10' />
 				<Row Name='AFArrhythmiaTableCell' Enabled='EventFamilies.AF.HasAFEvents' Height='18'/>
 				<Row Name='ApnoeaSummaryRow' Height='18' Enabled='EventFamilies.Apnoea.IsAnalysed'/>
-		<!-- 		<Row Name='IndicationsRow' Enabled ='Test.HasIndications' Height='13'/> -->
+<!-- 				<Row Name='IndicationsRow' Enabled ='Test.HasIndications' Height='10'/> -->
 		<!-- 	<Row Name='OperatorCommentsRow' Enabled ='Test.HasComments' Height='18'/> -->
-				<Row Name='SignatureRow' Height='12' Order='Bottom'>
+				<Row Name='SignatureRow' Height='18' Order='Bottom'> <!-- [LMM] Altura da linha de assinaturas -->
 					<Cell Name='OperatorSignatureCell' Width='96'/>
-					<Cell Name='DoctorSignatureCell' Width='36'/>
+					<Cell Name='OperatorSignatureCell' Width='40'/>
+					<Cell Name='DoctorSignatureCell' Width='46'/>
 				</Row>
 				<!-- <Row Name='DoctorCommentsRow' Height='62' Order='Bottom'/>  --> 
-				<Row Name='DoctorCommentsRow'/> 
+				<Row Name='DoctorCommentsRow' /> 
 
 			</Layout>
 
@@ -30804,7 +30805,7 @@
 					<Property Name='Left' Value='0'/>
 				</Property>
 
-				<Property Name='DataSource'> <!-- [LMM] Caixa Eventos de pendentes da frequencia -->
+				<Property Name='DataSource'> <!-- [LMM] Caixa Eventos dependentes da frequencia -->
 
 					<Property Name='Column'>
 						<Property Name='Width' Value='0.32'/>
@@ -31470,9 +31471,11 @@
 					<Property Name='Column'>
 						<Property Name='LeftPadding' Value='1'/>
 						<Property Name='Width' Value='4'/>
+						<Property Name='CellFont' Value='Segoeui.ttf,8.5pt,Black'/>
 					</Property>
 					<Property Name='Column'>
-						<Property Name='Width' Value='20'/>
+					<Property Name='Width' Value='20'/>
+					<Property Name='CellFont' Value='Segoeui.ttf,8.5pt,Black'/>
 					</Property>
 
 					<Property Name='Row'>
@@ -31570,8 +31573,8 @@
 				<Property Name='BorderPen' Value='Black,0.05mm'/>
 				<Property Name='Bounds' Value='DoctorCommentsRow'/>
 				<Property Name='Margin'>
-					<Property Name='Top' Value='1'/>
-					<Property Name='Bottom' Value='1'/>
+					<Property Name='Top' Value='3'/>
+					<Property Name='Bottom' Value='0'/>
 				</Property>
 				<Property Name='Align' Value='TopLeft'/>
 				<Property Name='TitleFont' Value='Segoeui.ttf,8pt,Black,Bold'/>
@@ -31589,15 +31592,27 @@
 					<Property Name='Top' Value='5'/>
 				</Property>
 			</Shape> -->
+  
+			<Shape Type='Block'>   <!-- [LMM] Linha de assinatura de Médico  -->
+				<Property Name='Bounds' Value='DoctorSignatureCell'/>
+				<Property Name='Content' Value='{_DoctorSignatureLabel_}'/>
+				<Property Name='Image' Value="C:\ProgramData\Spacelabs Healthcare\Pathfinder SL\Report Formats\AssinaturaHHP.png"/>
+				<Property Name='Alignment' Value='TopRight'/>
+				<Property Name='Padding'>
+					<Property Name='Left' Value='10'/>
+					<Property Name='Top' Value='2'/>
+				</Property>
+			</Shape>
 
-			<Shape Type='Block'>   [LMM] Linha de assinatura de Médico 
+<!-- 			<Shape Type='Block'>   [LMM] Linha de assinatura de Médico 
 				<Property Name='Bounds' Value='DoctorSignatureCell'/>
 				<Property Name='Content' Value='{_DoctorSignatureLabel_}'/>
 				<Property Name='Alignment' Value='TopRight'/>
 				<Property Name='Padding'>
-					<Property Name='Top' Value='5'/>
+				<Property Name='Top' Value='5'/>
 				</Property>
-			</Shape>
+			</Shape> -->
+
 		</Page>
 
 	</Section>

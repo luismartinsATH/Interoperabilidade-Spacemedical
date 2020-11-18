@@ -19312,7 +19312,7 @@
 	</TranslationEntry>
 	<TranslationEntry>
 		<Untranslated>BeatCountsTableTitleLabel</Untranslated>
-		<Translated>Batim.</Translated>
+		<Translated>Batimentos</Translated>
 	</TranslationEntry>
 	<TranslationEntry>
 		<Untranslated>NormalBeatsLabel</Untranslated>
@@ -20549,7 +20549,7 @@
 </TranslationEntry>
 <TranslationEntry>
 	<Untranslated>AgeLabel</Untranslated>
-	<Translated>({Patient.AgeInYears} anos)</Translated>
+	<Translated>     ({Patient.AgeInYears} anos)</Translated>
 </TranslationEntry>
 <TranslationEntry>
 	<Untranslated>GenderLabel</Untranslated>
@@ -21043,7 +21043,7 @@
 </TranslationEntry>
 <TranslationEntry>
 	<Untranslated>FindingsCommentsTitleLabel</Untranslated>
-	<Translated>Conclusões:</Translated>
+	<Translated></Translated> <!-- [LMM Retirado a pedido do cliente 30102020] -->
 </TranslationEntry>
 <TranslationEntry>
 	<Untranslated>FindingsCommentsContinuationTitleLabel</Untranslated>
@@ -21109,7 +21109,7 @@
 
 <TranslationEntry>
 	<Untranslated>OperatorSignatureLabel</Untranslated>
-	<Translated>Técnico CPL </Translated>
+	<Translated>Assinatura CPL </Translated>
 </TranslationEntry>
 <TranslationEntry>
 	<Untranslated>DoctorSignatureLabel</Untranslated>
@@ -28703,20 +28703,20 @@
 
 	<Style Name='StBeatStyle'>
 		<Property Name='EcgTracePen' Value='Black,0.1mm'/>
-		<Property Name='TitleFont' Value='Auto,8pt'/>
-		<Property Name='TraceNameFont' Value='Auto,11pt'/>
+		<Property Name='TitleFont' Value='Segoeui.ttf,8pt'/>
+		<Property Name='TraceNameFont' Value='Segoeui.ttf,11pt'/>
 		<Property Name='PrintSpeed' Value='50'/>
 		<Property Name='MarkerPen' Value='Black,0.1mm,1,1'/>
 	</Style>
 	<Style Name='MorphologyStyle'>
 		<Property Name='LayoutFormat' Value='Flowing'/>
-		<Property Name='FormFont' Value='Auto,7pt,Black'/>
-		<Property Name='TitleFont' Value='Auto,12pt,Black,Bold'/>
+		<Property Name='FormFont' Value='Segoeui.ttf,7pt,Black'/>
+		<Property Name='TitleFont' Value='Segoeui.ttf,12pt,Black,Bold'/>
 		<Property Name='BeatHeight' Value='46'/>
 	</Style>
 	<Style Name='BlockTableStyle'>
-		<Property Name='TitleFont' Value='Auto,10pt,Black,Bold'/>
-		<Property Name='CellFont' Value='Auto,7pt,Black'/>
+		<Property Name='TitleFont' Value='Segoeui.ttf,10pt,Black,Bold'/>
+		<Property Name='CellFont' Value='Segoeui.ttf,7pt,Black'/> <!-- [LMM] alteração do tamanho da fonte 140920 -->
 		<Property Name='RowCornerRadius' Value='0.25'/>
 		<Property Name='CellPadding'>
 			<Property Name='Left' Value='0'/>
@@ -28761,21 +28761,21 @@
 	</Style>
 	<Style Name='SectionTitleStyle'>
 		<Property Name='Alignment' Value='MiddleCentre'/>
-		<Property Name='Font' Value='Auto,14pt,Black,Bold'/>
+		<Property Name='Font' Value='Segoeui.ttf,14pt,Black,Bold'/>
 	</Style>
 	<Style Name='PageTitleStyle'>
 		<Property Name='Alignment' Value='MiddleCentre'/>
-		<Property Name='Font' Value='Auto,12pt,Black,Bold'/>
+		<Property Name='Font' Value='Segoeui.ttf,12pt,Black,Bold'/>
 	</Style>
 	<Style Name='ContentNotAvailableBlockStyle'>
 		<Property Name='Alignment' Value='MiddleCentre'/>
-		<Property Name='Font' Value='Auto,14pt,Black,Bold'/>
+		<Property Name='Font' Value='Segoeui.ttf,14pt,Black,Bold'/>
 		<Property Name='BorderBrush' Value='PowderBlue'/>
 	</Style>
 
 	<Style Name='FlowingTableStyle'>
 		<Property Name='LayoutFormat' Value='Flowing'/>
-		<Property Name='TitleFont' Value='Auto,10pt,Black,Bold'/>
+		<Property Name='TitleFont' Value='Segoeui.ttf,10pt,Black,Bold'/>
 		<Property Name='OddRowBrush' Value='aliceblue'/>
 		<Property Name='HeaderBrush' Value='powderblue'/>
 		<Property Name='RowCornerRadius' Value='0'/>
@@ -28783,8 +28783,8 @@
 		<Property Name='HeaderBorderPen' Value='DarkGray,0.1mm'/>
 		<Property Name='HeaderColumnSeparatorPen' Value='DarkGray,0.1mm'/>
 		<Property Name='ColumnBorderPen' Value='DarkGray,0.05mm'/>
-		<Property Name='HeaderFont' Value='Auto,8pt,Black,Bold'/>
-		<Property Name='CellFont' Value='Auto,7pt,Black'/>
+		<Property Name='HeaderFont' Value='Segoeui.ttf,8pt,Black,Bold'/>
+		<Property Name='CellFont' Value='Segoeui.ttf,7pt,Black'/>
 		<Property Name='Padding'>
 			<Property Name='Top' Value='0'/>
 			<Property Name='Bottom' Value='0'/>
@@ -28798,7 +28798,7 @@
 	</Style>
 
 	<Style Name='AlternatingColourTableStyle'>
-		<Property Name='TitleFont' Value='Auto,10pt,Black,Bold'/>
+		<Property Name='TitleFont' Value='Segoeui.ttf,10pt,Black,Bold'/>
 		<Property Name='OddRowBrush' Value='aliceblue'/>
 		<Property Name='HeaderBrush' Value='powderblue'/>
 		<Property Name='RowCornerRadius' Value='0'/>
@@ -28808,8 +28808,8 @@
 		<Property Name='TableBorderPen' Value='DarkGray,0.1mm'/>
 		<Property Name='HeaderColumnSeparatorPen' Value='DarkGray,0.1mm'/>
 		<Property Name='ColumnBorderPen' Value='DarkGray,0.05mm'/>
-		<Property Name='HeaderFont' Value='Auto,7pt,Black,Bold'/>
-		<Property Name='CellFont' Value='Auto,7pt,Black'/>
+		<Property Name='HeaderFont' Value='Segoeui.ttf,7pt,Black,Bold'/>
+		<Property Name='CellFont' Value='Segoeui.ttf,7pt,Black'/>
 		<Property Name='Margin'>
 			<Property Name='Top' Value='0'/>
 			<Property Name='Bottom' Value='0'/>
@@ -28828,18 +28828,17 @@
 		</Property>
 	</Style>
 
-
 	<Style Name='SubTitleBlockStyle'>
 		<Property Name='Alignment' Value='MiddleCentre'/>
 		<Property Name='Padding'>
 			<Property Name='Top' Value='2'/>
 			<Property Name='Bottom' Value='2'/>
 		</Property>
-		<Property Name='Font' Value='Auto,10pt,Black,Bold'/>
+		<Property Name='Font' Value='Segoeui.ttf,11pt,Black,Bold'/> <!-- [LMM] alteração do tamanho da fonte 140920 -->
 	</Style>
 
 	<Style Name='MostSevereCellStyle'>
-		<Property Name='MostSevereFont' Value='Auto,8pt,Black,Bold'/>
+		<Property Name='MostSevereFont' Value='Segoeui.ttf,9pt,Red,Bold'/> <!-- [LMM] alteração do tamanho da fonte 140920 -->
 		<Property Name='MostSevereBrush' Value='powderblue'/>
 	</Style>
 
@@ -28851,7 +28850,7 @@
 		</Property>
 	<!-- 	<Property Name='Content' Value="{Product.Name}"/> -->
 		<Property Name='Image' Value="C:\ProgramData\Spacelabs Healthcare\Pathfinder SL\Report Formats\HHP.png"/>
-		<Property Name='Font' Value='Auto,12pt,Black,Bold'/>
+		<Property Name='Font' Value='Segoeui.ttf,12pt,Black,Bold'/>
 		<Property Name='Alignment' Value='TopLeft'/>
 		<Property Name='Bounds' Value='TitleCell'/>
 	</Style>
@@ -28861,7 +28860,7 @@
 			<Property Name='Top' Value='7.75'/>
 		</Property>
 		<Property Name='Content' Value="{AnalysisFacility.Name}"/>
-		<Property Name='Font' Value='Auto,10pt,Black,Bold'/>
+		<Property Name='Font' Value='Segoeui.ttf,10pt,Black,Bold'/>
 		<Property Name='Alignment' Value='TopLeft'/>
 		<Property Name='Bounds' Value='TitleCell'/>
 	</Style>
@@ -28917,7 +28916,7 @@
 		</Property>
 		<Property Name='Content' Value='{Patient.FirstNameFirst}'/>	<!-- [LM 23082018] - Mudança de formato de nome  -->	
 <!-- 		<Property Name='Content' Value='{Patient.LastNameFirst}'/> -->
-		<Property Name='Font' Value='Helvetica,9pt,Black,Bold'/> <!-- [LM 23082018] - Mudança de tamanho da fonte de 14 para 9  -->
+		<Property Name='Font' Value='Helvetica,11pt,Black,Bold'/> <!-- [LMM 14092020] - Mudança de tamanho da fonte   -->
 		<Property Name='Alignment' Value='TopRight'/>
 		<Property Name='Bounds' Value='PatientNameCell'/>
 	</Style>
@@ -28927,7 +28926,7 @@
 			<Property Name='Top' Value='8.0'/>
 		</Property>
 		<Property Name='Content' Value='_HolterReportTitleLabel_'/>
-		<Property Name='Font' Value='Auto,8pt,Black'/>
+		<Property Name='Font' Value='Segoeui.ttf,8pt,Black'/>
 		<Property Name='Alignment' Value='TopRight'/>
 		<Property Name='Bounds' Value='PatientNameCell'/>
 	</Style> -->
@@ -28959,14 +28958,14 @@
 			</Property>
 			<Property Name='Column'>
 				<Property Name='Width' Value='0.34'/>
-				<Property Name='CellFont' Value='Auto,8pt,Black,Bold'/>
+				<Property Name='CellFont' Value='Segoeui.ttf,8pt,Black,Bold'/>
 			</Property>
 			<Property Name='Column'>
 				<Property Name='Width' Value='0.15'/>
 			</Property>
 			<Property Name='Column'>
 				<Property Name='Width' Value='0.35'/>
-				<Property Name='CellFont' Value='Auto,8pt,Black,Bold'/>
+				<Property Name='CellFont' Value='Segoeui.ttf,8pt,Black,Bold'/>
 			</Property>
 			<Property Name='Row'>
 				<Property Name='Cell'>
@@ -29010,7 +29009,7 @@
 			<Property Name='Right' Value='1'/>
 			<Property Name='Top' Value='1'/>
 		</Property>
-<!-- 		<Property Name='CellFont' Value='Segoeui.ttf,9pt,Black'/> -->
+		<Property Name='CellFont' Value='Segoeui.ttf,8pt,Black'/>
 		<Property Name='DataSource'>
 			<Property Name='Column'>
 				<Property Name='Width' Value='0.03' />
@@ -29078,7 +29077,7 @@
 			<Property Name='Right' Value='1'/>
 			<Property Name='Top' Value='0'/>
 		</Property>
-		<Property Name='CellFont' Value='Auto,8pt,black'/>
+		<Property Name='CellFont' Value='Segoeui.ttf,8pt,black'/>
 		<Property Name='DataSource'>
 			<Property Name='Column'>
 				<Property Name='Width' Value='0.1' />
@@ -29321,7 +29320,7 @@
 	<Style Name='FooterReportCreatedDateStyle'>
 		<Property Name='Bounds' Value='GeneratedOnCell'/>
 		<Property Name='Content' Value="{_ReportGenerationDateLabel_}"/>
-		<Property Name='Font' Value='Auto,6pt'/>
+		<Property Name='Font' Value='Segoeui.ttf,6pt'/>
 		<Property Name='Alignment' Value='BottomCentre'/>
 	</Style>
 	<Style Name='FooterLogoStyle'>
@@ -29339,13 +29338,13 @@
 			<Property Name='Left' Value='2.0'/>
 		</Property>
 		<Property Name='Content' Value="{_ProductVersionLabel_}"/>
-		<Property Name='Font' Value='Auto,6pt'/>
+		<Property Name='Font' Value='Segoeui.ttf,6pt'/>
 		<Property Name='Alignment' Value='BottomLeft'/>
 	</Style>
 	<Style Name='FooterPageMofNStyle'>
 		<Property Name='Bounds' Value='PageMofNCell'/>
 		<Property Name='Align' Value='BottomRight'/>
-		<Property Name='Font' Value='Auto,6pt'/>
+		<Property Name='Font' Value='Segoeui.ttf,6pt'/>
 		<Property Name='Format' Value="{_PageMofNLabel_}"/>
 	</Style>
 
@@ -29387,55 +29386,55 @@
 		<Shape Type='Block' Style='ShadedHeaderStyle,UserHeaderLeftRow1Style'>
 			<Property Name='Name' Value='UserHeaderLeftRow1LargeFont'/>
 			<Property Name='Enabled' Value='Headers.EnableUserHeaders and Headers.TopHeaderFontSize = 12 ? true : false'/>
-			<Property Name='Font' Value='Auto,12pt,Black,Bold'/>
+			<Property Name='Font' Value='Segoeui.ttf,12pt,Black,Bold'/>
 		</Shape>
 
 		<Shape Type='Block' Style='ShadedHeaderStyle,UserHeaderLeftRow1Style'>
 			<Property Name='Name' Value='UserHeaderLeftRow1MediumFont'/>
 			<Property Name='Enabled' Value='Headers.EnableUserHeaders and Headers.TopHeaderFontSize = 10 ? true : false'/>
-			<Property Name='Font' Value='Auto,10pt,Black,Bold'/>
+			<Property Name='Font' Value='Segoeui.ttf,10pt,Black,Bold'/>
 		</Shape>
 
 		<Shape Type='Block' Style='ShadedHeaderStyle,UserHeaderLeftRow1Style'>
 			<Property Name='Name' Value='UserHeaderLeftRow1SmallFont'/>
 			<Property Name='Enabled' Value='Headers.EnableUserHeaders and Headers.TopHeaderFontSize = 8 ? true : false'/>
-			<Property Name='Font' Value='Auto,8pt,Black,Bold'/>
+			<Property Name='Font' Value='Segoeui.ttf,8pt,Black,Bold'/>
 		</Shape>
 
 <!-- 		<Shape Type='Block' Style='ShadedHeaderStyle,UserHeaderLeftRow2Style'>
 			<Property Name='Name' Value='UserHeaderLeftRow2LargeFont'/>
 			<Property Name='Enabled' Value='Headers.EnableUserHeaders and Headers.MiddleHeaderFontSize = 12 ? true : false'/>
-			<Property Name='Font' Value='Auto,12pt,Black,Bold'/>
+			<Property Name='Font' Value='Segoeui.ttf,12pt,Black,Bold'/>
 		</Shape>
 
 		<Shape Type='Block' Style='ShadedHeaderStyle,UserHeaderLeftRow2Style'>
 			<Property Name='Name' Value='UserHeaderLeftRow2MediumFont'/>
 			<Property Name='Enabled' Value='Headers.EnableUserHeaders and Headers.MiddleHeaderFontSize = 10 ? true : false'/>
-			<Property Name='Font' Value='Auto,10pt,Black,Bold'/>
+			<Property Name='Font' Value='Segoeui.ttf,10pt,Black,Bold'/>
 		</Shape>
 
 		<Shape Type='Block' Style='ShadedHeaderStyle,UserHeaderLeftRow2Style'>
 			<Property Name='Name' Value='UserHeaderLeftRow2SmallFont'/>
 			<Property Name='Enabled' Value='Headers.EnableUserHeaders and Headers.MiddleHeaderFontSize = 8 ? true : false'/>
-			<Property Name='Font' Value='Auto,8pt,Black,Bold'/>
+			<Property Name='Font' Value='Segoeui.ttf,8pt,Black,Bold'/>
 		</Shape> -->
 
 <!-- 		<Shape Type='Block' Style='ShadedHeaderStyle,UserHeaderLeftRow3Style'>
 			<Property Name='Name' Value='UserHeaderLeftRow3LargeFont'/>
 			<Property Name='Enabled' Value='Headers.EnableUserHeaders and Headers.BottomHeaderFontSize = 12 ? true : false'/>
-			<Property Name='Font' Value='Auto,12pt,Black,Bold'/>
+			<Property Name='Font' Value='Segoeui.ttf,12pt,Black,Bold'/>
 		</Shape>
 
 		<Shape Type='Block' Style='ShadedHeaderStyle,UserHeaderLeftRow3Style'>
 			<Property Name='Name' Value='UserHeaderLeftRow3MediumFont'/>
 			<Property Name='Enabled' Value='Headers.EnableUserHeaders and Headers.BottomHeaderFontSize = 10 ? true : false'/>
-			<Property Name='Font' Value='Auto,10pt,Black,Bold'/>
+			<Property Name='Font' Value='Segoeui.ttf,10pt,Black,Bold'/>
 		</Shape>
 
 		<Shape Type='Block' Style='ShadedHeaderStyle,UserHeaderLeftRow3Style'>
 			<Property Name='Name' Value='UserHeaderLeftRow3SmallFont'/>
 			<Property Name='Enabled' Value='Headers.EnableUserHeaders and Headers.BottomHeaderFontSize = 8 ? true : false'/>
-			<Property Name='Font' Value='Auto,8pt,Black,Bold'/>
+			<Property Name='Font' Value='Segoeui.ttf,8pt,Black,Bold'/>
 		</Shape> -->
 
 		<Shape Type='Block' Style='ShadedHeaderStyle,PatientIdentificationTitleStyle'/>
@@ -29458,7 +29457,7 @@
 
 		<Layout>
 			<Row Name='TitleRow' Height='15.0'>
-				<Cell Name='TitleCell' Width='54'/>
+				<Cell Name='TitleCell' Width='25'/>
 
 				<Cell Name='PatientNameCell'/>
 			</Row>
@@ -29479,55 +29478,55 @@
 		<Shape Type='Block' Style='ShadedHeaderStyle,UserHeaderLeftRow1Style'>
 			<Property Name='Name' Value='UserHeaderLeftRow1LargeFont'/>
 			<Property Name='Enabled' Value='Headers.EnableUserHeaders and Headers.TopHeaderFontSize = 12 ? true : false'/>
-			<Property Name='Font' Value='Auto,12pt,Black,Bold'/>
+			<Property Name='Font' Value='Segoeui.ttf,12pt,Black,Bold'/>
 		</Shape>
 
 		<Shape Type='Block' Style='ShadedHeaderStyle,UserHeaderLeftRow1Style'>
 			<Property Name='Name' Value='UserHeaderLeftRow1MediumFont'/>
 			<Property Name='Enabled' Value='Headers.EnableUserHeaders and Headers.TopHeaderFontSize = 10 ? true : false'/>
-			<Property Name='Font' Value='Auto,10pt,Black,Bold'/>
+			<Property Name='Font' Value='Segoeui.ttf,10pt,Black,Bold'/>
 		</Shape>
 
 		<Shape Type='Block' Style='ShadedHeaderStyle,UserHeaderLeftRow1Style'>
 			<Property Name='Name' Value='UserHeaderLeftRow1SmallFont'/>
 			<Property Name='Enabled' Value='Headers.EnableUserHeaders and Headers.TopHeaderFontSize = 8 ? true : false'/>
-			<Property Name='Font' Value='Auto,8pt,Black,Bold'/>
+			<Property Name='Font' Value='Segoeui.ttf,8pt,Black,Bold'/>
 		</Shape>
 
 		<Shape Type='Block' Style='ShadedHeaderStyle,UserHeaderLeftRow2Style'>
 			<Property Name='Name' Value='UserHeaderLeftRow2LargeFont'/>
 			<Property Name='Enabled' Value='Headers.EnableUserHeaders and Headers.MiddleHeaderFontSize = 12 ? true : false'/>
-			<Property Name='Font' Value='Auto,12pt,Black,Bold'/>
+			<Property Name='Font' Value='Segoeui.ttf,12pt,Black,Bold'/>
 		</Shape>
 
 		<Shape Type='Block' Style='ShadedHeaderStyle,UserHeaderLeftRow2Style'>
 			<Property Name='Name' Value='UserHeaderLeftRow2MediumFont'/>
 			<Property Name='Enabled' Value='Headers.EnableUserHeaders and Headers.MiddleHeaderFontSize = 10 ? true : false'/>
-			<Property Name='Font' Value='Auto,10pt,Black,Bold'/>
+			<Property Name='Font' Value='Segoeui.ttf,10pt,Black,Bold'/>
 		</Shape>
 
 		<Shape Type='Block' Style='ShadedHeaderStyle,UserHeaderLeftRow2Style'>
 			<Property Name='Name' Value='UserHeaderLeftRow2SmallFont'/>
 			<Property Name='Enabled' Value='Headers.EnableUserHeaders and Headers.MiddleHeaderFontSize = 8 ? true : false'/>
-			<Property Name='Font' Value='Auto,8pt,Black,Bold'/>
+			<Property Name='Font' Value='Segoeui.ttf,8pt,Black,Bold'/>
 		</Shape>
 
 		<Shape Type='Block' Style='ShadedHeaderStyle,UserHeaderLeftRow3Style'>
 			<Property Name='Name' Value='UserHeaderLeftRow3LargeFont'/>
 			<Property Name='Enabled' Value='Headers.EnableUserHeaders and Headers.BottomHeaderFontSize = 12 ? true : false'/>
-			<Property Name='Font' Value='Auto,12pt,Black,Bold'/>
+			<Property Name='Font' Value='Segoeui.ttf,12pt,Black,Bold'/>
 		</Shape>
 
 		<Shape Type='Block' Style='ShadedHeaderStyle,UserHeaderLeftRow3Style'>
 			<Property Name='Name' Value='UserHeaderLeftRow3MediumFont'/>
 			<Property Name='Enabled' Value='Headers.EnableUserHeaders and Headers.BottomHeaderFontSize = 10 ? true : false'/>
-			<Property Name='Font' Value='Auto,10pt,Black,Bold'/>
+			<Property Name='Font' Value='Segoeui.ttf,10pt,Black,Bold'/>
 		</Shape>
 
 		<Shape Type='Block' Style='ShadedHeaderStyle,UserHeaderLeftRow3Style'>
 			<Property Name='Name' Value='UserHeaderLeftRow3SmallFont'/>
 			<Property Name='Enabled' Value='Headers.EnableUserHeaders and Headers.BottomHeaderFontSize = 8 ? true : false'/>
-			<Property Name='Font' Value='Auto,8pt,Black,Bold'/>
+			<Property Name='Font' Value='Segoeui.ttf,8pt,Black,Bold'/>
 		</Shape>
 
 		<Shape Type='Block' Style='ShadedHeaderStyle,PatientIdentificationTitleStyle'/>
@@ -29549,7 +29548,7 @@
 
 		<Layout>
 			<Row Name='TitleRow' Height='15.0'>
-				<Cell Name='TitleCell' Width='54'/>
+				<Cell Name='TitleCell' Width='25'/>
 
 				<Cell Name='PatientNameCell'/>
 			</Row>
@@ -29570,55 +29569,55 @@
 		<Shape Type='Block' Style='ShadedHeaderStyle,UserHeaderLeftRow1Style'>
 			<Property Name='Name' Value='UserHeaderLeftRow1LargeFont'/>
 			<Property Name='Enabled' Value='Headers.EnableUserHeaders and Headers.TopHeaderFontSize = 12 ? true : false'/>
-			<Property Name='Font' Value='Auto,12pt,Black,Bold'/>
+			<Property Name='Font' Value='Segoeui.ttf,12pt,Black,Bold'/>
 		</Shape>
 
 		<Shape Type='Block' Style='ShadedHeaderStyle,UserHeaderLeftRow1Style'>
 			<Property Name='Name' Value='UserHeaderLeftRow1MediumFont'/>
 			<Property Name='Enabled' Value='Headers.EnableUserHeaders and Headers.TopHeaderFontSize = 10 ? true : false'/>
-			<Property Name='Font' Value='Auto,10pt,Black,Bold'/>
+			<Property Name='Font' Value='Segoeui.ttf,10pt,Black,Bold'/>
 		</Shape>
 
 		<Shape Type='Block' Style='ShadedHeaderStyle,UserHeaderLeftRow1Style'>
 			<Property Name='Name' Value='UserHeaderLeftRow1SmallFont'/>
 			<Property Name='Enabled' Value='Headers.EnableUserHeaders and Headers.TopHeaderFontSize = 8 ? true : false'/>
-			<Property Name='Font' Value='Auto,8pt,Black,Bold'/>
+			<Property Name='Font' Value='Segoeui.ttf,8pt,Black,Bold'/>
 		</Shape>
 <!-- 
 		<Shape Type='Block' Style='ShadedHeaderStyle,UserHeaderLeftRow2Style'>
 			<Property Name='Name' Value='UserHeaderLeftRow2LargeFont'/>
 			<Property Name='Enabled' Value='Headers.EnableUserHeaders and Headers.MiddleHeaderFontSize = 12 ? true : false'/>
-			<Property Name='Font' Value='Auto,12pt,Black,Bold'/>
+			<Property Name='Font' Value='Segoeui.ttf,12pt,Black,Bold'/>
 		</Shape>
 
 		<Shape Type='Block' Style='ShadedHeaderStyle,UserHeaderLeftRow2Style'>
 			<Property Name='Name' Value='UserHeaderLeftRow2MediumFont'/>
 			<Property Name='Enabled' Value='Headers.EnableUserHeaders and Headers.MiddleHeaderFontSize = 10 ? true : false'/>
-			<Property Name='Font' Value='Auto,10pt,Black,Bold'/>
+			<Property Name='Font' Value='Segoeui.ttf,10pt,Black,Bold'/>
 		</Shape>
 
 		<Shape Type='Block' Style='ShadedHeaderStyle,UserHeaderLeftRow2Style'>
 			<Property Name='Name' Value='UserHeaderLeftRow2SmallFont'/>
 			<Property Name='Enabled' Value='Headers.EnableUserHeaders and Headers.MiddleHeaderFontSize = 8 ? true : false'/>
-			<Property Name='Font' Value='Auto,8pt,Black,Bold'/>
+			<Property Name='Font' Value='Segoeui.ttf,8pt,Black,Bold'/>
 		</Shape>
 
 		<Shape Type='Block' Style='ShadedHeaderStyle,UserHeaderLeftRow3Style'>
 			<Property Name='Name' Value='UserHeaderLeftRow3LargeFont'/>
 			<Property Name='Enabled' Value='Headers.EnableUserHeaders and Headers.BottomHeaderFontSize = 12 ? true : false'/>
-			<Property Name='Font' Value='Auto,12pt,Black,Bold'/>
+			<Property Name='Font' Value='Segoeui.ttf,12pt,Black,Bold'/>
 		</Shape>
 
 		<Shape Type='Block' Style='ShadedHeaderStyle,UserHeaderLeftRow3Style'>
 			<Property Name='Name' Value='UserHeaderLeftRow3MediumFont'/>
 			<Property Name='Enabled' Value='Headers.EnableUserHeaders and Headers.BottomHeaderFontSize = 10 ? true : false'/>
-			<Property Name='Font' Value='Auto,10pt,Black,Bold'/>
+			<Property Name='Font' Value='Segoeui.ttf,10pt,Black,Bold'/>
 		</Shape>
 
 		<Shape Type='Block' Style='ShadedHeaderStyle,UserHeaderLeftRow3Style'>
 			<Property Name='Name' Value='UserHeaderLeftRow3SmallFont'/>
 			<Property Name='Enabled' Value='Headers.EnableUserHeaders and Headers.BottomHeaderFontSize = 8 ? true : false'/>
-			<Property Name='Font' Value='Auto,8pt,Black,Bold'/>
+			<Property Name='Font' Value='Segoeui.ttf,8pt,Black,Bold'/>
 		</Shape> -->
 
 		<Shape Type='Block' Style='ShadedHeaderStyle,PatientIdentificationTitleStyle'/>
@@ -29662,55 +29661,55 @@
 		<Shape Type='Block' Style='ShadedHeaderStyle,UserHeaderLeftRow1Style'>
 			<Property Name='Name' Value='UserHeaderLeftRow1LargeFont'/>
 			<Property Name='Enabled' Value='Headers.EnableUserHeaders and Headers.TopHeaderFontSize = 12 ? true : false'/>
-			<Property Name='Font' Value='Auto,12pt,Black,Bold'/>
+			<Property Name='Font' Value='Segoeui.ttf,12pt,Black,Bold'/>
 		</Shape>
 
 		<Shape Type='Block' Style='ShadedHeaderStyle,UserHeaderLeftRow1Style'>
 			<Property Name='Name' Value='UserHeaderLeftRow1MediumFont'/>
 			<Property Name='Enabled' Value='Headers.EnableUserHeaders and Headers.TopHeaderFontSize = 10 ? true : false'/>
-			<Property Name='Font' Value='Auto,10pt,Black,Bold'/>
+			<Property Name='Font' Value='Segoeui.ttf,10pt,Black,Bold'/>
 		</Shape>
 
 		<Shape Type='Block' Style='ShadedHeaderStyle,UserHeaderLeftRow1Style'>
 			<Property Name='Name' Value='UserHeaderLeftRow1SmallFont'/>
 			<Property Name='Enabled' Value='Headers.EnableUserHeaders and Headers.TopHeaderFontSize = 8 ? true : false'/>
-			<Property Name='Font' Value='Auto,8pt,Black,Bold'/>
+			<Property Name='Font' Value='Segoeui.ttf,8pt,Black,Bold'/>
 		</Shape>
 
 		<Shape Type='Block' Style='ShadedHeaderStyle,UserHeaderLeftRow2Style'>
 			<Property Name='Name' Value='UserHeaderLeftRow2LargeFont'/>
 			<Property Name='Enabled' Value='Headers.EnableUserHeaders and Headers.MiddleHeaderFontSize = 12 ? true : false'/>
-			<Property Name='Font' Value='Auto,12pt,Black,Bold'/>
+			<Property Name='Font' Value='Segoeui.ttf,12pt,Black,Bold'/>
 		</Shape>
 
 		<Shape Type='Block' Style='ShadedHeaderStyle,UserHeaderLeftRow2Style'>
 			<Property Name='Name' Value='UserHeaderLeftRow2MediumFont'/>
 			<Property Name='Enabled' Value='Headers.EnableUserHeaders and Headers.MiddleHeaderFontSize = 10 ? true : false'/>
-			<Property Name='Font' Value='Auto,10pt,Black,Bold'/>
+			<Property Name='Font' Value='Segoeui.ttf,10pt,Black,Bold'/>
 		</Shape>
 
 		<Shape Type='Block' Style='ShadedHeaderStyle,UserHeaderLeftRow2Style'>
 			<Property Name='Name' Value='UserHeaderLeftRow2SmallFont'/>
 			<Property Name='Enabled' Value='Headers.EnableUserHeaders and Headers.MiddleHeaderFontSize = 8 ? true : false'/>
-			<Property Name='Font' Value='Auto,8pt,Black,Bold'/>
+			<Property Name='Font' Value='Segoeui.ttf,8pt,Black,Bold'/>
 		</Shape>
 
 		<Shape Type='Block' Style='ShadedHeaderStyle,UserHeaderLeftRow3Style'>
 			<Property Name='Name' Value='UserHeaderLeftRow3LargeFont'/>
 			<Property Name='Enabled' Value='Headers.EnableUserHeaders and Headers.BottomHeaderFontSize = 12 ? true : false'/>
-			<Property Name='Font' Value='Auto,12pt,Black,Bold'/>
+			<Property Name='Font' Value='Segoeui.ttf,12pt,Black,Bold'/>
 		</Shape>
 
 		<Shape Type='Block' Style='ShadedHeaderStyle,UserHeaderLeftRow3Style'>
 			<Property Name='Name' Value='UserHeaderLeftRow3MediumFont'/>
 			<Property Name='Enabled' Value='Headers.EnableUserHeaders and Headers.BottomHeaderFontSize = 10 ? true : false'/>
-			<Property Name='Font' Value='Auto,10pt,Black,Bold'/>
+			<Property Name='Font' Value='Segoeui.ttf,10pt,Black,Bold'/>
 		</Shape>
 
 		<Shape Type='Block' Style='ShadedHeaderStyle,UserHeaderLeftRow3Style'>
 			<Property Name='Name' Value='UserHeaderLeftRow3SmallFont'/>
 			<Property Name='Enabled' Value='Headers.EnableUserHeaders and Headers.BottomHeaderFontSize = 8 ? true : false'/>
-			<Property Name='Font' Value='Auto,8pt,Black,Bold'/>
+			<Property Name='Font' Value='Segoeui.ttf,8pt,Black,Bold'/>
 		</Shape>
 
 		<Shape Type='Block' Style='ShadedHeaderStyle,PatientIdentificationTitleStyle'/>
@@ -29866,25 +29865,27 @@
 				<Row Name='PauseRow' Height='7'/>
 				<Row Name='BeatCountTitleRow' Height='6.5'/>
 				<Row Name='BeatCountTableRow' Height='20'/>
-				<Row Name='ArrhythmiaTitleRow' Height='9.5'>
+				<Row Name='ArrhythmiaTitleRow' Height='7.5'>
 					<Cell Name='VentricularArrhythmiaTitleCell' Width='50%'/>
 					<Cell Name='SupraVentricularArrhythmiaTitleCell' Width='50%'/>
 				</Row>
 			<!-- 	<Row Name='PauseRow' Height='7'/> -->
-				<Row Name='ArrhythmiaEventsTableRow' Height='56'>
+				<Row Name='ArrhythmiaEventsTableRow' Height='61'>
 					<Cell Name='VentricularArrhythmiaTableCell' Width='50%'/>
 					<Cell Name='SupraVentricularArrhythmiaTableCell' Width='50%'/>
 				</Row>
-				<Row Name='AFArrhythmiaTitleCell' Enabled='EventFamilies.AF.HasAFEvents' Height='5.5' />
+				<Row Name='AFArrhythmiaTitleCell' Enabled='EventFamilies.AF.HasAFEvents' Height='10' />
 				<Row Name='AFArrhythmiaTableCell' Enabled='EventFamilies.AF.HasAFEvents' Height='18'/>
 				<Row Name='ApnoeaSummaryRow' Height='18' Enabled='EventFamilies.Apnoea.IsAnalysed'/>
-		<!-- 		<Row Name='IndicationsRow' Enabled ='Test.HasIndications' Height='13'/> -->
+<!-- 				<Row Name='IndicationsRow' Enabled ='Test.HasIndications' Height='10'/> -->
 		<!-- 	<Row Name='OperatorCommentsRow' Enabled ='Test.HasComments' Height='18'/> -->
-				<Row Name='SignatureRow' Height='12' Order='Bottom'>
+				<Row Name='SignatureRow' Height='20' Order='Bottom'> <!-- [LMM] Altura da linha de assinaturas -->
 					<Cell Name='OperatorSignatureCell' Width='96'/>
-					<Cell Name='DoctorSignatureCell' Width='36'/>
+					<Cell Name='OperatorSignatureCell_1' Width='40'/>
+					<Cell Name='DoctorSignatureCell' Width='46'/>
 				</Row>
-				<Row Name='DoctorCommentsRow'/>  
+				<!-- <Row Name='DoctorCommentsRow' Height='62' Order='Bottom'/>  --> 
+				<Row Name='DoctorCommentsRow' /> 
 
 			</Layout>
 
@@ -29959,24 +29960,24 @@
 					</Property>
 					<Property Name='Column'>
 						<Property Name='Width' Value='0.18'/>
-						<Property Name='CellFont' Value='Auto,7pt,Black,Bold'/>
+						<Property Name='CellFont' Value='Segoeui.ttf,7pt,Black,Bold'/>
 					</Property>
 					<Property Name='Column'>
 						<Property Name='Width' Value='0.15'/>
-						<Property Name='CellFont' Value='Auto,7pt,Black,Bold'/>
+						<Property Name='CellFont' Value='Segoeui.ttf,7pt,Black,Bold'/>
 						<Property Name='CellAlignment' Value='MiddleRight'/>
 						<Property Name='RightPadding' Value='3' />
 					</Property>
 					<Property Name='Column'>
 						<Property Name='Width' Value='0.15'/>
-						<Property Name='CellFont' Value='Auto,7pt,Black,Bold'/>
+						<Property Name='CellFont' Value='Segoeui.ttf,7pt,Black,Bold'/>
 					</Property>
 					<Property Name='Column'>
 						<Property Name='Width' Value='0.15'/>
 					</Property>
 					<Property Name='Column'>
 						<Property Name='Width' Value='0.28'/>
-						<Property Name='CellFont' Value='Auto,7pt,Black,Bold'/>
+						<Property Name='CellFont' Value='Segoeui.ttf,7pt,Black,Bold'/>
 					</Property>
 
 					<Property Name='Row'>
@@ -30083,24 +30084,24 @@
 					</Property>
 					<Property Name='Column'>
 						<Property Name='Width' Value='0.20'/>
-						<Property Name='CellFont' Value='Auto,7pt,Black,Bold'/>
+						<Property Name='CellFont' Value='Segoeui.ttf,7pt,Black,Bold'/>
 					</Property>
 					<Property Name='Column'>
 						<Property Name='Width' Value='0.15'/>
-						<Property Name='CellFont' Value='Auto,7pt,Black,Bold'/>
+						<Property Name='CellFont' Value='Segoeui.ttf,7pt,Black,Bold'/>
 						<Property Name='CellAlignment' Value='MiddleRight'/>
 						<Property Name='RightPadding' Value='5' />
 					</Property>
 					<Property Name='Column'>
 						<Property Name='Width' Value='0.15'/>
-						<Property Name='CellFont' Value='Auto,7pt,Black,Bold'/>
+						<Property Name='CellFont' Value='Segoeui.ttf,7pt,Black,Bold'/>
 					</Property>
 					<Property Name='Column'>
 						<Property Name='Width' Value='0.15'/>
 					</Property>
 					<Property Name='Column'>
 						<Property Name='Width' Value='0.28'/>
-						<Property Name='CellFont' Value='Auto,7pt,Black,Bold'/>
+						<Property Name='CellFont' Value='Segoeui.ttf,7pt,Black,Bold'/>
 					</Property>
 
 					<Property Name='Row'>
@@ -30250,26 +30251,27 @@
             <Property Name='Top' Value='0.5'/>
           </Property>
 
-          <Property Name='DataSource'>
+          <Property Name='DataSource'> <!-- [LMM] - Quadro de info do registo -->
 
             <Property Name='Column'>
-              <Property Name='Width' Value='0.16'/>
-			  <Property Name='CellFont' Value='Helvetica,7pt,Black'/>
+              <Property Name='Width' Value='0.18'/>
+			  <Property Name='CellFont' Value='Segoeui.ttf,8pt,Black'/>
             </Property>
             <Property Name='Column'>
               <Property Name='Width' Value='0.15'/>
-              <Property Name='CellFont' Value='Helvetica,7pt,Black'/>
+              <Property Name='CellFont' Value='Segoeui.ttf,8pt,Black'/>
             </Property>
             <Property Name='Column'>
               <Property Name='Width' Value='0.19'/>
-              <Property Name='CellFont' Value='Helvetica,7pt,Black'/>
+              <Property Name='CellFont' Value='Segoeui.ttf,8pt,Black'/>
             </Property>
             <Property Name='Column'>
-              <Property Name='Width' Value='0.15'/>
+              <Property Name='Width' Value='0.18'/>
+			  <Property Name='CellFont' Value='Segoeui.ttf,8pt,Black'/>
             </Property>
             <Property Name='Column'>
               <Property Name='Width' Value='0.35'/>
-              <Property Name='CellFont' Value='Helvetica,7pt,Black'/>
+              <Property Name='CellFont' Value='Segoeui.ttf,8pt,Black'/>
             </Property>
 
             <Property Name='Row'>
@@ -30417,24 +30419,24 @@
 					</Property>
 					<Property Name='Column'>
 						<Property Name='Width' Value='0.20'/>
-						<Property Name='CellFont' Value='Auto,7pt,Black,Bold'/>
+						<Property Name='CellFont' Value='Segoeui.ttf,7pt,Black,Bold'/>
 					</Property>
 					<Property Name='Column'>
 						<Property Name='Width' Value='0.14'/>
-						<Property Name='CellFont' Value='Auto,7pt,Black,Bold'/>
+						<Property Name='CellFont' Value='Segoeui.ttf,7pt,Black,Bold'/>
 						<Property Name='CellAlignment' Value='MiddleRight'/>
 						<Property Name='RightPadding' Value='5' />
 					</Property>
 					<Property Name='Column'>
 						<Property Name='Width' Value='0.15'/>
-						<Property Name='CellFont' Value='Auto,7pt,Black,Bold'/>
+						<Property Name='CellFont' Value='Segoeui.ttf,7pt,Black,Bold'/>
 					</Property>
 					<Property Name='Column'>
 						<Property Name='Width' Value='0.15'/>
 					</Property>
 					<Property Name='Column'>
 						<Property Name='Width' Value='0.28'/>
-						<Property Name='CellFont' Value='Auto,7pt,Black,Bold'/>
+						<Property Name='CellFont' Value='Segoeui.ttf,7pt,Black,Bold'/>
 					</Property>
 
 					<Property Name='Row'>
@@ -30595,7 +30597,7 @@
 					<Property Name='Bottom' Value='1'/>
 				</Property>
 				<Property Name='Title' Value='_SymptomsTitleLabel_'/>
-				<Property Name='TitleFont' Value='Auto,8pt,Black,Bold'/>
+				<Property Name='TitleFont' Value='Segoeui.ttf,8pt,Black,Bold'/>
 				<Property Name='OverflowTitle' Value='_SymptomsContinuationTitleLabel_'/>
 				<Property Name='Content' Value='{Test.Indications}'/>
 			</Shape>
@@ -30609,7 +30611,7 @@
 				<Property Name='Bounds' Value='BeatCountTitleRow'/>
 				<Property Name='Content' Value="{Beats.IsEdited ? '('+ _EditMarker_ +_UserEditedLabel_+')' : ''}"/>
 				<Property Name="Alignment" Value="TopRight"/>
-				<Property Name="Font" Value="Auto,6pt"/>
+				<Property Name="Font" Value="Segoeui.ttf,6pt"/>
 			</Shape>
 
 			<Shape Type='Table' Style='ShadedBlockStyle,BlockTableStyle'>
@@ -30621,31 +30623,39 @@
 					<Property Name='Bottom' Value='0.5'/>
 				</Property>
 
-				<Property Name='DataSource'>
+				<Property Name='DataSource'>  <!-- [LMM] Batimentos -->
 
 					<Property Name='Column'>
 						<Property Name='Width' Value='0.30'/>
+						<Property Name='CellFont' Value='Segoeui.ttf,8.5pt,Black'/>
 					</Property>
 					<Property Name='Column'>
 						<Property Name='Width' Value='0.70'/>
+						<Property Name='CellFont' Value='Segoeui.ttf,8.5pt,Black'/>
+					</Property>
+					<Property Name='Column'>
+						<Property Name='Width' Value='0.32'/>
+						<Property Name='CellFont' Value='Segoeui.ttf,8.5pt,Black'/>
+					</Property>
+					<Property Name='Column'>
+						<Property Name='Width' Value='0.70'/>
+						<Property Name='CellFont' Value='Segoeui.ttf,8.5pt,Black'/>
 					</Property>
 					<Property Name='Column'>
 						<Property Name='Width' Value='0.30'/>
+						<Property Name='CellFont' Value='Segoeui.ttf,8.5pt,Black'/>
 					</Property>
 					<Property Name='Column'>
 						<Property Name='Width' Value='0.70'/>
+						<Property Name='CellFont' Value='Segoeui.ttf,8.5pt,Black'/>
 					</Property>
 					<Property Name='Column'>
 						<Property Name='Width' Value='0.30'/>
+						<Property Name='CellFont' Value='Segoeui.ttf,8.5pt,Black'/>
 					</Property>
 					<Property Name='Column'>
 						<Property Name='Width' Value='0.70'/>
-					</Property>
-					<Property Name='Column'>
-						<Property Name='Width' Value='0.30'/>
-					</Property>
-					<Property Name='Column'>
-						<Property Name='Width' Value='0.70'/>
+						<Property Name='CellFont' Value='Segoeui.ttf,8.5pt,Black'/>
 					</Property>
 
 					<Property Name='Row'>
@@ -30795,13 +30805,15 @@
 					<Property Name='Left' Value='0'/>
 				</Property>
 
-				<Property Name='DataSource'>
+				<Property Name='DataSource'> <!-- [LMM] Caixa Eventos dependentes da frequencia -->
 
 					<Property Name='Column'>
 						<Property Name='Width' Value='0.32'/>
+						<Property Name='CellFont' Value='Segoeui.ttf,8.5pt,Black'/>
 					</Property>
 					<Property Name='Column'>
 						<Property Name='Width' Value='0.68'/>
+						<Property Name='CellFont' Value='Segoeui.ttf,8.5pt,Black'/>
 					</Property>
 
 					<Property Name='Row'>
@@ -30858,7 +30870,7 @@
 				<Property Name='Bounds' Value='RateDependentEventsTitleRow'/>
 				<Property Name='Content' Value="{EventFamilies.HR.IsSummaryEdited OR EventFamilies.Tachycardia.IsSummaryEdited OR EventFamilies.Bradycardia.IsSummaryEdited OR EventFamilies.Pause.IsEdited ? '('+ _EditMarker_ +_UserEditedLabel_+')' : ''}"/>
 				<Property Name="Alignment" Value="TopRight"/>
-				<Property Name="Font" Value="Auto,6pt"/>
+				<Property Name="Font" Value="Segoeui.ttf,6pt"/>
 			</Shape>
 
 			<!-- rate dependent events tables ( bradycardia ) -->
@@ -30876,9 +30888,11 @@
 
 					<Property Name='Column'>
 						<Property Name='Width' Value='0.35'/>
+						<Property Name='CellFont' Value='Segoeui.ttf,8.5pt,Black'/>
 					</Property>
 					<Property Name='Column'>
 						<Property Name='Width' Value='0.65'/>
+						<Property Name='CellFont' Value='Segoeui.ttf,8.5pt,Black'/>
 					</Property>
 
 					<Property Name='Row'>
@@ -30944,9 +30958,11 @@
 
 					<Property Name='Column'>
 						<Property Name='Width' Value='0.35'/>
+						<Property Name='CellFont' Value='Segoeui.ttf,8.5pt,Black'/>
 					</Property>
 					<Property Name='Column'>
 						<Property Name='Width' Value='0.65'/>
+						<Property Name='CellFont' Value='Segoeui.ttf,8.5pt,Black'/>
 					</Property>
 
 					<Property Name='Row'>
@@ -31008,9 +31024,11 @@
 
 					<Property Name='Column'>
 						<Property Name='Width' Value='0.11'/>
+						<Property Name='CellFont' Value='Segoeui.ttf,8.5pt,Black'/>
 					</Property>
 					<Property Name='Column'>
 						<Property Name='Width' Value='0.885'/>
+						<Property Name='CellFont' Value='Segoeui.ttf,8.5pt,Black'/>
 					</Property>
 
 					<Property Name='Row'>
@@ -31044,14 +31062,14 @@
 				<Property Name='Bounds' Value='VentricularArrhythmiaTitleCell'/>
 				<Property Name='Content' Value="{EventFamilies.VT.IsSummaryEdited OR EventFamilies.SVE.IsSummaryEdited OR EventFamilies.VE.IsSummaryEdited ? '('+ _EditMarker_ +_UserEditedLabel_+')' : ''}"/>
 				<Property Name="Alignment" Value="TopRight"/>
-				<Property Name="Font" Value="Auto,6pt"/>
+				<Property Name="Font" Value="Segoeui.ttf,6pt"/>
 			</Shape>
 
 			<Shape Type='Table' Style='ShadedBlockStyle,BlockTableStyle'>
 				<Property Name='Bounds' Value='VentricularArrhythmiaTableCell'/>
 				<Property Name='Margin'>
 					<Property Name='Right' Value='0.5'/>
-					<Property Name='Top' Value='0.5'/>
+					<Property Name='Top' Value='0'/>
 					<Property Name='Bottom' Value='0'/>
 					<Property Name='Left' Value='0'/>
 				</Property>
@@ -31060,12 +31078,15 @@
 
 					<Property Name='Column'>
 						<Property Name='Width' Value='0.36'/>
+						<Property Name='CellFont' Value='Segoeui.ttf,8.5pt,Black'/>
 					</Property>
 					<Property Name='Column'>
 						<Property Name='Width' Value='0.64'/>
+						<Property Name='CellFont' Value='Segoeui.ttf,8.5pt,Black'/>
 					</Property>
 
-					<Property Name='Row'>
+					<Property Name='Row'>  <!-- [LMM] Linha de TV -->
+						<Property Name='BottomPadding' Value='1'/>
 						<Property Name='Cell'>
 							<Property Name='Content' Value="[b]{EventFamilies.VT.FamilyName}[/b]{EventFamilies.VT.Count.IsEdited ? _EditMarker_ : ''}"/>
 						</Property>
@@ -31075,7 +31096,7 @@
 						</Property>
 					</Property>
 
-					<Property Name='Row'>
+					<Property Name='Row'> <!-- [LMM] Linha de TV - A mais longa -->
 						<Property Name='Cell'>
 							<Property Name='Content' Value="{_LongestLabel_}{EventFamilies.VT.Longest.IsEdited ? _EditMarker_ : ''}"/>
 						</Property>
@@ -31085,9 +31106,9 @@
 						</Property>
 					</Property>
 
-					<Property Name='Row'>
-						<Property Name='BottomPadding' Value='0.5'/>
-						<Property Name='BottomBorderPen' Value='Black,0.05mm'/>
+					<Property Name='Row'> <!-- [LMM] Linha de TV - FC -->
+						<Property Name='BottomPadding' Value='1'/>
+						<Property Name='BottomBorderPen' Value='LightGrey,0.01mm'/>
 						<Property Name='Cell'>
 							<Property Name='Content' Value="{_MaxRateLabel_}{EventFamilies.VT.MaxRate.IsEdited ? _EditMarker_ : ''}"/>
 						</Property>
@@ -31097,8 +31118,9 @@
 						</Property>
 					</Property>
 
-					<Property Name='Row'>
+					<Property Name='Row'> <!-- [LMM] linha de RIVA -->
 						<Property Name='TopPadding' Value='0.5'/>
+						<Property Name='BottomPadding' Value='1'/>
 						<Property Name='Cell'>
 							<Property Name='Content' Value="[b]{EventFamilies.AVIR.FamilyName}[/b]{EventFamilies.AVIR.Count.IsEdited ? _EditMarker_ : ''}"/>
 						</Property>
@@ -31108,7 +31130,7 @@
 						</Property>
 					</Property>
 
-					<Property Name='Row'>
+					<Property Name='Row'> <!-- [LMM] linha de RIVA - a mais longa -->
 						<Property Name='Cell'>
 							<Property Name='Content' Value="{_LongestLabel_}{EventFamilies.AVIR.Longest.IsEdited ? _EditMarker_ : ''}"/>
 						</Property>
@@ -31118,9 +31140,9 @@
 						</Property>
 					</Property>
 
-					<Property Name='Row'>
-						<Property Name='BottomPadding' Value='0.5'/>
-						<Property Name='BottomBorderPen' Value='Black,0.05mm'/>
+					<Property Name='Row'>  <!-- [LMM] linha de RIVA - FC -->				
+						<Property Name='BottomPadding' Value='1'/>
+						<Property Name='BottomBorderPen' Value='Black,0.01mm'/>
 						<Property Name='Cell'>
 							<Property Name='Content' Value="{_MaxRateLabel_}{EventFamilies.AVIR.MaxRate.IsEdited ? _EditMarker_ : ''}"/>
 						</Property>
@@ -31132,8 +31154,9 @@
 					
 					<!-- LMM adicção IVR -->
 					
-					<Property Name='Row'>
+					<Property Name='Row'> <!-- [LMM] linha de IVR -->
 						<Property Name='TopPadding' Value='0.5'/>
+						<Property Name='BottomPadding' Value='1'/>
 						<Property Name='Cell'>
 							<Property Name='Content' Value="[b]{EventFamilies.IVR.FamilyName}[/b]"/>
 						</Property>
@@ -31143,7 +31166,7 @@
 						</Property>
 					</Property>
 
-					<Property Name='Row'>
+					<Property Name='Row'> <!-- [LMM] linha de IVR - A mais longa -->
 						<Property Name='Cell'>
 							<Property Name='Content' Value="{_LongestLabel_}"/>
 						</Property>
@@ -31153,9 +31176,9 @@
 						</Property>
 					</Property>
 
-					<Property Name='Row'>
-						<Property Name='BottomPadding' Value='0.5'/>
-						<Property Name='BottomBorderPen' Value='Black,0.05mm'/>
+					<Property Name='Row'> <!-- [LMM] linha de IVR - FC -->
+						<Property Name='BottomPadding' Value='1'/>
+						<Property Name='BottomBorderPen' Value='Black,0.01mm'/>
 						<Property Name='Cell'>
 							<Property Name='Content' Value="{_MaxRateLabel_}"/>
 						</Property>
@@ -31167,8 +31190,8 @@
 					
 
 					<!--Use EventFamilies.VE.Count for the count of isolated VEs only, SingleVEEventCount to include PVCs and VEsc in the count-->
-					<Property Name='Row'>
-						<Property Name='TopPadding' Value='0.5'/>
+					<Property Name='Row'> <!-- [LMM] linha de Eventos EV, Par, Triplet, Bigeminia, Trigeminia -->
+						<Property Name='TopPadding' Value='1'/>
 						<Property Name='Cell'>
 							<Property Name='Content' Value="[b]{_SingleVentricularEventsName_}[/b]{EventFamilies.VE.SingleVEEventCount.IsEdited ? _EditMarker_ : ''}"/>
 						</Property>
@@ -31191,7 +31214,6 @@
 					<Property Name='Row'>
 						<Property Name='Enabled' Value='EventFamilies.Triplet.IsDisplayed'/>
 						<Property Name='TopPadding' Value='0.5'/>
-						<Property Name='BottomPadding' Value='0.5'/>
 					<!-- 	<Property Name='BottomBorderPen' Value='Black,0.05mm'/> -->
 						<Property Name='Cell'>
 							<Property Name='Content' Value="[b]{EventFamilies.Triplet.FamilyName}[/b]"/>
@@ -31255,14 +31277,14 @@
 				<Property Name='Bounds' Value='SupraVentricularArrhythmiaTitleCell'/>
 				<Property Name='Content' Value="{EventFamilies.SVT.IsSummaryEdited OR EventFamilies.SVE.IsSummaryEdited ? '(' + _EditMarker_ + _UserEditedLabel_+')' : ''}"/>
 				<Property Name="Alignment" Value="TopRight"/>
-				<Property Name="Font" Value="Auto,6pt"/>
+				<Property Name="Font" Value="Segoeui.ttf,6pt"/>
 			</Shape>
 
 			<Shape Type='Table' Style='ShadedBlockStyle,BlockTableStyle'>
 				<Property Name='Bounds' Value='SupraVentricularArrhythmiaTableCell'/>
 				<Property Name='Margin'>
 					<Property Name='Left' Value='0.5'/>
-					<Property Name='Top' Value='0.5'/>
+					<Property Name='Top' Value='0'/>
 					<Property Name='Bottom' Value='0'/>
 					<Property Name='Right' Value='0'/>
 				</Property>
@@ -31272,9 +31294,11 @@
 					<Property Name='Column'>
 						<Property Name='LeftPadding' Value='1'/>
 						<Property Name='Width' Value='0.36'/>
+						<Property Name='CellFont' Value='Segoeui.ttf,8.5pt,Black'/>
 					</Property>
 					<Property Name='Column'>
 						<Property Name='Width' Value='0.64'/>
+						<Property Name='CellFont' Value='Segoeui.ttf,8.5pt,Black'/>
 					</Property>
 
 					<Property Name='Row'>
@@ -31298,8 +31322,8 @@
 					</Property>
 
 					<Property Name='Row'>
-						<Property Name='BottomPadding' Value='0.5'/>
-						<Property Name='BottomBorderPen' Value='Black,0.05mm'/>
+						<Property Name='BottomPadding' Value='1'/>
+						<Property Name='BottomBorderPen' Value='Black,0.01mm'/>
 						<Property Name='Cell'>
 							<Property Name='Content' Value="{_MaxRateLabel_}{EventFamilies.SVT.MaxRate.IsEdited ? _EditMarker_ : ''}"/>
 						</Property>
@@ -31342,7 +31366,7 @@
 					</Property>
 
 					<Property Name='Row'>
-						<Property Name='BottomPadding' Value='0.5'/>
+						<Property Name='BottomPadding' Value='1'/>
 						<Property Name='BottomBorderPen' Value='Black,0.05mm'/>
 						<Property Name='Cell'>
 							<Property Name='Content' Value="{_MeanPerHourLabel_}{EventFamilies.SVE.MeanPerHour.IsEdited ? _EditMarker_ : ''}"/>
@@ -31376,6 +31400,9 @@
 					</Property>
 
 					<Property Name='Row'>
+						<Property Name='TopPadding' Value='0.5'/>
+						<Property Name='BottomPadding' Value='1'/>
+						<Property Name='BottomBorderPen' Value='Black,0.01mm'/>
 						<Property Name='Cell'>
 							<Property Name='Content' Value="{_MaxRateLabel_}{EventFamilies.SVRun.MaxRate.IsEdited ? _EditMarker_ : ''}"/>
 						</Property>
@@ -31403,11 +31430,11 @@
 			</Shape>
 			<!-- end of table shape -->
 
-			<!-- AF Beats-->
+			<!-- AF Beats--><!--  [LMM] Quadro de FA -->
 			<Shape Type="Block" Style="SubTitleBlockStyle">
 				<Property Name='Padding'>
-					<Property Name='Top' Value='1'/>
-					<Property Name='Bottom' Value='1'/>
+					<Property Name='Top' Value='0'/>
+					<Property Name='Bottom' Value='0'/>
 				</Property>
 				<Property Name="Bounds" Value="AFArrhythmiaTitleCell"/>
 				<Property Name="Content" Value="_AFTableTitleLabel_"/>
@@ -31416,13 +31443,13 @@
 
 			<Shape Type='Block' Style='SubTitleBlockStyle'>
 				<Property Name='Padding'>
-					<Property Name='Top' Value='1'/>
+					<Property Name='Top' Value='0'/>
 					<Property Name='Bottom' Value='1'/>
 				</Property>
 				<Property Name='Bounds' Value='AFArrhythmiaTitleCell'/>
 				<Property Name='Content' Value="{EventFamilies.AF.IsSummaryEdited ? '('+ _EditMarker_ +_UserEditedLabel_+')' : ''}"/>
 				<Property Name="Alignment" Value="TopRight"/>
-				<Property Name="Font" Value="Auto,6pt"/>
+				<Property Name="Font" Value="Segoeui.ttf,6pt"/>
 			</Shape>
 
 			<Shape Type='Table' Style='ShadedBlockStyle, BlockTableStyle'>
@@ -31444,9 +31471,11 @@
 					<Property Name='Column'>
 						<Property Name='LeftPadding' Value='1'/>
 						<Property Name='Width' Value='4'/>
+						<Property Name='CellFont' Value='Segoeui.ttf,8.5pt,Black'/>
 					</Property>
 					<Property Name='Column'>
-						<Property Name='Width' Value='20'/>
+					<Property Name='Width' Value='20'/>
+					<Property Name='CellFont' Value='Segoeui.ttf,8.5pt,Black'/>
 					</Property>
 
 					<Property Name='Row'>
@@ -31502,7 +31531,7 @@
 					<Property Name='Bottom' Value='1'/>
 				</Property>
 				<Property Name='Align' Value='TopLeft'/>
-				<Property Name='TitleFont' Value='Auto,8pt,Black,Bold'/>
+				<Property Name='TitleFont' Value='Segoeui.ttf,8pt,Black,Bold'/>
 				<Property Name='Title' Value="_ApnoeaSummaryTitleLabel_"/>
 				<Property Name='OverflowTitle' Value="_ApnoeaSummaryTitleLabel_"/>
 				<Property Name='Content' Value='{EventFamilies.Apnoea.ApnoeaSummary}'/>
@@ -31517,7 +31546,7 @@
 					<Property Name='Bottom' Value='1'/>
 				</Property>
 				<Property Name='Title' Value='_SymptomsTitleLabel_'/>
-				<Property Name='TitleFont' Value='Auto,8pt,Black,Bold'/>
+				<Property Name='TitleFont' Value='Segoeui.ttf,8pt,Black,Bold'/>
 				<Property Name='OverflowTitle' Value='_SymptomsContinuationTitleLabel_'/>
 				<Property Name='Content' Value='{Test.Indications}'/>
 			</Shape> -->
@@ -31531,7 +31560,7 @@
 					<Property Name='Bottom' Value='0.2'/>
 				</Property>
 				<Property Name='Align' Value='TopLeft'/>
-				<Property Name='TitleFont' Value='Auto,8pt,Black,Bold'/>
+				<Property Name='TitleFont' Value='Segoeui.ttf,8pt,Black,Bold'/>
 				<Property Name='Title' Value="_TestCommentsTitleLabel_"/>
 				<Property Name='OverflowTitle' Value="_TestCommentsContinuationTitleLabel_"/>
 				<Property Name='Content' Value='{Test.Comments}'/>
@@ -31544,13 +31573,14 @@
 				<Property Name='BorderPen' Value='Black,0.05mm'/>
 				<Property Name='Bounds' Value='DoctorCommentsRow'/>
 				<Property Name='Margin'>
-					<Property Name='Top' Value='1'/>
-					<Property Name='Bottom' Value='1'/>
+					<Property Name='Top' Value='3'/>
+					<Property Name='Bottom' Value='2'/>
 				</Property>
 				<Property Name='Align' Value='TopLeft'/>
-				<Property Name='TitleFont' Value='Auto,8pt,Black,Bold'/>
+				<Property Name='TitleFont' Value='Segoeui.ttf,8pt,Black,Bold'/>
 				<Property Name='Title' Value="{_FindingsCommentsTitleLabel_}"/>
 				<Property Name='OverflowTitle' Value="{_FindingsCommentsContinuationTitleLabel_}"/>
+				<Property Name='Font' Value='Segoeui.ttf,9pt,Black'/>
 				<Property Name='Content' Value='{Test.Findings}'/>
 			</Shape>
 
@@ -31560,18 +31590,33 @@
 				<Property Name='Bounds' Value='OperatorSignatureCell'/>
 				<Property Name='Content' Value='{_OperatorSignatureLabel_}'/>
 				<Property Name='Padding'>
+					<Property Name='Left' Value='20'/>
 					<Property Name='Top' Value='5'/>
 				</Property>
 			</Shape>
+  
+			<Shape Type='Block'>   <!-- [LMM] Linha de assinatura de Médico  -->
+				<Property Name='Bounds' Value='DoctorSignatureCell'/>
+				<Property Name='Content' Value='Prof. Dr. Hélder Pereira Cardiologista'/> <!-- [LMM - Alteração para nome fixo de médico] -->
+<!-- 		 <Property Name='Content' Value='{_DoctorSignatureLabel_}'/> --> 
+				<Property Name='Image' Value="C:\ProgramData\Spacelabs Healthcare\Pathfinder SL\Report Formats\AssinaturaHHP.png"/>
+				<Property Name='ShrinkOverflowToFitContent' />
+				<Property Name='Alignment' Value='TopCentre'/>
+				<Property Name='Padding'>
+					<Property Name='Left' Value='10'/>
+					<Property Name='Top' Value='2'/>
+				</Property>
+			</Shape>
 
-			<Shape Type='Block'>
+<!-- 			<Shape Type='Block'>   [LMM] Linha de assinatura de Médico 
 				<Property Name='Bounds' Value='DoctorSignatureCell'/>
 				<Property Name='Content' Value='{_DoctorSignatureLabel_}'/>
 				<Property Name='Alignment' Value='TopRight'/>
 				<Property Name='Padding'>
-					<Property Name='Top' Value='5'/>
+				<Property Name='Top' Value='5'/>
 				</Property>
-			</Shape>
+			</Shape> -->
+
 		</Page>
 
 	</Section>
@@ -31650,23 +31695,23 @@
 					<Property Name='Bottom' Value='1'/>
 				</Property>
 				<Property Name='Title' Value='_SymptomsTitleLabel_'/>
-				<Property Name='TitleFont' Value='Auto,8pt,Black,Bold'/>
+				<Property Name='TitleFont' Value='Segoeui.ttf,8pt,Black,Bold'/>
 				<Property Name='OverflowTitle' Value='_SymptomsContinuationTitleLabel_'/>
-				<Property Name='Font' Value='Auto,7pt,Black' />
+				<Property Name='Font' Value='Segoeui.ttf,7pt,Black' />
 				<Property Name='Content' Value='{Test.Indications}'/>
 			</Shape> -->
 
 			<!-- operator (analysis technician) comments -->
 
 			<Shape Type='Comment' Style='ShadedBlockStyle'>
-				<Property Name='Font' Value='Auto,7pt,Black' />
+				<Property Name='Font' Value='Segoeui.ttf,7pt,Black' />
 				<Property Name='Bounds' Value='OperatorCommentsRow'/>
 				<Property Name='Margin'>
 					<Property Name='Top' Value='0.2'/>
 					<Property Name='Bottom' Value='0.2'/>
 				</Property>
 				<Property Name='Align' Value='TopLeft'/>
-				<Property Name='TitleFont' Value='Auto,8pt,Black,Bold'/>
+				<Property Name='TitleFont' Value='Segoeui.ttf,8pt,Black,Bold'/>
 				<Property Name='Title' Value="_TestCommentsTitleLabel_"/>
 				<Property Name='OverflowTitle' Value="_TestCommentsContinuationTitleLabel_"/>
 				<Property Name='Content' Value='{Test.Comments}'/>
@@ -32277,7 +32322,7 @@
 			<Property Name='Width' Value='0.26' />
 			<Property Name='Heading' Value='{_RateDependentEventsTableTitleLabel_}'/>
 			<Property Name='HeadingLeftPadding' Value='1' />
-			<Property Name='CellFont' Value='Auto, 7pt, Black' />
+			<Property Name='CellFont' Value='Segoeui.ttf, 7pt, Black' />
 		</Property>
 
 		<!--
@@ -32293,7 +32338,7 @@
 			<Property Name='HeadingAlignment' Value='MiddleCentre' /> 
 			<Property Name='CellAlignment' Value='MiddleLeft' />
 			<Property Name='LeftPadding' Value='1' />
-			<Property Name='CellFont' Value='Auto, 7pt, Black' />
+			<Property Name='CellFont' Value='Segoeui.ttf, 7pt, Black' />
 		</Property>
 		<Property Name='Column'>
 			<Property Name='Enabled' Value='((EventFamilies.Pause.IsEdited = FALSE) AND (EventFamilies.Bradycardia.Count.IsEdited = FALSE) AND (EventFamilies.Tachycardia.Count.IsEdited = FALSE))'/>
@@ -32302,7 +32347,7 @@
 			<Property Name='HeadingAlignment' Value='MiddleCentre' />
 			<Property Name='CellAlignment' Value='MiddleRight' />
 			<Property Name='RightPadding' Value='1' />
-			<Property Name='CellFont' Value='Auto, 7pt, Black' />
+			<Property Name='CellFont' Value='Segoeui.ttf, 7pt, Black' />
 		</Property>
 
 		<Property Name='Column'>
@@ -32310,7 +32355,7 @@
 			<Property Name='Heading' Value="_MostSevereRateLabel_\r(_BPM_)"/>
 			<Property Name='HeadingAlignment' Value='MiddleCentre' /> 
 			<Property Name='CellAlignment' Value='MiddleRight' />
-			<Property Name='CellFont' Value='Auto, 7pt, Black' />
+			<Property Name='CellFont' Value='Segoeui.ttf, 7pt, Black' />
 			<Property Name='RightPadding' Value='1' />
 		</Property>
 		<Property Name='Column'>
@@ -32318,7 +32363,7 @@
 			<Property Name='Heading' Value="_LongestLabel_\r(_UnitOfBeats_ / _SecondsAbbreviationLabel_)"/>
 			<Property Name='HeadingAlignment' Value='MiddleCentre' /> 
 			<Property Name='CellAlignment' Value='MiddleRight' />
-			<Property Name='CellFont' Value='Auto, 7pt, Black' />
+			<Property Name='CellFont' Value='Segoeui.ttf, 7pt, Black' />
 			<Property Name='RightPadding' Value='1' />
 		</Property>
 
@@ -32460,7 +32505,7 @@
 	</Property>
 
 	<Property Name='UpperTitle' Value="_VentricularArrhythmiaTableTitleLabel_ {EventFamilies.VT.IsSummaryEdited OR EventFamilies.Avir.IsSummaryEdited ? '('+_EditMarker_+ _UserEditedLabel_+')' : ''}" />
-	<Property Name='CellFont' Value='Auto,7pt,Black'/>
+	<Property Name='CellFont' Value='Segoeui.ttf,7pt,Black'/>
 
 	<Property Name='DataSource'>
 		<Property Name='Column'>
@@ -32539,7 +32584,7 @@
 	<Property Name='Margin'>
 		<Property Name='Top' Value='0' />
 	</Property>
-	<Property Name='CellFont' Value='Auto,7pt,Black'/>
+	<Property Name='CellFont' Value='Segoeui.ttf,7pt,Black'/>
 
 	<Property Name='DataSource'>
 		<Property Name='Column'>
@@ -32886,7 +32931,7 @@
 <Shape Type='Table' Style='ShadedBlockStyle,BlockTableStyle'>
 	<Property Name='UpperTitle' Value="_SupraVentricularTableTitleLabel_ {EventFamilies.SVT.IsSummaryEdited ? '('+_EditMarker_+ _UserEditedLabel_+')' : ''}" />
 	<Property Name='Bounds' Value='SupraVentricularArrhythmiaBeatsTableRow' />
-	<Property Name='CellFont' Value='Auto,7pt,Black'/>
+	<Property Name='CellFont' Value='Segoeui.ttf,7pt,Black'/>
 	<Property Name='Padding'>
 		<Property Name='Top' Value='0.2'/>
 		<Property Name='Bottom' Value='0.2'/>
@@ -32978,8 +33023,8 @@
 		<Property Name='Top' Value='0' />
 		<Property Name='Bottom' Value='0' />
 	</Property>
-	<Property Name='CellFont' Value='Auto,7pt,Black'/>
-	<Property Name='TitleFont' Value='Auto,7pt,Black,Bold'/>
+	<Property Name='CellFont' Value='Segoeui.ttf,7pt,Black'/>
+	<Property Name='TitleFont' Value='Segoeui.ttf,7pt,Black,Bold'/>
 
 	<Property Name='DataSource'>
 		<Property Name='Column'>
@@ -33216,7 +33261,7 @@
 		<Property Name='Top' Value='0' />
 		<Property Name='Bottom' Value='1' />
 	</Property>
-	<Property Name='CellFont' Value='Auto,7pt,Black'/>
+	<Property Name='CellFont' Value='Segoeui.ttf,7pt,Black'/>
 	<Property Name='UpperTitle' Value="_AFTableTitleLabel_ {EventFamilies.AF.IsSummaryEdited ? '('+ _EditMarker_ +_UserEditedLabel_+')' : ''}" />
 
 	<Property Name='DataSource'>
@@ -33378,7 +33423,7 @@
 		<Property Name='Top' Value='0' />
 		<Property Name='Bottom' Value='1' />
 	</Property>
-	<Property Name='CellFont' Value='Auto,7pt,Black'/>
+	<Property Name='CellFont' Value='Segoeui.ttf,7pt,Black'/>
 	<Property Name='UpperTitle' Value='_ApnoeaSummaryTitleLabel_' />
 	<Property Name='TitlePadding'>
 		<Property Name='Top' Value='2'/>
@@ -33492,7 +33537,7 @@
 		<Property Name='Bottom' Value='1'/>
 	</Property>
 	<Property Name='Align' Value='TopLeft'/>
-	<Property Name='TitleFont' Value='Auto,8pt,Black,Bold'/>
+	<Property Name='TitleFont' Value='Segoeui.ttf,8pt,Black,Bold'/>
 	<Property Name='Title' Value="{_FindingsCommentsTitleLabel_}"/>
 	<Property Name='OverflowTitle' Value="{_FindingsCommentsContinuationTitleLabel_}"/>
 	<Property Name='Content' Value='{Test.Findings}'/>
@@ -33500,15 +33545,16 @@
 
 <!-- space for signatures on paper copy -->
 
-<Shape Type='Block'>
+<!-- <Shape Type='Block'>
 	<Property Name='Bounds' Value='OperatorSignatureCell'/>
 	<Property Name='Content' Value='{_OperatorSignatureLabel_}'/>
 	<Property Name='Padding'>
 		<Property Name='Top' Value='5'/>
 	</Property>
-</Shape>
+</Shape> -->
 
-<Shape Type='Block'>
+<!-- [LMM] Linha para assinatura do médico - Pagina Avançada -->
+<Shape Type='Block'> 
 	<Property Name='Bounds' Value='DoctorSignatureCell'/>
 	<Property Name='Content' Value='{_DoctorSignatureLabel_}'/>
 	<Property Name='Alignment' Value='TopRight'/>
@@ -33621,9 +33667,9 @@
 			<Property Name='UpperTitle' Value="{_DailyTrendTableTitle_} {EventFamilies.Bradycardia.IsSummaryEdited OR EventFamilies.Tachycardia.IsSummaryEdited OR EventFamilies.Pause.IsEdited OR EventFamilies.VT.IsSummaryEdited OR EventFamilies.Avir.IsSummaryEdited OR EventFamilies.SVT.IsSummaryEdited OR EventFamilies.AF.IsSummaryEdited ? '('+_EditMarker_+ _UserEditedLabel_+')' : ''}"/>
 			<Property Name='UpperOverflowTitle' Value='_DailyTrendTableTitle_ _ContinuedLabel_'/>
 			<Property Name='TableBorderPen' Value='DarkGray,0.1mm'/>
-			<Property Name='HeaderFont' Value='Auto,7pt,Black'/>
+			<Property Name='HeaderFont' Value='Segoeui.ttf,7pt,Black'/>
 			<Property Name='HeaderTwoRows' Value='true'/>
-			<Property Name='CellFont' Value='Auto,7pt,Black'/>
+			<Property Name='CellFont' Value='Segoeui.ttf,7pt,Black'/>
 			<Property Name='DataSource'>
 
 				<Property Name='Column'>
@@ -36042,7 +36088,7 @@
 	<Shape Type='Table'>
 		<Property Name='Bounds' Value='AfSummaryTable'/>
 		<Property Name='BorderBrush' Value='PowderBlue'/>
-		<Property Name='CellFont' Value='Auto,8pt,Black'/>
+		<Property Name='CellFont' Value='Segoeui.ttf,8pt,Black'/>
 		<Property Name='Padding'>
 			<Property Name='Top' Value='1'/>
 			<Property Name='Bottom' Value='1'/>
@@ -36207,7 +36253,7 @@
 		</Property>
 		<Property Name='Graph' Value='GraphLine'>
 			<Property Name='Pen' Value='LightGray,0.3mm'/>
-			<Property Name='TitleFont' Value='Auto,6pt'/>
+			<Property Name='TitleFont' Value='Segoeui.ttf,6pt'/>
 			<Property Name='TitleMargin' Value='3'/>
 			<Property Name='AlignLeft' Value='true'/>
 			<Property Name='LineValue'>
@@ -36402,7 +36448,7 @@
 			</Property>
 			<Property Name='Graph' Value='GraphLine'>
 				<Property Name='Pen' Value='LightGray,0.3mm'/>
-				<Property Name='TitleFont' Value='Auto,6pt'/>
+				<Property Name='TitleFont' Value='Segoeui.ttf,6pt'/>
 				<Property Name='TitleMargin' Value='3'/>
 				<Property Name='AlignLeft' Value='true'/>
 				<Property Name='LineValue'>
@@ -36662,7 +36708,7 @@
 
 		<Shape Type='CartesianChart'>
 			<Property Name='Bounds' Value='PauseHistogramCell'/>
-			<Property Name='TitleFont' Value='Auto,8pt,Black,Bold'/>
+			<Property Name='TitleFont' Value='Segoeui.ttf,8pt,Black,Bold'/>
 			<Property Name='UpperTitle' Value='{EventFamilies.Pause.FamilyName}'/>
 			<Property Name='XAxisTickLabelFormat' Value='{ReportAnnotationSettings.TimeDisplayFormatShort}'/>
 			<Property Name='Margin'>
@@ -36673,7 +36719,7 @@
 				<Property Name='Bottom' Value='0'/>
 			</Property>
 			<Property Name='Graph' Value='Histogram'>
-				<Property Name='HistogramValueFont' Value='Auto,5pt,Black'/>
+				<Property Name='HistogramValueFont' Value='Segoeui.ttf,5pt,Black'/>
 				<Property Name='DataSource' Value='EventFamilies.Pause.Histogram'/>
 				<Property Name='OddBrush' Value='AliceBlue'/>
 				<Property Name='EvenBrush' Value='PowderBlue'/>
@@ -36691,7 +36737,7 @@
 
 		<Shape Type='CartesianChart'>
 			<Property Name='Bounds' Value='VTHistogramCell'/>
-			<Property Name='TitleFont' Value='Auto,8pt,Black,Bold'/>
+			<Property Name='TitleFont' Value='Segoeui.ttf,8pt,Black,Bold'/>
 			<Property Name='UpperTitle' Value='{EventFamilies.VT.FamilyName}'/>
 			<Property Name='XAxisTickLabelFormat' Value='{ReportAnnotationSettings.TimeDisplayFormatShort}'/>
 			<Property Name='Margin'>
@@ -36702,7 +36748,7 @@
 				<Property Name='Bottom' Value='0'/>
 			</Property>
 			<Property Name='Graph' Value='Histogram'>
-				<Property Name='HistogramValueFont' Value='Auto,5pt,Black'/>
+				<Property Name='HistogramValueFont' Value='Segoeui.ttf,5pt,Black'/>
 				<Property Name='DataSource' Value='EventFamilies.VT.Histogram'/>
 				<Property Name='OddBrush' Value='AliceBlue'/>
 				<Property Name='EvenBrush' Value='PowderBlue'/>
@@ -36720,7 +36766,7 @@
 
 		<Shape Type='CartesianChart'>
 			<Property Name='Bounds' Value='AIVRHistogramCell'/>
-			<Property Name='TitleFont' Value='Auto,8pt,Black,Bold'/>
+			<Property Name='TitleFont' Value='Segoeui.ttf,8pt,Black,Bold'/>
 			<Property Name='UpperTitle' Value='{EventFamilies.AVIR.FamilyName}'/>
 			<Property Name='XAxisTickLabelFormat' Value='{ReportAnnotationSettings.TimeDisplayFormatShort}'/>
 			<Property Name='Margin'>
@@ -36731,7 +36777,7 @@
 				<Property Name='Bottom' Value='0'/>
 			</Property>
 			<Property Name='Graph' Value='Histogram'>
-				<Property Name='HistogramValueFont' Value='Auto,5pt,Black'/>
+				<Property Name='HistogramValueFont' Value='Segoeui.ttf,5pt,Black'/>
 				<Property Name='DataSource' Value='EventFamilies.AVIR.Histogram'/>
 				<Property Name='OddBrush' Value='AliceBlue'/>
 				<Property Name='EvenBrush' Value='PowderBlue'/>
@@ -36749,7 +36795,7 @@
 
 		<Shape Type='CartesianChart'>
 			<Property Name='Bounds' Value='VEHistogramCell'/>
-			<Property Name='TitleFont' Value='Auto,8pt,Black,Bold'/>
+			<Property Name='TitleFont' Value='Segoeui.ttf,8pt,Black,Bold'/>
 			<Property Name='UpperTitle' Value='{EventFamilies.VE.FamilyName}'/>
 			<Property Name='XAxisTickLabelFormat' Value='{ReportAnnotationSettings.TimeDisplayFormatShort}'/>
 			<Property Name='Margin'>
@@ -36760,7 +36806,7 @@
 				<Property Name='Bottom' Value='0'/>
 			</Property>
 			<Property Name='Graph' Value='Histogram'>
-				<Property Name='HistogramValueFont' Value='Auto,5pt,Black'/>
+				<Property Name='HistogramValueFont' Value='Segoeui.ttf,5pt,Black'/>
 				<Property Name='DataSource' Value='EventFamilies.VE.Histogram'/>
 				<Property Name='OddBrush' Value='AliceBlue'/>
 				<Property Name='EvenBrush' Value='PowderBlue'/>
@@ -36779,7 +36825,7 @@
 		<Shape Type='CartesianChart'>
 			<Property Name='Bounds' Value='DroppedBeatHistogramCell'/>
 			<Property Name='Enabled' Value='EventFamilies.DroppedBeat.IsDisplayed'/>
-			<Property Name='TitleFont' Value='Auto,8pt,Black,Bold'/>
+			<Property Name='TitleFont' Value='Segoeui.ttf,8pt,Black,Bold'/>
 			<Property Name='UpperTitle' Value='{EventFamilies.DroppedBeat.FamilyName}'/>
 			<Property Name='XAxisTickLabelFormat' Value='{ReportAnnotationSettings.TimeDisplayFormatShort}'/>
 			<Property Name='Margin'>
@@ -36790,7 +36836,7 @@
 				<Property Name='Bottom' Value='0'/>
 			</Property>
 			<Property Name='Graph' Value='Histogram'>
-				<Property Name='HistogramValueFont' Value='Auto,5pt,Black'/>
+				<Property Name='HistogramValueFont' Value='Segoeui.ttf,5pt,Black'/>
 				<Property Name='DataSource' Value='EventFamilies.DroppedBeat.Histogram'/>
 				<Property Name='OddBrush' Value='AliceBlue'/>
 				<Property Name='EvenBrush' Value='PowderBlue'/>
@@ -36808,7 +36854,7 @@
 
 		<Shape Type='CartesianChart'>
 			<Property Name='Bounds' Value='SVTHistogramCell'/>
-			<Property Name='TitleFont' Value='Auto,8pt,Black,Bold'/>
+			<Property Name='TitleFont' Value='Segoeui.ttf,8pt,Black,Bold'/>
 			<Property Name='UpperTitle' Value='{EventFamilies.SVT.FamilyName}'/>
 			<Property Name='XAxisTickLabelFormat' Value='{ReportAnnotationSettings.TimeDisplayFormatShort}'/>
 			<Property Name='Margin'>
@@ -36819,7 +36865,7 @@
 				<Property Name='Bottom' Value='0'/>
 			</Property>
 			<Property Name='Graph' Value='Histogram'>
-				<Property Name='HistogramValueFont' Value='Auto,5pt,Black'/>
+				<Property Name='HistogramValueFont' Value='Segoeui.ttf,5pt,Black'/>
 				<Property Name='DataSource' Value='EventFamilies.SVT.Histogram'/>
 				<Property Name='OddBrush' Value='AliceBlue'/>
 				<Property Name='EvenBrush' Value='PowderBlue'/>
@@ -36837,7 +36883,7 @@
 
 		<Shape Type='CartesianChart'>
 			<Property Name='Bounds' Value='SVEHistogramCell'/>
-			<Property Name='TitleFont' Value='Auto,8pt,Black,Bold'/>
+			<Property Name='TitleFont' Value='Segoeui.ttf,8pt,Black,Bold'/>
 			<Property Name='UpperTitle' Value='{EventFamilies.SVE.FamilyName}'/>
 			<Property Name='XAxisTickLabelFormat' Value='{ReportAnnotationSettings.TimeDisplayFormatShort}'/>
 			<Property Name='Margin'>
@@ -36848,7 +36894,7 @@
 				<Property Name='Bottom' Value='0'/>
 			</Property>
 			<Property Name='Graph' Value='Histogram'>
-				<Property Name='HistogramValueFont' Value='Auto,5pt,Black'/>
+				<Property Name='HistogramValueFont' Value='Segoeui.ttf,5pt,Black'/>
 				<Property Name='DataSource' Value='EventFamilies.SVE.Histogram'/>
 				<Property Name='OddBrush' Value='AliceBlue'/>
 				<Property Name='EvenBrush' Value='PowderBlue'/>
@@ -36867,7 +36913,7 @@
 		<Shape Type='CartesianChart'>
 			<Property Name='Enabled' Value='EventFamilies.Tachycardia.IsDisplayed'/>
 			<Property Name='Bounds' Value='STHistogramCell'/>
-			<Property Name='TitleFont' Value='Auto,8pt,Black,Bold'/>
+			<Property Name='TitleFont' Value='Segoeui.ttf,8pt,Black,Bold'/>
 			<Property Name='UpperTitle' Value='{EventFamilies.Tachycardia.FamilyName}'/>
 			<Property Name='XAxisTickLabelFormat' Value='{ReportAnnotationSettings.TimeDisplayFormatShort}'/>
 			<Property Name='Margin'>
@@ -36878,7 +36924,7 @@
 				<Property Name='Bottom' Value='0'/>
 			</Property>
 			<Property Name='Graph' Value='Histogram'>
-				<Property Name='HistogramValueFont' Value='Auto,5pt,Black'/>
+				<Property Name='HistogramValueFont' Value='Segoeui.ttf,5pt,Black'/>
 				<Property Name='DataSource' Value='EventFamilies.Tachycardia.Histogram'/>
 				<Property Name='OddBrush' Value='AliceBlue'/>
 				<Property Name='EvenBrush' Value='PowderBlue'/>
@@ -36896,7 +36942,7 @@
 
 		<Shape Type='CartesianChart'>
 			<Property Name='Bounds' Value='BradyHistogramCell'/>
-			<Property Name='TitleFont' Value='Auto,8pt,Black,Bold'/>
+			<Property Name='TitleFont' Value='Segoeui.ttf,8pt,Black,Bold'/>
 			<Property Name='UpperTitle' Value='{EventFamilies.Bradycardia.FamilyName}'/>
 			<Property Name='XAxisTickLabelFormat' Value='{ReportAnnotationSettings.TimeDisplayFormatShort}'/>
 			<Property Name='Margin'>
@@ -36907,7 +36953,7 @@
 				<Property Name='Bottom' Value='0'/>
 			</Property>
 			<Property Name='Graph' Value='Histogram'>
-				<Property Name='HistogramValueFont' Value='Auto,5pt,Black'/>
+				<Property Name='HistogramValueFont' Value='Segoeui.ttf,5pt,Black'/>
 				<Property Name='DataSource' Value='EventFamilies.Bradycardia.Histogram'/>
 				<Property Name='OddBrush' Value='AliceBlue'/>
 				<Property Name='EvenBrush' Value='PowderBlue'/>
@@ -36925,7 +36971,7 @@
 
 		<Shape Type='CartesianChart'>
 			<Property Name='Bounds' Value='VBHistogramCell'/>
-			<Property Name='TitleFont' Value='Auto,8pt,Black,Bold'/>
+			<Property Name='TitleFont' Value='Segoeui.ttf,8pt,Black,Bold'/>
 			<Property Name='UpperTitle' Value='{EventFamilies.Bigeminy.FamilyName}'/>
 			<Property Name='XAxisTickLabelFormat' Value='{ReportAnnotationSettings.TimeDisplayFormatShort}'/>
 			<Property Name='Margin'>
@@ -36936,7 +36982,7 @@
 				<Property Name='Bottom' Value='0'/>
 			</Property>
 			<Property Name='Graph' Value='Histogram'>
-				<Property Name='HistogramValueFont' Value='Auto,5pt,Black'/>
+				<Property Name='HistogramValueFont' Value='Segoeui.ttf,5pt,Black'/>
 				<Property Name='DataSource' Value='EventFamilies.Bigeminy.Histogram'/>
 				<Property Name='OddBrush' Value='AliceBlue'/>
 				<Property Name='EvenBrush' Value='PowderBlue'/>
@@ -36998,7 +37044,7 @@
 
 		<!--
           <Property Name='PatientEventIndexes' Value='PatientEventCorrelation.RowsWithPatientEvents'/>                  
-          <Property Name='PatientEventFont' Value='Auto, 7pt, Black, Bold'/>
+          <Property Name='PatientEventFont' Value='Segoeui.ttf, 7pt, Black, Bold'/>
         -->
 
 		<Shape Type='PatientEventsTable' Style='FlowingTableStyle'>
@@ -37007,8 +37053,8 @@
 			<Property Name='Bounds' Value='CorrelationTable'/>
 			<Property Name='UpperTitle' Value=''/>
 			<Property Name='IsTextClipped' Value='true'/>
-			<Property Name='HeaderFont' Value='Auto,7pt,Black'/>
-			<Property Name='CellFont' Value='Auto, 7pt, Black'/>
+			<Property Name='HeaderFont' Value='Segoeui.ttf,7pt,Black'/>
+			<Property Name='CellFont' Value='Segoeui.ttf, 7pt, Black'/>
 			<Property Name='LineSeparatorPen' Value='DarkGray, 0.05mm'/>
 			<Property Name='SeparateAfterLines' Value='PatientEventCorrelation.RowsToBeSeparated'/>
 			<Property Name='HeaderColumnSeparatorPen' Value='DarkGray, 0.05mm'/>
@@ -37197,21 +37243,21 @@
 					</Property>
 					<Property Name='Column'>
 						<Property Name='Width' Value='0.18'/>
-						<Property Name='CellFont' Value='Auto,8pt,Black,Bold'/>
+						<Property Name='CellFont' Value='Segoeui.ttf,8pt,Black,Bold'/>
 					</Property>
 					<Property Name='Column'>
 						<Property Name='Width' Value='0.12'/>
 					</Property>
 					<Property Name='Column'>
 						<Property Name='Width' Value='0.18'/>
-						<Property Name='CellFont' Value='Auto,8pt,Black,Bold'/>
+						<Property Name='CellFont' Value='Segoeui.ttf,8pt,Black,Bold'/>
 					</Property>
 					<Property Name='Column'>
 						<Property Name='Width' Value='0.22'/>
 					</Property>
 					<Property Name='Column'>
 						<Property Name='Width' Value='0.18'/>
-						<Property Name='CellFont' Value='Auto,8pt,Black,Bold'/>
+						<Property Name='CellFont' Value='Segoeui.ttf,8pt,Black,Bold'/>
 					</Property>
 
 					<Property Name='Row'>
@@ -37298,18 +37344,18 @@
 					</Property>
 					<Property Name='Column'>
 						<Property Name='Width' Value='0.18'/>
-						<Property Name='CellFont' Value='Auto,8pt,Black,Bold'/>
+						<Property Name='CellFont' Value='Segoeui.ttf,8pt,Black,Bold'/>
 					</Property>
 					<Property Name='Column'>
 						<Property Name='Width' Value='0.15'/>
 					</Property>
 					<Property Name='Column'>
 						<Property Name='Width' Value='0.18'/>
-						<Property Name='CellFont' Value='Auto,8pt,Black,Bold'/>
+						<Property Name='CellFont' Value='Segoeui.ttf,8pt,Black,Bold'/>
 					</Property>
 					<Property Name='Column'>
 						<Property Name='Width' Value='0.07'/>
-						<Property Name='CellFont' Value='Auto,8pt,Black,Bold'/>
+						<Property Name='CellFont' Value='Segoeui.ttf,8pt,Black,Bold'/>
 					</Property>
 
 					<Property Name='Row'>
@@ -37418,7 +37464,7 @@
 				</Property>
 				<Property Name='Event' Value='TwelveLeadEvent'/>
 				<Property Name='PageToPrint' Value='0'/>
-				<Property Name='TraceNameFont' Value='Auto,14pt,Black'/>
+				<Property Name='TraceNameFont' Value='Segoeui.ttf,14pt,Black'/>
 				<Property Name='PacingPulsesPen' Value='DarkBlue,0.2mm'/>
 				<Property Name='CalPulsePen' Value='Black,0.3mm'/>
 				<Property Name='LeadStartFormat' Value='Sequential'/>
@@ -37454,7 +37500,7 @@
 				<Property Name='Enabled' Value='TwelveLeadEvent.IsTwoPageEvent'/>
 				<Property Name='PageToPrint' Value='1'/>
 				<Property Name='Event' Value='TwelveLeadEvent'/>
-				<Property Name='TraceNameFont' Value='Auto,14pt,Black'/>
+				<Property Name='TraceNameFont' Value='Segoeui.ttf,14pt,Black'/>
 				<Property Name='PacingPulsesPen' Value='DarkBlue,0.2mm'/>
 				<Property Name='CalPulsePen' Value='Black,0.3mm'/>
 				<Property Name='LeadStartFormat' Value='Sequential'/>
@@ -37781,8 +37827,8 @@
 
 		<Shape Type='Table' Style='FlowingTableStyle'>
 
-			<Property Name='HeaderFont' Value='Auto,7pt,Black,Bold'/>
-			<Property Name='CellFont' Value='Auto,7pt,Black'/>
+			<Property Name='HeaderFont' Value='Segoeui.ttf,7pt,Black,Bold'/>
+			<Property Name='CellFont' Value='Segoeui.ttf,7pt,Black'/>
 			<Property Name='Bounds' Value='PacingSummaryTableLayout'/>
 			<Property Name='HeaderCornerRadius' Value='0'/>
 			<Property Name='RowCornerRadius' Value='0'/>
@@ -37938,7 +37984,7 @@
 
 		<Shape Type='Table' Style='FlowingTableStyle'>
 
-			<Property Name='HeaderFont' Value='Auto,8pt,Black,Bold'/>
+			<Property Name='HeaderFont' Value='Segoeui.ttf,8pt,Black,Bold'/>
 			<Property Name='Bounds' Value='PacingEventTableLayout'/>
 			<Property Name='HeaderCornerRadius' Value='0'/>
 			<Property Name='RowCornerRadius' Value='0'/>
@@ -37989,7 +38035,7 @@
 
 		<Shape Type='CartesianChart'>
 			<Property Name='Bounds' Value='RRLorentzCell'/>
-			<Property Name='TitleFont' Value='Auto,8pt'/>
+			<Property Name='TitleFont' Value='Segoeui.ttf,8pt'/>
 			<Property Name='UpperTitle' Value='{_PacingRrLorentzPlotGraphTitleLabel_}, {PacingScatterPlots.RRIntervalCount} {PacingScatterPlots.RRIntervalCount=1 ?_PacingRrLorentzPlotGraphCountLabelSingular_ : _PacingRrLorentzPlotGraphCountLabelPlural_}'/>
 			<Property Name='Margin'>
 				<Property Name='Top' Value='1'/>
@@ -38019,7 +38065,7 @@
 
 		<Shape Type='CartesianChart'>
 			<Property Name='Bounds' Value='SpikeIntervalCell'/>
-			<Property Name='TitleFont' Value='Auto,8pt'/>
+			<Property Name='TitleFont' Value='Segoeui.ttf,8pt'/>
 			<Property Name='UpperTitle' Value='{_PacingSpikeIntervalsLorentzPlotGraphTitleLabel_}, {PacingScatterPlots.SpikeIntervalCount} {PacingScatterPlots.SpikeIntervalCount=1 ? _PacingSpikeIntervalsLorentzPlotGraphCountLabelSingular_ : _PacingSpikeIntervalsLorentzPlotGraphCountLabelPlural_}'/>
 			<Property Name='Margin'>
 				<Property Name='Top' Value='1'/>
@@ -38089,7 +38135,7 @@
 				<Property Name='Bottom' Value='1'/>
 			</Property>
 			<Property Name='Align' Value='TopLeft'/>
-			<Property Name='TitleFont' Value='Auto,8pt,Black,Bold'/>
+			<Property Name='TitleFont' Value='Segoeui.ttf,8pt,Black,Bold'/>
 			<Property Name='Title' Value="_ApnoeaSummaryTitleLabel_"/>
 			<Property Name='OverflowTitle' Value="_ApnoeaSummaryTitleLabel_"/>
 			<Property Name='Content' Value='{EventFamilies.Apnoea.ApnoeaSummary}'/>
@@ -38110,7 +38156,7 @@
 				<Property Name='Top' Value='0' />
 				<Property Name='Bottom' Value='1' />
 			</Property>
-			<Property Name='CellFont' Value='Auto,7pt,Black'/>
+			<Property Name='CellFont' Value='Segoeui.ttf,7pt,Black'/>
 			<Property Name='UpperTitle' Value='_ApnoeaSummaryTitleLabel_' />
 			<Property Name='TitlePadding'>
 				<Property Name='Top' Value='2'/>
@@ -38225,7 +38271,7 @@
 			</Property> 
 			<Property Name='Graph' Value='GraphApnoeaEventExtent'> 
 				<Property Name='Pen' Value='Black,0.5mm'/> 
-				<Property Name='Font' Value='Auto,6pt,Black'/> 
+				<Property Name='Font' Value='Segoeui.ttf,6pt,Black'/> 
 				<Property Name='Title' Value="_ApnoeaEstimatedAHIFormatLabel_"/> 
 			</Property> 
 			<Property Name='XAxisScale' Value='RecordingTime'> 
@@ -38315,7 +38361,7 @@
 			<Property Name='Top' Value='0' />
 			<Property Name='Bottom' Value='0.5' />
 		</Property>
-		<Property Name='CellFont' Value='Auto,7pt,Black'/>
+		<Property Name='CellFont' Value='Segoeui.ttf,7pt,Black'/>
 		<Property Name='UpperTitle' Value='_StSummaryTitleLabel_' />
 		<Property Name='TitlePadding'>
 			<Property Name='Top' Value='1'/>
@@ -38651,7 +38697,7 @@
 		<Property Name='Top' Value='0' />
 		<Property Name='Bottom' Value='1' />
 	</Property>
-	<Property Name='CellFont' Value='Auto,7pt,Black'/>
+	<Property Name='CellFont' Value='Segoeui.ttf,7pt,Black'/>
 	<Property Name='UpperTitle' Value='_StSummaryTitleLabel_' />
 	<Property Name='TitlePadding'>
 		<Property Name='Top' Value='2'/>
@@ -38987,7 +39033,7 @@
 		<Property Name='Top' Value='0' />
 		<Property Name='Bottom' Value='1' />
 	</Property>
-	<Property Name='CellFont' Value='Auto,7pt,Black'/>
+	<Property Name='CellFont' Value='Segoeui.ttf,7pt,Black'/>
 	<Property Name='UpperTitle' Value='_StSummaryTitleLabel_' />
 	<Property Name='TitlePadding'>
 		<Property Name='Top' Value='2'/>
@@ -39444,7 +39490,7 @@
 			<Property Name='Graph' Value='GraphArrow'>
 				<Property Name='ArrowPen' Value='Black,0.05mm'/>
 				<Property Name='ArrowBrush' Value='Black'/>
-				<Property Name='TitleFont' Value='Auto,6pt'/>
+				<Property Name='TitleFont' Value='Segoeui.ttf,6pt'/>
 				<Property Name='LinePen' Value='PowderBlue,0.1mm,1mm,2mm'/>
 				<Property Name='Annotation'>
 					<Property Name='Second' Value='ThreeChannelStEvent.Pre.TriggerSecond'/>
@@ -39643,7 +39689,7 @@
 		<Property Name='Top' Value='-0.5' />
 		<Property Name='Bottom' Value='0' />
 	</Property>
-	<Property Name='CellFont' Value='Auto,7pt,Black'/>
+	<Property Name='CellFont' Value='Segoeui.ttf,7pt,Black'/>
 	<Property Name='UpperTitle' Value='_StSummaryTitleLabel_' />
 	<Property Name='TitlePadding'>
 		<Property Name='Top' Value='2'/>
@@ -40421,7 +40467,7 @@
 
 		<Shape Type='CartesianChart'>
 			<Property Name='Bounds' Value='NNHistogramCell'/>
-			<Property Name='TitleFont' Value='Auto,8pt'/>
+			<Property Name='TitleFont' Value='Segoeui.ttf,8pt'/>
 			<Property Name='UpperTitle' Value='{_HrvNnHistogramGraphTitleLabel_}'/>
 			<Property Name='Margin'>
 				<Property Name='All' Value='3'/>
@@ -40443,7 +40489,7 @@
 
 		<Shape Type='CartesianChart'>
 			<Property Name='Bounds' Value='NNLorentzCell'/>
-			<Property Name='TitleFont' Value='Auto,8pt'/>
+			<Property Name='TitleFont' Value='Segoeui.ttf,8pt'/>
 			<Property Name='UpperTitle' Value='{_HrvNnLorentzPlotGraphTitleLabel_}'/>
 			<Property Name='Margin'>
 				<Property Name='All' Value='3'/>
@@ -40469,7 +40515,7 @@
 
 		<Shape Type='CartesianChart'>
 			<Property Name='Bounds' Value='RRLorentzCell'/>
-			<Property Name='TitleFont' Value='Auto,8pt'/>
+			<Property Name='TitleFont' Value='Segoeui.ttf,8pt'/>
 			<Property Name='UpperTitle' Value='{_HrvRrLorentzPlotGraphTitleLabel_}'/>
 			<Property Name='Margin'>
 				<Property Name='All' Value='3'/>
@@ -40883,18 +40929,18 @@
 				</Property>
 				<Property Name='Column'>
 					<Property Name='Width' Value='25'/>
-					<Property Name='CellFont' Value='Auto,7pt,Black,Bold'/>
+					<Property Name='CellFont' Value='Segoeui.ttf,7pt,Black,Bold'/>
 				</Property>
 				<Property Name='Column'>
 					<Property Name='Width' Value='8'/>
 				</Property>
 				<Property Name='Column'>
 					<Property Name='Width' Value='15'/>
-					<Property Name='CellFont' Value='Auto,7pt,Black,Bold'/>
+					<Property Name='CellFont' Value='Segoeui.ttf,7pt,Black,Bold'/>
 				</Property>
 				<Property Name='Column'>
 					<Property Name='Width' Value='25'/>
-					<Property Name='CellFont' Value='Auto,7pt,Black,Bold'/>
+					<Property Name='CellFont' Value='Segoeui.ttf,7pt,Black,Bold'/>
 				</Property>
 
 				<Property Name='Row'>
@@ -41010,7 +41056,7 @@
 						<Property Name='Content' Value='_DateOfBirthLabel_'/>
 					</Property>
 					<Property Name='Cell'>
-						<Property Name='Content' Value="{Patient.DateOfBirth, _DateOnlyFormatLabel_ }    _AgeLabel_"/>
+						<Property Name='Content' Value="{Patient.DateOfBirth, _DateOnlyFormatLabel_ }     _AgeLabel_"/>
 					</Property>
 					<Property Name='Cell'/>
 					<Property Name='Cell'>
@@ -41098,18 +41144,18 @@
 				</Property>
 				<Property Name='Column'>
 					<Property Name='Width' Value='25'/>
-					<Property Name='CellFont' Value='Auto,7pt,Black,Bold'/>
+					<Property Name='CellFont' Value='Segoeui.ttf,7pt,Black,Bold'/>
 				</Property>
 				<Property Name='Column'>
 					<Property Name='Width' Value='8'/>
 				</Property>
 				<Property Name='Column'>
 					<Property Name='Width' Value='15'/>
-					<Property Name='CellFont' Value='Auto,7pt,Black,Bold'/>
+					<Property Name='CellFont' Value='Segoeui.ttf,7pt,Black,Bold'/>
 				</Property>
 				<Property Name='Column'>
 					<Property Name='Width' Value='25'/>
-					<Property Name='CellFont' Value='Auto,7pt,Black,Bold'/>
+					<Property Name='CellFont' Value='Segoeui.ttf,7pt,Black,Bold'/>
 				</Property>
 
 				<!-- Identifiers / Details -->

@@ -2411,7 +2411,7 @@
     </TranslationEntry>
     <TranslationEntry>
       <Untranslated>AgeLabel</Untranslated>
-      <Translated>({Patient.AgeInYears} anos)</Translated>
+      <Translated> ({Patient.AgeInYears} anos)</Translated>
     </TranslationEntry>
     <TranslationEntry>
       <Untranslated>GenderLabel</Untranslated>

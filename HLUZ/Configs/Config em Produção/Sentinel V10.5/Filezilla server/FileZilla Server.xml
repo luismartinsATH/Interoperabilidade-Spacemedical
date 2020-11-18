@@ -1,0 +1,239 @@
+<FileZillaServer>
+    <Settings>
+        <Item name="Admin port" type="numeric">14147</Item>
+    </Settings>
+    <Groups />
+    <Users>
+        <User Name="cardioARR">
+            <Option Name="Pass">E74209B669BC17C0BF74A07456074ECD0119043FF84497BBBEEAFC89F7EA761D5ACBE492A2017F43AE05E6C0A52702A6F44C4BA5DA1483D846B843CEE44C2535</Option>
+            <Option Name="Salt">@&gt;$BHOYfIV*#9,jdLi&apos;k~Na!L&quot;I,3Kg@fF;kdDI()lC3!93!6},O&apos;^1y41Ux_7AO</Option>
+            <Option Name="Group"></Option>
+            <Option Name="Bypass server userlimit">0</Option>
+            <Option Name="User Limit">0</Option>
+            <Option Name="IP Limit">0</Option>
+            <Option Name="Enabled">1</Option>
+            <Option Name="Comments"></Option>
+            <Option Name="ForceSsl">0</Option>
+            <IpFilter>
+                <Disallowed />
+                <Allowed />
+            </IpFilter>
+            <Permissions>
+                <Permission Dir="C:\DMR\Sentinel\SCP Import Service\Inboxes\CardioExpress\Arrabida">
+                    <Option Name="FileRead">1</Option>
+                    <Option Name="FileWrite">1</Option>
+                    <Option Name="FileDelete">1</Option>
+                    <Option Name="FileAppend">0</Option>
+                    <Option Name="DirCreate">0</Option>
+                    <Option Name="DirDelete">0</Option>
+                    <Option Name="DirList">1</Option>
+                    <Option Name="DirSubdirs">1</Option>
+                    <Option Name="IsHome">1</Option>
+                    <Option Name="AutoCreate">0</Option>
+                </Permission>
+            </Permissions>
+            <SpeedLimits DlType="0" DlLimit="10" ServerDlLimitBypass="0" UlType="0" UlLimit="10" ServerUlLimitBypass="0">
+                <Download />
+                <Upload />
+            </SpeedLimits>
+        </User>
+        <User Name="cardioCAN">
+            <Option Name="Pass">90798DC956551D95C3832835B376D7FFA50CD784BEF2F4A5188EC98E1CA285C06F2A70C27ACACF56AC85BE82FBE58FB1C785BDDC9134EF5B208DB60FBFD6EAC5</Option>
+            <Option Name="Salt">j~g^by1*b,H6zY??+DT1El&gt;qe.yMnT*eXDGQ/7N_ZOqL]-I!ioAXM3\0wCdmY0=_</Option>
+            <Option Name="Group"></Option>
+            <Option Name="Bypass server userlimit">0</Option>
+            <Option Name="User Limit">0</Option>
+            <Option Name="IP Limit">0</Option>
+            <Option Name="Enabled">1</Option>
+            <Option Name="Comments"></Option>
+            <Option Name="ForceSsl">0</Option>
+            <IpFilter>
+                <Disallowed />
+                <Allowed />
+            </IpFilter>
+            <Permissions>
+                <Permission Dir="C:\DMR\Sentinel\SCP Import Service\Inboxes\CardioExpress\Caniço">
+                    <Option Name="FileRead">1</Option>
+                    <Option Name="FileWrite">1</Option>
+                    <Option Name="FileDelete">1</Option>
+                    <Option Name="FileAppend">1</Option>
+                    <Option Name="DirCreate">1</Option>
+                    <Option Name="DirDelete">1</Option>
+                    <Option Name="DirList">1</Option>
+                    <Option Name="DirSubdirs">1</Option>
+                    <Option Name="IsHome">1</Option>
+                    <Option Name="AutoCreate">0</Option>
+                </Permission>
+            </Permissions>
+            <SpeedLimits DlType="0" DlLimit="10" ServerDlLimitBypass="0" UlType="0" UlLimit="10" ServerUlLimitBypass="0">
+                <Download />
+                <Upload />
+            </SpeedLimits>
+        </User>
+        <User Name="cardioFNC">
+            <Option Name="Pass">05B782646FB09EE6D49305985937D683801F3F467EF6DCC3B55F9EA8A8629B00B937047EC0518B1E239964E4A7CC93D42A9CA5E892113A01026A94974962812C</Option>
+            <Option Name="Salt">DX&quot;;10E~8`;f?&quot;NR:Mi7{{&gt;;O[e$K+Jm&quot;l!nM6k{gp;)]e/)Db3MWD&gt;e/Z&amp;YQ=+]</Option>
+            <Option Name="Group"></Option>
+            <Option Name="Bypass server userlimit">0</Option>
+            <Option Name="User Limit">0</Option>
+            <Option Name="IP Limit">0</Option>
+            <Option Name="Enabled">1</Option>
+            <Option Name="Comments"></Option>
+            <Option Name="ForceSsl">0</Option>
+            <IpFilter>
+                <Disallowed />
+                <Allowed />
+            </IpFilter>
+            <Permissions>
+                <Permission Dir="C:\DMR\Sentinel\SCP Import Service\Inboxes\CardioExpress\Funchal">
+                    <Option Name="FileRead">1</Option>
+                    <Option Name="FileWrite">1</Option>
+                    <Option Name="FileDelete">1</Option>
+                    <Option Name="FileAppend">1</Option>
+                    <Option Name="DirCreate">1</Option>
+                    <Option Name="DirDelete">1</Option>
+                    <Option Name="DirList">1</Option>
+                    <Option Name="DirSubdirs">1</Option>
+                    <Option Name="IsHome">1</Option>
+                    <Option Name="AutoCreate">0</Option>
+                </Permission>
+            </Permissions>
+            <SpeedLimits DlType="0" DlLimit="10" ServerDlLimitBypass="0" UlType="0" UlLimit="10" ServerUlLimitBypass="0">
+                <Download />
+                <Upload />
+            </SpeedLimits>
+        </User>
+        <User Name="cardioHV">
+            <Option Name="Pass">8ADA30AEEABCCE25D0A597A14729F85AAE9448B43DB1499A0F4A48CF9C89104775B0C758BD567AE6A5F8C9E41743382AACD255A90E564EE7C539C1234ADC0218</Option>
+            <Option Name="Salt">~a0L&apos;tXhw&amp;C4+OK#$l4v3S3iJAO6qkHAXui3^?owg%35tVF]P}p0UtRg[|Rt)}3&amp;</Option>
+            <Option Name="Group"></Option>
+            <Option Name="Bypass server userlimit">0</Option>
+            <Option Name="User Limit">0</Option>
+            <Option Name="IP Limit">0</Option>
+            <Option Name="Enabled">1</Option>
+            <Option Name="Comments"></Option>
+            <Option Name="ForceSsl">0</Option>
+            <IpFilter>
+                <Disallowed />
+                <Allowed />
+            </IpFilter>
+            <Permissions>
+                <Permission Dir="C:\DMR\Sentinel\SCP Import Service\Inboxes\CardioExpress\Vila_Real">
+                    <Option Name="FileRead">1</Option>
+                    <Option Name="FileWrite">1</Option>
+                    <Option Name="FileDelete">1</Option>
+                    <Option Name="FileAppend">0</Option>
+                    <Option Name="DirCreate">0</Option>
+                    <Option Name="DirDelete">0</Option>
+                    <Option Name="DirList">1</Option>
+                    <Option Name="DirSubdirs">1</Option>
+                    <Option Name="IsHome">1</Option>
+                    <Option Name="AutoCreate">0</Option>
+                </Permission>
+            </Permissions>
+            <SpeedLimits DlType="0" DlLimit="10" ServerDlLimitBypass="0" UlType="0" UlLimit="10" ServerUlLimitBypass="0">
+                <Download />
+                <Upload />
+            </SpeedLimits>
+        </User>
+        <User Name="cardioLisboa">
+            <Option Name="Pass">42147F9792317C8A8FB58EEFB7F4BFBD2DBA5EEBEBD351DCD39D76EA6F51A1D2DC6A48F4C5B58AFD0FC2BC3C6F31D274D95C9A5AC2B204AB96A7CBDB9D7F5C45</Option>
+            <Option Name="Salt">OejY(V5{VOQ_fL*to7f|_.@XihWwP]I/244\Qq~X(NL1G!l436$))?w4F/dCO(!,</Option>
+            <Option Name="Group"></Option>
+            <Option Name="Bypass server userlimit">0</Option>
+            <Option Name="User Limit">0</Option>
+            <Option Name="IP Limit">0</Option>
+            <Option Name="Enabled">1</Option>
+            <Option Name="Comments"></Option>
+            <Option Name="ForceSsl">0</Option>
+            <IpFilter>
+                <Disallowed />
+                <Allowed />
+            </IpFilter>
+            <Permissions>
+                <Permission Dir="C:\DMR\Sentinel\SCP Import Service\Inboxes\CardioExpress\Lisboa">
+                    <Option Name="FileRead">1</Option>
+                    <Option Name="FileWrite">1</Option>
+                    <Option Name="FileDelete">1</Option>
+                    <Option Name="FileAppend">0</Option>
+                    <Option Name="DirCreate">1</Option>
+                    <Option Name="DirDelete">1</Option>
+                    <Option Name="DirList">1</Option>
+                    <Option Name="DirSubdirs">1</Option>
+                    <Option Name="IsHome">1</Option>
+                    <Option Name="AutoCreate">0</Option>
+                </Permission>
+            </Permissions>
+            <SpeedLimits DlType="0" DlLimit="10" ServerDlLimitBypass="0" UlType="0" UlLimit="10" ServerUlLimitBypass="0">
+                <Download />
+                <Upload />
+            </SpeedLimits>
+        </User>
+        <User Name="cardioSetubal">
+            <Option Name="Pass">E00BF43796938BEDA82E63BFBC3DCF0E06883BEA14BA3B81CC20B094D09D45F235E4B5EBD3F7012575499167F3FDD323EAC63445B573E2042186698D7A6F3D08</Option>
+            <Option Name="Salt">Rr@\Pgf+l9RsA9h=($a9sGeeLVl;?d(pd=@,xClTDwO)ZL;}Xet0&gt;H&gt;F&quot;M~nYgI{</Option>
+            <Option Name="Group"></Option>
+            <Option Name="Bypass server userlimit">0</Option>
+            <Option Name="User Limit">0</Option>
+            <Option Name="IP Limit">0</Option>
+            <Option Name="Enabled">1</Option>
+            <Option Name="Comments"></Option>
+            <Option Name="ForceSsl">0</Option>
+            <IpFilter>
+                <Disallowed />
+                <Allowed />
+            </IpFilter>
+            <Permissions>
+                <Permission Dir="C:\DMR\Sentinel\SCP Import Service\Inboxes\CardioExpress\Setubal">
+                    <Option Name="FileRead">1</Option>
+                    <Option Name="FileWrite">1</Option>
+                    <Option Name="FileDelete">1</Option>
+                    <Option Name="FileAppend">0</Option>
+                    <Option Name="DirCreate">0</Option>
+                    <Option Name="DirDelete">0</Option>
+                    <Option Name="DirList">1</Option>
+                    <Option Name="DirSubdirs">1</Option>
+                    <Option Name="IsHome">1</Option>
+                    <Option Name="AutoCreate">0</Option>
+                </Permission>
+            </Permissions>
+            <SpeedLimits DlType="0" DlLimit="10" ServerDlLimitBypass="0" UlType="0" UlLimit="10" ServerUlLimitBypass="0">
+                <Download />
+                <Upload />
+            </SpeedLimits>
+        </User>
+        <User Name="GECOIMBRA">
+            <Option Name="Pass">870FF43E1912E89505D9E7FD7AB29BFBC3761C8F0A8048F149142DB82E87B677DA5E0994362380F7F4514600561CD3533284CAB95424549F3B6CE178E12EEF64</Option>
+            <Option Name="Salt">1/wCw0^`i:fkJ&lt;}gS2MEVn17G=1B../7f{;EuC@finJ(2`wdbrJy&apos;o&amp;iY`%4(h%&gt;</Option>
+            <Option Name="Group"></Option>
+            <Option Name="Bypass server userlimit">0</Option>
+            <Option Name="User Limit">0</Option>
+            <Option Name="IP Limit">0</Option>
+            <Option Name="Enabled">1</Option>
+            <Option Name="Comments"></Option>
+            <Option Name="ForceSsl">0</Option>
+            <IpFilter>
+                <Disallowed />
+                <Allowed />
+            </IpFilter>
+            <Permissions>
+                <Permission Dir="C:\DatamedFT\EKGsfromGE">
+                    <Option Name="FileRead">1</Option>
+                    <Option Name="FileWrite">1</Option>
+                    <Option Name="FileDelete">1</Option>
+                    <Option Name="FileAppend">1</Option>
+                    <Option Name="DirCreate">1</Option>
+                    <Option Name="DirDelete">1</Option>
+                    <Option Name="DirList">1</Option>
+                    <Option Name="DirSubdirs">1</Option>
+                    <Option Name="IsHome">1</Option>
+                    <Option Name="AutoCreate">0</Option>
+                </Permission>
+            </Permissions>
+            <SpeedLimits DlType="0" DlLimit="10" ServerDlLimitBypass="0" UlType="0" UlLimit="10" ServerUlLimitBypass="0">
+                <Download />
+                <Upload />
+            </SpeedLimits>
+        </User>
+    </Users>
+</FileZillaServer>
