@@ -1,0 +1,7 @@
+SQL 2014 express
+sa
+Spacemedical
+
+Sentinel V10.5
+admin
+spacemedical
