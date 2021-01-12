@@ -1,5 +1,5 @@
 •	Foi parametrizado o acesso VPN Fortigate para a empresa Spacemedical.
-•	Acesso: https://213.58.177.206
+•	Acesso: https://213.58.177.206 (VPN.CHLN.min-saude.pt)
 •	Utilizador: spacemedical
 •	Pass: mesma de domínio CHLN
 •	Tem acesso ao servidor vs669sta (172.31.12.17) por RDP.
