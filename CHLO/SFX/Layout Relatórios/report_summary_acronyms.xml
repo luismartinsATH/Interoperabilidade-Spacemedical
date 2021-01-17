@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Acronyms>
+    <Section Name ="Report comments">
+        <Acronym>NORM Registo de ECG de Holter em boas condições técnicas.&#13;&#13;
+Ritmo sinusal, frequência cardíaca variando entre  e  ppm, média de  ppm.&#13;&#13;
+Registaram-se:&#13;&#13;
+- Raras extrassístoles supraventriculares isoladas e aos pares;&#13;&#13;
+- episódios curtos de taquicardia supraventricular paroxística, máximo  batimentos;&#13;&#13;
+- Raras extrassístoles ventriculares isoladas, monomorfas.&#13;&#13;
+Sem outras disritmias.&#13;&#13;
+Sem alterações valorizáveis da repolarização ventricular.&#13;&#13;
+Sem queixas do foro cardiovascular durante o exame.&#13;&#13;
+.</Acronym>    
+        <Acronym>SRTR Sinus rhythm throughout the recording.</Acronym>
+        <Acronym>SRNSB Sinus rhythm with nocturnal sinus bradycardia.</Acronym>
+        <Acronym>SRBBB Sinus rhythm with BBB morphology throughout the recording.</Acronym>
+        <Acronym>SRIBBB Sinus rhythm with intermittent BBB morphology.</Acronym>
+        <Acronym>AFTR Atrial fibrillation throughout the recording.</Acronym>
+        <Acronym>AFSVR Atrial fibrillation throughout the recording with slow ventricular response.</Acronym>
+        <Acronym>AFRVR Atrial fibrillation throughout the recording with rapid ventricular response.</Acronym>
+        <Acronym>AFVB Atrial flutter with variable block.</Acronym>
+        <Acronym>PDNR Patient diary not returned.</Acronym>
+        <Acronym>NSPD No symptoms recorded in patient diary.</Acronym>
+        <Acronym>NECPD No ECG changes seen at times of diary entries.</Acronym>
+        <Acronym>IPR In-patient recording.</Acronym>
+        <Acronym>NCRPS No significant change in rate or rhythm when the patient was symptomatic.</Acronym>
+        <Acronym>DBNCP Dropped beats all due to non-conducted P waves.</Acronym>
+        <Acronym>DBPEP Dropped beats seen in the context of post-ectopic pauses.</Acronym>
+        <Acronym>ISVE Infrequent SVEs seen as isolated beats and short runs.</Acronym>
+        <Acronym>FSVE Frequent SVEs seen as isolated beats and short runs.</Acronym>
+        <Acronym>VFSVE Very frequent SVEs seen as isolated beats and short runs.</Acronym>
+        <Acronym>OSVE Occasional SVEs seen as isolated beats and short runs.</Acronym>
+        <Acronym>MSVE Moderate number of SVEs seen as isolated beats and short runs.</Acronym>
+        <Acronym>IVE Infrequent VEs seen as isolated beats, couplets, triplets with episodes of bigeminy and trigeminy.</Acronym>
+        <Acronym>FVE Frequent VEs seen as isolated beats, couplets, triplets with episodes of bigeminy and trigeminy.</Acronym>
+        <Acronym>VFVE Very frequent VEs seen as isolated beats, couplets, triplets with episodes of bigeminy and trigeminy.</Acronym>
+        <Acronym>OVE Occasional VEs seen as isolated beats, couplets, triplets with episodes of bigeminy and trigeminy.</Acronym>
+        <Acronym>MVE Moderate number of VEs seen as isolated beats, couplets, triplets with episodes of bigeminy and trigeminy.</Acronym>
+    </Section>
+</Acronyms>

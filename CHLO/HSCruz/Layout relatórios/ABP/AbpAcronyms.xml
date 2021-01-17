@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Acronyms>
+    <Section Name ="Normal/Abnormal">
+        <Acronym>NORM Motivo do exame: HTA em estudo.&#13;&#13;Registo:&#13;&#13;Registo de boa qualidade técnica (usadas para avaliação XX de XX  “medições” diurnas (>70%) e XX de XX “medições” noturnas (>70%)).&#13;
+Média tensional das 24horas: XXX/XXmmHg                                        (VR 130/80mmHg).&#13;
+Média tensional diurna: XXX/XXmmHg                                                (VR 135/85mmHg).&#13;
+Média tensional noturna: XXX/XXmmHg                                               (VR 120/70mmHg).&#13;
+&#13;Perfil Tensional:&#13;
+Normal ( escassa) descida noturna de valores tensionais sisto-diastólicos (perfil tipo Dipper (não Dipper).&#13;
+&#13;
+Conclusão:&#13;
+Sem critérios para Hipertensão Arterial de acordo com parametros utilizados.&#13;
+Perfil circadiano conservado (não conservado).
+</Acronym>	
+<Acronym>HTA Motivo do exame: HTA em estudo.&#13;
+
+Registo:&#13;
+
+Registo de boa qualidade técnica (usadas para avaliação XX de XX  “medições” diurnas (>70%) e XX de XX “medições” noturnas (>70%)).&#13;&#13;
+
+Média tensional das 24horas: XXX/XXmmHg                                        (VR 130/80mmHg).&#13;
+Média tensional diurna: XXX/XXmmHg                                                (VR 135/85mmHg).&#13;
+Média tensional noturna: XXX/XXmmHg                                               (VR 120/70mmHg).&#13;
+
+Perfil Tensional:&#13;
+Normal ( escassa) descida noturna de valores tensionais sisto-diastólicos (perfil tipo Dipper (não Dipper).&#13;
+
+Conclusão:&#13;
+Hipertensão Arterial sistólica/ Hipertensão Arterial sisto-diastólica/ Hipertensão Arterial diastólica, com predominio noturno/diurno/ noturna e diurna.&#13;
+Perfil circadiano conservado (não conservado).&#13;
+</Acronym>
+<Acronym>CRI Registo de M.A.P.A. de 24 horas com boa qualidade técnica. Sem terapêutica anti-hipertensiva.&#13;
+Pressão arterial média ao longo das 24 horas abaixo do percentil 50 ( mmHg).&#13;
+Pressão arterial média diurna abaixo do percentil 50 ( mmHg).&#13;
+Pressão arterial média nocturna abaixo do percentil 50 ( mmHg).&#13;
+Descida adequada da PA no período nocturno (Perfil Dipper).&#13;
+Ausência de descida fisiológica da pressão arterial no período nocturno (Perfil Non Dipper).&#13;
+&#13;
+NOTA: Utilizados os valores de referência para o género e a idade (Flynn et al, 2014).
+</Acronym>
+
+<Acronym>ADU Registo de M.A.P.A. de 24 horas com boa qualidade técnica. Sem terapêutica anti-hipertensiva.&#13;
+Pressão arterial média ao longo das 24 horas de  mmHg com cargas S/D de %/%.&#13;
+Pressão arterial média diurna dentro da normalidade ( mmHg com cargas S/D de %/%).&#13;
+Pressão arterial média nocturna dentro da normalidade ( mmHg com cargas S/D de %/%).&#13;
+Descida adequada da pressão arterial no período nocturno (Perfil Dipper).&#13;
+&#13;
+NOTA: Utilizados os valores de referência para adultos.
+</Acronym>
+
+    </Section>
+</Acronyms>
