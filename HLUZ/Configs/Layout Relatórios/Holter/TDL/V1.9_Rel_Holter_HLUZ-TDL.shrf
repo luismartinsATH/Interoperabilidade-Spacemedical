@@ -19313,7 +19313,7 @@
 	</TranslationEntry>
 	<TranslationEntry>
 		<Untranslated>BeatCountsTableTitleLabel</Untranslated>
-		<Translated>Batim.</Translated>
+		<Translated>Batimentos</Translated>
 	</TranslationEntry>
 	<TranslationEntry>
 		<Untranslated>NormalBeatsLabel</Untranslated>
@@ -31630,7 +31630,7 @@
 
 		<Page>
 			<Layout>
-			<!-- 	<Row Name='IndicationsRow' Enabled='Test.HasIndications' Height='15' /> -->
+				<Row Name='IndicationsRow' Enabled='Test.HasIndications' Height='15' />
 				<Row Name='OperatorCommentsRow' Enabled ='Test.HasComments' Height='15' />
 
 				<Row Name='BeatCountTotalsTableTitle' Height='13' />
@@ -31678,7 +31678,7 @@
 
 			<!-- indications -->
 
-<!-- 			<Shape Type='Comment' Style='ShadedBlockStyle'>
+			<Shape Type='Comment' Style='ShadedBlockStyle'>
 				<Property Name='Bounds' Value='IndicationsRow'/>
 				<Property Name='Margin'>
 					<Property Name='Top' Value='1'/>
@@ -31689,7 +31689,7 @@
 				<Property Name='OverflowTitle' Value='_SymptomsContinuationTitleLabel_'/>
 				<Property Name='Font' Value='Auto,7pt,Black' />
 				<Property Name='Content' Value='{Test.Indications}'/>
-			</Shape> -->
+			</Shape>
 
 			<!-- operator (analysis technician) comments -->
 
