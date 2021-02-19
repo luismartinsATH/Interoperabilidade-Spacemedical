@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ReportFormat>
+
+    <Definition>
+        <!-- Test Report -->
+        <ReportType ReportTypeValue="RhythmECG"/>
+        <PageType PageTypeValue="RhythmFrontPage"/>
+        <PageOrientation>Landscape</PageOrientation>
+    </Definition>
+
+    <SectionPos X="0.0" Y="0.0"/>
+
+    <DrawLine X0="50.0" Y0="100.0" X1="150.0" Y1="100.0" OffsetType="Abs" />
+    <DrawLine X0="100.0" Y0="50.0" X1="100.0" Y1="150.0" OffsetType="Abs" />
+
+    <DrawLine X0="150.0" Y0="100.0" X1="250.0" Y1="100.0" OffsetType="Abs" />
+    <DrawLine X0="200.0" Y0="50.0" X1="200.0" Y1="150.0" OffsetType="Abs" />
+    
+    <DrawText Name="">
+        <Position X="100.0" Y="100.0" OffsetType="Abs"/>
+        <Alignment Horizontal="Right" Vertical="Above" />
+        <Text>
+            <Language Name="En-Us">rightabove</Language>
+        </Text>
+    </DrawText>
+
+    <DrawText Name="">
+        <Position X="100.0" Y="100.0" OffsetType="Abs"/>
+        <Alignment Horizontal="Right" Vertical="Below" />
+        <Text>
+            <Language Name="En-Us">rightbelow</Language>
+        </Text>
+    </DrawText>
+
+    <DrawText Name="">
+        <Position X="100.0" Y="100.0" OffsetType="Abs"/>
+        <Alignment Horizontal="Left" Vertical="Above" />
+        <Text>
+            <Language Name="En-Us">leftabove</Language>
+        </Text>
+    </DrawText>
+
+    <DrawText Name="">
+        <Position X="100.0" Y="100.0" OffsetType="Abs"/>
+        <Alignment Horizontal="Left" Vertical="Below" />
+        <Text>
+            <Language Name="En-Us">leftbelow</Language>
+        </Text>
+    </DrawText>
+
+    <DrawText Name="">
+        <Position X="200.0" Y="100.0" OffsetType="Abs"/>
+        <Alignment Horizontal="Left" Vertical="Middle" />
+        <Text>
+            <Language Name="En-Us">leftmiddle</Language>
+        </Text>
+    </DrawText>
+
+    <DrawText Name="">
+        <Position X="200.0" Y="100.0" OffsetType="Abs"/>
+        <Alignment Horizontal="Right" Vertical="Middle" />
+        <Text>
+            <Language Name="En-Us">rightmiddle</Language>
+        </Text>
+    </DrawText>
+
+    <DrawText Name="">
+        <Position X="200.0" Y="100.0" OffsetType="Abs"/>
+        <Alignment Horizontal="Centre" Vertical="Above" />
+        <Text>
+            <Language Name="En-Us">centreabove</Language>
+        </Text>
+    </DrawText>
+
+    <DrawText Name="">
+        <Position X="200.0" Y="100.0" OffsetType="Abs"/>
+        <Alignment Horizontal="Centre" Vertical="Below" />
+        <Text>
+            <Language Name="En-Us">centrebelow</Language>
+        </Text>
+    </DrawText>
+
+    <!--DrawText Name="">
+        <Position X="2.0" Y="10.0" OffsetType="Abs"/>
+        <English Str="%bBold %iItalic %uUnderline %sStrikethrough %nNormal"/>
+        <German Str=""/>
+        <Spanish Str=""/>
+    </DrawText>
+
+    <DrawText Name="">
+        <Position X="2.0" Y="10.0" OffsetType="Abs"/>
+        <Font FontType="roman_normal_bold" />
+        <English Str="Bold"/>
+        <German Str=""/>
+        <Spanish Str=""/>
+    </DrawText>
+
+    <DrawText Name="">
+        <Position X="2.0" Y="20.0" OffsetType="Abs"/>
+        <English Str="EscBold"/>
+        <German Str=""/>
+        <Spanish Str=""/>
+    </DrawText>
+
+    <DrawText Name="">
+        <Position X="2.0" Y="30.0" OffsetType="Abs"/>
+        <English Str="EscItalic"/>
+        <German Str=""/>
+        <Spanish Str=""/>
+    </DrawText>
+
+    <ECGStrip Name="">
+        <Position X="28.5" Y="3.0" OffsetType="Abs"/>
+        <Size X="62.5" Y="40.0"/>
+        <LeadOrChannel Number="1"/>
+        <Drawing Scale="x1"/>
+    </ECGStrip>
+
+    <ECGStrip Name="">
+        <Position X="28.5" Y="43.0" OffsetType="Abs"/>
+        <Size X="62.5" Y="40.0"/>
+        <LeadOrChannel Number="2"/>
+        <Drawing Scale="x1"/>
+    </ECGStrip-->
+
+</ReportFormat>

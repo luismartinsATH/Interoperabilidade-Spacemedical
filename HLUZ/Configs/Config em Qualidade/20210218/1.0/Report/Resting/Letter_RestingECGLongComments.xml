@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ReportFormat>
+
+  <Definition>
+    <!-- US Resting Report Letter - Long Comments Page -->
+    <ReportType ReportTypeValue="RestingECG"/>
+    <PageType PageTypeValue="NormalPage"/>
+    <PageOrientation>Landscape</PageOrientation>
+  </Definition>
+
+  <SectionPos X="7.0" Y="5.0" />
+
+  <!-- Page outline -->
+
+  <DrawLine X0="0.0" Y0="0.5" X1="264.5" Y1="0.5" OffsetType="Abs" Thickness="Thick"/>
+  <DrawLine X0="264.5" Y0="0.5" X1="264.5" Y1="204.0" OffsetType="Abs" Thickness="Thick" />
+  <DrawLine X0="264.5" Y0="204.0" X1="0.0" Y1="204.0" OffsetType="Abs" Thickness="Thick" />
+  <DrawLine X0="0.0" Y0="204.0" X1="0.0" Y1="0.5" OffsetType="Abs" Thickness="Thick" />
+  <DrawLine X0="0.0" Y0="9.0" X1="264.5" Y1="9.0" OffsetType="Abs" Thickness="Thick" />
+  <DrawLine X0="0.0" Y0="14.0" X1="264.5" Y1="14.0" OffsetType="Abs" Thickness="Normal" />
+  <DrawLine X0="0.0" Y0="171.0" X1="264.5" Y1="171.0" OffsetType="Abs" Thickness="Normal" />
+  <DrawLine X0="0.0" Y0="176.0" X1="264.5" Y1="176.0" OffsetType="Abs" Thickness="Normal" />
+
+
+  <DrawText Name="Report Title">
+    <Position X="134.5" Y="4.5" OffsetType="Abs"/>
+    <Font FontType="ArialLargeBold" />
+    <Alignment Vertical="Middle" Horizontal="Centre" />
+    <Parameter Number="0" Id="facility" Format="Text"/>
+    <Text>
+      <Language Name="En-Us">%0 - ECG Report</Language>
+      <Language Name="Es">%0 - Informe de ECG</Language>
+    </Text>
+  </DrawText>
+
+  <DrawText Name="">
+    <Position X="0.0" Y="206.5" OffsetType="Abs"/>
+    <Font FontType="ArialSmall" />
+    <Parameter Number="0" Id="date_time_now" Format="Text"/>
+    <Text>
+      <Language Name="En-Us">Generated on %0</Language>
+      <Language Name="Es">Creado en %0</Language>
+    </Text>
+  </DrawText>
+
+  <DrawText Name="">
+    <Condition Param="report_signed" Value="true"/>
+    <Position X="120.0" Y="206.5" OffsetType="Abs"/>
+    <Font FontType="ArialSmall" />
+    <Parameter Number="0" Id="signed_by_operator" Format="Text"/>
+    <Parameter Number="1" Id="signed_date_time" Format="Text"/>
+    <Parameter Number="2" Id="signed_kind" Format="Text"/>
+    <Text>
+      <Language Name="En-Us">Signed by %0 on %1 (%2)</Language>
+      <Language Name="Es">Firmado por: %0 fecha %1 (%2)</Language>
+    </Text>
+  </DrawText>
+
+  <DrawText Name="SignedBy">
+    <Condition Param="prev_report_signed" Value="true"/>
+    <Position X="45.0" Y="206.5" OffsetType="Abs"/>
+    <Font FontType="ArialSmall" />
+    <Parameter Number="0" Id="prev_signed_by_operator" Format="Text"/>
+    <Parameter Number="1" Id="prev_signed_date_time" Format="Text"/>
+    <Parameter Number="2" Id="prev_signed_kind" Format="Text"/>
+    <Text>
+      <Language Name="En-Us">Signed by %0 on %1 (%2)</Language>
+      <Language Name="Es">Firmado por: %0 fecha %1 (%2)</Language>
+    </Text>
+  </DrawText>
+
+  <DrawText Name="">
+    <Position X="264.5" Y="206.5" OffsetType="Abs"/>
+    <Font FontType="ArialSmall" />
+    <Alignment Horizontal="Right" Vertical="Below" />
+    <Parameter Number="0" Id="sentinel_version" Format="Text"/>
+    <Parameter Number="1" Id="recorder_type" Format="Text"/>
+    <Parameter Number="2" Id="recorder_serialnum" Format="Text"/>
+    <Text>
+      <Language Name="En-Us">Spacelabs Healthcare Sentinel Ver: %0,  %1 Ser Num: %2</Language>
+      <Language Name="Es">Spacelabs Healthcare Sentinel Ver: %0,  %1 Nº de serie: %2</Language>
+    </Text>
+  </DrawText>
+
+  <DrawBitmap Name="">
+    <Position X="2.0" Y="1.3" OffsetType="Abs"/>
+    <Size X="34.0" Y="6.5"/>
+    <BitmapFile Filename="SLHC_Logo_Hor.png" />
+    <Orientation Angle="0.0" />
+  </DrawBitmap>
+
+  <!-- interpretation -->
+
+  <DrawText Name="">
+    <Position X="2.0" Y="12.5" OffsetType="Abs"/>
+    <Parameter Number="0" Id="resting_ecg.algorithm" Format="Text"/>
+    <Font FontType="ArialNormalBold" />
+    <Text>
+      <Language Name="En-Us">Findings and Interpretations (%0)</Language>
+      <Language Name="Es">Hallazgos e interpretaciones (%0)</Language>
+    </Text>
+  </DrawText>
+
+  <DrawText Name="">
+    <Position X="2.0" Y="15.0" OffsetType="Abs"/>
+    <Size X="265.0" Y="155.0"/>
+    <Alignment Horizontal="Left" Vertical="Above" />
+    <Parameter Number="0" Id="resting_ecg.interpretation" Format="Text"/>
+    <Font FontType="ArialNormal" />
+    <Text>
+      <Language Name="En-Us">%0</Language>
+      <Language Name="Es">%0</Language>
+    </Text>
+    <LongComments />
+  </DrawText>
+
+
+  <!-- Patient Details -->
+  <DrawText Name="">
+    <Position X="2.0" Y="174.5" OffsetType="Abs"/>
+    <Font FontType="ArialNormalBold" />
+    <Text>
+      <Language Name="En-Us">Patient</Language>
+      <Language Name="Es">Paciente</Language>
+    </Text>
+  </DrawText>
+
+  <DrawText Name="">
+    <Position X="2.0" Y="181.0" OffsetType="Abs"/>
+    <Font FontType="ArialNormal" />
+    <Text>
+      <Language Name="En-Us">Name:</Language>
+      <Language Name="Es">Nombre:</Language>
+    </Text>
+  </DrawText>
+
+  <DrawText Name="">
+    <Position X="35.0" Y="181.0" OffsetType="Abs"/>
+    <Parameter Number="0" Id="patient_last_name_comma_first_name" Format="Text"/>
+    <Font FontType="ArialNormalBold" />
+    <Text>
+      <Language Name="En-Us">%0</Language>
+      <Language Name="Es">%0</Language>
+    </Text>
+  </DrawText>
+
+  <DrawText Name="">
+    <Position X="2.0" Y="186.0" OffsetType="Abs"/>
+    <Font FontType="ArialNormal" />
+    <Text>
+      <Language Name="En-Us">Patient ID:</Language>
+      <Language Name="Es">ID paciente:</Language>
+    </Text>
+  </DrawText>
+
+  <DrawText Name="">
+    <Position X="35.0" Y="186.0" OffsetType="Abs"/>
+    <Parameter Number="0" Id="patient_number" Format="Text"/>
+    <Font FontType="ArialNormalBold" />
+    <Text>
+      <Language Name="En-Us">%0</Language>
+      <Language Name="Es">%0</Language>
+    </Text>
+  </DrawText>
+
+  <DrawText Name="">
+    <Position X="2.0" Y="191.0" OffsetType="Abs"/>
+    <Font FontType="ArialNormal" />
+    <Text>
+      <Language Name="En-Us">National ID:</Language>
+      <Language Name="Es">National ID:</Language>
+    </Text>
+  </DrawText>
+
+  <DrawText Name="">
+    <Position X="35.0" Y="191.0" OffsetType="Abs"/>
+    <Parameter Number="0" Id="national_id" Format="Text"/>
+    <Font FontType="ArialNormalBold" />
+    <Text>
+      <Language Name="En-Us">%0</Language>
+      <Language Name="Es">%0</Language>
+    </Text>
+  </DrawText>
+
+
+  <DrawText Name="">
+    <Position X="2.0" Y="196.0" OffsetType="Abs"/>
+    <Font FontType="ArialNormal" />
+    <Text>
+      <Language Name="En-Us">Date of birth:</Language>
+      <Language Name="Es">Fecha de nacimiento:</Language>
+    </Text>
+  </DrawText>
+
+  <DrawText Name="">
+    <Position X="35.0" Y="196.0" OffsetType="Abs"/>
+    <Parameter Number="0" Id="date_of_birth" Format="Text"/>
+    <Font FontType="ArialNormalBold" />
+    <Text>
+      <Language Name="En-Us">%0</Language>
+      <Language Name="Es">%0</Language>
+    </Text>
+  </DrawText>
+
+  <DrawText Name="">
+    <Position X="85.0" Y="186.0" OffsetType="Abs"/>
+    <Font FontType="ArialNormal" />
+    <Text>
+      <Language Name="En-Us">Age:</Language>
+      <Language Name="Es">Edad:</Language>
+    </Text>
+  </DrawText>
+
+  <DrawText Name="">
+    <Position X="105.0" Y="186.0" OffsetType="Abs"/>
+    <Parameter Number="0" Id="patient_age" Format="Text"/>
+    <Font FontType="ArialNormalBold" />
+    <Text>
+      <Language Name="En-Us">%0</Language>
+      <Language Name="Es">%0</Language>
+    </Text>
+  </DrawText>
+
+  <DrawText Name="">
+    <Position X="2.0" Y="201.0" OffsetType="Abs"/>
+    <Font FontType="ArialNormal" />
+    <Text>
+      <Language Name="En-Us">Gender:</Language>
+      <Language Name="Es">Sexo:</Language>
+    </Text>
+  </DrawText>
+
+  <DrawText Name="">
+    <Position X="35.0" Y="201.0" OffsetType="Abs"/>
+    <Parameter Number="0" Id="gender" Format="Text"/>
+    <Font FontType="ArialNormalBold" />
+    <Text>
+      <Language Name="En-Us">%0</Language>
+      <Language Name="Es">%0</Language>
+    </Text>
+  </DrawText>
+
+  <DrawText Name="">
+    <Position X="85.0" Y="181.0" OffsetType="Abs"/>
+    <Font FontType="ArialNormal" />
+    <Text>
+      <Language Name="En-Us">Pacemaker:</Language>
+      <Language Name="Es">Marcapasos:</Language>
+    </Text>
+  </DrawText>
+
+  <DrawText Name="">
+    <Position X="105.0" Y="181.0" OffsetType="Abs"/>
+    <Parameter Number="0" Id="pacemaker" Format="Text"/>
+    <Font FontType="ArialNormalBold" />
+    <Text>
+      <Language Name="En-Us">%0</Language>
+      <Language Name="Es">%0</Language>
+    </Text>
+  </DrawText>
+
+</ReportFormat>

@@ -1,0 +1,412 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ReportFormats>
+  <Culture Name="En">
+    <TestModality Name="Resting12LeadECG">
+      <Identity Title="Resting ECG 3x1+1R" TraceCount="3" Filename="Resting\A4_RestingECG3x1+1R.xml"/>
+      <Identity Title="Resting ECG 2x3+1R" TraceCount="6" Filename="Resting\A4_RestingECG2x3+1R.xml"/>
+      <Identity Title="Resting ECG 3x4" TraceCount="12" Filename="Resting\A4_RestingECG3x4.xml"/>
+      <Identity Title="Resting ECG 3x4+1R" TraceCount="12" Filename="Resting\A4_RestingECG3x4+1R.xml"/>
+      <Identity Title="Resting ECG 6x1x2" TraceCount="12" Filename="Resting\A4_RestingECG6x1x2.xml"/>
+      <Identity Title="Resting ECG 6x2+1R" TraceCount="12" Filename="Resting\A4_RestingECG6x2+1R.xml"/>
+      <Identity Title="Resting ECG 1x12" TraceCount="12" Filename="Resting\A4_RestingECG1x12.xml"/>
+      <Identity Title="Resting ECG 3x5" TraceCount="15" Filename="Resting\A4_RestingECG3x5.xml"/>
+      <Identity Title="Resting ECG 3x5+1R" TraceCount="15" Filename="Resting\A4_RestingECG3x5+1R.xml"/>
+      <Identity Title="Resting ECG 1x15" TraceCount="15" Filename="Resting\A4_RestingECG1x15.xml"/>
+      <Identity Title="Resting ECG 6+6+3" TraceCount="15" Filename="Resting\A4_RestingECG6+6+3.xml"/>
+      <Identity Title="Resting ECG 6+6+3+1R" TraceCount="15" Filename="Resting\A4_RestingECG6+6+3+1R.xml"/>
+      <Identity Title="Resting ECG 6+9" TraceCount="15" Filename="Resting\A4_RestingECG6+9.xml"/>
+      <Identity Title="Resting ECG 6x3+1R" TraceCount="18" Filename="Resting\A4_RestingECG6x3+1R.xml"/>
+      <!-- the following shrf report formats are for future use only -->
+      <Identity Title="Test" TraceCount="18" Filename="Resting\Test.shrf"/>
+      <Identity Title="Test" TraceCount="15" Filename="Resting\Test.shrf"/>
+      <Identity Title="Test" TraceCount="12" Filename="Resting\Test.shrf"/>
+      <Identity Title="Test" TraceCount="6" Filename="Resting\Test.shrf"/>
+      <Identity Title="Test" TraceCount="3" Filename="Resting\Test.shrf"/>
+      <!-- the following resting report format (A4 Resting Test Report Format) is included for the following purposes and is not intended for clinical use:
+           a. to assist in verification of Sentinel
+           b. to allow sales to easily see all the graphs and fields which resting reports support (seeing them visually)
+           c. for GTS to have a simple report covering all resting report capabilities to assist in understanding creating custom reports
+      -->
+      <!--<Identity Title="Test Report" TraceCount="12" Filename="Resting\A4 Resting Test Report Format.xml"/>-->
+    </TestModality>
+    <TestModality Name="RhythmECG">
+      <Identity Title="Rhythm (standard)" Filename="Rhythm\UKRhythmECG_a4.xml"/>
+    </TestModality>
+    <TestModality Name="BloodPressure">
+      <Identity Title="Single Page Report" Filename="ABP\SinglePageReport.shrf"/>
+      <Identity Title="Single Page Legacy Report" Filename="ABP\CNAVSinglePageReport.shrf"/>
+      <Identity Title="Full Report" Filename="ABP\FullReport.shrf"/>
+      <Identity Title="Full Report with Landscape Graphs" Filename="ABP\FullReportWithLandscapeGraphs.shrf"/>
+      <Identity Title="Full Report with Hourly Averages" Filename="ABP\FullReportWithHourlyAverages.shrf"/>
+      <!-- the following ABP report format (Test Report Format) is included for the following purposes and is not intended for clinical use:
+           a. to assist in verification of Sentinel
+           b. to allow sales to easily see all the graphs and fields which ABP reports support (seeing them visually)
+           c. for GTS to have a simple report covering all ABP report capabilities to assist in understanding creating custom reports
+      -->
+      <!--<Identity Title="Test Report" Filename="ABP\Test Report Format.shrf"/>-->
+    </TestModality>
+  </Culture>
+  <Culture Name="En-Us">
+    <TestModality Name="Resting12LeadECG">
+      <Identity Title="Resting ECG 3x1+1R" TraceCount="3" Filename="Resting\Letter_RestingECG3x1+1R.xml"/>
+      <Identity Title="Resting ECG 2x3+1R" TraceCount="6" Filename="Resting\Letter_RestingECG2x3+1R.xml"/>
+      <Identity Title="Resting ECG 3x4" TraceCount="12" Filename="Resting\Letter_RestingECG3x4.xml"/>
+      <Identity Title="Resting ECG 3x4+1R" TraceCount="12" Filename="Resting\Letter_RestingECG3x4+1R.xml"/>
+      <Identity Title="Resting ECG 6x1x2" TraceCount="12" Filename="Resting\Letter_RestingECG6x1x2.xml"/>
+      <Identity Title="Resting ECG 6x2+1R" TraceCount="12" Filename="Resting\Letter_RestingECG6x2+1R.xml"/>
+      <Identity Title="Resting ECG 1x12" TraceCount="12" Filename="Resting\Letter_RestingECG1x12.xml"/>
+      <Identity Title="Resting ECG 3x5" TraceCount="15" Filename="Resting\Letter_RestingECG3x5.xml"/>
+      <Identity Title="Resting ECG 3x5+1R" TraceCount="15" Filename="Resting\Letter_RestingECG3x5+1R.xml"/>
+      <Identity Title="Resting ECG 1x15" TraceCount="15" Filename="Resting\Letter_RestingECG1x15.xml"/>
+      <Identity Title="Resting ECG 6+6+3" TraceCount="15" Filename="Resting\Letter_RestingECG6+6+3.xml"/>
+      <Identity Title="Resting ECG 6+6+3+1R" TraceCount="15" Filename="Resting\Letter_RestingECG6+6+3+1R.xml"/>
+      <Identity Title="Resting ECG 6+9" TraceCount="15" Filename="Resting\Letter_RestingECG6+9.xml"/>
+      <Identity Title="Resting ECG 6x3+1R" TraceCount="18" Filename="Resting\Letter_RestingECG6x3+1R.xml"/>
+    </TestModality>
+    <TestModality Name="RhythmECG">
+      <Identity Title="Rhythm (standard)" Filename="Rhythm\UKRhythmECG_a4.xml"/>
+    </TestModality>
+    <TestModality Name="BloodPressure">
+      <Identity Title="Single Page Report" Filename="ABP\SinglePageReport.shrf"/>
+      <Identity Title="Full Report" Filename="ABP\FullReport.shrf"/>
+      <Identity Title="Full Report with Landscape Graphs" Filename="ABP\FullReportWithLandscapeGraphs.shrf"/>
+      <Identity Title="Full Report with Hourly Averages" Filename="ABP\FullReportWithHourlyAverages.shrf"/>
+    </TestModality>
+  </Culture>
+  <Culture Name="Pl">
+    <TestModality Name="Resting12LeadECG">
+      <Identity Title="EKG spoczynkowe 3x1+1R" TraceCount="3" Filename="Resting\A4_RestingECG3x1+1R.xml"/>
+      <Identity Title="EKG spoczynkowe 2x3+1R" TraceCount="6" Filename="Resting\A4_RestingECG2x3+1R.xml"/>
+      <Identity Title="EKG spoczynkowe 3x4" TraceCount="12" Filename="Resting\A4_RestingECG3x4.xml"/>
+      <Identity Title="EKG spoczynkowe 3x4+1R" TraceCount="12" Filename="Resting\A4_RestingECG3x4+1R.xml"/>
+      <Identity Title="EKG spoczynkowe 6x1x2" TraceCount="12" Filename="Resting\A4_RestingECG6x1x2.xml"/>
+      <Identity Title="EKG spoczynkowe 6x2+1R" TraceCount="12" Filename="Resting\A4_RestingECG6x2+1R.xml"/>
+      <Identity Title="EKG spoczynkowe 1x12" TraceCount="12" Filename="Resting\A4_RestingECG1x12.xml"/>
+      <Identity Title="EKG spoczynkowe 3x5" TraceCount="15" Filename="Resting\A4_RestingECG3x5.xml"/>
+      <Identity Title="EKG spoczynkowe 3x5+1R" TraceCount="15" Filename="Resting\A4_RestingECG3x5+1R.xml"/>
+      <Identity Title="EKG spoczynkowe 1x15" TraceCount="15" Filename="Resting\A4_RestingECG1x15.xml"/>
+      <Identity Title="EKG spoczynkowe 6+6+3" TraceCount="15" Filename="Resting\A4_RestingECG6+6+3.xml"/>
+      <Identity Title="EKG spoczynkowe 6+6+3+1R" TraceCount="15" Filename="Resting\A4_RestingECG6+6+3+1R.xml"/>
+      <Identity Title="EKG spoczynkowe 6+9" TraceCount="15" Filename="Resting\A4_RestingECG6+9.xml"/>
+      <Identity Title="EKG spoczynkowe 6x3+1R" TraceCount="18" Filename="Resting\A4_RestingECG6x3+1R.xml"/>
+    </TestModality>
+    <TestModality Name="RhythmECG">
+      <Identity Title="EKG rytmu (standardowe)" Filename="Rhythm\UKRhythmECG_a4.xml"/>
+    </TestModality>
+    <TestModality Name="BloodPressure">
+      <Identity Title="Raport jednostronicowy" Filename="ABP\SinglePageReport.shrf"/>
+      <Identity Title="Raport jednostronicowy w poprzedniej wersji" Filename="ABP\CNAVSinglePageReport.shrf"/>
+      <Identity Title="Pełny raport" Filename="ABP\FullReport.shrf"/>
+      <Identity Title="Pełny raport z poziomymi wykresami" Filename="ABP\FullReportWithLandscapeGraphs.shrf"/>
+      <Identity Title="Pełny raport ze średnimi godzinowymi" Filename="ABP\FullReportWithHourlyAverages.shrf"/>
+    </TestModality>
+  </Culture>
+  <Culture Name="Da">
+    <TestModality Name="Resting12LeadECG">
+      <Identity Title="Hvile-EKG 3x1+1R" TraceCount="3" Filename="Resting\A4_RestingECG3x1+1R.xml"/>
+      <Identity Title="Hvile-EKG 2x3+1R" TraceCount="6" Filename="Resting\A4_RestingECG2x3+1R.xml"/>
+      <Identity Title="Hvile-EKG 3x4" TraceCount="12" Filename="Resting\A4_RestingECG3x4.xml"/>
+      <Identity Title="Hvile-EKG 3x4+1R" TraceCount="12" Filename="Resting\A4_RestingECG3x4+1R.xml"/>
+      <Identity Title="Hvile-EKG 6x1x2" TraceCount="12" Filename="Resting\A4_RestingECG6x1x2.xml"/>
+      <Identity Title="Hvile-EKG 6x2+1R" TraceCount="12" Filename="Resting\A4_RestingECG6x2+1R.xml"/>
+      <Identity Title="Hvile-EKG 1x12" TraceCount="12" Filename="Resting\A4_RestingECG1x12.xml"/>
+      <Identity Title="Hvile-EKG 3x5" TraceCount="15" Filename="Resting\A4_RestingECG3x5.xml"/>
+      <Identity Title="Hvile-EKG 3x5+1R" TraceCount="15" Filename="Resting\A4_RestingECG3x5+1R.xml"/>
+      <Identity Title="Hvile-EKG 1x15" TraceCount="15" Filename="Resting\A4_RestingECG1x15.xml"/>
+      <Identity Title="Hvile-EKG 6+6+3" TraceCount="15" Filename="Resting\A4_RestingECG6+6+3.xml"/>
+      <Identity Title="Hvile-EKG 6+6+3+1R" TraceCount="15" Filename="Resting\A4_RestingECG6+6+3+1R.xml"/>
+      <Identity Title="Hvile-EKG 6+9" TraceCount="15" Filename="Resting\A4_RestingECG6+9.xml"/>
+      <Identity Title="Hvile-EKG 6x3+1R" TraceCount="18" Filename="Resting\A4_RestingECG6x3+1R.xml"/>
+    </TestModality>
+    <TestModality Name="RhythmECG">
+      <Identity Title="Rytme (standard)" Filename="Rhythm\UKRhythmECG_a4.xml"/>
+    </TestModality>
+    <TestModality Name="BloodPressure">
+      <Identity Title="Ensidet rapport" Filename="ABP\SinglePageReport.shrf"/>
+      <Identity Title="Ensidet historikrapport" Filename="ABP\CNAVSinglePageReport.shrf"/>
+      <Identity Title="Fuld rapport" Filename="ABP\FullReport.shrf"/>
+      <Identity Title="Fuld rapport med vandret diagram" Filename="ABP\FullReportWithLandscapeGraphs.shrf"/>
+      <Identity Title="Fuld rapport med gennemsnit pr. time" Filename="ABP\FullReportWithHourlyAverages.shrf"/>
+    </TestModality>
+  </Culture>
+  <Culture Name="Fr">
+    <TestModality Name="Resting12LeadECG">
+      <Identity Title="ECG de repos 3x1+1R" TraceCount="3" Filename="Resting\A4_RestingECG3x1+1R.xml"/>
+      <Identity Title="ECG de repos 2x3+1R" TraceCount="6" Filename="Resting\A4_RestingECG2x3+1R.xml"/>
+      <Identity Title="ECG de repos 3x4" TraceCount="12" Filename="Resting\A4_RestingECG3x4.xml"/>
+      <Identity Title="ECG de repos 3x4+1R" TraceCount="12" Filename="Resting\A4_RestingECG3x4+1R.xml"/>
+      <Identity Title="ECG de repos 6x1x2" TraceCount="12" Filename="Resting\A4_RestingECG6x1x2.xml"/>
+      <Identity Title="ECG de repos 6x2+1R" TraceCount="12" Filename="Resting\A4_RestingECG6x2+1R.xml"/>
+      <Identity Title="ECG de repos 1x12" TraceCount="12" Filename="Resting\A4_RestingECG1x12.xml"/>
+      <Identity Title="ECG de repos 3x5" TraceCount="15" Filename="Resting\A4_RestingECG3x5.xml"/>
+      <Identity Title="ECG de repos 3x5+1R" TraceCount="15" Filename="Resting\A4_RestingECG3x5+1R.xml"/>
+      <Identity Title="ECG de repos 1x15" TraceCount="15" Filename="Resting\A4_RestingECG1x15.xml"/>
+      <Identity Title="ECG de repos 6+6+3" TraceCount="15" Filename="Resting\A4_RestingECG6+6+3.xml"/>
+      <Identity Title="ECG de repos 6+6+3+1R" TraceCount="15" Filename="Resting\A4_RestingECG6+6+3+1R.xml"/>
+      <Identity Title="ECG de repos 6+9" TraceCount="15" Filename="Resting\A4_RestingECG6+9.xml"/>
+      <Identity Title="ECG de repos 6x3+1R" TraceCount="18" Filename="Resting\A4_RestingECG6x3+1R.xml"/>
+    </TestModality>
+    <TestModality Name="RhythmECG">
+      <Identity Title="ECG rythmique (standard)" Filename="Rhythm\UKRhythmECG_a4.xml"/>
+    </TestModality>
+    <TestModality Name="BloodPressure">
+      <Identity Title="Rapport sur une seule page" Filename="ABP\SinglePageReport.shrf"/>
+      <Identity Title="Rapport de synthèse sur une seule page CNAV" Filename="ABP\CNAVSinglePageReport.shrf"/>
+      <Identity Title="Rapport complet" Filename="ABP\FullReport.shrf"/>
+      <Identity Title="Rapport complet avec graphiques panorama" Filename="ABP\FullReportWithLandscapeGraphs.shrf"/>
+      <Identity Title="Rapport complet avec des moyennes horaires" Filename="ABP\FullReportWithHourlyAverages.shrf"/>
+    </TestModality>
+  </Culture>
+  <Culture Name="Es">
+    <TestModality Name="Resting12LeadECG">
+      <Identity Title="ECG en reposo 3x1+1R" TraceCount="3" Filename="Resting\A4_RestingECG3x1+1R.xml"/>
+      <Identity Title="ECG en reposo 2x3+1R" TraceCount="6" Filename="Resting\A4_RestingECG2x3+1R.xml"/>
+      <Identity Title="ECG en reposo 3x4" TraceCount="12" Filename="Resting\A4_RestingECG3x4.xml"/>
+      <Identity Title="ECG en reposo 3x4+1R" TraceCount="12" Filename="Resting\A4_RestingECG3x4+1R.xml"/>
+      <Identity Title="ECG en reposo 6x1x2" TraceCount="12" Filename="Resting\A4_RestingECG6x1x2.xml"/>
+      <Identity Title="ECG en reposo 6x2+1R" TraceCount="12" Filename="Resting\A4_RestingECG6x2+1R.xml"/>
+      <Identity Title="ECG en reposo 1x12" TraceCount="12" Filename="Resting\A4_RestingECG1x12.xml"/>
+      <Identity Title="ECG en reposo 3x5" TraceCount="15" Filename="Resting\A4_RestingECG3x5.xml"/>
+      <Identity Title="ECG en reposo 3x5+1R" TraceCount="15" Filename="Resting\A4_RestingECG3x5+1R.xml"/>
+      <Identity Title="ECG en reposo 1x15" TraceCount="15" Filename="Resting\A4_RestingECG1x15.xml"/>
+      <Identity Title="ECG en reposo 6+6+3" TraceCount="15" Filename="Resting\A4_RestingECG6+6+3.xml"/>
+      <Identity Title="ECG en reposo 6+6+3+1R" TraceCount="15" Filename="Resting\A4_RestingECG6+6+3+1R.xml"/>
+      <Identity Title="ECG en reposo 6+9" TraceCount="15" Filename="Resting\A4_RestingECG6+9.xml"/>
+      <Identity Title="ECG en reposo 6x3+1R" TraceCount="18" Filename="Resting\A4_RestingECG6x3+1R.xml"/>
+    </TestModality>
+    <TestModality Name="RhythmECG">
+      <Identity Title="Ritmo (estándar)" Filename="Rhythm\UKRhythmECG_a4.xml"/>
+    </TestModality>
+    <TestModality Name="BloodPressure">
+      <Identity Title="Informe de una sola página 1" Filename="ABP\SinglePageReport.shrf"/>
+      <Identity Title="Informe de una sola página 2" Filename="ABP\CNAVSinglePageReport.shrf"/>
+      <Identity Title="Informe completo" Filename="ABP\FullReport.shrf"/>
+      <Identity Title="Informe completo con gráficos horizontales" Filename="ABP\FullReportWithLandscapeGraphs.shrf"/>
+      <Identity Title="Informe completo con horas promediadas" Filename="ABP\FullReportWithHourlyAverages.shrf"/>
+    </TestModality>
+  </Culture>
+  <Culture Name="De">
+    <TestModality Name="Resting12LeadECG">
+      <Identity Title="Ruhe-EKG 3x1+1R" TraceCount="3" Filename="Resting\A4_RestingECG3x1+1R.xml"/>
+      <Identity Title="Ruhe-EKG 2x3+1R" TraceCount="6" Filename="Resting\A4_RestingECG2x3+1R.xml"/>
+      <Identity Title="Ruhe-EKG 3x4" TraceCount="12" Filename="Resting\A4_RestingECG3x4.xml"/>
+      <Identity Title="Ruhe-EKG 3x4+1R" TraceCount="12" Filename="Resting\A4_RestingECG3x4+1R.xml"/>
+      <Identity Title="Ruhe-EKG 6x1x2" TraceCount="12" Filename="Resting\A4_RestingECG6x1x2.xml"/>
+      <Identity Title="Ruhe-EKG 6x2+1R" TraceCount="12" Filename="Resting\A4_RestingECG6x2+1R.xml"/>
+      <Identity Title="Ruhe-EKG 1x12" TraceCount="12" Filename="Resting\A4_RestingECG1x12.xml"/>
+      <Identity Title="Ruhe-EKG 3x5" TraceCount="15" Filename="Resting\A4_RestingECG3x5.xml"/>
+      <Identity Title="Ruhe-EKG 3x5+1R" TraceCount="15" Filename="Resting\A4_RestingECG3x5+1R.xml"/>
+      <Identity Title="Ruhe-EKG 1x15" TraceCount="15" Filename="Resting\A4_RestingECG1x15.xml"/>
+      <Identity Title="Ruhe-EKG 6+6+3" TraceCount="15" Filename="Resting\A4_RestingECG6+6+3.xml"/>
+      <Identity Title="Ruhe-EKG 6+6+3+1R" TraceCount="15" Filename="Resting\A4_RestingECG6+6+3+1R.xml"/>
+      <Identity Title="Ruhe-EKG 6+9" TraceCount="15" Filename="Resting\A4_RestingECG6+9.xml"/>
+      <Identity Title="Ruhe-EKG 6x3+1R" TraceCount="18" Filename="Resting\A4_RestingECG6x3+1R.xml"/>
+    </TestModality>
+    <TestModality Name="RhythmECG">
+      <Identity Title="Rhythmus-EKG (standard)" Filename="Rhythm\DERhythmECG_a4.xml"/>
+    </TestModality>
+    <TestModality Name="BloodPressure">
+      <Identity Title="Einseitiger Bericht" Filename="ABP\SinglePageReport.shrf"/>
+      <Identity Title="Einseitiger Bericht im CNAV-Stil" Filename="ABP\CNAVSinglePageReport.shrf"/>
+      <Identity Title="Vollständiger Bericht" Filename="ABP\FullReport.shrf"/>
+      <Identity Title="Vollständiger Bericht mit Grafiken im Querformat" Filename="ABP\FullReportWithLandscapeGraphs.shrf"/>
+      <Identity Title="Vollständiger Bericht mit stündlichen Mittelwerten" Filename="ABP\FullReportWithHourlyAverages.shrf"/>
+    </TestModality>
+  </Culture>
+  <Culture Name="Pt">
+    <TestModality Name="Resting12LeadECG">
+      <Identity Title="ECG em repouso 3x1+1R" TraceCount="3" Filename="Resting\A4_RestingECG3x1+1R.xml"/>
+      <Identity Title="ECG em repouso 2x3+1R" TraceCount="6" Filename="Resting\A4_RestingECG2x3+1R.xml"/>
+      <Identity Title="ECG em repouso 3x4" TraceCount="12" Filename="Resting\A4_RestingECG3x4.xml"/>
+      <Identity Title="ECG em repouso 3x4+1R" TraceCount="12" Filename="Resting\A4_RestingECG3x4+1R.xml"/>
+      <Identity Title="ECG em repouso 6x1x2" TraceCount="12" Filename="Resting\A4_RestingECG6x1x2.xml"/>
+      <Identity Title="ECG em repouso 6x2+1R" TraceCount="12" Filename="Resting\A4_RestingECG6x2+1R.xml"/>
+      <Identity Title="ECG em repouso 1x12" TraceCount="12" Filename="Resting\A4_RestingECG1x12.xml"/>
+      <Identity Title="ECG em repouso 3x5" TraceCount="15" Filename="Resting\A4_RestingECG3x5.xml"/>
+      <Identity Title="ECG em repouso 3x5+1R" TraceCount="15" Filename="Resting\A4_RestingECG3x5+1R.xml"/>
+      <Identity Title="ECG em repouso 1x15" TraceCount="15" Filename="Resting\A4_RestingECG1x15.xml"/>
+      <Identity Title="ECG em repouso 6+6+3" TraceCount="15" Filename="Resting\A4_RestingECG6+6+3.xml"/>
+      <Identity Title="ECG em repouso 6+6+3+1R" TraceCount="15" Filename="Resting\A4_RestingECG6+6+3+1R.xml"/>
+      <Identity Title="ECG em repouso 6+9" TraceCount="15" Filename="Resting\A4_RestingECG6+9.xml"/>
+      <Identity Title="ECG em repouso 6x3+1R" TraceCount="18" Filename="Resting\A4_RestingECG6x3+1R.xml"/>
+    </TestModality>
+    <TestModality Name="RhythmECG">
+      <Identity Title="ECG de Ritmo (padrão)" Filename="Rhythm\UKRhythmECG_a4.xml"/>
+    </TestModality>
+    <TestModality Name="BloodPressure">
+      <Identity Title="Relatório de Página Única 1" Filename="ABP\SinglePageReport.shrf"/>
+      <Identity Title="Relatório de Página Única 2" Filename="ABP\CNAVSinglePageReport.shrf"/>
+      <Identity Title="Relatório completo" Filename="ABP\FullReport.shrf"/>
+      <Identity Title="Relatório completo com gráficos em modo paisagem" Filename="ABP\FullReportWithLandscapeGraphs.shrf"/>
+      <Identity Title="Relatório completo com média por hora" Filename="ABP\FullReportWithHourlyAverages.shrf"/>
+    </TestModality>
+  </Culture>
+  <Culture Name="It">
+    <TestModality Name="Resting12LeadECG">
+      <Identity Title="ECG a riposo 3x1+1R" TraceCount="3" Filename="Resting\A4_RestingECG3x1+1R.xml"/>
+      <Identity Title="ECG a riposo 2x3+1R" TraceCount="6" Filename="Resting\A4_RestingECG2x3+1R.xml"/>
+      <Identity Title="ECG a riposo 3x4" TraceCount="12" Filename="Resting\A4_RestingECG3x4.xml"/>
+      <Identity Title="ECG a riposo 3x4+1R" TraceCount="12" Filename="Resting\A4_RestingECG3x4+1R.xml"/>
+      <Identity Title="ECG a riposo 6x1x2" TraceCount="12" Filename="Resting\A4_RestingECG6x1x2.xml"/>
+      <Identity Title="ECG a riposo 6x2+1R" TraceCount="12" Filename="Resting\A4_RestingECG6x2+1R.xml"/>
+      <Identity Title="ECG a riposo 1x12" TraceCount="12" Filename="Resting\A4_RestingECG1x12.xml"/>
+      <Identity Title="ECG a riposo 3x5" TraceCount="15" Filename="Resting\A4_RestingECG3x5.xml"/>
+      <Identity Title="ECG a riposo 3x5+1R" TraceCount="15" Filename="Resting\A4_RestingECG3x5+1R.xml"/>
+      <Identity Title="ECG a riposo 1x15" TraceCount="15" Filename="Resting\A4_RestingECG1x15.xml"/>
+      <Identity Title="ECG a riposo 6+6+3" TraceCount="15" Filename="Resting\A4_RestingECG6+6+3.xml"/>
+      <Identity Title="ECG a riposo 6+6+3+1R" TraceCount="15" Filename="Resting\A4_RestingECG6+6+3+1R.xml"/>
+      <Identity Title="ECG a riposo 6+9" TraceCount="15" Filename="Resting\A4_RestingECG6+9.xml"/>
+      <Identity Title="ECG a riposo 6x3+1R" TraceCount="18" Filename="Resting\A4_RestingECG6x3+1R.xml"/>
+    </TestModality>
+    <TestModality Name="RhythmECG">
+      <Identity Title="Ritmo (standard)" Filename="Rhythm\UKRhythmECG_a4.xml"/>
+    </TestModality>
+    <TestModality Name="BloodPressure">
+      <Identity Title="Referto pagina singola - vers.2" Filename="ABP\SinglePageReport.shrf"/>
+      <Identity Title="Referto pagina singola" Filename="ABP\CNAVSinglePageReport.shrf"/>
+      <Identity Title="Referto completo" Filename="ABP\FullReport.shrf"/>
+      <Identity Title="Referto completo con grafici orizzontali" Filename="ABP\FullReportWithLandscapeGraphs.shrf"/>
+      <Identity Title="Referto completo con medie orarie" Filename="ABP\FullReportWithHourlyAverages.shrf"/>
+    </TestModality>
+  </Culture>
+  <Culture Name="Nl">
+    <TestModality Name="Resting12LeadECG">
+      <Identity Title="Rust-ECG 3x1+1R" TraceCount="3" Filename="Resting\A4_RestingECG3x1+1R.xml"/>
+      <Identity Title="Rust-ECG 2x3+1R" TraceCount="6" Filename="Resting\A4_RestingECG2x3+1R.xml"/>
+      <Identity Title="Rust-ECG 3x4" TraceCount="12" Filename="Resting\A4_RestingECG3x4.xml"/>
+      <Identity Title="Rust-ECG 3x4+1R" TraceCount="12" Filename="Resting\A4_RestingECG3x4+1R.xml"/>
+      <Identity Title="Rust-ECG 6x1x2" TraceCount="12" Filename="Resting\A4_RestingECG6x1x2.xml"/>
+      <Identity Title="Rust-ECG 6x2+1R" TraceCount="12" Filename="Resting\A4_RestingECG6x2+1R.xml"/>
+      <Identity Title="Rust-ECG 1x12" TraceCount="12" Filename="Resting\A4_RestingECG1x12.xml"/>
+      <Identity Title="Rust-ECG 3x5" TraceCount="15" Filename="Resting\A4_RestingECG3x5.xml"/>
+      <Identity Title="Rust-ECG 3x5+1R" TraceCount="15" Filename="Resting\A4_RestingECG3x5+1R.xml"/>
+      <Identity Title="Rust-ECG 1x15" TraceCount="15" Filename="Resting\A4_RestingECG1x15.xml"/>
+      <Identity Title="Rust-ECG 6+6+3" TraceCount="15" Filename="Resting\A4_RestingECG6+6+3.xml"/>
+      <Identity Title="Rust-ECG 6+6+3+1R" TraceCount="15" Filename="Resting\A4_RestingECG6+6+3+1R.xml"/>
+      <Identity Title="Rust-ECG 6+9" TraceCount="15" Filename="Resting\A4_RestingECG6+9.xml"/>
+      <Identity Title="Rust-ECG 6x3+1R" TraceCount="18" Filename="Resting\A4_RestingECG6x3+1R.xml"/>
+    </TestModality>
+    <TestModality Name="RhythmECG">
+      <Identity Title="Ritme-ECG (standaard)" Filename="Rhythm\UKRhythmECG_a4.xml"/>
+    </TestModality>
+    <TestModality Name="BloodPressure">
+      <Identity Title="Beknopt rapport 1" Filename="ABP\SinglePageReport.shrf"/>
+      <Identity Title="Beknopt rapport 2" Filename="ABP\CNAVSinglePageReport.shrf"/>
+      <Identity Title="Volledig rapport" Filename="ABP\FullReport.shrf"/>
+      <Identity Title="Volledig rapport incl. liggende grafieken" Filename="ABP\FullReportWithLandscapeGraphs.shrf"/>
+      <Identity Title="Volledig rapport incl. uurgemiddelden" Filename="ABP\FullReportWithHourlyAverages.shrf"/>
+    </TestModality>
+  </Culture>
+  <Culture Name="Sv">
+    <TestModality Name="Resting12LeadECG">
+      <Identity Title="Vilo-EKG 3x1+1R" TraceCount="3" Filename="Resting\A4_RestingECG3x1+1R.xml"/>
+      <Identity Title="Vilo-EKG 2x3+1R" TraceCount="6" Filename="Resting\A4_RestingECG2x3+1R.xml"/>
+      <Identity Title="Vilo-EKG 3x4" TraceCount="12" Filename="Resting\A4_RestingECG3x4.xml"/>
+      <Identity Title="Vilo-EKG 3x4+1R" TraceCount="12" Filename="Resting\A4_RestingECG3x4+1R.xml"/>
+      <Identity Title="Vilo-EKG 6x1x2" TraceCount="12" Filename="Resting\A4_RestingECG6x1x2.xml"/>
+      <Identity Title="Vilo-EKG 6x2+1R" TraceCount="12" Filename="Resting\A4_RestingECG6x2+1R.xml"/>
+      <Identity Title="Vilo-EKG 1x12" TraceCount="12" Filename="Resting\A4_RestingECG1x12.xml"/>
+      <Identity Title="Vilo-EKG 3x5" TraceCount="15" Filename="Resting\A4_RestingECG3x5.xml"/>
+      <Identity Title="Vilo-EKG 3x5+1R" TraceCount="15" Filename="Resting\A4_RestingECG3x5+1R.xml"/>
+      <Identity Title="Vilo-EKG 1x15" TraceCount="15" Filename="Resting\A4_RestingECG1x15.xml"/>
+      <Identity Title="Vilo-EKG 6+6+3" TraceCount="15" Filename="Resting\A4_RestingECG6+6+3.xml"/>
+      <Identity Title="Vilo-EKG 6+6+3+1R" TraceCount="15" Filename="Resting\A4_RestingECG6+6+3+1R.xml"/>
+      <Identity Title="Vilo-EKG 6+9" TraceCount="15" Filename="Resting\A4_RestingECG6+9.xml"/>
+      <Identity Title="Vilo-EKG 6x3+1R" TraceCount="18" Filename="Resting\A4_RestingECG6x3+1R.xml"/>
+    </TestModality>
+    <TestModality Name="RhythmECG">
+      <Identity Title="Rytm-EKG (standard)" Filename="Rhythm\UKRhythmECG_a4.xml"/>
+    </TestModality>
+    <TestModality Name="BloodPressure">
+      <Identity Title="Enstaka sidorapport" Filename="ABP\SinglePageReport.shrf"/>
+      <Identity Title="Enstaka sidorapport, äldre format" Filename="ABP\CNAVSinglePageReport.shrf"/>
+      <Identity Title="Fullständig rapport" Filename="ABP\FullReport.shrf"/>
+      <Identity Title="Fullständig rapport med liggande diagram" Filename="ABP\FullReportWithLandscapeGraphs.shrf"/>
+      <Identity Title="Fullständig rapport med genomsnitt per timme" Filename="ABP\FullReportWithHourlyAverages.shrf"/>
+    </TestModality>
+  </Culture>
+  <Culture Name="Zh">
+    <TestModality Name="Resting12LeadECG">
+      <Identity Title="静态 3x1+1R" TraceCount="3" Filename="Resting\A4_RestingECG3x1+1R.xml"/>
+      <Identity Title="静态 2x3+1R" TraceCount="6" Filename="Resting\A4_RestingECG2x3+1R.xml"/>
+      <Identity Title="静态 3x4" TraceCount="12" Filename="Resting\A4_RestingECG3x4.xml"/>
+      <Identity Title="静态 3x4+1R" TraceCount="12" Filename="Resting\A4_RestingECG3x4+1R.xml"/>
+      <Identity Title="静态 6x1x2" TraceCount="12" Filename="Resting\A4_RestingECG6x1x2.xml"/>
+      <Identity Title="静态 6x2+1R" TraceCount="12" Filename="Resting\A4_RestingECG6x2+1R.xml"/>
+      <Identity Title="静态 1x12" TraceCount="12" Filename="Resting\A4_RestingECG1x12.xml"/>
+      <Identity Title="静态 3x5" TraceCount="15" Filename="Resting\A4_RestingECG3x5.xml"/>
+      <Identity Title="静态 3x5+1R" TraceCount="15" Filename="Resting\A4_RestingECG3x5+1R.xml"/>
+      <Identity Title="静态 1x15" TraceCount="15" Filename="Resting\A4_RestingECG1x15.xml"/>
+      <Identity Title="静态 6+6+3" TraceCount="15" Filename="Resting\A4_RestingECG6+6+3.xml"/>
+      <Identity Title="静态 6+6+3+1R" TraceCount="15" Filename="Resting\A4_RestingECG6+6+3+1R.xml"/>
+      <Identity Title="静态 6+9" TraceCount="15" Filename="Resting\A4_RestingECG6+9.xml"/>
+      <Identity Title="静态 6x3+1R" TraceCount="18" Filename="Resting\A4_RestingECG6x3+1R.xml"/>
+    </TestModality>
+    <TestModality Name="RhythmECG">
+      <Identity Title="节律（标准）" Filename="Rhythm\UKRhythmECG_a4.xml"/>
+    </TestModality>
+    <TestModality Name="BloodPressure">
+      <Identity Title="单页报告" Filename="ABP\SinglePageReport.shrf"/>
+      <Identity Title="单页旧版报告" Filename="ABP\CNAVSinglePageReport.shrf"/>
+      <Identity Title="整份报告" Filename="ABP\FullReport.shrf"/>
+      <Identity Title="附带横向图形的整份报告" Filename="ABP\FullReportWithLandscapeGraphs.shrf"/>
+      <Identity Title="附带小时均值的整份报告" Filename="ABP\FullReportWithHourlyAverages.shrf"/>
+    </TestModality>
+  </Culture>
+  <Culture Name="Ru">
+    <TestModality Name="Resting12LeadECG">
+      <Identity Title="ЭКГ 3x1+1R" TraceCount="3" Filename="Resting\A4_RestingECG3x1+1R.xml"/>
+      <Identity Title="ЭКГ 2x3+1R" TraceCount="6" Filename="Resting\A4_RestingECG2x3+1R.xml"/>
+      <Identity Title="ЭКГ 3x4" TraceCount="12" Filename="Resting\A4_RestingECG3x4.xml"/>
+      <Identity Title="ЭКГ 3x4+1R" TraceCount="12" Filename="Resting\A4_RestingECG3x4+1R.xml"/>
+      <Identity Title="ЭКГ 6x1x2" TraceCount="12" Filename="Resting\A4_RestingECG6x1x2.xml"/>
+      <Identity Title="ЭКГ 6x2+1R" TraceCount="12" Filename="Resting\A4_RestingECG6x2+1R.xml"/>
+      <Identity Title="ЭКГ 1x12" TraceCount="12" Filename="Resting\A4_RestingECG1x12.xml"/>
+      <Identity Title="ЭКГ 3x5" TraceCount="15" Filename="Resting\A4_RestingECG3x5.xml"/>
+      <Identity Title="ЭКГ 3x5+1R" TraceCount="15" Filename="Resting\A4_RestingECG3x5+1R.xml"/>
+      <Identity Title="ЭКГ 1x15" TraceCount="15" Filename="Resting\A4_RestingECG1x15.xml"/>
+      <Identity Title="ЭКГ 6+6+3" TraceCount="15" Filename="Resting\A4_RestingECG6+6+3.xml"/>
+      <Identity Title="ЭКГ 6+6+3+1R" TraceCount="15" Filename="Resting\A4_RestingECG6+6+3+1R.xml"/>
+      <Identity Title="ЭКГ 6+9" TraceCount="15" Filename="Resting\A4_RestingECG6+9.xml"/>
+      <Identity Title="ЭКГ 6x3+1R" TraceCount="18" Filename="Resting\A4_RestingECG6x3+1R.xml"/>
+    </TestModality>
+    <TestModality Name="RhythmECG">
+      <Identity Title="Ритм (стандартно)" Filename="Rhythm\UKRhythmECG_a4.xml"/>
+    </TestModality>
+    <TestModality Name="BloodPressure">
+      <Identity Title="Одностраничный отчет" Filename="ABP\SinglePageReport.shrf"/>
+      <Identity Title="Одностраничный устаревший отчет" Filename="ABP\CNAVSinglePageReport.shrf"/>
+      <Identity Title="Полный отчет" Filename="ABP\FullReport.shrf"/>
+      <Identity Title="Полный отчет с графиком в альбомной ориентации" Filename="ABP\FullReportWithLandscapeGraphs.shrf"/>
+      <Identity Title="Полный отчет со среднечасовыми значениями" Filename="ABP\FullReportWithHourlyAverages.shrf"/>
+    </TestModality>
+  </Culture>
+  <Culture Name="Ja">
+    <TestModality Name="Resting12LeadECG">
+      <Identity Title="安静時ECG 3x1+1R" TraceCount="3" Filename="Resting\A4_RestingECG3x1+1R.xml"/>
+      <Identity Title="安静時ECG 2x3+1R" TraceCount="6" Filename="Resting\A4_RestingECG2x3+1R.xml"/>
+      <Identity Title="安静時ECG 3x4" TraceCount="12" Filename="Resting\A4_RestingECG3x4.xml"/>
+      <Identity Title="安静時ECG 3x4+1R" TraceCount="12" Filename="Resting\A4_RestingECG3x4+1R.xml"/>
+      <Identity Title="安静時ECG 6x1x2" TraceCount="12" Filename="Resting\A4_RestingECG6x1x2.xml"/>
+      <Identity Title="安静時ECG 6x2+1R" TraceCount="12" Filename="Resting\A4_RestingECG6x2+1R.xml"/>
+      <Identity Title="安静時ECG 1x12" TraceCount="12" Filename="Resting\A4_RestingECG1x12.xml"/>
+      <Identity Title="安静時ECG 3x5" TraceCount="15" Filename="Resting\A4_RestingECG3x5.xml"/>
+      <Identity Title="安静時ECG 3x5+1R" TraceCount="15" Filename="Resting\A4_RestingECG3x5+1R.xml"/>
+      <Identity Title="安静時ECG 1x15" TraceCount="15" Filename="Resting\A4_RestingECG1x15.xml"/>
+      <Identity Title="安静時ECG 6+6+3" TraceCount="15" Filename="Resting\A4_RestingECG6+6+3.xml"/>
+      <Identity Title="安静時ECG 6+6+3+1R" TraceCount="15" Filename="Resting\A4_RestingECG6+6+3+1R.xml"/>
+      <Identity Title="安静時ECG 6+9" TraceCount="15" Filename="Resting\A4_RestingECG6+9.xml"/>
+      <Identity Title="安静時ECG 6x3+1R" TraceCount="18" Filename="Resting\A4_RestingECG6x3+1R.xml"/>
+    </TestModality>
+    <TestModality Name="RhythmECG">
+      <Identity Title="リズム・調律（標準）" Filename="Rhythm\UKRhythmECG_a4.xml"/>
+    </TestModality>
+    <TestModality Name="BloodPressure">
+      <Identity Title="単ページレポート" Filename="ABP\SinglePageReport.shrf"/>
+      <Identity Title="単ページレガシーレポート" Filename="ABP\CNAVSinglePageReport.shrf"/>
+      <Identity Title="フルレポート" Filename="ABP\FullReport.shrf"/>
+      <Identity Title="横向きグラフを含むフルレポート" Filename="ABP\FullReportWithLandscapeGraphs.shrf"/>
+      <Identity Title="毎時平均を含むフルレポート" Filename="ABP\FullReportWithHourlyAverages.shrf"/>
+    </TestModality>
+  </Culture>
+</ReportFormats>

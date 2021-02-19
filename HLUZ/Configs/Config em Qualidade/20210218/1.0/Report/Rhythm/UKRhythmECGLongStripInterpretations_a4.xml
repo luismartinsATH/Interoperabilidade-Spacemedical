@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ReportFormat>
+
+  <Definition>
+    <!-- UK Rhythm Report A4 - Long Strip Interpretations Page -->
+    <ReportType ReportTypeValue="RhythmECG"/>
+    <PageType PageTypeValue="NormalPage"/>
+    <PageOrientation>Landscape</PageOrientation>
+  </Definition>
+
+  <SectionPos X="7.0" Y="5.0" />
+
+  <!-- Page outline -->
+
+  <DrawLine X0="0.0" Y0="0.5" X1="278.5" Y1="0.5" OffsetType="Abs" Thickness="Thick"/>
+  <DrawLine X0="278.5" Y0="0.5" X1="278.5" Y1="198.0" OffsetType="Abs" Thickness="Thick" />
+  <DrawLine X0="278.5" Y0="198.0" X1="0.0" Y1="198.0" OffsetType="Abs" Thickness="Thick" />
+  <DrawLine X0="0.0" Y0="198.0" X1="0.0" Y1="0.5" OffsetType="Abs" Thickness="Thick" />
+
+  <DrawLine X0="0.0" Y0="9.0" X1="278.5" Y1="9.0" OffsetType="Abs" Thickness="Thick" />
+  <DrawLine X0="0.0" Y0="14.0" X1="278.5" Y1="14.0" OffsetType="Abs" Thickness="Normal" />
+
+  <DrawText Name="Report Title">
+    <Position X="139.25" Y="4.5" OffsetType="Abs"/>
+    <Font FontType="ArialLargeBold" />
+    <Alignment Vertical="Middle" Horizontal="Centre" />
+    <Parameter Number="0" Id="facility" Format="Text"/>
+    <Text>
+      <Language Name="En-Us">%0 - ECG Report</Language>
+      <Language Name="Nl">%0 - Rapport ECG</Language>
+      <Language Name="Pl">%0 - Raport EKG</Language>
+      <Language Name="Da">%0 - EKG-rapport</Language>
+      <Language Name="Fi">%0 - EKG-raportti</Language>
+      <Language Name="Fr">%0 - Rapport d'ECG</Language>
+      <Language Name="Es">%0 - Informe de ECG</Language>
+      <Language Name="Es-Es">%0 - Informe de ECG</Language>
+      <Language Name="Sv">%0 - EKG-rapport</Language>
+      <Language Name="It">%0 - Referto ECG</Language>
+      <Language Name="Pt-Br">%0 - Relatório de ECG</Language>
+      <Language Name="Pt-Pt">%0 - Relatório de ECG</Language>
+      <Language Name="Zh">%0 - ECG 报告</Language>
+      <Language Name="Ja">%0 - ECGレポート</Language>
+      <Language Name="Ru">%0 — Отчет ЭКГ</Language>
+    </Text>
+  </DrawText>
+
+  <DrawText Name="">
+    <Position X="0.0" Y="200.5" OffsetType="Abs"/>
+    <Font FontType="ArialSmall" />
+    <Parameter Number="0" Id="date_time_now" Format="Text"/>
+    <Text>
+      <Language Name="En-Us">Generated on %0</Language>
+      <Language Name="Nl">Gegenereerd op %0</Language>
+      <Language Name="Pl">Utworzone w %0</Language>
+      <Language Name="Da">Genereret den %0</Language>
+      <Language Name="Fi">Luotu %0</Language>
+      <Language Name="Fr">Généré le %0</Language>
+      <Language Name="Es">Creado en %0</Language>
+      <Language Name="Sv">Genererades %0</Language>
+      <Language Name="It">Generato su %0</Language>
+      <Language Name="Pt-Br">Criado em %0</Language>
+      <Language Name="Pt-Pt">Criado em %0</Language>
+      <Language Name="Zh">生成于 %0</Language>
+      <Language Name="Ja">作成日%0</Language>
+      <Language Name="Ru">Создано %0</Language>
+    </Text>
+  </DrawText>
+
+  <DrawText Name="">
+    <Condition Param="report_signed" Value="true"/>
+    <Position X="80.0" Y="200.5" OffsetType="Abs"/>
+    <Font FontType="ArialSmall" />
+    <Parameter Number="0" Id="signed_by_operator" Format="Text"/>
+    <Parameter Number="1" Id="signed_date_time" Format="Text"/>
+    <Text>
+      <Language Name="En-Us">Signed by %0 on %1</Language>
+      <Language Name="Nl">Ondertekend door %0 op %1</Language>
+      <Language Name="Pl">Podpisane przez %0 w %1</Language>
+      <Language Name="Da">Underskrevet af %0 den %1</Language>
+      <Language Name="Fi">Allekirjoittanut %0, %1</Language>
+      <Language Name="Fr">Signé par %0 le %1</Language>
+      <Language Name="Es">Firmado por: %0 fecha %1</Language>
+      <Language Name="Sv">Undertecknades av %0 den %1</Language>
+      <Language Name="It">Firmato da %0 il %1</Language>
+      <Language Name="Pt-Br">Assinado por %0 em %1</Language>
+      <Language Name="Pt-Pt">Assinado por %0 em %1</Language>
+      <Language Name="Zh">%0 于 %1 签署</Language>
+      <Language Name="Ja">署名%0（%1）</Language>
+      <Language Name="Ru">Подписано %0, %1</Language>
+    </Text>
+  </DrawText>
+
+  <DrawText Name="">
+    <Position X="278.5" Y="200.5" OffsetType="Abs"/>
+    <Font FontType="ArialSmall" />
+    <Alignment Horizontal="Right" Vertical="Below" />
+    <Parameter Number="0" Id="sentinel_version" Format="Text"/>
+    <Parameter Number="1" Id="recorder_type" Format="Text"/>
+    <Parameter Number="2" Id="recorder_serialnum" Format="Text"/>
+    <Text>
+      <Language Name="En-Us">Spacelabs Healthcare Sentinel Ver: %0,  %1 Ser Num: %2</Language>
+      <Language Name="Nl">Spacelabs Healthcare Sentinel Ver: %0,  %1 Ser Num: %2</Language>
+      <Language Name="Pl">Spacelabs Healthcare Sentinel Wersja: %0,  %1 Nr serii: %2</Language>
+      <Language Name="Da">Spacelabs Healthcare Sentinel Ver: %0,  %1 Ser Num: %2</Language>
+      <Language Name="Fi">Spacelabs Healthcare Sentinel ver: %0,  %1 sarjanro: %2</Language>
+      <Language Name="Fr">Spacelabs Healthcare Sentinel Ver: %0,  %1 Nº de série : %2</Language>
+      <Language Name="Es">Spacelabs Healthcare Sentinel Ver: %0,  %1 Nº de serie: %2</Language>
+      <Language Name="Sv">Spacelabs Healthcare Sentinel vers.: %0,  %1 Serienr: %2</Language>
+      <Language Name="It">Spacelabs Healthcare Sentinel Ver: %0,  %1 N. di serie: %2</Language>
+      <Language Name="Pt-Br">Spacelabs Healthcare Sentinel Ver: %0,  %1 Nº de Série: %2</Language>
+      <Language Name="Pt-Pt">Spacelabs Healthcare Sentinel Ver: %0,  %1 Nº de Série: %2</Language>
+      <Language Name="Zh">Spacelabs Healthcare Sentinel 版本：%0、%1 序列号：%2</Language>
+      <Language Name="Ja">Spacelabs Healthcare Sentinelバージョン：%0、  %1シリアル番号：%2</Language>
+      <Language Name="Ru">Версия Spacelabs Healthcare Sentinel: %0,  %1 Серийный номер: %2</Language>
+    </Text>
+  </DrawText>
+
+  <DrawBitmap Name="">
+    <Position X="2.0" Y="1.3" OffsetType="Abs"/>
+    <Size X="34.0" Y="6.5"/>
+    <BitmapFile Filename="SLHC_Logo_Hor.png" />
+    <Orientation Angle="0.0" />
+  </DrawBitmap>
+
+  <!-- The rhythm strip start time -->
+
+  <DrawText Name="">
+    <Position X="2.0" Y="195.0" OffsetType="Abs"/>
+    <Alignment Horizontal="Left" Vertical="Below" />
+    <Parameter Number="0" Id="rhythm_10_sec_strip_time" Format="Text"/>
+    <Font FontType="ArialNormal" />
+    <Text>
+      <Language Name="En-Us">For strip at %0</Language>
+      <Language Name="Nl">Strook: %0</Language>
+      <Language Name="Pl">Odcinek: %0</Language>
+      <Language Name="Da">Strimmel: %0</Language>
+      <Language Name="Fi">Käyrä: %0</Language>
+      <Language Name="Fr">Exemple : %0</Language>
+      <Language Name="Es">Tira: %0</Language>
+      <Language Name="Sv">Remsa: %0</Language>
+      <Language Name="It">Strip: %0</Language>
+      <Language Name="Pt-Br">Tira: %0</Language>
+      <Language Name="Pt-Pt">Tira: %0</Language>
+      <Language Name="Zh">针对 %0 时的条形图</Language>
+      <Language Name="Ja">%0でストリップ</Language>
+      <Language Name="Ru">Для отрезка на %0</Language>
+    </Text>
+  </DrawText>
+
+    <!-- Patient name and ID -->
+    
+  <DrawText Name="">
+    <Position X="49.0" Y="195.0" OffsetType="Abs"/>
+    <Font FontType="ArialNormal" />
+    <Text>
+      <Language Name="En-Us">Patient Name:</Language>
+      <Language Name="Nl">Naam patiënt:</Language>
+      <Language Name="Pl">Pacjent:</Language>
+      <Language Name="Da">Patientnavn:</Language>
+      <Language Name="Fi">Potilaan nimi:</Language>
+      <Language Name="Fr">Nom du patient :</Language>
+      <Language Name="Es">Nombre paciente:</Language>
+      <Language Name="Sv">Patientnamn:</Language>
+      <Language Name="It">Nome paziente:</Language>
+      <Language Name="Pt-Br">Nome:</Language>
+      <Language Name="Pt-Pt">Nome:</Language>
+      <Language Name="Zh">患者姓名：</Language>
+      <Language Name="Ja">患者名：</Language>
+      <Language Name="Ru">Имя пациента:</Language>
+    </Text>
+  </DrawText>
+
+  <DrawText Name="">
+    <Position X="75.0" Y="195.0" OffsetType="Abs"/>
+    <Parameter Number="0" Id="patient_last_name_comma_first_name" Format="Text"/>
+    <Font FontType="ArialNormalBold" />
+    <Text>
+      <Language Name="En-Us">%0</Language>
+      <Language Name="Nl">%0</Language>
+      <Language Name="Pl">%0</Language>
+      <Language Name="Da">%0</Language>
+      <Language Name="Fi">%0</Language>
+      <Language Name="Fr">%0</Language>
+      <Language Name="Es">%0</Language>
+      <Language Name="Sv">%0</Language>
+      <Language Name="It">%0</Language>
+      <Language Name="Pt-Br">%0</Language>
+      <Language Name="Pt-Pt">%0</Language>
+      <Language Name="Zh">%0</Language>
+      <Language Name="Ja">%0</Language>
+      <Language Name="Ru">%0</Language>
+    </Text>
+  </DrawText>
+
+  <DrawText Name="">
+    <Position X="157.0" Y="195.0" OffsetType="Abs"/>
+    <Font FontType="ArialNormal" />
+    <Text>
+      <Language Name="En-Us">Patient ID:</Language>
+      <Language Name="Nl">Patiënt-ID:</Language>
+      <Language Name="Pl">Nr pacjenta:</Language>
+      <Language Name="Da">Patient-ID:</Language>
+      <Language Name="Fi">Potilastunnus:</Language>
+      <Language Name="Fr">N° du patient :</Language>
+      <Language Name="Es">ID paciente:</Language>
+      <Language Name="Sv">Patient-ID:</Language>
+      <Language Name="It">ID paziente:</Language>
+      <Language Name="Pt-Br">ID do paciente:</Language>
+      <Language Name="Pt-Pt">ID do paciente:</Language>
+      <Language Name="Zh">患者 ID：</Language>
+      <Language Name="Ja">患者ID：</Language>
+      <Language Name="Ru">№ пациента:</Language>
+    </Text>
+  </DrawText>
+
+  <DrawText Name="">
+    <Position X="178.0" Y="195.0" OffsetType="Abs"/>
+    <Parameter Number="0" Id="patient_number" Format="Text"/>
+    <Font FontType="ArialNormalBold" />
+    <Text>
+      <Language Name="En-Us">%0</Language>
+      <Language Name="Nl">%0</Language>
+      <Language Name="Pl">%0</Language>
+      <Language Name="Da">%0</Language>
+      <Language Name="Fi">%0</Language>
+      <Language Name="Fr">%0</Language>
+      <Language Name="Es">%0</Language>
+      <Language Name="Sv">%0</Language>
+      <Language Name="It">%0</Language>
+      <Language Name="Pt-Br">%0</Language>
+      <Language Name="Pt-Pt">%0</Language>
+      <Language Name="Zh">%0</Language>
+      <Language Name="Ja">%0</Language>
+      <Language Name="Ru">%0</Language>
+    </Text>
+  </DrawText>
+
+  <!-- interpretation -->
+
+  <DrawText Name="">
+    <Position X="2.0" Y="12.5" OffsetType="Abs"/>
+    <Parameter Number="0" Id="rhythm_ecg.algorithm" Format="Text"/>
+    <Font FontType="ArialNormalBold" />
+    <Text>
+      <Language Name="En-Us">Findings and Interpretations (%0)</Language>
+      <Language Name="Nl">Bevindingen en interpretaties (%0)</Language>
+      <Language Name="Pl">Opisy badań (%0)</Language>
+      <Language Name="Da">Resultater og interpretationer (%0)</Language>
+      <Language Name="Fi">Löydöt ja tulkinnat (%0)</Language>
+      <Language Name="Fr">Résultats et interprétation (%0)</Language>
+      <Language Name="Es">Hallazgos e interpretaciones (%0)</Language>
+      <Language Name="Sv">Slutsatser och tolkningar (%0)</Language>
+      <Language Name="It">Interpretazioni e risultati (%0)</Language>
+      <Language Name="Pt-Br">Interpretações e Conclusões (%0)</Language>
+      <Language Name="Pt-Pt">Interpretações e Conclusões (%0)</Language>
+      <Language Name="Zh">结果与解释 (%0)</Language>
+      <Language Name="Ja">所見および解釈（%0）</Language>
+      <Language Name="Ru">Выводы и интерпретации (%0)</Language>
+    </Text>
+  </DrawText>
+
+  <DrawText Name="">
+    <Position X="2.0" Y="15.0" OffsetType="Abs"/>
+    <Size X="275.0" Y="176.0"/>
+    <Alignment Horizontal="Left" Vertical="Above" />
+    <Parameter Number="0" Id="rhythm_ecg.strip_findings" Format="Text"/>
+    <Font FontType="ArialNormal" />
+    <Text>
+      <Language Name="En-Us">%0</Language>
+      <Language Name="Nl">%0</Language>
+      <Language Name="Pl">%0</Language>
+      <Language Name="Da">%0</Language>
+      <Language Name="Fi">%0</Language>
+      <Language Name="Fr">%0</Language>
+      <Language Name="Es">%0</Language>
+      <Language Name="Sv">%0</Language>
+      <Language Name="It">%0</Language>
+      <Language Name="Pt-Br">%0</Language>
+      <Language Name="Pt-Pt">%0</Language>
+      <Language Name="Zh">%0</Language>
+      <Language Name="Ja">%0</Language>
+      <Language Name="Ru">%0</Language>
+    </Text>
+    <LongComments />
+  </DrawText>
+
+  <!-- Page X of Y -->
+
+  <PageXOfY Name="">
+    <Position X="275.0" Y="195.0" OffsetType="Abs"/>
+    <Alignment Horizontal="Right" Vertical="Below" />
+    <Font FontType="ArialNormal" />
+    <Text>
+      <Language Name="En-Us">Page #current# of #total#</Language>
+      <Language Name="Nl">Pagina #current# van #total#</Language>
+      <Language Name="Pl">Strona #current# z #total#</Language>
+      <Language Name="Da">Side #current# af #total#</Language>
+      <Language Name="Fi">Sivu #current# / #total#</Language>
+      <Language Name="Fr">Page #current# de #total#</Language>
+      <Language Name="Es">Página #current# de #total#</Language>
+      <Language Name="Sv">Sidan #current# av #total#</Language>
+      <Language Name="It">Pagina #current# di #total#</Language>
+      <Language Name="Pt-Br">Página #current# de #total#</Language>
+      <Language Name="Pt-Pt">Página #current# de #total#</Language>
+      <Language Name="Zh">第 #current# 页，共 #total# 页</Language>
+      <Language Name="Ja">#current#/#total#ページ</Language>
+      <Language Name="Ru">#current# из #total#</Language>
+    </Text>
+  </PageXOfY>
+
+</ReportFormat>
