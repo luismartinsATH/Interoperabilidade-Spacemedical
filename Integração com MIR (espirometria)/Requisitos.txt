@@ -1,0 +1,12 @@
+Ficheiro GDT com o seguinte formato:
+
+WPROXXXX.GDT
+
+Ficheiro que envia:
+
+xxxxWPRO.GDT
+
+campos a passar:
+- DOB
+- Altura
+- Peso
