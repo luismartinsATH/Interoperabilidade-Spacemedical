@@ -10,3 +10,4 @@ campos a passar:
 - DOB
 - Altura
 - Peso
+- Sexo

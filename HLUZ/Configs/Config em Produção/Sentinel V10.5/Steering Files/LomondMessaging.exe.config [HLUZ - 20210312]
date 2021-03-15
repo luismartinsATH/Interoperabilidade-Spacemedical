@@ -1,0 +1,491 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <!-- This section should not require alteration during configuration for a particular customer -->
+  <configSections>
+    <section name="DataSourceGroup" type="Dmr.LomondMessaging.Configuration.DataSourceHandler, LomondMessaging"/>
+    <section name="DataSinkGroup" type="Dmr.LomondMessaging.Configuration.DataSinkHandler, LomondMessaging"/>
+    <section name="TransformsGroup" type="Dmr.LomondMessaging.Configuration.TransformsHandler, LomondMessaging"/>
+    <section name="Routing" type="Dmr.LomondMessaging.Configuration.RoutingHandler, LomondMessaging"/>
+    <section name="DataImportExport" type="System.Configuration.NameValueSectionHandler"/>
+    <section name="WebAppConnection" type="System.Configuration.NameValueSectionHandler"/>
+    <section name="HL7Settings" type="Dmr.LomondMessaging.Configuration.Hl7SettingsHandler, LomondMessaging"/>
+    <section name="Logging" type="System.Configuration.NameValueSectionHandler"/>
+    <section name="CardioExpressOrganisationMapping" type="System.Configuration.NameValueSectionHandler"/>
+  </configSections>
+
+  <!-- Each entry in the following group defines a data source that
+    the pipeline will create and listen for data on.-->
+  <DataSourceGroup>
+
+    <FileSystemDataSources>
+
+      <FileSystemDataSource name="CH2000 File System Data Source" type="Dmr.LomondMessaging.DataSources.FileSystemDatasource">
+        <!-- Only files with names that match the filenamePatterns regular expressions will be processed.
+        FilesetSpec specifies a text file that is used to group sets of files (e.g. a pdf and a csv) into single messages.  -->
+        <Inbox path="Inboxes\CH2000" filenamePatterns=".*\.pdf\z;.*\.csv\z" filesetSpec="netfiles.txt"  IncludeSubdirectories="true" archivePath="Archive CH2000"/>
+        <!-- If a file is to be treated as part of a set (e.g. file1.pdf + file1.csv = a single message) then PartialMessageTTL
+        specifies how many other messages will be processed before a partial message will be deemed dead.  For example,
+        if csv file arrives and its associated pdf fails to arrive in the next five messages, the csv file will be discarded. -->
+        <PartialMessageTTL>5</PartialMessageTTL>
+        <!-- 0 = untrusted, 1 = trusted.  Untrusted data must be reconciled manually within Sentinel.  Untrusted data is
+        data that comes from a source that is not authoritative and so may contain erroneous patient IDs etc. -->
+        <TrustLevel>0</TrustLevel>
+        <!-- (optional) Seconds to wait before deleting a file that has been processed.  CH2000 does a check for the
+        files that it has FTPed and if the messaging service deletes them too soon it is interpreted
+        by CH2000 as an error in copying. -->
+        <DeleteDelay>2</DeleteDelay>
+      </FileSystemDataSource>
+
+      <FileSystemDataSource name="HL7 File System Data Source" type="Dmr.LomondMessaging.DataSources.FileSystemDatasource">
+        <Inbox path="Inboxes\HL7" filenamePatterns=".*?([0-9]+)?\.[hH][lL]7\z" IncludeSubdirectories="false" pollingInterval="00:00:05" pollOnStartup="false"
+               processByOrdinal="true" archivePath="Archive Hl7"/>
+        <TrustLevel>1</TrustLevel>
+      </FileSystemDataSource>
+
+      <FileSystemDataSource name="Stress File System Data Source" type="Dmr.LomondMessaging.DataSources.FileSystemDatasource">
+        <Inbox path="Inboxes\Stress" filenamePatterns=".*\.pdf\z" IncludeSubdirectories="false" archivePath="Archive Stress"/>
+        <TrustLevel>1</TrustLevel>
+      </FileSystemDataSource>
+
+      <FileSystemDataSource name="Philips File System Data Source" type="Dmr.LomondMessaging.DataSources.FileSystemDatasource">
+        <!-- <Inbox path="\\hl-sfshare06.hluz.ess.local\Exames\cardiologia\SpaceLabs" filenamePatterns=".*\.pdf\z" IncludeSubdirectories="false" archivePath="Archive Philips"/> -->
+		<Inbox path="Inboxes\Philips" filenamePatterns=".*\.pdf\z" IncludeSubdirectories="false" archivePath="Archive Philips"/>
+        <TrustLevel>1</TrustLevel>
+      </FileSystemDataSource>
+	  
+<!-- 	 <FileSystemDataSource name="Philips File System Data Source" type="Dmr.LomondMessaging.DataSources.FileSystemDatasource">
+	  <Inbox path="Inboxes\Philips" filenamePatterns=".*\.pdf\z" IncludeSubdirectories="false" archivePath="Archive Philips"/>
+        <TrustLevel>1</TrustLevel>
+      </FileSystemDataSource> -->
+
+      <FileSystemDataSource name="Quinton File System Data Source" type="Dmr.LomondMessaging.DataSources.FileSystemDatasource">
+        <Inbox path="Inboxes\Quinton" filenamePatterns=".*\.pdf\z;.*\.xml\z" filesetSpec="Quinton File Set.txt" IncludeSubdirectories="false" archivePath="Archive Quinton"/>
+        <PartialMessageTTL>5</PartialMessageTTL>
+        <TrustLevel>1</TrustLevel>
+      </FileSystemDataSource>
+
+    </FileSystemDataSources>
+
+    <SocketDataSources>
+      <SocketDataSource name="HL7 Socket Data Source" type="Dmr.LomondMessaging.DataSources.SocketDatasource">
+        <!-- If no IP address is specified, the messaging service will listen for data on all
+        available IP addresses.  If the server the service is running on has multiple IP addresses and
+        only one of those IP addresses should be used by the messaging service for receiving data, then
+        specify the address in the IPAddresses element. -->
+        <IPAddress>0.0.0.0</IPAddress>
+        <Port>2201</Port>
+        <!-- Persistent = true means multiple messages will be expected on a single connection.
+            Persistent = false means only a single message will be expected across a connection.-->
+        <Persistent>false</Persistent>
+        <!-- In order to determine when a message starts and stops within a stream of data, delimiters
+        are required.  The following elements indicate what those delimeters are. -->
+        <MessageDelimiters>
+          <Start>11</Start>
+          <End>28</End>
+          <!-- An extra byte is optional.  HL7 MLLP uses an extra byte but other protocols may not.  If
+          one is not required, simply remove the ExtraByte element. -->
+          <ExtraByte>13</ExtraByte>
+        </MessageDelimiters>
+        <!-- Presence of Acknowledge element indicates that this data source
+            will be expected to return acks for received messages. -->
+        <Acknowledge/>
+        <TrustLevel>1</TrustLevel>
+      </SocketDataSource>
+
+
+      <SocketDataSource name="CardioExpress Data Source" type="Dmr.LomondMessaging.DataSources.SocketDatasource">
+        <IPAddress>0.0.0.0</IPAddress>
+        <Port>5051</Port>
+        <Persistent>false</Persistent>
+        <Protocol>CardioExpress</Protocol>
+        <!-- Presence of Acknowledge element indicates that this data source
+              will be expected to return acks for received messages. -->
+        <Acknowledge/>
+        <TrustLevel>1</TrustLevel>
+      </SocketDataSource>
+    </SocketDataSources>
+
+  </DataSourceGroup>
+
+  <!-- Each entry in this group defines a sink that takes messages from
+  the pipeline and sends them to some remote target -->
+  <DataSinkGroup>
+
+    <FileSystemDataSinks>
+      <FileSystemDataSink name="File System Data Sink" type="Dmr.LomondMessaging.DataSources.FileSystemDataSink">
+        <!-- filenamePattern can use the following substitution strings: $guid, $sequence and $timestamp.
+        Valid values for writeMode are CreateNewFile, OverwriteExisting and AppendToExisting. -->
+        <Outbox path="Outboxes\Outbox1" filenamePattern="$guid-report.dat" writeMode="CreateNewFile" pathFromMessage=""/>
+      </FileSystemDataSink>
+
+    </FileSystemDataSinks>
+
+    <SocketDataSinks>
+      <SocketDataSink name="HL7 Socket Data Sink" type="Dmr.LomondMessaging.DataSources.SocketDatasink">
+        <!-- If no IP address specified then the loopback address will be used. -->
+        <!-- <IPAddress>192.168.12.138</IPAddress> -->
+        <Port>2202</Port>
+        <Persistent>false</Persistent>
+        <MessageDelimiters>
+          <Start>11</Start>
+          <End>28</End>
+          <ExtraByte>13</ExtraByte>
+        </MessageDelimiters>
+        <!-- Presence of Acknowledge element indicates that this sink
+            will expect to receive an ack after sending a message. -->
+        <Acknowledge timeout="10"/>
+      </SocketDataSink>
+
+      <SocketDataSink name="HL7 External Database Sink" type="Dmr.LomondMessaging.DataSources.SocketDatasink">
+        <!-- This sink is intended for use with ADT19 query messages.  This sink can be used to send
+        out query messages and return the results through the pipeline. -->
+        <!-- If no IP address specified then the loopback address will be used. -->
+        <!--<IPAddress>192.168.12.125</IPAddress>-->
+        <Port>2210</Port>
+        <Persistent>false</Persistent>
+        <MessageDelimiters>
+          <Start>11</Start>
+          <End>28</End>
+          <ExtraByte>13</ExtraByte>
+        </MessageDelimiters>
+        <!-- Presence of Acknowledge element indicates that this sink
+            will expect to receive an ack after sending a message. -->
+        <Acknowledge timeout="10"/>
+      </SocketDataSink>
+    </SocketDataSinks>
+  </DataSinkGroup>
+
+  <!-- Settings related to transformations applied to incoming and outgoing data -->
+  <TransformsGroup>
+    <Incoming>
+      <!-- Define individual transforms.  The transform will be applied to all messages that have
+        contents that match the contentSignature attribute's regex or metadata that match the metadataSignature regex. 
+        Order is significant as these transformations will be applied in the order they appear in here. -->
+      <Transform contentSignature='(\AMSH|\A\"Meta\")'
+                 typeName="Dmr.LomondMessaging.Transformations.EncodingTransform" encoding="iso-8859-1"/>
+
+      <!-- The following performs a CSV to XML conversion on incoming CH2000 csv data.  The parameters,
+      passed to the transform using the params attribute, have the following interpretation: 
+      param 1 - Start Field             e.g. 4 : start converting at the 4th comma-separated value (ignore the first three values)
+      param 2 - End Field               e.g. 156 : stop converting at the 156th comma-separated value (ignore any data after this point in the csv file) 
+      param 3 - Row Length              e.g. 4 : treat each sequence of four values as a single row. 
+      param 4 - Element Name            e.g. 1 : take the first cell of a row as the name the element in the XML representation. 
+      param 5 - Element Value           e.g. 4 : take the fourth cell of a row as the value of the XML element in the XML representation.
+      param 6 - XML Root Element Name   e.g. CH2000 : use this string as the name of the root XML element in the XML representation. -->
+      <Transform metadataSignature="Name = CH2000 File System Data Source" contentSignature='\A\"Meta\"'
+                typeName="Dmr.LomondMessaging.Transformations.Incoming.CsvToXmlTransform" params="4, 156, 4, 1, 4, CH2000"/>
+
+      <Transform steeringFile="Steering Files\Ch2000XmlToCmf.xslt"
+                metadataSignature="Name = CH2000 File System Data Source" contentSignature="&lt;CH2000&gt;"
+                typeName="Dmr.LomondMessaging.Transformations.XsltTransform"/>
+
+      <Transform metadataSignature="Name = Stress File System Data Source|Name = Philips File System Data Source"
+                typeName="Dmr.LomondMessaging.Transformations.Incoming.MetadataToBodyTransform"/>
+
+      <Transform steeringFile="Steering Files\PhilipsPdfImport.xslt" contentSignature="&lt;MessageMetadata&gt;"
+                  metadataSignature="Name = Philips File System Data Source"
+                  typeName="Dmr.LomondMessaging.Transformations.XsltTransform" />
+
+      <Transform steeringFile="Steering Files\QuintonToCmf.xslt" contentSignature="&lt;Q-Stress_Final_Report"
+                  metadataSignature="Name = Quinton File System Data Source"
+                  typeName="Dmr.LomondMessaging.Transformations.XsltTransform" />
+
+      <Transform  metadataSignature="Name = HL7" contentSignature="PID\||QRD\|"
+                 typeName="Dmr.LomondMessaging.Transformations.Incoming.Hl7ToSimpleXml"/>
+
+      <Transform metadataSignature="Name = HL7 Socket Data Source"
+                typeName="Dmr.LomondMessaging.Transformations.AckTransform"/>
+
+      <Transform steeringFile="Steering Files\ADTA01ToCmf.xslt"
+                 metadataSignature="Name = HL7" contentSignature="\&lt;MSH.8.2\&gt;A01" fastMatchPrefix="330"
+                 typeName="Dmr.LomondMessaging.Transformations.XsltTransform"/>
+
+      <Transform steeringFile="Steering Files\ADTA02ToCmf.xslt"
+                 metadataSignature="Name = HL7" contentSignature="\&lt;MSH.8.2\&gt;A02" fastMatchPrefix="330"
+                 typeName="Dmr.LomondMessaging.Transformations.XsltTransform"/>
+
+      <Transform steeringFile="Steering Files\ADTA03ToCmf.xslt"
+                 metadataSignature="Name = HL7" contentSignature="\&lt;MSH.8.2\&gt;A03" fastMatchPrefix="330"
+                 typeName="Dmr.LomondMessaging.Transformations.XsltTransform"/>
+
+      <Transform steeringFile="Steering Files\ADTA04ToCmf.xslt"
+                 metadataSignature="Name = HL7" contentSignature="\&lt;MSH.8.2\&gt;A04" fastMatchPrefix="330"
+                 typeName="Dmr.LomondMessaging.Transformations.XsltTransform"/>
+
+      <Transform steeringFile="Steering Files\ADTA06ToCmf.xslt"
+                metadataSignature="Name = HL7" contentSignature="\&lt;MSH.8.2\&gt;A06" fastMatchPrefix="330"
+                typeName="Dmr.LomondMessaging.Transformations.XsltTransform"/>
+
+      <Transform steeringFile="Steering Files\ADTA07ToCmf.xslt"
+                metadataSignature="Name = HL7" contentSignature="\&lt;MSH.8.2\&gt;A07" fastMatchPrefix="330"
+                typeName="Dmr.LomondMessaging.Transformations.XsltTransform"/>
+
+      <Transform steeringFile="Steering Files\ADTA08ToCmf.xslt"
+                metadataSignature="Name = HL7" contentSignature="\&lt;MSH.8.2\&gt;A08" fastMatchPrefix="330"
+                typeName="Dmr.LomondMessaging.Transformations.XsltTransform"/>
+
+      <Transform steeringFile="Steering Files\ADTA11ToCmf.xslt"
+                metadataSignature="Name = HL7" contentSignature="\&lt;MSH.8.2\&gt;A11" fastMatchPrefix="330"
+                typeName="Dmr.LomondMessaging.Transformations.XsltTransform"/>
+
+      <Transform steeringFile="Steering Files\ADTA12ToCmf.xslt"
+                metadataSignature="Name = HL7" contentSignature="\&lt;MSH.8.2\&gt;A12" fastMatchPrefix="330"
+                typeName="Dmr.LomondMessaging.Transformations.XsltTransform"/>
+
+      <Transform steeringFile="Steering Files\ADTA13ToCmf.xslt"
+                metadataSignature="Name = HL7" contentSignature="\&lt;MSH.8.2\&gt;A13" fastMatchPrefix="330"
+                typeName="Dmr.LomondMessaging.Transformations.XsltTransform"/>
+
+      <Transform steeringFile="Steering Files\ADTA18ToCmf.xslt"
+                metadataSignature="Name = HL7" contentSignature="\&lt;MSH.8.2\&gt;A18" fastMatchPrefix="330"
+                typeName="Dmr.LomondMessaging.Transformations.XsltTransform"/>
+
+      <Transform steeringFile="Steering Files\ADRA19ToCmf.xslt"
+                metadataSignature="Name = HL7" contentSignature="\&lt;MSH.8.2\&gt;A19" fastMatchPrefix="330"
+                typeName="Dmr.LomondMessaging.Transformations.XsltTransform"/>
+
+      <Transform steeringFile="Steering Files\ADTA28ToCmf.xslt"
+                metadataSignature="Name = HL7" contentSignature="\&lt;MSH.8.2\&gt;A28" fastMatchPrefix="330"
+                typeName="Dmr.LomondMessaging.Transformations.XsltTransform"/>
+
+      <Transform steeringFile="Steering Files\ADTA31ToCmf.xslt"
+                metadataSignature="Name = HL7" contentSignature="\&lt;MSH.8.2\&gt;A31" fastMatchPrefix="330"
+                typeName="Dmr.LomondMessaging.Transformations.XsltTransform"/>
+
+      <Transform steeringFile="Steering Files\ADTA34ToCmf.xslt"
+                metadataSignature="Name = HL7" contentSignature="\&lt;MSH.8.2\&gt;A34" fastMatchPrefix="330"
+                typeName="Dmr.LomondMessaging.Transformations.XsltTransform"/>
+
+      <Transform steeringFile="Steering Files\ADTA39ToCmf.xslt"
+                metadataSignature="Name = HL7" contentSignature="\&lt;MSH.8.2\&gt;A39" fastMatchPrefix="330"
+                typeName="Dmr.LomondMessaging.Transformations.XsltTransform"/>
+
+      <Transform steeringFile="Steering Files\ADTA40ToCmf.xslt"
+                metadataSignature="Name = HL7" contentSignature="\&lt;MSH.8.2\&gt;A40" fastMatchPrefix="330"
+                typeName="Dmr.LomondMessaging.Transformations.XsltTransform"/>
+
+      <Transform steeringFile="Steering Files\ADTA42ToCmf.xslt"
+                metadataSignature="Name = HL7" contentSignature="\&lt;MSH.8.2\&gt;A42" fastMatchPrefix="330"
+                typeName="Dmr.LomondMessaging.Transformations.XsltTransform"/>
+
+      <Transform steeringFile="Steering Files\ADTA45ToCmf.xslt"
+                metadataSignature="Name = HL7" contentSignature="\&lt;MSH.8.2\&gt;A45" fastMatchPrefix="330"
+                typeName="Dmr.LomondMessaging.Transformations.XsltTransform"/>
+
+      <Transform steeringFile="Steering Files\OMGO19ToCmf.xslt"
+                metadataSignature="Name = HL7" contentSignature="\&lt;MSH.8.2\&gt;O19" fastMatchPrefix="330"
+                typeName="Dmr.LomondMessaging.Transformations.XsltTransform"/>
+
+      <Transform steeringFile="Steering Files\ORMO01ToCmf.xslt"
+                metadataSignature="Name = HL7" contentSignature="\&lt;MSH.8.2\&gt;O01" fastMatchPrefix="330"
+                typeName="Dmr.LomondMessaging.Transformations.XsltTransform"/>
+
+    </Incoming>
+
+    <Outgoing>
+
+      <!-- If the outgoing message is already in simple HL7 XML form then it must be a copy of
+      an incoming message that is to be transformed into an ack. -->
+      <Transform steeringFile="Steering Files\Hl7XmlToOrderAck.xslt"
+                 contentSignature="\&lt;MSH.8.2\&gt;O01|\&lt;MSH.8.2\&gt;O19" fastMatchPrefix="330"
+                 typeName="Dmr.LomondMessaging.Transformations.XsltTransform"/>
+
+      <Transform steeringFile="Steering Files\Hl7XmlToGenericAck.xslt"
+                 contentSignature="\&lt;MSH.8.1\&gt;ADT" fastMatchPrefix="330"
+                 typeName="Dmr.LomondMessaging.Transformations.XsltTransform"/>
+
+      <!-- used to transform the deserialized ExtendedTest into the file format to send to CardioExpress to inform it of the orders -->
+      <Transform steeringFile="Steering Files\CardioExpressQueryXMLtoCardioExpressMessage.xslt"
+                 contentSignature="\&lt;SentinelTests" fastMatchPrefix="330"
+                 typeName="Dmr.LomondMessaging.Transformations.XsltTransform"/>
+
+      <Transform steeringFile="Steering Files\CmfToBillHl7Xml.xslt"
+                metadataSignature="Event = SendBill" contentSignature="\&lt;Message" fastMatchPrefix="100"
+                typeName="Dmr.LomondMessaging.Transformations.XsltTransform"/>
+
+      <Transform steeringFile="Steering Files\CmfToOruHl7Xml.xslt"
+                 contentSignature="\&lt;Message" fastMatchPrefix="100"
+                 typeName="Dmr.LomondMessaging.Transformations.XsltTransform"/>
+
+      <!--<Transform steeringFile="Steering Files\CmfToCNavPlusXml.xslt"
+                 contentSignature="\&lt;Message" fastMatchPrefix="100"
+                 typeName="Dmr.LomondMessaging.Transformations.XsltTransform"/>-->
+
+      <!--<Transform steeringFile="Steering Files\patientToSqlQuery.xslt"
+                 contentSignature="\&lt;Patient" fastMatchPrefix="100"
+                 typeName="Dmr.LomondMessaging.Transformations.XsltTransform"/>-->
+
+      <!--<Transform steeringFile="Steering Files\CmfToSciStore.xslt"
+                 contentSignature="\&lt;Message" fastMatchPrefix="100"
+                 typeName="Dmr.LomondMessaging.Transformations.XsltTransform"/>-->
+
+      <!--<Transform steeringFile="Steering Files\CmfToEpiphanyXml.xslt"
+                 contentSignature="\&lt;Message" fastMatchPrefix="100"
+                 typeName="Dmr.LomondMessaging.Transformations.XsltTransform"/>-->
+
+      <Transform steeringFile="Steering Files\patientToHl7Query.xslt"
+                 contentSignature="\&lt;Patient" fastMatchPrefix="100"
+                 typeName="Dmr.LomondMessaging.Transformations.XsltTransform"/>
+
+      <Transform contentSignature="\&lt;Hl7XmlMessage" fastMatchPrefix="100"
+                 typeName="Dmr.LomondMessaging.Transformations.Outgoing.Hl7XmlToFlatHl7"/>
+
+      <Transform contentSignature="\AMSH"
+                 typeName="Dmr.LomondMessaging.Transformations.EncodingTransform" encoding="iso-8859-1"/>
+    </Outgoing>
+  </TransformsGroup>
+
+  <!-- Routing information.  Messages that match a given metadata and/or content
+  signature are then assigned to the named sink.
+  Multicasting not currently supported. -->
+  <Routing>
+    <!-- Route incoming queries for tests -->
+    <Route metadataSignature="CardioExpress Data Source" sinkName="query"/>
+    <!-- Route outgoing responses to test queries -->
+    <Route metadataSignature="Outgoing" contentSignature="\&lt;SentinelTests" sinkName="CardioExpress Data Source"/>
+    <!-- Ignore incoming acks -->
+    <Route metadataSignature="HL7 Socket Data Sink" contentSignature="MSA\|" sinkName="ignore" />
+    <!-- Route incoming query responses to Sentinel -->
+    <Route contentSignature="ADR\^A19"  sinkName="Sentinel" />
+    <!-- Route outgoing messages containing patient queries to the external db sink. -->
+    <Route metadataSignature="SendBill" sinkName="HL7 External Database Sink" />
+    <!-- Route outgoing messages containing patient queries to the external db sink. -->
+    <Route metadataSignature="SendQuery" sinkName="HL7 External Database Sink" />
+    <!-- Route, by default, out the Socket Data Sink. -->
+	<Route metadataSignature="Outgoing" contentSignature="\&lt;Message" sinkName="HL7 Socket Data Sink" /> <!-- [LMM 19042017] -->
+<!--     <Route metadataSignature="Outgoing" contentSignature="\&lt;Message" sinkName="File System Data Sink" /> -->
+    <!-- Route, by default, all acknowledgements out the Socket Data Source -->
+    <Route metadataSignature="Outgoing" contentSignature="\&lt;Hl7XmlMessage" sinkName="HL7 Socket Data Source" />
+
+  </Routing>
+
+  <!-- Settings related to importing data from messages in to the Lomond Database
+  and exporting data from the database for packaging as messages and sending -->
+  <DataImportExport>
+    <!-- Root directory for all folders, such as inboxes, outboxes and report directories,
+    that hold data and may need to be shared to integrate with third party systems. -->
+    <add key="RootFolder" value="C:\DMR\Sentinel\Sentinel Messaging Service" />
+    <!-- Location of incoming or outgoing PDF reports, under the RootFolder location. -->
+    <add key="ReportsLocationIncoming" value="Reports\In" />
+    <add key="ReportsLocationOutgoing" value="\\hl-sfshare06.hluz.ess.local\Exames\_matching\ORM\sentinel\relatorio"/> <!-- LMM 05022020 alteração da localização dos relatórios pdf na ORU -->
+    <!-- Flag that, when set to true, will result in a timestamped subdirectory being
+    created below the specified location.  This is useful when exported reports have
+    potentially clashing names. -->
+    <add key="CreateSubdirForOutgoing" value="false"/>
+    <!-- Time after a report is retrieved from Sentinel that it will be
+    removed from the local store (HH:MM format). A setting of 00:00 means 'never purge'. -->
+    <add key="ReportPurgeInterval" value="00:00" />
+    <!-- If set to true, this setting will ensure that no database update takes place
+    as a result of processing an incoming message.  This can be useful when testing
+    new steering files or other tests where updates to a live database would be undesirable. -->
+    <add key="DisableImport" value="false"/>
+    <!-- Duration, in seconds, that the remoting API will wait for a result to be produced
+    before assuming no answer is coming and timing out. -->
+    <add key="RemoteJobTimeout" value="15"/>
+
+    <!-- Culture setting to use when retrieving reports from the server.  Some reports that
+    can be exported via the messaging service are generated by the Sentinel server each time
+    they are requested and the format of dates in these reports will be determined by
+    the culture setting of the calling thread.  If no culture is supplied, the default 
+    UI culture (which is the installed UI culture of the OS) is used and the default
+    current culture is used (which, for a service, will be the invariant culture). -->
+    <add key="culture" value="PT-PT"/>
+
+  </DataImportExport>
+
+  <!-- HL7-specific settings -->
+  <HL7Settings>
+    <!-- Text containing characters matched by the find attribute will be replaced
+    by those in the replace attribute.  If non-default encoding characters are being
+    used, then the non-default equivalent of the character in the find attribute
+    will be the target of replacement. -->
+    <Substitutions>
+      <!-- <Substitution find="\" replace="\E\" /> Currently commented out because 
+      it escapes backslashes in PDF paths which no one has complained about and 
+      may mess up some interfaces. -->
+      <Substitution find="|" replace="\F\" />
+      <!--<Substitution find="^" replace="\S\" /> -->
+      <Substitution find="&amp;" replace="\T\" />
+      <Substitution find="~" replace="\R\" />
+      <Substitution find="\n" replace=".br" />
+    </Substitutions>
+
+    <RemoveTrailingDelimiters>true</RemoveTrailingDelimiters>
+
+    <!-- 
+    The list of HL7 procedure codes and their corresponding Sentinel Test Types that this Sentinel installation supports.
+    The HL7Code must map to either:
+        a. A built-in Sentinel TestType (denoted by a string starting with the '@' character).
+           In this case the Sentinel TestTypeName is set using the text following the @ character in the sentinelType attribute.
+           The text in the sentinelType attibute must match one of the following in order to map to a built-in Sentinel TestKind:
+           @SentinelHolter
+           @SentinelStress
+           @SentinelRhythm
+           @SentinelResting
+           @SentinelBloodPressure
+           @SentinelErgospirometry
+    or
+        b. A Custom test type (denoted by a string that does NOT start with the '@' character)
+           In this case the Sentinel TestTypeName is set using the text specified in the sentinelType attribute. 
+           Any sentinelType attibute text that DOES NOT start with a '@Sentinel' character is automatically mapped to TestKind.Custom.
+           
+           NOTE: Event, Spirometry and Plethysmography are all TestKind.Custom tests, 
+                 despite having their own modality buttons on the Sentinel UI.
+                 
+           Hl7Codes can be written in this App.config file as Upper-case, Lower-case or Camel-case. 
+           However they are stored in the internal mapper dictionaries as lower case and are compared as lowercase values.
+           This is to ensure compatibility with existing configurations, and to avoid user errors when configuring the service.
+    -->
+    <SupportedHl7TestTypes>
+      <!-- -->
+	  <SupportedType hl7Code="11524-0" sentinelType="@SentinelResting"/> 
+      <SupportedType hl7Code="CARDPE002" sentinelType="@SentinelStress"/>
+      <SupportedType hl7Code="CARDHOLT3" sentinelType="@SentinelHolter"/>  <!-- LMM 18102017 Alteração do código de exame para HLUZ -->
+      <SupportedType hl7Code="CARDMAPA7" sentinelType="@SentinelBloodPressure" />
+      <SupportedType hl7Code="Rhythm^00" sentinelType="@SentinelRhythm"/>
+      <SupportedType hl7Code="Ergospirometry^00" sentinelType="@SentinelErgospirometry"/>
+      <SupportedType hl7Code="Event^00" sentinelType="Event"/>
+      <SupportedType hl7Code="Spirometry^00" sentinelType="Spirometry"/>
+      <SupportedType hl7Code="Plethysmography^00" sentinelType="Plethysmography"/>
+      <SupportedType hl7Code="Ultrasound^00" sentinelType="Ultrasound"/>
+    </SupportedHl7TestTypes>
+
+  </HL7Settings>
+
+  <!-- Settings for logging to the windows event log -->
+  <Logging>
+    <!-- Level of detail to log (0 = terse, 1 = medium, 2 = verbose).
+    Verbose logging should only be necessary for tracking down problems with
+    the messaging service or with the messages that are being sent to it. -->
+    <add key="Verbosity" value="0"/>
+    <!-- Level of detail to log to the file system log, as opposed to the event log/!-->
+    <add key="FileSystemLogVerbosity" value="2"/>
+    <!-- Root directory of the file system message log (if relative then 
+    created below the install dir of the messaging service). -->
+    <add key="LogRoot" value="Message Log"/>
+  </Logging>
+
+  <CardioExpressOrganisationMapping> 
+    <!--Any IP's not below will assume the default organisation.-->
+    <!--e.g <Map IPAddress="192.168.1.1" Organisation="SL18"/> -->
+	<Map IPAddress="10.0.165.192" Organisation="ARR"/>
+	<Map IPAddress="10.0.165.89" Organisation="TDL"/>
+	<Map IPAddress="10.0.165.234" Organisation="HS"/>
+	<Map IPAddress="10.0.165.224" Organisation="HLUZ"/>
+	<Map IPAddress="10.0.165.223" Organisation="HSP-CVR"/>
+	<Map IPAddress="10.0.165.222" Organisation="CPP"/>
+	<Map IPAddress="10.0.165.221" Organisation="FNC-CAN"/>
+	<Map IPAddress="10.0.165.219" Organisation="FNC-CAT"/>
+	<Map IPAddress="10.0.165.248" Organisation="HLC-COI"/>
+	
+  </CardioExpressOrganisationMapping>
+
+  <!-- Suppress the warning which is added to the event log when HMACSHA512.ProduceLegacyHmacValues 
+  has been set to true. -->
+  <runtime>
+    <legacyHMACWarning enabled="0" />
+  </runtime>
+  <startup useLegacyV2RuntimeActivationPolicy="true">
+    <supportedRuntime version="v4.0"/>
+  </startup>
+</configuration>
