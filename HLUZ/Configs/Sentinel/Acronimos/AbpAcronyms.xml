@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Acronyms>
+    <Section Name ="Normal/Abnormal">
+        <Acronym>NORM Motivo do exame: HTA em estudo.&#13;&#13;Registo:&#13;&#13;Registo de boa qualidade técnica (usadas para avaliação XX de XX  “medições” diurnas (>70%) e XX de XX “medições” noturnas (>70%)).&#13;
+Média tensional das 24horas: XXX/XXmmHg                                        (VR 130/80mmHg).&#13;
+Média tensional diurna: XXX/XXmmHg                                                (VR 135/85mmHg).&#13;
+Média tensional noturna: XXX/XXmmHg                                               (VR 120/70mmHg).&#13;
+&#13;Perfil Tensional:&#13;
+Normal ( escassa) descida noturna de valores tensionais sisto-diastólicos (perfil tipo Dipper (não Dipper).&#13;
+&#13;
+Conclusão:&#13;
+Sem critérios para Hipertensão Arterial de acordo com parametros utilizados.&#13;
+Perfil circadiano conservado (não conservado).
+</Acronym>	
+        <Acronym>HTA1 Motivo do exame: HTA em estudo.&#13;
+
+Registo:&#13;
+
+Registo de boa qualidade técnica (usadas para avaliação XX de XX  “medições” diurnas (>70%) e XX de XX “medições” noturnas (>70%)).&#13;&#13;
+
+Média tensional das 24horas: XXX/XXmmHg                                        (VR 130/80mmHg).&#13;
+Média tensional diurna: XXX/XXmmHg                                                (VR 135/85mmHg).&#13;
+Média tensional noturna: XXX/XXmmHg                                               (VR 120/70mmHg).&#13;
+
+Perfil Tensional:&#13;
+Normal ( escassa) descida noturna de valores tensionais sisto-diastólicos (perfil tipo Dipper (não Dipper).&#13;
+
+Conclusão:&#13;
+Hipertensão Arterial sistólica/ Hipertensão Arterial sisto-diastólica/ Hipertensão Arterial diastólica, com predominio noturno/diurno/ noturna e diurna.&#13;
+Perfil circadiano conservado (não conservado).&#13;
+</Acronym>			
+    </Section>
+</Acronyms>

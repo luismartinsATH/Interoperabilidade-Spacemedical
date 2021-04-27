@@ -1,0 +1,3596 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReportFormat>
+    <Property Name="name" Value="Single Page Report"/>
+
+    <Property Name='Author' Value='Spacelabs Healthcare'/>
+    <Property Name='Subject' Value='ABP Single Page Report'/>
+    <Property Name='Title' Value='Single Page Report'/>
+    <Property Name='Keywords' Value=''/>
+    <Property Name='Creator' Value='ABP Report Generator'/>
+    <Property Name='Version' Value='1.0'/>
+
+    <Translation CultureName='En'>
+        <TranslationEntry>
+            <Untranslated>PageMOfNLabel</Untranslated>
+            <Translated>{PageNumber} of {PageCount}</Translated>
+        </TranslationEntry>
+    </Translation>
+
+
+    <PaintBox>
+
+        <Style Name='TableStyle'>
+            <Property Name='TitleFont' Value='Helvetica,12pt,Black,Bold'/>
+            <Property Name='HeaderBrush' Value='LightGray'/>
+            <Property Name='HeaderCornerRadius' Value='2'/>
+            <Property Name='HeaderPadding'>
+                <Property Name='Top' Value='1'/>
+                <Property Name='Bottom' Value='2'/>
+            </Property>
+            <Property Name='HeaderFont' Value='Helvetica,10pt,Black,Bold'/>
+            <Property Name='CellPadding'>
+                <Property Name='Top' Value='1'/>
+                <Property Name='Bottom' Value='2'/>
+            </Property>
+            <Property Name='EvenRowBrush' Value='AliceBlue'/>
+            <Property Name='CellFont' Value='Helvetica,9pt,Black'/>
+        </Style>
+
+        <Style Name='GraphStyle'>
+            <Property Name='TitleFont' Value='Helvetica,12pt,Black,Bold'/>
+        </Style>
+
+        <Style Name='BlockStyle'>
+            <Property Name='TitleFont' Value='Helvetica,12pt,Black,Bold'/>
+            <Property Name='Font' Value='Helvetica,9pt,Black'/>
+            <Property Name='BorderBrush' Value='aliceblue'/>
+            <Property Name='Margin'>
+                <Property Name='Top' Value='1'/>
+                <Property Name='Bottom' Value='1'/>
+            </Property>
+            <Property Name='Padding'>
+                <Property Name='Top' Value='1'/>
+                <Property Name='Bottom' Value='1'/>
+                <Property Name='Left' Value='1'/>
+                <Property Name='Right' Value='1'/>
+            </Property>
+            <Property Name='Alignment' Value='TopLeft'/>
+        </Style>
+
+    </PaintBox>
+
+    <!-- **********************************************************************************
+                                               HEADERS
+       ********************************************************************************** -->
+
+    <Headers>
+        <Header>
+            <Property Name='Name' Value='Header'/>
+            <Property Name='Margin'>
+                <Property Name='Left' Value='5'/>
+                <Property Name='Top' Value='10'/>
+                <Property Name='Right' Value='10'/>
+                <Property Name='Bottom' Value='0'/>
+            </Property>
+
+            <Layout>
+                <Row Name='TitleRow' Height='15.0'>
+                    <Cell Name='TitleCell'/>
+                </Row>
+            </Layout>
+
+            <Shape Type='Block'>
+                <Property Name='Content' Value='Sentinel ABP Test Report'/>
+                <Property Name='Font' Value='Helvetica,14pt,Black,Bold'/>
+                <Property Name='Alignment' Value='TopCentre'/>
+                <Property Name='Bounds' Value='TitleCell'/>
+                <Property Name='Alignment' Value='TopCentre'/>
+            </Shape>
+
+        </Header>
+
+    </Headers>
+
+
+    <!-- **********************************************************************************
+                                               FOOTERS
+       ********************************************************************************** -->
+
+    <Footers>
+
+        <Footer>
+            <Property Name='Name' Value='Footer'/>
+            <Property Name='Margin'>
+                <Property Name='Left' Value='5'/>
+                <Property Name='Top' Value='5'/>
+                <Property Name='Right' Value='10'/>
+                <Property Name='Bottom' Value='10'/>
+            </Property>
+
+            <Layout>
+                <Row Name='FooterRow' Height='5' Order='Bottom'>
+                    <Cell Name='PageMofNCell'/>
+                </Row>
+            </Layout>
+
+            <Shape Type='PageMofN'>
+                <Property Name='Bounds' Value='PageMofNCell'/>
+                <Property Name='Align' Value='BottomRight'/>
+                <Property Name='Font' Value='Helvetica,6pt'/>
+                <Property Name='Format' Value="{_PageMOfNLabel_}"/>
+            </Shape>
+
+        </Footer>
+    </Footers>
+
+    <!-- ***************************************** MAIN CONTENT OF THE REPORT PAGES ************ -->
+
+    <Content>
+
+        <Section>
+            <Property Name='Name' Value='FrontPage'/>
+            <Property Name='HeaderName' Value='Header'/>
+            <Property Name='FooterName' Value='Footer'/>
+            <Property Name='Margin'>
+                <Property Name='Left' Value='10'/>
+                <Property Name='Top' Value='25'/>
+                <Property Name='Right' Value='10'/>
+                <Property Name='Bottom' Value='15'/>
+            </Property>
+
+            <!-- **********************************************************************************
+                                        START OF FIRST PAGE
+           ********************************************************************************** -->
+
+            <Page>
+
+                <Layout>
+                    <Row Name='ExplanationRow' Height='17'/>
+                    <Row Name='FindingsRow' Height='30'/>
+                    <Row Name='CommentsRow' Height='30'/>
+                    <Row Name='TableRow'/>
+                </Layout>
+
+                <Shape Type='Block' Style='BlockStyle'>
+                    <Property Name='Bounds' Value='ExplanationRow'/>
+                    <Property Name='UpperTitle' Value="Explanation of this report"/>
+                    <Property Name='Content' Value='This report format is not intended for clinical use. It shows every field and graph which the ABP reports can show indicating the ids for report fields as used within the report format files'/>
+                </Shape>
+
+                <Shape Type='Block' Style='BlockStyle'>
+                    <Property Name='Bounds' Value='FindingsRow'/>
+                    <Property Name='UpperTitle' Value="Test.Interpretations:"/>
+                    <Property Name='UpperOverflowTitle' Value="Test.Interpretations (continued)"/>
+                    <Property Name='Content' Value='{Test.Interpretations}'/>
+                </Shape>
+
+                <Shape Type='Block' Style='BlockStyle'>
+                    <Property Name='Bounds' Value='CommentsRow'/>
+                    <Property Name='UpperTitle' Value="Test.Comments:"/>
+                    <Property Name='UpperOverflowTitle' Value="Test.Comments (continued)"/>
+                    <Property Name='Content' Value='{Test.Comments}'/>
+                </Shape>
+
+                <Shape Type='Table' Style='TableStyle'>
+                    <Property Name='Bounds' Value='TableRow'/>
+                    <Property Name='UpperTitle' Value='ABP Report Fields'/>
+                    <Property Name='UpperOverflowTitle' Value='ABP Report Fields (continued)'/>
+                    <Property Name='DataSource'>
+
+                        <Property Name='Column'>
+                            <Property Name='Width' Value='1'/>
+                            <Property Name='Heading' Value='ID within Report Format File'/>
+                            <Property Name='CellFont' Value='Helvetica,9pt,Black'/>
+                        </Property>
+                        <Property Name='Column'>
+                            <Property Name='Width' Value='1'/>
+                            <Property Name='Heading' Value='Value for this ABP test'/>
+                            <Property Name='CellFont' Value='Helvetica,9pt,Black'/>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Patient.LastNameFirst:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Patient.LastNameFirst}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Patient.LastNameLast:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Patient.LastNameLast}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Patient.LastNameFirstNoTitle:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Patient.LastNameFirstNoTitle}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Patient.FirstNameFirst:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Patient.FirstNameFirst}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Patient.FirstNameFirstNoTitle:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Patient.FirstNameFirstNoTitle}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Patient.LastNameWithInitial:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Patient.LastNameWithInitial}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Patient.MaidenName:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Patient.MaidenName}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Patient.ID:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Patient.ID}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Patient.Organisation:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Patient.Organisation}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Patient.DateOfBirth:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Patient.DateOfBirth}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Patient.AgeInYears:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Patient.AgeInYears}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Patient.LastName:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Patient.LastName}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Patient.FirstName:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Patient.FirstName}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Patient.Gender:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Patient.Gender}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Patient.HeightInMetres:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Patient.HeightInMetres}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Patient.HeightMetric:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Patient.HeightMetric}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Patient.HeightImperial:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Patient.HeightImperial}'/>
+                            </Property>
+                        </Property>
+
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Patient.WeightInKg:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Patient.WeightInKg}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Patient.WeightMetric:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Patient.WeightMetric}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Patient.WeightImperial:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Patient.WeightImperial}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Patient.MiddleInitials:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Patient.MiddleInitials}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Patient.SecondaryId:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Patient.SecondaryId}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Patient.TertiaryId:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Patient.TertiaryId}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Patient.Title:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Patient.Title}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Patient.Ward:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Patient.Ward}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Patient.InsuranceNumber:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Patient.InsuranceNumber}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Patient.Address1:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Patient.Address1}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Patient.Address2:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Patient.Address2}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Patient.City:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Patient.City}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Patient.Region:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Patient.Region}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Patient.Country:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Patient.Country}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Patient.PostCode:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Patient.PostCode}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Patient.Ethnicity:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Patient.Ethnicity}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Patient.NationalId:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Patient.NationalId}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Patient.Bmi:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Patient.Bmi}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Patient.Bsa:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Patient.Bsa}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Patient.PatientCustom1:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Patient.PatientCustom1}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Patient.PatientCustom1Label:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Patient.PatientCustom1Label}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Patient.PatientCustom2:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Patient.PatientCustom2}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Patient.PatientCustom2Label:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Patient.PatientCustom2Label}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Patient.PatientCustom3:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Patient.PatientCustom3}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Patient.PatientCustom3Label:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Patient.PatientCustom3Label}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Patient.PatientCustom4:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Patient.PatientCustom4}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Patient.PatientCustom4Label:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Patient.PatientCustom4Label}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'></Property>
+                            <Property Name='Cell'></Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Product.Name:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Product.Name}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Product.Version:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Product.Version}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'></Property>
+                            <Property Name='Cell'></Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Recording.Duration:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Recording.Duration}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Recording.StartDateAndTime:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Recording.StartDateAndTime}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Recording.EndDateAndTime:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Recording.EndDateAndTime}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Recording.RecorderSerialNumber:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Recording.RecorderSerialNumber}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'></Property>
+                            <Property Name='Cell'></Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Test.Bed:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Test.Bed}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Test.Indications:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Test.Indications}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Test.Medications:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Test.Medications}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Test.CaseNumber:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Test.CaseNumber}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Test.CaseType:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Test.CaseType}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Test.OrderComments:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Test.OrderComments}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Test.OrderNumber:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Test.OrderNumber}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Test.OrderingPhysician:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Test.OrderingPhysician}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Test.Pacemaker:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Test.Pacemaker}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Test.PointOfCare:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Test.PointOfCare}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Test.Priority:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Test.Priority}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Test.TestCustom1:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Test.TestCustom1}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Test.TestCustom1Label:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Test.TestCustom1Label}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Test.TestCustom2:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Test.TestCustom2}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Test.TestCustom2Label:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Test.TestCustom2Label}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Test.TestCustom3:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Test.TestCustom3}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Test.TestCustom3Label:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Test.TestCustom3Label}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Test.TestCustom4:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Test.TestCustom4}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Test.TestCustom4Label:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Test.TestCustom4Label}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Test.TestCustom1:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Test.TestCustom1}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Test.Ward:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Test.Ward}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'></Property>
+                            <Property Name='Cell'></Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Signer.IsSigned:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Signer.IsSigned}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Signer.Date:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Signer.Date}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Signer.Name:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Signer.Name}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Signer.Summary:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Signer.Summary}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'></Property>
+                            <Property Name='Cell'></Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AbpDayAnalysis.NumReadings:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpDayAnalysis.NumReadings}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AbpDayAnalysis.NumSuccessfulReadings:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpDayAnalysis.NumSuccessfulReadings}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AbpDayAnalysis.NumReadingErrors:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpDayAnalysis.NumReadingErrors}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AbpDayAnalysis.DaytimeSystolicLimit:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpDayAnalysis.DaytimeSystolicLimit}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AbpDayAnalysis.DaytimeDiastolicLimit:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpDayAnalysis.DaytimeDiastolicLimit}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AbpDayAnalysis.Aasi:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpDayAnalysis.Aasi}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AbpDayAnalysis.DBPAverage:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpDayAnalysis.DBPAverage}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AbpDayAnalysis.DBPAboveLimits:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpDayAnalysis.DBPAboveLimits}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AbpDayAnalysis.DBPSD:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpDayAnalysis.DBPSD}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AbpDayAnalysis.HRAverage:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpDayAnalysis.HRAverage}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AbpDayAnalysis.HRSD:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpDayAnalysis.HRSD}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AbpDayAnalysis.MAPAverage:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpDayAnalysis.MAPAverage}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AbpDayAnalysis.MAPSD:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpDayAnalysis.MAPSD}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AbpDayAnalysis.PPAverage:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpDayAnalysis.PPAverage}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AbpDayAnalysis.PPSD:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpDayAnalysis.PPSD}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AbpDayAnalysis.SBPAverage:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpDayAnalysis.SBPAverage}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AbpDayAnalysis.SBPAboveLimits:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpDayAnalysis.SBPAboveLimits}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AbpDayAnalysis.SBPSD:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpDayAnalysis.SBPSD}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AbpDayAnalysis.PercentSuccessful:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpDayAnalysis.PercentSuccessful}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'></Property>
+                            <Property Name='Cell'></Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AbpNightAnalysis.NumReadings:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpNightAnalysis.NumReadings}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AbpNightAnalysis.NumSuccessfulReadings:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpNightAnalysis.NumSuccessfulReadings}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AbpNightAnalysis.NumReadingErrors:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpNightAnalysis.NumReadingErrors}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AbpNightAnalysis.NighttimeSystolicLimit:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpNightAnalysis.NighttimeSystolicLimit}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AbpNightAnalysis.NighttimeDiastolicLimit:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpNightAnalysis.NighttimeDiastolicLimit}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AbpNightAnalysis.Aasi:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpNightAnalysis.Aasi}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AbpNightAnalysis.DBPAverage:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpNightAnalysis.DBPAverage}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AbpNightAnalysis.DBPAboveLimits:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpNightAnalysis.DBPAboveLimits}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AbpNightAnalysis.DBPSD:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpNightAnalysis.DBPSD}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AbpNightAnalysis.HRAverage:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpNightAnalysis.HRAverage}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AbpNightAnalysis.HRSD:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpNightAnalysis.HRSD}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AbpNightAnalysis.MAPAverage:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpNightAnalysis.MAPAverage}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AbpNightAnalysis.MAPSD:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpNightAnalysis.MAPSD}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AbpNightAnalysis.PPAverage:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpNightAnalysis.PPAverage}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AbpNightAnalysis.PPSD:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpNightAnalysis.PPSD}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AbpNightAnalysis.SBPAverage:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpNightAnalysis.SBPAverage}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AbpNightAnalysis.SBPAboveLimits:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpNightAnalysis.SBPAboveLimits}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AbpNightAnalysis.SBPSD:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpNightAnalysis.SBPSD}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AbpNightAnalysis.PercentSuccessful:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpNightAnalysis.PercentSuccessful}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'></Property>
+                            <Property Name='Cell'></Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AbpData.NumReadings:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpData.NumReadings}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AbpData.NumSuccessfulReadings:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpData.NumSuccessfulReadings}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AbpData.NumReadingErrors:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpData.NumReadingErrors}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AbpData.DaytimeSystolicLimit:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpData.DaytimeSystolicLimit}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AbpData.DaytimeDiastolicLimit:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpData.DaytimeDiastolicLimit}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AbpData.NighttimeSystolicLimit:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpData.NighttimeSystolicLimit}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AbpData.NighttimeDiastolicLimit:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpData.NighttimeDiastolicLimit}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AbpData.Aasi:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpData.Aasi}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AbpData.DBPAverage:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpData.DBPAverage}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AbpData.DBPAboveLimits:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpData.DBPAboveLimits}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AbpData.DBPSD:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpData.DBPSD}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AbpData.HRAverage:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpData.HRAverage}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AbpData.HRSD:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpData.HRSD}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AbpData.MAPAverage:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpData.MAPAverage}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AbpData.MAPSD:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpData.MAPSD}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AbpData.PPAverage:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpData.PPAverage}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AbpData.PPSD:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpData.PPSD}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AbpData.SBPAverage:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpData.SBPAverage}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AbpData.SBPAboveLimits:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpData.SBPAboveLimits}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AbpData.SBPDipper:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpData.SBPDipper}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AbpData.SBPSD:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpData.SBPSD}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AbpData.PercentSuccessful:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpData.PercentSuccessful}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AbpData.DayAnalysisPercentSuccessful:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpData.DayAnalysisPercentSuccessful}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AbpData.NightAnalysisPercentSuccessful:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpData.NightAnalysisPercentSuccessful}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AbpData.ChildModeEnabled:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpData.ChildModeEnabled}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AbpData.ComfortChildModeApplicable:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpData.ComfortChildModeApplicable}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AbpData.ComfortModeMaxPressure:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpData.ComfortModeMaxPressure}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'></Property>
+                            <Property Name='Cell'></Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='ReferringPhysician.FreeTextName:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{ReferringPhysician.FreeTextName}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='ReferringPhysician.Title:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{ReferringPhysician.Title}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='ReferringPhysician.FirstName:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{ReferringPhysician.FirstName}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='ReferringPhysician.MiddleInitials:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{ReferringPhysician.MiddleInitials}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='ReferringPhysician.LastName:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{ReferringPhysician.LastName}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='ReferringPhysician.FullNameLastNameFirst:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{ReferringPhysician.FullNameLastNameFirst}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='ReferringPhysician.FullNameLastNameLast:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{ReferringPhysician.FullNameLastNameLast}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='ReferringPhysician.ID:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{ReferringPhysician.ID}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='ReferringPhysician.Username:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{ReferringPhysician.Username}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='ReferringPhysician.IsUser:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{ReferringPhysician.IsUser}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='ReferringPhysician.DateAndTimeRecordCreated:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{ReferringPhysician.DateAndTimeRecordCreated}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='ReferringPhysician.Notes:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{ReferringPhysician.Notes}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='ReferringPhysician.Address.AddressLine1:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{ReferringPhysician.Address.AddressLine1}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='ReferringPhysician.Address.AddressLine2:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{ReferringPhysician.Address.AddressLine2}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='ReferringPhysician.Address.City:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{ReferringPhysician.Address.City}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='ReferringPhysician.Address.Region:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{ReferringPhysician.Address.Region}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='ReferringPhysician.Address.Country:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{ReferringPhysician.Address.Country}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='ReferringPhysician.Address.Postcode:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{ReferringPhysician.Address.Postcode}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='ReferringPhysician.Address.MobileTelephone:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{ReferringPhysician.Address.MobileTelephone}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='ReferringPhysician.Address.HomeTelephone:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{ReferringPhysician.Address.HomeTelephone}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='ReferringPhysician.Address.WorkTelephone:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{ReferringPhysician.Address.WorkTelephone}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='ReferringPhysician.Address.Fax:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{ReferringPhysician.Address.Fax}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='ReferringPhysician.Address.PagerCode:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{ReferringPhysician.Address.PagerCode}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='ReferringPhysician.Address.EmailAddress:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{ReferringPhysician.Address.EmailAddress}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'></Property>
+                            <Property Name='Cell'></Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='ResponsiblePhysician.FreeTextName:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{ResponsiblePhysician.FreeTextName}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='ResponsiblePhysician.Title:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{ResponsiblePhysician.Title}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='ResponsiblePhysician.FirstName:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{ResponsiblePhysician.FirstName}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='ResponsiblePhysician.MiddleInitials:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{ResponsiblePhysician.MiddleInitials}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='ResponsiblePhysician.LastName:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{ResponsiblePhysician.LastName}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='ResponsiblePhysician.FullNameLastNameFirst:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{ResponsiblePhysician.FullNameLastNameFirst}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='ResponsiblePhysician.FullNameLastNameLast:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{ResponsiblePhysician.FullNameLastNameLast}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='ResponsiblePhysician.ID:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{ResponsiblePhysician.ID}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='ResponsiblePhysician.Username:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{ResponsiblePhysician.Username}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='ResponsiblePhysician.IsUser:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{ResponsiblePhysician.IsUser}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='ResponsiblePhysician.DateAndTimeRecordCreated:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{ResponsiblePhysician.DateAndTimeRecordCreated}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='ResponsiblePhysician.Notes:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{ResponsiblePhysician.Notes}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='ResponsiblePhysician.Address.AddressLine1:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{ResponsiblePhysician.Address.AddressLine1}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='ResponsiblePhysician.Address.AddressLine2:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{ResponsiblePhysician.Address.AddressLine2}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='ResponsiblePhysician.Address.City:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{ResponsiblePhysician.Address.City}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='ResponsiblePhysician.Address.Region:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{ResponsiblePhysician.Address.Region}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='ResponsiblePhysician.Address.Country:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{ResponsiblePhysician.Address.Country}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='ResponsiblePhysician.Address.Postcode:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{ResponsiblePhysician.Address.Postcode}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='ResponsiblePhysician.Address.MobileTelephone:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{ResponsiblePhysician.Address.MobileTelephone}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='ResponsiblePhysician.Address.HomeTelephone:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{ResponsiblePhysician.Address.HomeTelephone}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='ResponsiblePhysician.Address.WorkTelephone:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{ResponsiblePhysician.Address.WorkTelephone}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='ResponsiblePhysician.Address.Fax:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{ResponsiblePhysician.Address.Fax}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='ResponsiblePhysician.Address.PagerCode:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{ResponsiblePhysician.Address.PagerCode}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='ResponsiblePhysician.Address.EmailAddress:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{ResponsiblePhysician.Address.EmailAddress}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'></Property>
+                            <Property Name='Cell'></Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='DownloadTechnician.FreeTextName:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{DownloadTechnician.FreeTextName}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='DownloadTechnician.Title:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{DownloadTechnician.Title}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='DownloadTechnician.FirstName:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{DownloadTechnician.FirstName}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='DownloadTechnician.MiddleInitials:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{DownloadTechnician.MiddleInitials}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='DownloadTechnician.LastName:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{DownloadTechnician.LastName}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='DownloadTechnician.FullNameLastNameFirst:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{DownloadTechnician.FullNameLastNameFirst}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='DownloadTechnician.FullNameLastNameLast:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{DownloadTechnician.FullNameLastNameLast}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='DownloadTechnician.ID:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{DownloadTechnician.ID}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='DownloadTechnician.Username:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{DownloadTechnician.Username}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='DownloadTechnician.IsUser:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{DownloadTechnician.IsUser}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='DownloadTechnician.DateAndTimeRecordCreated:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{DownloadTechnician.DateAndTimeRecordCreated}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='DownloadTechnician.Notes:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{DownloadTechnician.Notes}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='DownloadTechnician.Address.AddressLine1:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{DownloadTechnician.Address.AddressLine1}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='DownloadTechnician.Address.AddressLine2:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{DownloadTechnician.Address.AddressLine2}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='DownloadTechnician.Address.City:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{DownloadTechnician.Address.City}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='DownloadTechnician.Address.Region:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{DownloadTechnician.Address.Region}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='DownloadTechnician.Address.Country:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{DownloadTechnician.Address.Country}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='DownloadTechnician.Address.Postcode:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{DownloadTechnician.Address.Postcode}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='DownloadTechnician.Address.MobileTelephone:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{DownloadTechnician.Address.MobileTelephone}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='DownloadTechnician.Address.HomeTelephone:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{DownloadTechnician.Address.HomeTelephone}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='DownloadTechnician.Address.WorkTelephone:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{DownloadTechnician.Address.WorkTelephone}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='DownloadTechnician.Address.Fax:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{DownloadTechnician.Address.Fax}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='DownloadTechnician.Address.PagerCode:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{DownloadTechnician.Address.PagerCode}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='DownloadTechnician.Address.EmailAddress:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{DownloadTechnician.Address.EmailAddress}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'></Property>
+                            <Property Name='Cell'></Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='HookupTechnician.FreeTextName:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{HookupTechnician.FreeTextName}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='HookupTechnician.Title:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{HookupTechnician.Title}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='HookupTechnician.FirstName:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{HookupTechnician.FirstName}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='HookupTechnician.MiddleInitials:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{HookupTechnician.MiddleInitials}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='HookupTechnician.LastName:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{HookupTechnician.LastName}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='HookupTechnician.FullNameLastNameFirst:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{HookupTechnician.FullNameLastNameFirst}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='HookupTechnician.FullNameLastNameLast:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{HookupTechnician.FullNameLastNameLast}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='HookupTechnician.ID:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{HookupTechnician.ID}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='HookupTechnician.Username:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{HookupTechnician.Username}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='HookupTechnician.IsUser:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{HookupTechnician.IsUser}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='HookupTechnician.DateAndTimeRecordCreated:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{HookupTechnician.DateAndTimeRecordCreated}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='HookupTechnician.Notes:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{HookupTechnician.Notes}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='HookupTechnician.Address.AddressLine1:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{HookupTechnician.Address.AddressLine1}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='HookupTechnician.Address.AddressLine2:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{HookupTechnician.Address.AddressLine2}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='HookupTechnician.Address.City:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{HookupTechnician.Address.City}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='HookupTechnician.Address.Region:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{HookupTechnician.Address.Region}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='HookupTechnician.Address.Country:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{HookupTechnician.Address.Country}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='HookupTechnician.Address.Postcode:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{HookupTechnician.Address.Postcode}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='HookupTechnician.Address.MobileTelephone:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{HookupTechnician.Address.MobileTelephone}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='HookupTechnician.Address.HomeTelephone:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{HookupTechnician.Address.HomeTelephone}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='HookupTechnician.Address.WorkTelephone:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{HookupTechnician.Address.WorkTelephone}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='HookupTechnician.Address.Fax:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{HookupTechnician.Address.Fax}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='HookupTechnician.Address.PagerCode:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{HookupTechnician.Address.PagerCode}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='HookupTechnician.Address.EmailAddress:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{HookupTechnician.Address.EmailAddress}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'></Property>
+                            <Property Name='Cell'></Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AnalysisTechnician.FreeTextName:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AnalysisTechnician.FreeTextName}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AnalysisTechnician.Title:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AnalysisTechnician.Title}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AnalysisTechnician.FirstName:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AnalysisTechnician.FirstName}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AnalysisTechnician.MiddleInitials:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AnalysisTechnician.MiddleInitials}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AnalysisTechnician.LastName:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AnalysisTechnician.LastName}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AnalysisTechnician.FullNameLastNameFirst:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AnalysisTechnician.FullNameLastNameFirst}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AnalysisTechnician.FullNameLastNameLast:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AnalysisTechnician.FullNameLastNameLast}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AnalysisTechnician.ID:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AnalysisTechnician.ID}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AnalysisTechnician.Username:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AnalysisTechnician.Username}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AnalysisTechnician.IsUser:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AnalysisTechnician.IsUser}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AnalysisTechnician.DateAndTimeRecordCreated:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AnalysisTechnician.DateAndTimeRecordCreated}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AnalysisTechnician.Notes:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AnalysisTechnician.Notes}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AnalysisTechnician.Address.AddressLine1:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AnalysisTechnician.Address.AddressLine1}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AnalysisTechnician.Address.AddressLine2:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AnalysisTechnician.Address.AddressLine2}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AnalysisTechnician.Address.City:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AnalysisTechnician.Address.City}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AnalysisTechnician.Address.Region:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AnalysisTechnician.Address.Region}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AnalysisTechnician.Address.Country:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AnalysisTechnician.Address.Country}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AnalysisTechnician.Address.Postcode:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AnalysisTechnician.Address.Postcode}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AnalysisTechnician.Address.MobileTelephone:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AnalysisTechnician.Address.MobileTelephone}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AnalysisTechnician.Address.HomeTelephone:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AnalysisTechnician.Address.HomeTelephone}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AnalysisTechnician.Address.WorkTelephone:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AnalysisTechnician.Address.WorkTelephone}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AnalysisTechnician.Address.Fax:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AnalysisTechnician.Address.Fax}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AnalysisTechnician.Address.PagerCode:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AnalysisTechnician.Address.PagerCode}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AnalysisTechnician.Address.EmailAddress:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AnalysisTechnician.Address.EmailAddress}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'></Property>
+                            <Property Name='Cell'></Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='DownloadFacility.Name:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{DownloadFacility.Name}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='DownloadFacility.Abbreviation:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{DownloadFacility.Abbreviation}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='DownloadFacility.Address.AddressLine1:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{DownloadFacility.Address.AddressLine1}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='DownloadFacility.Address.AddressLine2:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{DownloadFacility.Address.AddressLine2}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='DownloadFacility.Address.City:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{DownloadFacility.Address.City}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='DownloadFacility.Address.Region:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{DownloadFacility.Address.Region}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='DownloadFacility.Address.Country:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{DownloadFacility.Address.Country}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='DownloadFacility.Address.Postcode:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{DownloadFacility.Address.Postcode}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='DownloadFacility.Address.MobileTelephone:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{DownloadFacility.Address.MobileTelephone}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='DownloadFacility.Address.HomeTelephone:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{DownloadFacility.Address.HomeTelephone}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='DownloadFacility.Address.WorkTelephone:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{DownloadFacility.Address.WorkTelephone}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='DownloadFacility.Address.Fax:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{DownloadFacility.Address.Fax}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='DownloadFacility.Address.EmailAddress:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{DownloadFacility.Address.EmailAddress}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'></Property>
+                            <Property Name='Cell'></Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AnalysisFacility.Name:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AnalysisFacility.Name}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AnalysisFacility.Abbreviation:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AnalysisFacility.Abbreviation}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AnalysisFacility.Address.AddressLine1:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AnalysisFacility.Address.AddressLine1}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AnalysisFacility.Address.AddressLine2:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AnalysisFacility.Address.AddressLine2}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AnalysisFacility.Address.City:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AnalysisFacility.Address.City}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AnalysisFacility.Address.Region:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AnalysisFacility.Address.Region}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AnalysisFacility.Address.Country:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AnalysisFacility.Address.Country}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AnalysisFacility.Address.Postcode:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AnalysisFacility.Address.Postcode}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AnalysisFacility.Address.MobileTelephone:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AnalysisFacility.Address.MobileTelephone}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AnalysisFacility.Address.HomeTelephone:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AnalysisFacility.Address.HomeTelephone}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AnalysisFacility.Address.WorkTelephone:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AnalysisFacility.Address.WorkTelephone}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AnalysisFacility.Address.Fax:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AnalysisFacility.Address.Fax}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='AnalysisFacility.Address.EmailAddress:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AnalysisFacility.Address.EmailAddress}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'></Property>
+                            <Property Name='Cell'></Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Facility.Name:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Facility.Name}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Facility.Abbreviation:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Facility.Abbreviation}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Facility.Address.AddressLine1:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Facility.Address.AddressLine1}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Facility.Address.AddressLine2:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Facility.Address.AddressLine2}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Facility.Address.City:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Facility.Address.City}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Facility.Address.Region:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Facility.Address.Region}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Facility.Address.Country:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Facility.Address.Country}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Facility.Address.Postcode:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Facility.Address.Postcode}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Facility.Address.MobileTelephone:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Facility.Address.MobileTelephone}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Facility.Address.HomeTelephone:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Facility.Address.HomeTelephone}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Facility.Address.WorkTelephone:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Facility.Address.WorkTelephone}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Facility.Address.Fax:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Facility.Address.Fax}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Facility.Address.EmailAddress:'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{Facility.Address.EmailAddress}'/>
+                            </Property>
+                        </Property>
+
+                    </Property>
+                </Shape>
+
+                <Shape Type='Table' Style='TableStyle'>
+                    <Property Name='LayoutFormat' Value='Flowing'/>
+                    <Property Name='TitlePadding'>
+                        <Property Name='Top' Value='5'/>
+                    </Property>
+                    <Property Name='UpperTitle' Value='ABP Measurements'/>
+                    <Property Name='UpperOverflowTitle' Value='ABP Measurements (continued)'/>
+                    <Property Name='DataSource'>
+                        <Property Name='SourceData' Value='AbpData.AbpRawData'/>
+                        <Property Name='Column'>
+                            <Property Name='Width' Value='0.06'/>
+                            <Property Name='Heading' Value='Type'/>
+                            <Property Name='Content' Value="{Row.ReadingStatus}"/>
+                        </Property>
+                        <Property Name='Column'>
+                            <Property Name='Width' Value='0.15'/>
+                            <Property Name='Heading' Value='Time'/>
+                            <Property Name='Content' Value="{Row.Time}"/>
+                        </Property>
+                        <Property Name='Column'>
+                            <Property Name='Width' Value='0.07'/>
+                            <Property Name='Heading' Value='Sys'/>
+                            <Property Name='Content' Value="{Row.Systolic}"/>
+                        </Property>
+                        <Property Name='Column'>
+                            <Property Name='Width' Value='0.07'/>
+                            <Property Name='Heading' Value='Dia'/>
+                            <Property Name='Content' Value="{Row.Diastolic}"/>
+                        </Property>
+                        <Property Name='Column'>
+                            <Property Name='Width' Value='0.07'/>
+                            <Property Name='Heading' Value='MAP'/>
+                            <Property Name='Content' Value="{Row.MeanArterialPressure}"/>
+                        </Property>
+                        <Property Name='Column'>
+                            <Property Name='Width' Value='0.07'/>
+                            <Property Name='Heading' Value='PP'/>
+                            <Property Name='Content' Value="{Row.PulsePressure}"/>
+                        </Property>
+                        <Property Name='Column'>
+                            <Property Name='Width' Value='0.07'/>
+                            <Property Name='Heading' Value='HR'/>
+                            <Property Name='Content' Value="{Row.HeartRate}"/>
+                        </Property>
+                        <Property Name='Column'>
+                            <Property Name='Width' Value='0.1'/>
+                            <Property Name='Heading' Value='Error'/>
+                            <Property Name='Content' Value="{Row.ErrorStatus}"/>
+                        </Property>
+                        <Property Name='Column'>
+                            <Property Name='Width' Value='0.1'/>
+                            <Property Name='Heading' Value='Error Code'/>
+                            <Property Name='Content' Value="{Row.ErrorCode}"/>
+                        </Property>
+                        <Property Name='Column'>
+                            <Property Name='Width' Value='0.07'/>
+                            <Property Name='Heading' Value='Excl.'/>
+                            <Property Name='Content' Value="{Row.Excluded}"/>
+                            <Property Name='CellFont' Value='Helvetica,10pt,Black'/>
+                        </Property>
+                        <Property Name='Column'>
+                            <Property Name='Width' Value='0.2'/>
+                            <Property Name='Heading' Value='Diary'/>
+                            <Property Name='Content' Value="{Row.Comment}"/>
+                        </Property>
+                    </Property>
+                </Shape>
+
+                <Shape Type='Table' Style='TableStyle'>
+                    <Property Name='LayoutFormat' Value='Flowing'/>
+                    <Property Name='TitlePadding'>
+                        <Property Name='Top' Value='5'/>
+                    </Property>
+                    <Property Name='UpperTitle' Value='Calipers'/>
+                    <Property Name='UpperOverflowTitle' Value='Calipers (continued)'/>
+
+                    <Property Name='DataSource'>
+                        <Property Name='SourceData' Value='AbpData.Calipers'/>
+                        <Property Name='Column'>
+                            <Property Name='Width' Value='0.3'/>
+                            <Property Name='Heading' Value='{}'/>
+                            <Property Name='Content' Value='{Row.TypeLabel}'/>
+                        </Property>
+                        <Property Name='Column'>
+                            <Property Name='Width' Value='0.08'/>
+                            <Property Name='Heading' Value='AVG'/>
+                            <Property Name='Content' Value="{Row.Avg}"/>
+                        </Property>
+                        <Property Name='Column'>
+                            <Property Name='Width' Value='0.08'/>
+                            <Property Name='Heading' Value='STD'/>
+                            <Property Name='Content' Value="{Row.StdDev}"/>
+                        </Property>
+                        <Property Name='Column'>
+                            <Property Name='Width' Value='0.15'/>
+                            <Property Name='Heading' Value='MIN'/>
+                            <Property Name='Content' Value="{Row.Min}"/>
+                        </Property>
+                        <Property Name='Column'>
+                            <Property Name='Width' Value='0.15'/>
+                            <Property Name='Heading' Value='MIN'/>
+                            <Property Name='Content' Value="{Row.Max}"/>
+                        </Property>
+                    </Property>
+                </Shape>
+
+                <Shape Type='Table' Style='TableStyle'>
+                    <Property Name='LayoutFormat' Value='Flowing'/>
+                    <Property Name='TitlePadding'>
+                        <Property Name='Top' Value='5'/>
+                    </Property>
+                    <Property Name='UpperTitle' Value='ABP Analyses'/>
+                    <Property Name='UpperOverflowTitle' Value='ABP Analyses (continued)'/>
+
+                    <Property Name='DataSource'>
+                        <Property Name='SourceData' Value='AbpData.AbpAnalyses'/>
+                        <Property Name='Column'>
+                            <Property Name='Width' Value='0.3'/>
+                            <Property Name='Heading' Value='{}'/>
+                            <Property Name='Content' Value='{Row.TypeLabel}'/>
+                        </Property>
+                        <Property Name='Column'>
+                            <Property Name='Width' Value='0.08'/>
+                            <Property Name='Heading' Value='AVG'/>
+                            <Property Name='Content' Value="{Row.Avg}"/>
+                        </Property>
+                        <Property Name='Column'>
+                            <Property Name='Width' Value='0.08'/>
+                            <Property Name='Heading' Value='STD'/>
+                            <Property Name='Content' Value="{Row.StdDev}"/>
+                        </Property>
+                        <Property Name='Column'>
+                            <Property Name='Width' Value='0.15'/>
+                            <Property Name='Heading' Value='MIN'/>
+                            <Property Name='Content' Value="{Row.Min}"/>
+                        </Property>
+                        <Property Name='Column'>
+                            <Property Name='Width' Value='0.15'/>
+                            <Property Name='Heading' Value='MAX'/>
+                            <Property Name='Content' Value="{Row.Max}"/>
+                        </Property>
+                    </Property>
+                </Shape>
+
+                <Shape Type='Table' Style='TableStyle'>
+                    <Property Name='LayoutFormat' Value='Flowing'/>
+                    <Property Name='TitlePadding'>
+                        <Property Name='Top' Value='5'/>
+                    </Property>
+                    <Property Name='UpperTitle' Value='24 hour analyses'/>
+                    <Property Name='UpperOverflowTitle' Value='24 hour Analyses (continued)'/>
+
+                    <Property Name='DataSource'>
+                        <Property Name='SourceData' Value='AbpData.Abp24HourAnalyses'/>
+                        <Property Name='Column'>
+                            <Property Name='Width' Value='0.3'/>
+                            <Property Name='Heading' Value='{}'/>
+                            <Property Name='Content' Value='{Row.TypeLabel}'/>
+                        </Property>
+                        <Property Name='Column'>
+                            <Property Name='Width' Value='0.08'/>
+                            <Property Name='Heading' Value='AVG'/>
+                            <Property Name='Content' Value="{Row.Avg}"/>
+                        </Property>
+                        <Property Name='Column'>
+                            <Property Name='Width' Value='0.08'/>
+                            <Property Name='Heading' Value='STD'/>
+                            <Property Name='Content' Value="{Row.StdDev}"/>
+                        </Property>
+                        <Property Name='Column'>
+                            <Property Name='Width' Value='0.15'/>
+                            <Property Name='Heading' Value='MIN'/>
+                            <Property Name='Content' Value="{Row.Min}"/>
+                        </Property>
+                        <Property Name='Column'>
+                            <Property Name='Width' Value='0.15'/>
+                            <Property Name='Heading' Value='MAX'/>
+                            <Property Name='Content' Value="{Row.Max}"/>
+                        </Property>
+                        <Property Name='Column'>
+                            <Property Name='Width' Value='0.08'/>
+                            <Property Name='Heading' Value='DIP'/>
+                            <Property Name='Content' Value="{Row.Dipper}"/>
+                        </Property>
+                    </Property>
+                </Shape>
+
+                <Shape Type='CartesianChart' Style='GraphStyle'>
+                    <Property Name='HGratPen' Value='Silver,0.2mm'/>
+                    <Property Name='VGratPen' Value='Silver,0.2mm'/>
+                    <Property Name='Enabled' Value='AbpData.NumSuccessfulReadings>1'/>
+                    <Property Name='LayoutFormat' Value='Flowing'/>
+                    <Property Name='YAxis2Width' Value='12'/>
+                    <Property Name='TitlePadding'>
+                        <Property Name='Top' Value='5'/>
+                    </Property>
+                    <Property Name='Bounds'>
+                        <Property Name='Height' Value='110'/>
+                    </Property>
+                    <Property Name='UpperTitle' Value='Blood Pressure Graph'/>
+
+                    <Property Name='Graph' Value='Line'>
+                        <Property Name='Pen' Value='Black,0.2mm'/>
+                        <Property Name='DataSource' Value='SystolicProfile'/>
+                    </Property>
+                    <Property Name='Graph' Value='Line'>
+                        <Property Name='Pen' Value='black,0.75mm'/>
+                        <Property Name='DataSource' Value='NightProfile'/>
+                        <Property Name='PlotAlongXAxis' Value='true'/>
+                    </Property>
+                    <Property Name='Graph' Value='Line'>
+                        <Property Name='Pen' Value='Black,0.2mm'/>
+                        <Property Name='DataSource' Value='DiastolicProfile'/>
+                    </Property>
+                    <Property Name='Graph' Value='Line'>
+                        <Property Name='Pen' Value='Red,0.4mm'/>
+                        <Property Name='DataSource' Value='SystolicGraph'/>
+                    </Property>
+                    <Property Name='Graph' Value='Line'>
+                        <Property Name='Pen' Value='Blue,0.4mm'/>
+                        <Property Name='DataSource' Value='DiastolicGraph'/>
+                    </Property>
+                    <Property Name='Graph' Value='VerticalLine'>
+                      <Property Name='Lower' Value='SystolicGraph'/>
+                      <Property Name='Upper' Value='DiastolicGraph'/>
+                      <Property Name='Pen' Value='Black,0.2mm'/>
+                    </Property>
+                    <Property Name='Graph' Value='Line'>
+                        <Property Name='Pen' Value='Purple,0.4mm'/>
+                        <Property Name='DataSource' Value='MapGraph'/>
+                    </Property>
+                    <Property Name='Graph' Value='Symbols'>
+                        <Property Name='Brush' Value='Red'/>
+                        <Property Name='Size' Value='2.0'/>
+                        <Property Name='Symbol' Value='Triangle'/>
+                        <Property Name='DataSource' Value='SystolicGraph'/>
+                    </Property>
+                    <Property Name='Graph' Value='Symbols'>
+                        <Property Name='Brush' Value='Blue'/>
+                        <Property Name='Size' Value='2.0'/>
+                        <Property Name='Symbol' Value='Cross'/>
+                        <Property Name='DataSource' Value='DiastolicGraph'/>
+                    </Property>
+                    <Property Name='Graph' Value='Symbols'>
+                        <Property Name='Brush' Value='Purple'/>
+                        <Property Name='Size' Value='1.5'/>
+                        <Property Name='Symbol' Value='Square'/>
+                        <Property Name='DataSource' Value='MapGraph'/>
+                    </Property>
+
+                    <Property Name='Graph' Value='Line'>
+                        <Property Name='Pen' Value='Green,0.4mm'/>
+                        <Property Name='DataSource' Value='HRGraph'/>
+                        <Property Name='UseYAxis2' Value='true'/>
+                    </Property>
+
+                    <Property Name='Graph' Value='Symbols'>
+                        <Property Name='Brush' Value='Green'/>
+                        <Property Name='Size' Value='1.5'/>
+                        <Property Name='Symbol' Value='Diamond'/>
+                        <Property Name='DataSource' Value='HRGraph'/>
+                        <Property Name='UseYAxis2' Value='true'/>
+                    </Property>
+
+                    <Property Name='XAxisScale' Value='RecordingTime'>
+                        <Property Name='StartTime' Value='AbpData.DateTimeOfFirstIncludedMeasurement'/>
+                        <Property Name='AxisDuration' Value='AbpData.TimeBetweenFirstAndLastIncludedMeasurement.TotalSeconds'/>
+                        <Property Name='GraticuleInterval' Value='7200'/>
+                    </Property>
+                    <Property Name='YAxisScale' Value='Linear'>
+                        <Property Name='MinAxisValue' Value='-40'/>
+                        <Property Name='MaxAxisValue' Value='280'/>
+                        <Property Name='Interval' Value='20'/>
+                        <Property Name='HideNegativeTickLabels' Value='true'/>
+                    </Property>
+                    <Property Name='YAxisLabel' Value='Time'/>
+                    <Property Name='YAxis2Scale' Value='Linear'>
+                        <Property Name='MinAxisValue' Value='40'/>
+                        <Property Name='MaxAxisValue' Value='200'/>
+                        <Property Name='Interval' Value='10'/>
+                    </Property>
+                    <Property Name='YAxis2Label' Value='HR'/>
+                </Shape>
+
+                <Shape Type='ChartLegend'>
+                    <Property Name='LayoutFormat' Value='Flowing'/>
+                    <Property Name='Bounds'>
+                        <Property Name='Height' Value='10'/>
+                    </Property>
+                    <Property Name='Margin'>
+                        <Property Name='Left' Value='15'/>
+                        <Property Name='Bottom' Value='2'/>
+                    </Property>
+                    <Property Name='LegendSymbol'>
+                        <Property Name='Pen' Value='Red,0.4mm'/>
+                        <Property Name='Brush' Value='Red'/>
+                        <Property Name='Size' Value='3.0'/>
+                        <Property Name='Symbol' Value='Triangle'/>
+                        <Property Name='Label' Value='Systolic'/>
+                    </Property>
+                    <Property Name='LegendSymbol'>
+                        <Property Name='Pen' Value='Blue,0.4mm'/>
+                        <Property Name='Brush' Value='Blue'/>
+                        <Property Name='Size' Value='3.0'/>
+                        <Property Name='Symbol' Value='Cross'/>
+                        <Property Name='Label' Value='Diastolic'/>
+                    </Property>
+                    <Property Name='LegendSymbol'>
+                        <Property Name='Pen' Value='Purple,0.4mm'/>
+                        <Property Name='Brush' Value='Purple'/>
+                        <Property Name='Size' Value='2.25'/>
+                        <Property Name='Symbol' Value='Square'/>
+                        <Property Name='Label' Value='MAP'/>
+                    </Property>
+                    <Property Name='LegendSymbol'>
+                        <Property Name='Pen' Value='Green,0.4mm'/>
+                        <Property Name='Brush' Value='Green'/>
+                        <Property Name='Size' Value='1.5'/>
+                        <Property Name='Symbol' Value='Diamond'/>
+                        <Property Name='Label' Value='HR'/>
+                    </Property>
+                </Shape>
+
+                <Shape Type='CartesianChart' Style='GraphStyle'>
+                    <Property Name='HGratPen' Value='Silver,0.2mm'/>
+                    <Property Name='VGratPen' Value='Silver,0.2mm'/>
+                    <Property Name='Enabled' Value='AbpData.NumSuccessfulReadings>1'/>
+                    <Property Name='LayoutFormat' Value='Flowing'/>
+                    <Property Name='YAxis2Width' Value='12'/>
+                    <Property Name='YAxis2Enabled' Value='false'/>
+                    <Property Name='TitlePadding'>
+                        <Property Name='Top' Value='5'/>
+                    </Property>
+                    <Property Name='UpperTitle' Value='Night Profile Graph'/>
+                    <Property Name='Bounds'>
+                        <Property Name='Height' Value='60'/>
+                    </Property>
+
+                    <Property Name='Graph' Value='Line'>
+                        <Property Name='Pen' Value='black,0.75mm'/>
+                        <Property Name='DataSource' Value='NightProfile'/>
+                    </Property>
+                    <Property Name='Graph' Value='Line'>
+                        <Property Name='Pen' Value='Brown,0.4mm'/>
+                        <Property Name='DataSource' Value='PPGraph'/>
+                    </Property>
+                    <Property Name='Graph' Value='Point'>
+                        <Property Name='Brush' Value='Brown'/>
+                        <Property Name='PointSize' Value='1.5'/>
+                        <Property Name='CornerRadius' Value='0.75'/>
+                        <Property Name='DataSource' Value='PPGraph'/>
+                    </Property>
+                    <Property Name='XAxisScale' Value='RecordingTime'>
+                        <Property Name='StartTime' Value='AbpData.DateTimeOfFirstIncludedMeasurement'/>
+                        <Property Name='AxisDuration' Value='AbpData.TimeBetweenFirstAndLastIncludedMeasurement.TotalSeconds'/>
+                        <Property Name='GraticuleInterval' Value='7200'/>
+                    </Property>
+                    <Property Name='YAxisScale' Value='Linear'>
+                        <Property Name='MinAxisValue' Value='0'/>
+                        <Property Name='MaxAxisValue' Value='200'/>
+                        <Property Name='Interval' Value='20'/>
+                    </Property>
+                    <Property Name='YAxisLabel' Value='PP'/>
+                </Shape>
+
+                <Shape Type='CartesianChart' Style='GraphStyle'>
+                    <Property Name='HGratPen' Value='Silver,0.2mm'/>
+                    <Property Name='VGratPen' Value='Silver,0.2mm'/>
+                    <Property Name='Enabled' Value='AbpData.NumSuccessfulReadings>1'/>
+                    <Property Name='LayoutFormat' Value='Flowing'/>
+                    <Property Name='YAxis2Width' Value='12'/>
+                    <Property Name='YAxis2Enabled' Value='false'/>
+                    <Property Name='TitlePadding'>
+                        <Property Name='Top' Value='5'/>
+                    </Property>
+                    <Property Name='UpperTitle' Value='Hourly Average Graph'/>
+                    <Property Name='Bounds'>
+                        <Property Name='Height' Value='60'/>
+                    </Property>
+
+                    <Property Name='Graph' Value='Line'>
+                        <Property Name='Pen' Value='Blue,0.4mm'/>
+                        <Property Name='DataSource' Value='SystolicHourlyAvgGraph'/>
+                    </Property>
+                    <Property Name='Graph' Value='Symbols'>
+                        <Property Name='Brush' Value='Blue'/>
+                        <Property Name='Size' Value='2.0'/>
+                        <Property Name='Symbol' Value='Cross'/>
+                        <Property Name='DataSource' Value='SystolicHourlyAvgGraph'/>
+                    </Property>
+                    <Property Name='Graph' Value='Line'>
+                        <Property Name='Pen' Value='Red,0.4mm'/>
+                        <Property Name='DataSource' Value='DiastolicHourlyAvgGraph'/>
+                    </Property>
+                    <Property Name='Graph' Value='Symbols'>
+                        <Property Name='Brush' Value='Red'/>
+                        <Property Name='Size' Value='2.0'/>
+                        <Property Name='Symbol' Value='Triangle'/>
+                        <Property Name='DataSource' Value='DiastolicHourlyAvgGraph'/>
+                    </Property>
+                    <Property Name='XAxisScale' Value='RecordingTime'>
+                        <Property Name='StartTime' Value='AbpData.DateTimeOfFirstIncludedMeasurement'/>
+                        <Property Name='AxisDuration' Value='AbpData.TimeBetweenFirstAndLastIncludedMeasurement.TotalSeconds'/>
+                        <Property Name='GraticuleInterval' Value='7200'/>
+                    </Property>
+                    <Property Name='YAxisScale' Value='Linear'>
+                        <Property Name='MinAxisValue' Value='0'/>
+                        <Property Name='MaxAxisValue' Value='200'/>
+                        <Property Name='Interval' Value='20'/>
+                    </Property>
+                    <Property Name='YAxisLabel' Value='mmHg'/>
+                </Shape>
+
+
+                <Shape Type='ChartLegend'>
+                    <Property Name='LayoutFormat' Value='Flowing'/>
+                    <Property Name='Bounds'>
+                        <Property Name='Height' Value='10'/>
+                    </Property>
+                    <Property Name='Margin'>
+                        <Property Name='Left' Value='15'/>
+                        <Property Name='Bottom' Value='2'/>
+                    </Property>
+                    <Property Name='LegendSymbol'>
+                        <Property Name='Pen' Value='Red,0.4mm'/>
+                        <Property Name='Brush' Value='Red'/>
+                        <Property Name='Size' Value='3.0'/>
+                        <Property Name='Symbol' Value='Triangle'/>
+                        <Property Name='Label' Value='Diastolic'/>
+                    </Property>
+                    <Property Name='LegendSymbol'>
+                        <Property Name='Pen' Value='Blue,0.4mm'/>
+                        <Property Name='Brush' Value='Blue'/>
+                        <Property Name='Size' Value='3.0'/>
+                        <Property Name='Symbol' Value='Cross'/>
+                        <Property Name='Label' Value='Systolic'/>
+                    </Property>
+                </Shape>
+
+                <Shape Type='Table' Style='TableStyle'>
+                    <Property Name='LayoutFormat' Value='Flowing'/>
+                    <Property Name='TitlePadding'>
+                        <Property Name='Top' Value='5'/>
+                    </Property>
+                    <Property Name='UpperTitle' Value='Hourly averages'/>
+                    <Property Name='UpperOverflowTitle' Value='Hourly averages (continued)'/>
+
+                    <Property Name='DataSource'>
+                        <Property Name='SourceData' Value='AbpData.AbpHourlyAvgData'/>
+                        <Property Name='Column'>
+                            <Property Name='Width' Value='0.2'/>
+                            <Property Name='Heading' Value='Hour'/>
+                            <Property Name='Content' Value="{Row.Time}"/>
+                        </Property>
+                        <Property Name='Column'>
+                            <Property Name='Width' Value='0.1'/>
+                            <Property Name='Heading' Value='No.'/>
+                            <Property Name='Content' Value="{Row.Count}"/>
+                        </Property>
+                        <Property Name='Column'>
+                            <Property Name='Width' Value='0.2'/>
+                            <Property Name='Heading' Value='Systolic'/>
+                            <Property Name='Content' Value="{Row.Systolic}"/>
+                        </Property>
+                        <Property Name='Column'>
+                            <Property Name='Width' Value='0.2'/>
+                            <Property Name='Heading' Value='Diastolic'/>
+                            <Property Name='Content' Value="{Row.Diastolic}"/>
+                        </Property>
+                        <Property Name='Column'>
+                            <Property Name='Width' Value='0.2'/>
+                            <Property Name='Heading' Value='MAP'/>
+                            <Property Name='Content' Value="{Row.Map}"/>
+                        </Property>
+                        <Property Name='Column'>
+                            <Property Name='Width' Value='0.2'/>
+                            <Property Name='Heading' Value='PP'/>
+                            <Property Name='Content' Value="{Row.PulsePressure}"/>
+                        </Property>
+                        <Property Name='Column'>
+                            <Property Name='Width' Value='0.2'/>
+                            <Property Name='Heading' Value='HR'/>
+                            <Property Name='Content' Value="{Row.HeartRate}"/>
+                        </Property>
+                    </Property>
+                </Shape>
+
+                <Shape Type='Table' Style='TableStyle'>
+                    <Property Name='LayoutFormat' Value='Flowing'/>
+                    <Property Name='TitlePadding'>
+                        <Property Name='Top' Value='5'/>
+                    </Property>
+                    <Property Name='UpperTitle' Value='Statistics Max-Min Limits'/>
+                    <Property Name='UpperOverflowTitle' Value='Statistics Max-Min Limits (continued)'/>
+
+                    <Property Name='DataSource'>
+
+                        <Property Name='Column'>
+                            <Property Name='Width' Value='0.3'/>
+                        </Property>
+                        <Property Name='Column'>
+                            <Property Name='Width' Value='0.3'/>
+                            <Property Name='Heading' Value='Systolic'/>
+                        </Property>
+                        <Property Name='Column'>
+                            <Property Name='Width' Value='0.3'/>
+                            <Property Name='Heading' Value='Diastolic'/>
+                        </Property>
+                        <Property Name='Column'>
+                            <Property Name='Width' Value='0.3'/>
+                            <Property Name='Heading' Value='MAP'/>
+                        </Property>
+                        <Property Name='Column'>
+                            <Property Name='Width' Value='0.3'/>
+                            <Property Name='Heading' Value='PP'/>
+                        </Property>
+                        <Property Name='Column'>
+                            <Property Name='Width' Value='0.3'/>
+                            <Property Name='Heading' Value='HR'/>
+                        </Property>
+
+                        <Property Name='Row' Height='1'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Min'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpData.AbpData.Statistics.ValidityRanges.Systolic.Min}'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpData.AbpData.Statistics.ValidityRanges.Diastolic.Min}'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpData.AbpData.Statistics.ValidityRanges.MeanArterialPressure.Min}'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpData.AbpData.Statistics.ValidityRanges.PulsePressure.Min}'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpData.AbpData.Statistics.ValidityRanges.HeartRate.Min}'/>
+                            </Property>
+                        </Property>
+
+                        <Property Name='Row' Height='1'>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='Max'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpData.AbpData.Statistics.ValidityRanges.Systolic.Max}'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpData.AbpData.Statistics.ValidityRanges.Diastolic.Max}'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpData.AbpData.Statistics.ValidityRanges.MeanArterialPressure.Max}'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpData.AbpData.Statistics.ValidityRanges.PulsePressure.Max}'/>
+                            </Property>
+                            <Property Name='Cell'>
+                                <Property Name='Content' Value='{AbpData.AbpData.Statistics.ValidityRanges.HeartRate.Max}'/>
+                            </Property>
+                        </Property>
+                    </Property>
+                </Shape>
+
+                <Shape Type='CartesianChart' Style='GraphStyle'>
+                    <Property Name='HGratPen' Value='Silver,0.2mm'/>
+                    <Property Name='VGratPen' Value='Silver,0.2mm'/>
+                    <Property Name='Enabled' Value='HasAccelerometerData'/>
+                    <Property Name='LayoutFormat' Value='Flowing'/>
+                    <Property Name='Bounds'>
+                        <Property Name='Height' Value='40'/>
+                    </Property>
+                    <Property Name='TitlePadding'>
+                        <Property Name='Top' Value='5'/>
+                    </Property>
+                    <Property Name='UpperTitle' Value='Accelerometer Graph'/>
+                    <Property Name='YAxis2Width' Value='12'/>
+                    <Property Name='YAxis2Enabled' Value='false'/>
+                    <Property Name='Graph' Value='Line'>
+                        <Property Name='Pen' Value='Blue,0.05mm'/>
+                        <Property Name='DataSource' Value='AccelGraph'/>
+                    </Property>
+                    <Property Name='XAxisScale' Value='RecordingTime'>
+                      <Property Name='StartTime' Value='AbpData.DateTimeOfFirstIncludedMeasurement'/>
+                      <Property Name='AxisDuration' Value='AbpData.TimeBetweenFirstAndLastIncludedMeasurement.TotalSeconds'/>
+                    </Property>
+                    <Property Name='YAxisScale' Value='Linear'>
+                        <Property Name='MaxAxisValue' Value='1000'/>
+                        <Property Name='Interval' Value='100'/>
+                        <Property Name='LabelsEnabled' Value='false'/>
+                    </Property>
+                </Shape>
+
+              <Shape Type='Table' Style='TableStyle'>
+                <Property Name='LayoutFormat' Value='Flowing'/>
+                <Property Name='TitlePadding'>
+                  <Property Name='Top' Value='5'/>
+                </Property>
+                <Property Name='UpperTitle' Value='Medications'/>
+                <Property Name='UpperOverflowTitle' Value='Medications (continued)'/>
+                <Property Name='DataSource'>
+                  <Property Name='SourceData' Value='Test.MedicationDataSource'/>
+                  <Property Name='Column'>
+                    <Property Name='Width' Value='0.2'/>
+                    <Property Name='Heading' Value='Name'/>
+                    <Property Name='Content' Value="{Row.Name}"/>
+                  </Property>
+                  <Property Name='Column'>
+                    <Property Name='Width' Value='0.2'/>
+                    <Property Name='Heading' Value='Dosage'/>
+                    <Property Name='Content' Value="{Row.Dosage}"/>
+                  </Property>
+                  <Property Name='Column'>
+                    <Property Name='Width' Value='0.2'/>
+                    <Property Name='Heading' Value='Units'/>
+                    <Property Name='Content' Value="{Row.Units}"/>
+                  </Property>
+                  <Property Name='Column'>
+                    <Property Name='Width' Value='0.2'/>
+                    <Property Name='Heading' Value='Regime'/>
+                    <Property Name='Content' Value="{Row.Regime}"/>
+                  </Property>
+                  <Property Name='Column'>
+                    <Property Name='Width' Value='0.2'/>
+                    <Property Name='Heading' Value='Route'/>
+                    <Property Name='Content' Value="{Row.Route}"/>
+                  </Property>
+                </Property>
+              </Shape>
+
+            </Page>
+
+        </Section>
+    </Content>
+</ReportFormat>

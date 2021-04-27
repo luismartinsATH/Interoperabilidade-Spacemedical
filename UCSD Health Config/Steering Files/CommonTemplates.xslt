@@ -904,14 +904,14 @@
       <xsl:when test="$procedure='11524-0^LN'">11524-0^LN</xsl:when>
       <xsl:when test="$procedure='18752-6^LN'">18752-6^LN</xsl:when>
       <xsl:when test="$procedure='18754-2^LN'">18754-2^LN</xsl:when>
-	  <xsl:when test="starts-with($procedure,'blood')">blood pressure</xsl:when>
-	  <xsl:when test="starts-with($procedure,'Rhythm')">rhythm</xsl:when>
+	    <xsl:when test="starts-with($procedure,'blood')">blood pressure</xsl:when>
+	    <xsl:when test="starts-with($procedure,'Rhythm')">rhythm</xsl:when>
       <xsl:when test="starts-with($procedure,'event')">other</xsl:when>
 			
-            <xsl:when test="starts-with($procedure,'CARD7^HOLTER MONITOR')">18754-2^LN</xsl:when>       <!--  Custom Procedure codes -->
-	        <xsl:when test="starts-with($procedure,'CARD^48HRHOLTER')">18754-2^LN</xsl:when>     <!--  Custom Procedure codes --> 
+      <xsl:when test="starts-with($procedure,'CARD7^HOLTER MONITOR')">18754-2^LN</xsl:when>       <!--  Custom Procedure codes -->
+      <xsl:when test="starts-with($procedure,'CARD^48HRHOLTER')">18754-2^LN</xsl:when>     <!--  Custom Procedure codes --> 
 			<xsl:when test="starts-with($procedure,'CARD15^AMB')">Blood Pressure^00</xsl:when>	 <!--  Custom Procedure codes -->			
-		    <xsl:when test="starts-with($procedure,'Holter Monitor 24')">18754-2^LN</xsl:when>	 <!--  Custom Procedure codes -->
+      <xsl:when test="starts-with($procedure,'Holter Monitor 24')">18754-2^LN</xsl:when>	 <!--  Custom Procedure codes -->
 
 		<!--    **********  FROM LomondMessagingService codes   *****  LMS 8-26-2018 
 				CARD7^HOLTER MONITOR (24 HOURS)^SENTINEL^^HOLTER MONITOR
@@ -922,7 +922,7 @@
       will be put into an "unrecognised procedure" error message in the event log. -->
       <xsl:otherwise><xsl:value-of select="$procedure"/></xsl:otherwise>  
     <!--  <xsl:otherwise>other</xsl:otherwise> -->
- </xsl:choose>
+    </xsl:choose>
   </xsl:template>
   
   

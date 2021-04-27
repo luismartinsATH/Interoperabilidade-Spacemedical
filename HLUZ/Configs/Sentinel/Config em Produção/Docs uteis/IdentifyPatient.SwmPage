@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- this configuration file should not be edited. -->
+
+<Page PageKind="Search">
+
+  <Header DisplayName="#IdentifyingPatientHeading#">
+    <div class="navigation">
+      <include file="HeaderIcons/CommonHeaderIconsWithConfirmation.SwmControl"/>
+      <include file="HeaderIcons/HomeIconWithConfirmation.SwmControl"/>
+      <span Id="PageTitle"/>
+    </div>
+  </Header>
+
+
+  <OnPageLoad>
+    <Commands>            
+      <Command Type="WriteTestIntoFieldsCommand"/>
+      <Command Type="WritePatientIntoFieldsCommand"/>
+      <Command Type="ChangePatientWriteSearchCriteriaIntoFields"/>
+      <Command Type="WriteUrlQueryParametersIntoFieldsCommand"/>
+      <Command Type="DataGridFirstPageOfResultsCommand"/>
+      <Command Type="AuditFromFieldsCommand">
+        <Activity>#ActivityBeginIdentifyPatient#</Activity>
+        <AuditKind>Test</AuditKind>
+      </Command>
+    </Commands>
+  </OnPageLoad>
+
+  <Content>
+    <DataEntry>
+      <TextBox Id="Patient_Key" DataType="Key" IsHidden="true"/>
+      <TextBox Id="Case_key" DataType="Key" IsHidden="true"/>
+      <TextBox Id="Test_Key" DataType="Key" IsHidden="true"/>
+    </DataEntry>
+
+    <div class="col-group">
+      <div class="col-fixed">
+        <Menu class="Vertical">
+
+          <Item DisplayName="#UseSelectedMatch#" Id="Button_UseSelectedMatch">
+            <OnClicked Id="Click Use selected match button">
+              <Commands>
+                <Command Type="IdentifyPatientShowConfirmationDialogCommand"/>
+                <Command Type="IdentifyPatientAndTestCommand"/>
+                <Command Type="AuditFromFieldsCommand">
+                  <Activity>#ActivityIdentifyPatientForRecording#</Activity>
+                  <AuditKind>Test</AuditKind>
+                </Command>
+                <Command Type="SendXdtEventOnTestIdentifiedFieldCommand"/>
+                <Command Type="EndWorkflowCommand"/>
+              </Commands>
+            </OnClicked>
+          </Item>
+
+          <Item DisplayName="#SearchExternalPatients#" Id="Button_SearchExternalPatients">
+            <OnClicked Id="Click Search external patients button">
+              <Commands>
+                <Command Type="IsExternalPatientSearchEnabledCondition" Availability="HiddenIfNotSatisfied"/>
+                <Command Type="StartWorkflowAtPageCommand">
+                  <PageName>Patient/SearchExternalPatients</PageName>
+                  <QueryString>
+                    <Field FieldId="Test_Key"/>
+                  </QueryString>
+                </Command>
+              </Commands>
+            </OnClicked>
+          </Item>
+          
+          <Item DisplayName="#Cancel#" Id="Button_Cancel">
+            <OnClicked Id="Click Cancel button">
+              <Commands>
+                <Command Type="EndWorkflowCommand"/>
+              </Commands>
+            </OnClicked>
+          </Item>
+        </Menu>
+      </div>
+      <div class="col-remainder">
+
+        <div class="col-group">
+          <div class="col-span-6">
+            <Portlet>
+              <Header DisplayName="#DetailsFromRecording#"/>
+              <Content style="height: 24.8rem;">
+
+                <table>
+                  <tr>
+                    <td>
+                      <DataEntry>
+                        <TextBox Id="Patient_Organisation">
+                          <IsReadOnly>true</IsReadOnly>
+                        </TextBox>
+                        <TextBox Id="Patient_Id">
+                          <IsReadOnly>true</IsReadOnly>
+                        </TextBox>
+                        <TextBox Id="Patient_LastName">
+                          <IsReadOnly>true</IsReadOnly>
+                        </TextBox>
+                        <TextBox Id="Patient_FirstName">
+                          <IsReadOnly>true</IsReadOnly>
+                        </TextBox>
+                        <TextBox Id="Patient_BirthDate">
+                          <IsReadOnly>true</IsReadOnly>
+                        </TextBox>
+                        <TextBox Id="Test_CaseNumber">
+                          <IsReadOnly>true</IsReadOnly>
+                        </TextBox>
+                        <TextBox Id="Patient_NationalId">
+                          <IsReadOnly>true</IsReadOnly>
+                        </TextBox>
+                        <TextBox Id="Patient_GenderPickList">
+                          <IsReadOnly>true</IsReadOnly>
+                          <Options>
+                            <Option Value="Male" DisplayName="#GenderMale#"/>
+                            <Option Value="Female" DisplayName="#GenderFemale#"/>
+                            <Option Value="Unknown" DisplayName="#GenderUnknown#"/>
+                          </Options>
+                        </TextBox>
+                        <TextBox Id="Test_PacemakerType">
+                          <IsReadOnly>true</IsReadOnly>
+                        </TextBox>
+                        <TextBox Id="Test_Height">
+                          <IsReadOnly>true</IsReadOnly>
+                        </TextBox>
+                        <TextBox Id="Test_Weight">
+                          <IsReadOnly>true</IsReadOnly>
+                        </TextBox>
+                        <TextBox Id="Test_TypeName">
+                          <IsReadOnly>true</IsReadOnly>
+                        </TextBox>
+                        <TextBox Id="Test_RecordingStartDateTime">
+                          <IsReadOnly>true</IsReadOnly>
+                        </TextBox>
+                      </DataEntry>
+                    </td>
+
+                    <td style="width: 7em;">
+                      <Menu class="Vertical">
+                        <Item DisplayName="#PlayAudio#">
+                          <OnClicked>
+                            <Commands>
+                              <Command Type="PlayAudioRecordingForHolterTestCommand">
+                                <DialogTitle>#HolterAudioRecording#</DialogTitle>
+                              </Command>
+                            </Commands>
+                          </OnClicked>
+                        </Item>
+                      </Menu>
+                    </td>
+                  </tr>
+                </table>
+              </Content>
+            </Portlet>
+          </div>
+          <div class="col-span-6">
+            <Portlet>
+              <Header DisplayName="#SearchCriteria#"/>
+              <Content style="height: 24.8rem;">
+
+                <table>
+                  <tr>
+                    <td>
+                      <DataEntry>
+                        <TextBox Id="Critereon_Spacer">
+                          <!-- used to line up patient id etc fields with those from test -->
+                          <IsReadOnly>true</IsReadOnly>
+                        </TextBox>
+                        <TextBox Id="Critereon_Id" DisplayName="#Patient_Id#" Tooltip="#PatientCritereonIdTooltip#" />
+                        <TextBox Id="Critereon_PatientLastName" />
+                        <TextBox Id="Critereon_PatientFirstName" />
+                        <TextBox Id="Critereon_PatientBirthDate" DataType="DateOnly" />
+                        <TextBox Id="Critereon_PatientNationalId" DisplayName="#Patient_NationalId#" />
+                      </DataEntry>
+                    </td>
+                    <td style="width: 7em;">
+                      <Menu class="Vertical">
+                        <Item DisplayName="#AddPatient#" Id="Button_AddPatient">
+                          <OnClicked>
+                            <Commands>
+                              <Command Type="CanUserAddPatientCondition" Availability="HiddenIfNotSatisfied"/>
+                              <Command Type="StartWorkflowAtPageCommand">
+                                <Permissions>AddPatient</Permissions>
+                                <PageName>Patient/AddPatient</PageName>
+                                <QueryString>
+                                  <Field FieldId="Critereon_Id" QueryStringParameterId="Patient_Id"/>
+                                  <Field FieldId="Critereon_PatientLastName" QueryStringParameterId="Patient_LastName"/>
+                                  <Field FieldId="Critereon_PatientFirstName" QueryStringParameterId="Patient_FirstName"/>
+                                  <Field FieldId="Critereon_PatientBirthDate" QueryStringParameterId="Patient_BirthDate"/>
+                                  <Field FieldId="Critereon_PatientNationalId" QueryStringParameterId="Patient_NationalId"/>
+                                  <Field FieldId="Critereon_PatientCaseNumber" QueryStringParameterId="Case_Number"/>
+                                  <Field FieldId="Test_Key"/>
+                                </QueryString>
+                              </Command>
+                            </Commands>
+                          </OnClicked>
+                        </Item>
+                        <Item DisplayName="#Revert#">
+                          <OnClicked>
+                            <Commands>
+                              <Command Type="WriteTestIntoFieldsCommand"/>
+                              <Command Type="WritePatientIntoFieldsCommand"/>
+                              <Command Type="ChangePatientWriteSearchCriteriaIntoFields"/>
+                              <Command Type="SupplyFieldValuesToWebPageCommand"/>
+                              <Command Type="DataGridFirstPageOfResultsCommand"/>
+                              <Command Type="ValidateCommand"/>
+                            </Commands>
+                          </OnClicked>
+                        </Item>
+                        <Item DisplayName="#Clear#" Tooltip="#ClearTooltip#" Id="Button_Clear">
+                          <OnClicked>
+                            <Commands>
+                              <Command Type="IdentifyPatientClearChangePatientSearchFieldsCommand"/>
+                              <Command Type="SupplyFieldValuesToWebPageCommand"/>
+                              <Command Type="DataGridFirstPageOfResultsCommand"/>
+                              <Command Type="ValidateCommand"/>
+                            </Commands>
+                          </OnClicked>
+                        </Item>
+                        <Item DisplayName="#Refresh#" Tooltip="#RefreshTooltip#" Id="Button_Refresh" EnterKeyExecutesOnClickedEvent="true"  DisplayLoadingIndicator="true">
+                          <OnClicked>
+                            <Commands>
+                              <Command Type="SupplyFieldValuesToWebPageCommand"/>
+                              <Command Type="DataGridFirstPageOfResultsCommand"/>
+                              <Command Type="ValidateCommand"/>
+                            </Commands>
+                          </OnClicked>
+                        </Item>
+                      </Menu>
+                    </td>
+                  </tr>
+                </table>
+              </Content>
+            </Portlet>
+          </div>
+        </div>
+
+        <DataGrid Id="MatchingPatientsDataGrid">
+          <OnSearch>
+            <Commands>
+              <Command Type="DataGridSearchCommand">
+                <DatabaseQuery>
+                  <TextColumn Id="Patient_Key" DataType="Key" IsHidden="true"/>
+                  <TextColumn Id="Patient_Organisation" IsSortable="true"/>
+                  <TextColumn Id="Patient_Id" IsSortable="true"/>
+                  <TextColumn Id="Patient_NationalId" IsSortable="true"/>
+                  <TextColumn Id="Patient_LastName" IsSortable="true"/>
+                  <TextColumn Id="Patient_FirstName" IsSortable="true"/>
+                  <DateColumn Id="Patient_BirthDate" DataType="DateOnly" IsSortable="true"/>
+                  <TextColumn Id="Patient_GenderPickList" DataType="PickList" IsSortable="true">
+                    <Value DatabaseValue="0" UiValue="#GenderUnknown#"/>
+                    <Value DatabaseValue="1" UiValue="#GenderMale#"/>
+                    <Value DatabaseValue="2" UiValue="#GenderFemale#"/>
+                  </TextColumn>
+                  <View>WebGridPatientView</View>
+                  <Criteria>
+                    <ColumnStartsWithField ColumnId="Patient_Id" FieldId="Critereon_Id"/>
+                    <ColumnStartsWithField ColumnId="Patient_LastName" FieldId="Critereon_PatientLastName"/>
+                    <ColumnStartsWithField ColumnId="Patient_FirstName" FieldId="Critereon_PatientFirstName"/>
+                    <ColumnEqualsField ColumnId="Patient_BirthDate" FieldId="Critereon_PatientBirthDate"/>
+                    <ColumnStartsWithField ColumnId="Patient_NationalId" FieldId="Critereon_PatientNationalId"/>
+                    <ColumnEqualsValue ColumnId="Test_PatientInfoStatus" Value="20"/>
+                    <!-- Only search for identified patients -->
+                  </Criteria>
+                  <SortOrder>Ascending</SortOrder>
+                  <SortColumn>Patient_Id</SortColumn>
+                  <MaxResultCount>20</MaxResultCount>
+                </DatabaseQuery>
+              </Command>
+            </Commands>
+          </OnSearch>
+
+          <OnRefresh>
+            <Commands>
+              <Command Type="DataGridRefreshCommand"/>
+            </Commands>
+          </OnRefresh>
+
+          <OnSelectedRowsChanged>
+            <Commands>
+              <Command Type="ValidateCommand"/>
+            </Commands>
+          </OnSelectedRowsChanged>
+
+          <OnDblClickRow>
+            <Commands>
+              <Command Type="IdentifyPatientShowConfirmationDialogCommand"/>
+
+              <Command Type="IdentifyPatientAndTestCommand"/>
+              <Command Type="AuditFromFieldsCommand">
+                <Activity>#ActivityIdentifyPatientForRecording#</Activity>
+                <AuditKind>Test</AuditKind>
+              </Command>
+              <Command Type="SendXdtEventOnTestIdentifiedFieldCommand"/>
+              <Command Type="EndWorkflowCommand"/>
+            </Commands>
+          </OnDblClickRow>
+          
+        </DataGrid>
+      </div>
+    </div>
+  </Content>
+</Page>

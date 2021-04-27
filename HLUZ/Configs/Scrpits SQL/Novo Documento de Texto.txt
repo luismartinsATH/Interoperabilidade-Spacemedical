@@ -1,8 +1,0 @@
-Use LomondClinicalData
-SELECT        RecorderSerial, DownloadFacilityKey
-FROM            Test
-
-update Test set DownloadFacilityKey='{CAD28D57-B842-4DEA-B245-B9F48558C1AE}' 
-where 
-test.RecorderSerial='1069612'
-and Test.DownloadFacilityKey is Null

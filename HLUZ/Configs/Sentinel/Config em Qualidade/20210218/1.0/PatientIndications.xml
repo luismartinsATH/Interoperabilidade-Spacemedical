@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Indications>
+  <Indication>Vertigem</Indication>
+  <Indication>Tontura</Indication>
+  <Indication>Palpitações</Indication>
+  <Indication>Dor no Peito</Indication>
+  <Indication>Dor no Braço</Indication>
+  <Indication>Dor na Perna</Indication>
+  <Indication>Dor na mandíbula/dentes</Indication>
+  <Indication>Fadiga</Indication>
+  <Indication>Letargia</Indication>
+  <Indication>Náusea</Indication>
+  <Indication>Ansiedade</Indication>
+  <Indication>Falta de Apetite</Indication>
+  <Indication>Dor de cabeça</Indication>
+  <Indication>Vômitos</Indication>
+  <Indication>Indigestão</Indication>
+  <Indication>Intolerância ao Exercício</Indication>
+  <Indication>Tossir</Indication>
+  <Indication>Exaustão</Indication>
+  <Indication>Síncope</Indication>  
+  <Indication>Pré-Síncope Recorrente</Indication>
+  <Indication>Palpitações Diárias ou Frequentes</Indication>
+  <Indication>Histórico Familiar</Indication>
+  <Indication>MI Passado</Indication>
+  <Indication>Infarto agudo do miocárdio</Indication>
+  <Indication>Angina instável</Indication>
+  <Indication>Pericardite</Indication>
+  <Indication>Tamponamento cardíaco</Indication>
+  <Indication>Hipotensão/choque</Indication>
+  <Indication>Dispneia</Indication>
+  <Indication>Edema</Indication>
+  <Indication>Embolia pulmonar</Indication>
+  <Indication>Insuficiência cardíaca congestiva</Indication>
+  <Indication>Arritmias</Indication>
+  <Indication>Febre</Indication>
+  <Indication>Hipertensão</Indication>
+  <Indication>Parada cardíaca</Indication>
+  <Indication>Trombose venosa profunda</Indication>
+  <Indication>Sopros</Indication>
+</Indications>

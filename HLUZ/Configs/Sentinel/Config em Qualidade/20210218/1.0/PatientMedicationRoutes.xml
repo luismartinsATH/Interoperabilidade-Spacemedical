@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Routes>
+  <Route>Oral</Route>
+  <Route>I/M</Route>
+  <Route>I/V</Route>
+  <Route>S/C</Route>
+</Routes>
