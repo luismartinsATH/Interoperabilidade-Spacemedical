@@ -1,0 +1,159 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE RestingECGRequest>
+<RestingECGRequest>
+  <Manufacturer>dotLogic</Manufacturer>
+	  <Version>dotLogicECG</Version>
+    <PatientDemographics>
+    <LastName>
+      <Value>HERMOZA</Value>
+      <Label>Last Name:</Label>
+    </LastName>
+    <FirstName>
+      <Value>ALLAN FIRMINO</Value>
+      <Label>First Name:</Label>
+    </FirstName>
+    <MiddleName>
+      <Value></Value>
+      <Label>Middle Name:</Label>
+    </MiddleName>
+    <ID>
+      <Value>202918955</Value>
+      <Label>ID:</Label>
+    </ID>
+    <SecondID>
+      <Value></Value>
+      <Label>Second ID:</Label>
+    </SecondID>
+    <SocialSecurityNum>
+      <Value></Value>
+      <Label>SSN:</Label>
+    </SocialSecurityNum>
+    <PatientBirthDate>
+      <Value>19780707</Value>
+      <Label>Date of Birth:</Label>
+    </PatientBirthDate>
+    <Age>
+      <Value></Value>
+      <Label>Age:</Label>
+    </Age>
+    <Gender>
+      <Value>Male</Value>
+      <Label>Gender:</Label>
+    </Gender>
+    <Race>
+      <Value></Value>
+      <Label>Race:</Label>
+    </Race>
+    <Height>
+      <Value></Value>
+      <Units>in</Units>
+      <Label>Height:</Label>
+    </Height>
+    <Weight>
+      <Value></Value>
+      <Units>lbs</Units>
+      <Label>Weight:</Label>
+    </Weight>
+    <PatientLocation>
+      <Value></Value>
+      <Label>Patient Location:</Label>
+    </PatientLocation>
+    <PatientRoom>
+      <Value></Value>
+      <Label>Patient Room:</Label>
+    </PatientRoom>
+    <CommentField>
+      <Value></Value>
+      <Label>Comment:</Label>
+    </CommentField>
+    <ReferringPhysician>
+      <Value></Value>
+      <Label>Referring Phy:</Label>
+    </ReferringPhysician>
+    <AttendingPhysician>
+      <Value></Value>
+      <Label>Attending Phy:</Label>
+    </AttendingPhysician>
+    <OverreadingPhysician>
+      <Value></Value>
+      <Label>Overreading Phy:</Label>
+    </OverreadingPhysician>
+    <AssistingProvider>
+      <Value></Value>
+      <Label>Assisting Provider:</Label>
+    </AssistingProvider>
+    <ProceduralDiagnosis>
+      <Value></Value>
+      <Label>Procedural Diagnosis:</Label>
+    </ProceduralDiagnosis>
+    <ReasonForProcedure>
+      <Value></Value>
+      <Label>Reason For Procedure:</Label>
+    </ReasonForProcedure>
+    <Medications>
+      <Label>Medications:</Label>
+    </Medications>
+    <Note1>
+      <Label>Note1:</Label>
+    </Note1>
+    <Note2>
+      <Label>Note2:</Label>
+    </Note2>
+    <OrderRequestNum>
+      <Value>P000104016666</Value>
+      <Label>Order Request Number:</Label>
+    </OrderRequestNum>
+    <CartLcdReqField>
+      <Value></Value>
+      <Label>Cart LCD Request Number:</Label>
+    </CartLcdReqField>
+    <SysBPNum>
+      <Value></Value>
+      <Label>Systolic BP:</Label>
+    </SysBPNum>
+    <DiaBPNum>
+      <Value></Value>
+      <Label>Diastolic BP:</Label>
+    </DiaBPNum>
+    <BillingCode1>
+      <Value></Value>
+      <Label>Billing Code 1:</Label>
+    </BillingCode1>
+    <BillingCode2>
+      <Value></Value>
+      <Label>Billing Code 2:</Label>
+    </BillingCode2>
+    <BillingCode3>
+      <Value></Value>
+      <Label>Billing Code 3:</Label>
+    </BillingCode3>
+    <Address>
+      <Value></Value>
+      <Label>Address:</Label>
+    </Address>
+    <City>
+      <Value></Value>
+      <Label>City:</Label>
+    </City>
+    <State>
+      <Value></Value>
+      <Label>State:</Label>
+    </State>
+    <PostalCode>
+      <Value></Value>
+      <Label>PostalCode:</Label>
+    </PostalCode>
+    <Country>
+      <Value></Value>
+      <Label>Country:</Label>
+    </Country>
+    <HomePhone>
+      <Value></Value>
+      <Label>Home Phone:</Label>
+    </HomePhone>
+    <WorkPhone>
+      <Value></Value>
+      <Label>Work Phone:</Label>
+    </WorkPhone>
+  </PatientDemographics>
+</RestingECGRequest>

@@ -11,6 +11,7 @@
       <Bed></Bed>
    </TestLocationInformation>
    <PatientInformation>
+      <PatientNumberNamespace>COIMBRATESTE</PatientNumberNamespace>
       <PatientID>1146284</PatientID>
       <SecondaryPatientID></SecondaryPatientID>
       <PatientMRN></PatientMRN>

@@ -1,0 +1,1790 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StressTest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Manufacturer>Mortara Instrument, Inc.</Manufacturer>
+  <Version>X-Scribe 6.3.0</Version>
+  <PDF_Path>\\10.0.165.192\c$\DMR\Sentinel\Sentinel Messaging Service\Inboxes\Quinton\X^EXMGR^manual^_1^494_^dfsfsd^^^^_20210208124440_20210506131300.pdf</PDF_Path>
+  <PatientDemographics>
+    <LastName>
+      <Value>dfsfsd</Value>
+      <Label>LastName</Label>
+    </LastName>
+    <FirstName>
+      <Value />
+      <Label>FirstName</Label>
+    </FirstName>
+    <MiddleName>
+      <Value />
+      <Label>MiddleName</Label>
+    </MiddleName>
+    <ID>
+      <Value />
+      <Label>PatientID</Label>
+    </ID>
+    <SecondaryID>
+      <Value />
+      <Label>SecondID</Label>
+    </SecondaryID>
+    <DOB>
+      <Value />
+      <Label>DOB</Label>
+    </DOB>
+    <DobEx>
+      <Value />
+      <Label>DOB</Label>
+    </DobEx>
+    <Age>
+      <Value />
+      <Label>Age</Label>
+    </Age>
+    <TargetHR>
+      <Value />
+      <Units>BPM</Units>
+      <Label>TargetHR</Label>
+    </TargetHR>
+    <Gender>
+      <Value>Unknown</Value>
+      <Label>Gender</Label>
+    </Gender>
+    <Race>
+      <Value>Desconhecido</Value>
+      <Label>Race</Label>
+    </Race>
+    <Height>
+      <Value />
+      <Label>Height</Label>
+    </Height>
+    <Weight>
+      <Value />
+      <Label>Weight</Label>
+    </Weight>
+    <Address>
+      <Value />
+      <Label>Address</Label>
+    </Address>
+    <City>
+      <Value />
+      <Label>City</Label>
+    </City>
+    <State>
+      <Value />
+      <Label>State</Label>
+    </State>
+    <PostalCode>
+      <Value />
+      <Label>PostalCode</Label>
+    </PostalCode>
+    <Country>
+      <Value />
+      <Label>Country</Label>
+    </Country>
+    <HomePhone>
+      <Value />
+      <Label>HomeTelephone</Label>
+    </HomePhone>
+    <WorkPhone>
+      <Value />
+      <Label>WorkTelephone</Label>
+    </WorkPhone>
+    <Location>
+      <Value />
+      <Label>Location</Label>
+    </Location>
+    <ReferringPhysician>
+      <Value />
+      <Label>RefPhys</Label>
+    </ReferringPhysician>
+    <AttendingPhysician>
+      <Value />
+      <Label>AttendingPhysExam</Label>
+    </AttendingPhysician>
+    <Authenticator>
+      <Value />
+      <Label>AttendingPhys</Label>
+    </Authenticator>
+    <LegalAuthenticator>
+      <Value />
+      <Label>LegalSigner</Label>
+    </LegalAuthenticator>
+    <Smoker>
+      <Value>Unknown</Value>
+      <Label>Smoking</Label>
+    </Smoker>
+    <Diabetic>
+      <Value>Unknown</Value>
+      <Label>Diabetic</Label>
+    </Diabetic>
+    <HistoryOfMI>
+      <Value>Unknown</Value>
+      <Label>HistoryOfMI</Label>
+    </HistoryOfMI>
+    <FamilyHistory>
+      <Value>Unknown</Value>
+      <Label>FamilyHistory</Label>
+    </FamilyHistory>
+    <PriorCABG>
+      <Value>Unknown</Value>
+      <Label>PriorCABG</Label>
+    </PriorCABG>
+    <PriorCath>
+      <Value>Unknown</Value>
+      <Label>PriorCath</Label>
+    </PriorCath>
+    <Angina>
+      <Value>Desconhecido</Value>
+      <Label>Angina</Label>
+    </Angina>
+    <Indications>
+      <Label>Indications</Label>
+    </Indications>
+    <Medications>
+      <Label>Medications</Label>
+    </Medications>
+    <Notes>
+      <Label>Notes</Label>
+      <Line />
+    </Notes>
+    <MessageID>
+      <Value />
+      <Label>MessageID</Label>
+    </MessageID>
+    <OrderNumber>
+      <Value />
+      <Label>OrderNumber</Label>
+    </OrderNumber>
+    <BillingCode1>
+      <Value />
+      <Label>BillingCode1</Label>
+    </BillingCode1>
+    <BillingCode2>
+      <Value />
+      <Label>BillingCode2</Label>
+    </BillingCode2>
+    <BillingCode3>
+      <Value />
+      <Label>BillingCode3</Label>
+    </BillingCode3>
+    <ExpansionField1>
+      <Value />
+      <Label>ExpansionField1</Label>
+    </ExpansionField1>
+    <ExpansionField2>
+      <Value />
+      <Label>ExpansionField2</Label>
+    </ExpansionField2>
+    <ExpansionField3>
+      <Value />
+      <Label>ExpansionField3</Label>
+    </ExpansionField3>
+    <ExpansionField4>
+      <Value />
+      <Label>ExpansionField4</Label>
+    </ExpansionField4>
+    <AdmissionID>
+      <Value />
+      <Label>AdmissionID</Label>
+    </AdmissionID>
+    <AccessionNumber>
+      <Value />
+      <Label>AccessionNumber</Label>
+    </AccessionNumber>
+  </PatientDemographics>
+  <TestSummary>
+    <StationName>
+      <Value>HL-PC0872</Value>
+    </StationName>
+    <Institution>
+      <Value />
+    </Institution>
+    <Protocol>
+      <Value>Bruce</Value>
+      <Label>Protocol</Label>
+    </Protocol>
+    <ExamDate>
+      <Value>2/8/2021</Value>
+    </ExamDate>
+    <ExamDateEx>
+      <Value>2021-02-08</Value>
+    </ExamDateEx>
+    <ExamTime>
+      <Value>12:44</Value>
+    </ExamTime>
+    <ExerciseTime>
+      <Value>00:51</Value>
+    </ExerciseTime>
+    <JPoint>
+      <Value>80</Value>
+      <Unit>ms</Unit>
+      <Label>ST measurement based on J + 80ms</Label>
+    </JPoint>
+    <LeadsWith100uV_ST>
+      <Value>I</Value>
+      <Value>aVR</Value>
+      <Value>V2</Value>
+      <Value>V3</Value>
+      <Value>V4</Value>
+    </LeadsWith100uV_ST>
+    <PVCs>
+      <Value>0</Value>
+      <Label>PVC's</Label>
+    </PVCs>
+    <DukeScore>
+      <Value />
+      <Label>Duke Treadmill Score</Label>
+    </DukeScore>
+    <FAI>
+      <Value />
+      <Label>FAI%</Label>
+    </FAI>
+    <MaxSpeed>
+      <Value>2.7</Value>
+      <Units>km/h</Units>
+      <Label>Speed</Label>
+    </MaxSpeed>
+    <MaxGrade>
+      <Value>10.0</Value>
+      <Units>%</Units>
+      <Label>Grade</Label>
+    </MaxGrade>
+    <MaxMets>
+      <Value>2.5</Value>
+      <Label>METs</Label>
+    </MaxMets>
+    <MaxHR>
+      <Value>83</Value>
+      <Units>BPM</Units>
+      <Label>HR</Label>
+    </MaxHR>
+    <MaxSBP>
+      <Value />
+      <SBP />
+      <DBP />
+      <Time />
+      <Unit>mmHg</Unit>
+      <Label>SBP</Label>
+    </MaxSBP>
+    <MaxDBP>
+      <Value />
+      <SBP />
+      <DBP />
+      <Time />
+      <Unit>mmHg</Unit>
+      <Label>DBP</Label>
+    </MaxDBP>
+    <MaxDoubleProduct>
+      <Value>10010</Value>
+      <Label>HR*BP</Label>
+    </MaxDoubleProduct>
+    <MaxPercentTargetHR>
+      <Value>85%</Value>
+      <Unit>%</Unit>
+      <Label>% Target</Label>
+    </MaxPercentTargetHR>
+    <MaxST_Elevation>
+      <Value>1.5</Value>
+      <Units>mm</Units>
+      <Lead>V2</Lead>
+      <Time>00:50</Time>
+      <Label>ST elevation</Label>
+    </MaxST_Elevation>
+    <MaxST_Depression>
+      <Value>-1.2</Value>
+      <Units>mm</Units>
+      <Lead>aVR</Lead>
+      <Time>00:50</Time>
+      <Label>ST depression</Label>
+    </MaxST_Depression>
+    <MaxST_ElevationChange>
+      <Value>0.3</Value>
+      <Units>mm</Units>
+      <Lead>I</Lead>
+      <Time>00:50</Time>
+      <Label>ST elevation change</Label>
+    </MaxST_ElevationChange>
+    <MaxST_DepressionChange>
+      <Value>-0.4</Value>
+      <Unit>mm</Unit>
+      <Lead>II</Lead>
+      <Time>00:40</Time>
+      <Label>ST depression change</Label>
+    </MaxST_DepressionChange>
+    <MaxSTHR_Index>
+      <Value />
+      <Label>ST/HR Index</Label>
+    </MaxSTHR_Index>
+    <ReasonsForEnd>
+      <Label>ReasonsForEnd</Label>
+    </ReasonsForEnd>
+    <Symptoms>
+      <Label>Symptoms</Label>
+    </Symptoms>
+    <Conclusions>
+      <Label>Conclusions</Label>
+    </Conclusions>
+    <Technician>
+      <Value />
+      <Label>Technician</Label>
+    </Technician>
+    <ReviewingPhysician>
+      <Value />
+      <Label>OverrPhys</Label>
+    </ReviewingPhysician>
+  </TestSummary>
+  <SummaryTable>
+    <StageSummaryLine>
+      <Stage>
+        <Value />
+      </Stage>
+      <StageTime>
+        <Value>PRE-X</Value>
+      </StageTime>
+      <Speed>
+        <Value>1.6</Value>
+        <Unit>km/h</Unit>
+      </Speed>
+      <Grade>
+        <Value>0.0</Value>
+        <Unit>%</Unit>
+      </Grade>
+      <HR>
+        <Value />
+        <Unit>BPM</Unit>
+      </HR>
+      <SystolicBP>
+        <Value />
+        <Unit>mmHg</Unit>
+      </SystolicBP>
+      <DiastolicBP>
+        <Value />
+        <Unit>mmHg</Unit>
+      </DiastolicBP>
+      <METS>
+        <Value />
+      </METS>
+      <DoubleProduct>
+        <Value />
+      </DoubleProduct>
+      <ST_Level>
+        <Lead_I />
+        <Lead_II />
+        <Lead_III />
+        <Lead_aVR />
+        <Lead_aVL />
+        <Lead_aVF />
+        <Lead_V1 />
+        <Lead_V2 />
+        <Lead_V3 />
+        <Lead_V4 />
+        <Lead_V5 />
+        <Lead_V6 />
+      </ST_Level>
+      <ST_Slope>
+        <Lead_I />
+        <Lead_II />
+        <Lead_III />
+        <Lead_aVR />
+        <Lead_aVL />
+        <Lead_aVF />
+        <Lead_V1 />
+        <Lead_V2 />
+        <Lead_V3 />
+        <Lead_V4 />
+        <Lead_V5 />
+        <Lead_V6 />
+      </ST_Slope>
+    </StageSummaryLine>
+    <StageSummaryLine>
+      <Stage>
+        <Value />
+      </Stage>
+      <StageTime>
+        <Value>PRE-X</Value>
+      </StageTime>
+      <Speed>
+        <Value>1.6</Value>
+        <Unit>km/h</Unit>
+      </Speed>
+      <Grade>
+        <Value>0.0</Value>
+        <Unit>%</Unit>
+      </Grade>
+      <HR>
+        <Value>77</Value>
+        <Unit>BPM</Unit>
+      </HR>
+      <SystolicBP>
+        <Value>130</Value>
+        <Unit>mmHg</Unit>
+      </SystolicBP>
+      <DiastolicBP>
+        <Value>80</Value>
+        <Unit>mmHg</Unit>
+      </DiastolicBP>
+      <METS>
+        <Value />
+      </METS>
+      <DoubleProduct>
+        <Value>10010</Value>
+      </DoubleProduct>
+      <ST_Level>
+        <Lead_I />
+        <Lead_II />
+        <Lead_III />
+        <Lead_aVR />
+        <Lead_aVL />
+        <Lead_aVF />
+        <Lead_V1 />
+        <Lead_V2 />
+        <Lead_V3 />
+        <Lead_V4 />
+        <Lead_V5 />
+        <Lead_V6 />
+      </ST_Level>
+      <ST_Slope>
+        <Lead_I />
+        <Lead_II />
+        <Lead_III />
+        <Lead_aVR />
+        <Lead_aVL />
+        <Lead_aVF />
+        <Lead_V1 />
+        <Lead_V2 />
+        <Lead_V3 />
+        <Lead_V4 />
+        <Lead_V5 />
+        <Lead_V6 />
+      </ST_Slope>
+    </StageSummaryLine>
+    <StageSummaryLine>
+      <Stage>
+        <Value>START EXE</Value>
+      </Stage>
+      <StageTime>
+        <Value>EXE 00:00</Value>
+      </StageTime>
+      <Speed>
+        <Value>1.6</Value>
+        <Unit>km/h</Unit>
+      </Speed>
+      <Grade>
+        <Value>0.0</Value>
+        <Unit>%</Unit>
+      </Grade>
+      <HR>
+        <Value>76</Value>
+        <Unit>BPM</Unit>
+      </HR>
+      <SystolicBP>
+        <Value>130</Value>
+        <Unit>mmHg</Unit>
+      </SystolicBP>
+      <DiastolicBP>
+        <Value>80</Value>
+        <Unit>mmHg</Unit>
+      </DiastolicBP>
+      <METS>
+        <Value>1.3</Value>
+      </METS>
+      <DoubleProduct>
+        <Value>10010</Value>
+      </DoubleProduct>
+      <ST_Level>
+        <Lead_I>
+          <Value>1.0</Value>
+          <Unit>mm</Unit>
+        </Lead_I>
+        <Lead_II>
+          <Value>0.7</Value>
+          <Unit>mm</Unit>
+        </Lead_II>
+        <Lead_III>
+          <Value>-0.3</Value>
+          <Unit>mm</Unit>
+        </Lead_III>
+        <Lead_aVR>
+          <Value>-0.9</Value>
+          <Unit>mm</Unit>
+        </Lead_aVR>
+        <Lead_aVL>
+          <Value>0.6</Value>
+          <Unit>mm</Unit>
+        </Lead_aVL>
+        <Lead_aVF>
+          <Value>0.2</Value>
+          <Unit>mm</Unit>
+        </Lead_aVF>
+        <Lead_V1>
+          <Value>-1.0</Value>
+          <Unit>mm</Unit>
+        </Lead_V1>
+        <Lead_V2>
+          <Value>1.4</Value>
+          <Unit>mm</Unit>
+        </Lead_V2>
+        <Lead_V3>
+          <Value>1.1</Value>
+          <Unit>mm</Unit>
+        </Lead_V3>
+        <Lead_V4>
+          <Value>0.9</Value>
+          <Unit>mm</Unit>
+        </Lead_V4>
+        <Lead_V5>
+          <Value>0.6</Value>
+          <Unit>mm</Unit>
+        </Lead_V5>
+        <Lead_V6>
+          <Value>0.3</Value>
+          <Unit>mm</Unit>
+        </Lead_V6>
+      </ST_Level>
+      <ST_Slope>
+        <Lead_I>
+          <Value>1.5</Value>
+          <Unit>mV/s</Unit>
+        </Lead_I>
+        <Lead_II>
+          <Value>1.0</Value>
+          <Unit>mV/s</Unit>
+        </Lead_II>
+        <Lead_III>
+          <Value>-0.6</Value>
+          <Unit>mV/s</Unit>
+        </Lead_III>
+        <Lead_aVR>
+          <Value>-1.3</Value>
+          <Unit>mV/s</Unit>
+        </Lead_aVR>
+        <Lead_aVL>
+          <Value>1.0</Value>
+          <Unit>mV/s</Unit>
+        </Lead_aVL>
+        <Lead_aVF>
+          <Value>0.2</Value>
+          <Unit>mV/s</Unit>
+        </Lead_aVF>
+        <Lead_V1>
+          <Value>-1.4</Value>
+          <Unit>mV/s</Unit>
+        </Lead_V1>
+        <Lead_V2>
+          <Value>1.9</Value>
+          <Unit>mV/s</Unit>
+        </Lead_V2>
+        <Lead_V3>
+          <Value>1.2</Value>
+          <Unit>mV/s</Unit>
+        </Lead_V3>
+        <Lead_V4>
+          <Value>0.9</Value>
+          <Unit>mV/s</Unit>
+        </Lead_V4>
+        <Lead_V5>
+          <Value>0.7</Value>
+          <Unit>mV/s</Unit>
+        </Lead_V5>
+        <Lead_V6>
+          <Value>0.3</Value>
+          <Unit>mV/s</Unit>
+        </Lead_V6>
+      </ST_Slope>
+    </StageSummaryLine>
+    <StageSummaryLine>
+      <Stage>
+        <Value>PEAK EXE</Value>
+      </Stage>
+      <StageTime>
+        <Value>EXE 00:51</Value>
+      </StageTime>
+      <Speed>
+        <Value>2.7</Value>
+        <Unit>km/h</Unit>
+      </Speed>
+      <Grade>
+        <Value>10.0</Value>
+        <Unit>%</Unit>
+      </Grade>
+      <HR>
+        <Value>80</Value>
+        <Unit>BPM</Unit>
+      </HR>
+      <SystolicBP>
+        <Value>130</Value>
+        <Unit>mmHg</Unit>
+      </SystolicBP>
+      <DiastolicBP>
+        <Value>80</Value>
+        <Unit>mmHg</Unit>
+      </DiastolicBP>
+      <METS>
+        <Value>2.5</Value>
+      </METS>
+      <DoubleProduct>
+        <Value>10010</Value>
+      </DoubleProduct>
+      <ST_Level>
+        <Lead_I>
+          <Value>1.3</Value>
+          <Unit>mm</Unit>
+        </Lead_I>
+        <Lead_II>
+          <Value>0.8</Value>
+          <Unit>mm</Unit>
+        </Lead_II>
+        <Lead_III>
+          <Value>-0.5</Value>
+          <Unit>mm</Unit>
+        </Lead_III>
+        <Lead_aVR>
+          <Value>-1.2</Value>
+          <Unit>mm</Unit>
+        </Lead_aVR>
+        <Lead_aVL>
+          <Value>0.9</Value>
+          <Unit>mm</Unit>
+        </Lead_aVL>
+        <Lead_aVF>
+          <Value>0.1</Value>
+          <Unit>mm</Unit>
+        </Lead_aVF>
+        <Lead_V1>
+          <Value>-1.0</Value>
+          <Unit>mm</Unit>
+        </Lead_V1>
+        <Lead_V2>
+          <Value>1.5</Value>
+          <Unit>mm</Unit>
+        </Lead_V2>
+        <Lead_V3>
+          <Value>1.1</Value>
+          <Unit>mm</Unit>
+        </Lead_V3>
+        <Lead_V4>
+          <Value>0.9</Value>
+          <Unit>mm</Unit>
+        </Lead_V4>
+        <Lead_V5>
+          <Value>0.6</Value>
+          <Unit>mm</Unit>
+        </Lead_V5>
+        <Lead_V6>
+          <Value>0.3</Value>
+          <Unit>mm</Unit>
+        </Lead_V6>
+      </ST_Level>
+      <ST_Slope>
+        <Lead_I>
+          <Value>1.5</Value>
+          <Unit>mV/s</Unit>
+        </Lead_I>
+        <Lead_II>
+          <Value>1.0</Value>
+          <Unit>mV/s</Unit>
+        </Lead_II>
+        <Lead_III>
+          <Value>-0.5</Value>
+          <Unit>mV/s</Unit>
+        </Lead_III>
+        <Lead_aVR>
+          <Value>-1.3</Value>
+          <Unit>mV/s</Unit>
+        </Lead_aVR>
+        <Lead_aVL>
+          <Value>1.0</Value>
+          <Unit>mV/s</Unit>
+        </Lead_aVL>
+        <Lead_aVF>
+          <Value>0.3</Value>
+          <Unit>mV/s</Unit>
+        </Lead_aVF>
+        <Lead_V1>
+          <Value>-1.2</Value>
+          <Unit>mV/s</Unit>
+        </Lead_V1>
+        <Lead_V2>
+          <Value>1.9</Value>
+          <Unit>mV/s</Unit>
+        </Lead_V2>
+        <Lead_V3>
+          <Value>1.3</Value>
+          <Unit>mV/s</Unit>
+        </Lead_V3>
+        <Lead_V4>
+          <Value>0.7</Value>
+          <Unit>mV/s</Unit>
+        </Lead_V4>
+        <Lead_V5>
+          <Value>0.8</Value>
+          <Unit>mV/s</Unit>
+        </Lead_V5>
+        <Lead_V6>
+          <Value>0.3</Value>
+          <Unit>mV/s</Unit>
+        </Lead_V6>
+      </ST_Slope>
+    </StageSummaryLine>
+    <StageSummaryLine>
+      <Stage>
+        <Value />
+      </Stage>
+      <StageTime>
+        <Value>REC 00:12</Value>
+      </StageTime>
+      <Speed>
+        <Value>0.0</Value>
+        <Unit>km/h</Unit>
+      </Speed>
+      <Grade>
+        <Value>0.0</Value>
+        <Unit>%</Unit>
+      </Grade>
+      <HR>
+        <Value>79</Value>
+        <Unit>BPM</Unit>
+      </HR>
+      <SystolicBP>
+        <Value>130</Value>
+        <Unit>mmHg</Unit>
+      </SystolicBP>
+      <DiastolicBP>
+        <Value>80</Value>
+        <Unit>mmHg</Unit>
+      </DiastolicBP>
+      <METS>
+        <Value>2.2</Value>
+      </METS>
+      <DoubleProduct>
+        <Value>10010</Value>
+      </DoubleProduct>
+      <ST_Level>
+        <Lead_I>
+          <Value>0.9</Value>
+          <Unit>mm</Unit>
+        </Lead_I>
+        <Lead_II>
+          <Value>0.8</Value>
+          <Unit>mm</Unit>
+        </Lead_II>
+        <Lead_III>
+          <Value>-0.1</Value>
+          <Unit>mm</Unit>
+        </Lead_III>
+        <Lead_aVR>
+          <Value>-0.9</Value>
+          <Unit>mm</Unit>
+        </Lead_aVR>
+        <Lead_aVL>
+          <Value>0.4</Value>
+          <Unit>mm</Unit>
+        </Lead_aVL>
+        <Lead_aVF>
+          <Value>0.3</Value>
+          <Unit>mm</Unit>
+        </Lead_aVF>
+        <Lead_V1>
+          <Value>-1.0</Value>
+          <Unit>mm</Unit>
+        </Lead_V1>
+        <Lead_V2>
+          <Value>1.4</Value>
+          <Unit>mm</Unit>
+        </Lead_V2>
+        <Lead_V3>
+          <Value>1.2</Value>
+          <Unit>mm</Unit>
+        </Lead_V3>
+        <Lead_V4>
+          <Value>0.9</Value>
+          <Unit>mm</Unit>
+        </Lead_V4>
+        <Lead_V5>
+          <Value>0.7</Value>
+          <Unit>mm</Unit>
+        </Lead_V5>
+        <Lead_V6>
+          <Value>0.3</Value>
+          <Unit>mm</Unit>
+        </Lead_V6>
+      </ST_Level>
+      <ST_Slope>
+        <Lead_I>
+          <Value>1.8</Value>
+          <Unit>mV/s</Unit>
+        </Lead_I>
+        <Lead_II>
+          <Value>1.2</Value>
+          <Unit>mV/s</Unit>
+        </Lead_II>
+        <Lead_III>
+          <Value>-0.6</Value>
+          <Unit>mV/s</Unit>
+        </Lead_III>
+        <Lead_aVR>
+          <Value>-1.5</Value>
+          <Unit>mV/s</Unit>
+        </Lead_aVR>
+        <Lead_aVL>
+          <Value>1.2</Value>
+          <Unit>mV/s</Unit>
+        </Lead_aVL>
+        <Lead_aVF>
+          <Value>0.2</Value>
+          <Unit>mV/s</Unit>
+        </Lead_aVF>
+        <Lead_V1>
+          <Value>-1.3</Value>
+          <Unit>mV/s</Unit>
+        </Lead_V1>
+        <Lead_V2>
+          <Value>1.8</Value>
+          <Unit>mV/s</Unit>
+        </Lead_V2>
+        <Lead_V3>
+          <Value>1.3</Value>
+          <Unit>mV/s</Unit>
+        </Lead_V3>
+        <Lead_V4>
+          <Value>0.9</Value>
+          <Unit>mV/s</Unit>
+        </Lead_V4>
+        <Lead_V5>
+          <Value>0.8</Value>
+          <Unit>mV/s</Unit>
+        </Lead_V5>
+        <Lead_V6>
+          <Value>0.3</Value>
+          <Unit>mV/s</Unit>
+        </Lead_V6>
+      </ST_Slope>
+    </StageSummaryLine>
+    <StageSummaryLine>
+      <Stage>
+        <Value>END REC</Value>
+      </Stage>
+      <StageTime>
+        <Value>REC 00:19</Value>
+      </StageTime>
+      <Speed>
+        <Value>0.0</Value>
+        <Unit>km/h</Unit>
+      </Speed>
+      <Grade>
+        <Value>0.0</Value>
+        <Unit>%</Unit>
+      </Grade>
+      <HR>
+        <Value>77</Value>
+        <Unit>BPM</Unit>
+      </HR>
+      <SystolicBP>
+        <Value>130</Value>
+        <Unit>mmHg</Unit>
+      </SystolicBP>
+      <DiastolicBP>
+        <Value>80</Value>
+        <Unit>mmHg</Unit>
+      </DiastolicBP>
+      <METS>
+        <Value>1.9</Value>
+      </METS>
+      <DoubleProduct>
+        <Value>10010</Value>
+      </DoubleProduct>
+      <ST_Level>
+        <Lead_I>
+          <Value>1.1</Value>
+          <Unit>mm</Unit>
+        </Lead_I>
+        <Lead_II>
+          <Value>0.9</Value>
+          <Unit>mm</Unit>
+        </Lead_II>
+        <Lead_III>
+          <Value>-0.2</Value>
+          <Unit>mm</Unit>
+        </Lead_III>
+        <Lead_aVR>
+          <Value>-1.1</Value>
+          <Unit>mm</Unit>
+        </Lead_aVR>
+        <Lead_aVL>
+          <Value>0.6</Value>
+          <Unit>mm</Unit>
+        </Lead_aVL>
+        <Lead_aVF>
+          <Value>0.4</Value>
+          <Unit>mm</Unit>
+        </Lead_aVF>
+        <Lead_V1>
+          <Value>-0.9</Value>
+          <Unit>mm</Unit>
+        </Lead_V1>
+        <Lead_V2>
+          <Value>1.5</Value>
+          <Unit>mm</Unit>
+        </Lead_V2>
+        <Lead_V3>
+          <Value>1.1</Value>
+          <Unit>mm</Unit>
+        </Lead_V3>
+        <Lead_V4>
+          <Value>0.8</Value>
+          <Unit>mm</Unit>
+        </Lead_V4>
+        <Lead_V5>
+          <Value>0.5</Value>
+          <Unit>mm</Unit>
+        </Lead_V5>
+        <Lead_V6>
+          <Value>0.3</Value>
+          <Unit>mm</Unit>
+        </Lead_V6>
+      </ST_Level>
+      <ST_Slope>
+        <Lead_I>
+          <Value>1.9</Value>
+          <Unit>mV/s</Unit>
+        </Lead_I>
+        <Lead_II>
+          <Value>1.2</Value>
+          <Unit>mV/s</Unit>
+        </Lead_II>
+        <Lead_III>
+          <Value>-0.7</Value>
+          <Unit>mV/s</Unit>
+        </Lead_III>
+        <Lead_aVR>
+          <Value>-1.6</Value>
+          <Unit>mV/s</Unit>
+        </Lead_aVR>
+        <Lead_aVL>
+          <Value>1.3</Value>
+          <Unit>mV/s</Unit>
+        </Lead_aVL>
+        <Lead_aVF>
+          <Value>0.3</Value>
+          <Unit>mV/s</Unit>
+        </Lead_aVF>
+        <Lead_V1>
+          <Value>-1.2</Value>
+          <Unit>mV/s</Unit>
+        </Lead_V1>
+        <Lead_V2>
+          <Value>1.9</Value>
+          <Unit>mV/s</Unit>
+        </Lead_V2>
+        <Lead_V3>
+          <Value>1.1</Value>
+          <Unit>mV/s</Unit>
+        </Lead_V3>
+        <Lead_V4>
+          <Value>0.8</Value>
+          <Unit>mV/s</Unit>
+        </Lead_V4>
+        <Lead_V5>
+          <Value>0.7</Value>
+          <Unit>mV/s</Unit>
+        </Lead_V5>
+        <Lead_V6>
+          <Value>0.3</Value>
+          <Unit>mV/s</Unit>
+        </Lead_V6>
+      </ST_Slope>
+    </StageSummaryLine>
+    <MinuteSummaryLine>
+      <Stage>
+        <Value />
+      </Stage>
+      <StageTime>
+        <Value>PRE-X</Value>
+      </StageTime>
+      <Speed>
+        <Value>1.6</Value>
+        <Unit>km/h</Unit>
+      </Speed>
+      <Grade>
+        <Value>0.0</Value>
+        <Unit>%</Unit>
+      </Grade>
+      <HR>
+        <Value />
+        <Unit>BPM</Unit>
+      </HR>
+      <SystolicBP>
+        <Value />
+        <Unit>mmHg</Unit>
+      </SystolicBP>
+      <DiastolicBP>
+        <Value />
+        <Unit>mmHg</Unit>
+      </DiastolicBP>
+      <METS>
+        <Value />
+      </METS>
+      <DoubleProduct>
+        <Value />
+      </DoubleProduct>
+      <ST_Level>
+        <Lead_I />
+        <Lead_II />
+        <Lead_III />
+        <Lead_aVR />
+        <Lead_aVL />
+        <Lead_aVF />
+        <Lead_V1 />
+        <Lead_V2 />
+        <Lead_V3 />
+        <Lead_V4 />
+        <Lead_V5 />
+        <Lead_V6 />
+      </ST_Level>
+      <ST_Slope>
+        <Lead_I />
+        <Lead_II />
+        <Lead_III />
+        <Lead_aVR />
+        <Lead_aVL />
+        <Lead_aVF />
+        <Lead_V1 />
+        <Lead_V2 />
+        <Lead_V3 />
+        <Lead_V4 />
+        <Lead_V5 />
+        <Lead_V6 />
+      </ST_Slope>
+    </MinuteSummaryLine>
+    <MinuteSummaryLine>
+      <Stage>
+        <Value />
+      </Stage>
+      <StageTime>
+        <Value>PRE-X</Value>
+      </StageTime>
+      <Speed>
+        <Value>1.6</Value>
+        <Unit>km/h</Unit>
+      </Speed>
+      <Grade>
+        <Value>0.0</Value>
+        <Unit>%</Unit>
+      </Grade>
+      <HR>
+        <Value>77</Value>
+        <Unit>BPM</Unit>
+      </HR>
+      <SystolicBP>
+        <Value>130</Value>
+        <Unit>mmHg</Unit>
+      </SystolicBP>
+      <DiastolicBP>
+        <Value>80</Value>
+        <Unit>mmHg</Unit>
+      </DiastolicBP>
+      <METS>
+        <Value />
+      </METS>
+      <DoubleProduct>
+        <Value>10010</Value>
+      </DoubleProduct>
+      <ST_Level>
+        <Lead_I />
+        <Lead_II />
+        <Lead_III />
+        <Lead_aVR />
+        <Lead_aVL />
+        <Lead_aVF />
+        <Lead_V1 />
+        <Lead_V2 />
+        <Lead_V3 />
+        <Lead_V4 />
+        <Lead_V5 />
+        <Lead_V6 />
+      </ST_Level>
+      <ST_Slope>
+        <Lead_I />
+        <Lead_II />
+        <Lead_III />
+        <Lead_aVR />
+        <Lead_aVL />
+        <Lead_aVF />
+        <Lead_V1 />
+        <Lead_V2 />
+        <Lead_V3 />
+        <Lead_V4 />
+        <Lead_V5 />
+        <Lead_V6 />
+      </ST_Slope>
+    </MinuteSummaryLine>
+    <MinuteSummaryLine>
+      <Stage>
+        <Value>START EXE</Value>
+      </Stage>
+      <StageTime>
+        <Value>EXE 00:00</Value>
+      </StageTime>
+      <Speed>
+        <Value>2.7</Value>
+        <Unit>km/h</Unit>
+      </Speed>
+      <Grade>
+        <Value>10.0</Value>
+        <Unit>%</Unit>
+      </Grade>
+      <HR>
+        <Value>76</Value>
+        <Unit>BPM</Unit>
+      </HR>
+      <SystolicBP>
+        <Value>130</Value>
+        <Unit>mmHg</Unit>
+      </SystolicBP>
+      <DiastolicBP>
+        <Value>80</Value>
+        <Unit>mmHg</Unit>
+      </DiastolicBP>
+      <METS>
+        <Value />
+      </METS>
+      <DoubleProduct>
+        <Value>10010</Value>
+      </DoubleProduct>
+      <ST_Level>
+        <Lead_I>
+          <Value>1.0</Value>
+          <Unit>mm</Unit>
+        </Lead_I>
+        <Lead_II>
+          <Value>0.7</Value>
+          <Unit>mm</Unit>
+        </Lead_II>
+        <Lead_III>
+          <Value>-0.3</Value>
+          <Unit>mm</Unit>
+        </Lead_III>
+        <Lead_aVR>
+          <Value>-0.9</Value>
+          <Unit>mm</Unit>
+        </Lead_aVR>
+        <Lead_aVL>
+          <Value>0.6</Value>
+          <Unit>mm</Unit>
+        </Lead_aVL>
+        <Lead_aVF>
+          <Value>0.2</Value>
+          <Unit>mm</Unit>
+        </Lead_aVF>
+        <Lead_V1>
+          <Value>-1.0</Value>
+          <Unit>mm</Unit>
+        </Lead_V1>
+        <Lead_V2>
+          <Value>1.4</Value>
+          <Unit>mm</Unit>
+        </Lead_V2>
+        <Lead_V3>
+          <Value>1.1</Value>
+          <Unit>mm</Unit>
+        </Lead_V3>
+        <Lead_V4>
+          <Value>0.9</Value>
+          <Unit>mm</Unit>
+        </Lead_V4>
+        <Lead_V5>
+          <Value>0.6</Value>
+          <Unit>mm</Unit>
+        </Lead_V5>
+        <Lead_V6>
+          <Value>0.3</Value>
+          <Unit>mm</Unit>
+        </Lead_V6>
+      </ST_Level>
+      <ST_Slope>
+        <Lead_I>
+          <Value>1.5</Value>
+          <Unit>mV/s</Unit>
+        </Lead_I>
+        <Lead_II>
+          <Value>1.0</Value>
+          <Unit>mV/s</Unit>
+        </Lead_II>
+        <Lead_III>
+          <Value>-0.6</Value>
+          <Unit>mV/s</Unit>
+        </Lead_III>
+        <Lead_aVR>
+          <Value>-1.3</Value>
+          <Unit>mV/s</Unit>
+        </Lead_aVR>
+        <Lead_aVL>
+          <Value>1.0</Value>
+          <Unit>mV/s</Unit>
+        </Lead_aVL>
+        <Lead_aVF>
+          <Value>0.2</Value>
+          <Unit>mV/s</Unit>
+        </Lead_aVF>
+        <Lead_V1>
+          <Value>-1.4</Value>
+          <Unit>mV/s</Unit>
+        </Lead_V1>
+        <Lead_V2>
+          <Value>1.9</Value>
+          <Unit>mV/s</Unit>
+        </Lead_V2>
+        <Lead_V3>
+          <Value>1.2</Value>
+          <Unit>mV/s</Unit>
+        </Lead_V3>
+        <Lead_V4>
+          <Value>0.9</Value>
+          <Unit>mV/s</Unit>
+        </Lead_V4>
+        <Lead_V5>
+          <Value>0.7</Value>
+          <Unit>mV/s</Unit>
+        </Lead_V5>
+        <Lead_V6>
+          <Value>0.3</Value>
+          <Unit>mV/s</Unit>
+        </Lead_V6>
+      </ST_Slope>
+    </MinuteSummaryLine>
+    <MinuteSummaryLine>
+      <Stage>
+        <Value>PEAK EXE</Value>
+      </Stage>
+      <StageTime>
+        <Value>EXE 00:51</Value>
+      </StageTime>
+      <Speed>
+        <Value>2.7</Value>
+        <Unit>km/h</Unit>
+      </Speed>
+      <Grade>
+        <Value>10.0</Value>
+        <Unit>%</Unit>
+      </Grade>
+      <HR>
+        <Value>80</Value>
+        <Unit>BPM</Unit>
+      </HR>
+      <SystolicBP>
+        <Value>130</Value>
+        <Unit>mmHg</Unit>
+      </SystolicBP>
+      <DiastolicBP>
+        <Value>80</Value>
+        <Unit>mmHg</Unit>
+      </DiastolicBP>
+      <METS>
+        <Value>2.5</Value>
+      </METS>
+      <DoubleProduct>
+        <Value>10010</Value>
+      </DoubleProduct>
+      <ST_Level>
+        <Lead_I>
+          <Value>1.3</Value>
+          <Unit>mm</Unit>
+        </Lead_I>
+        <Lead_II>
+          <Value>0.8</Value>
+          <Unit>mm</Unit>
+        </Lead_II>
+        <Lead_III>
+          <Value>-0.5</Value>
+          <Unit>mm</Unit>
+        </Lead_III>
+        <Lead_aVR>
+          <Value>-1.2</Value>
+          <Unit>mm</Unit>
+        </Lead_aVR>
+        <Lead_aVL>
+          <Value>0.9</Value>
+          <Unit>mm</Unit>
+        </Lead_aVL>
+        <Lead_aVF>
+          <Value>0.1</Value>
+          <Unit>mm</Unit>
+        </Lead_aVF>
+        <Lead_V1>
+          <Value>-1.0</Value>
+          <Unit>mm</Unit>
+        </Lead_V1>
+        <Lead_V2>
+          <Value>1.5</Value>
+          <Unit>mm</Unit>
+        </Lead_V2>
+        <Lead_V3>
+          <Value>1.1</Value>
+          <Unit>mm</Unit>
+        </Lead_V3>
+        <Lead_V4>
+          <Value>0.9</Value>
+          <Unit>mm</Unit>
+        </Lead_V4>
+        <Lead_V5>
+          <Value>0.6</Value>
+          <Unit>mm</Unit>
+        </Lead_V5>
+        <Lead_V6>
+          <Value>0.3</Value>
+          <Unit>mm</Unit>
+        </Lead_V6>
+      </ST_Level>
+      <ST_Slope>
+        <Lead_I>
+          <Value>1.5</Value>
+          <Unit>mV/s</Unit>
+        </Lead_I>
+        <Lead_II>
+          <Value>1.0</Value>
+          <Unit>mV/s</Unit>
+        </Lead_II>
+        <Lead_III>
+          <Value>-0.5</Value>
+          <Unit>mV/s</Unit>
+        </Lead_III>
+        <Lead_aVR>
+          <Value>-1.3</Value>
+          <Unit>mV/s</Unit>
+        </Lead_aVR>
+        <Lead_aVL>
+          <Value>1.0</Value>
+          <Unit>mV/s</Unit>
+        </Lead_aVL>
+        <Lead_aVF>
+          <Value>0.3</Value>
+          <Unit>mV/s</Unit>
+        </Lead_aVF>
+        <Lead_V1>
+          <Value>-1.2</Value>
+          <Unit>mV/s</Unit>
+        </Lead_V1>
+        <Lead_V2>
+          <Value>1.9</Value>
+          <Unit>mV/s</Unit>
+        </Lead_V2>
+        <Lead_V3>
+          <Value>1.3</Value>
+          <Unit>mV/s</Unit>
+        </Lead_V3>
+        <Lead_V4>
+          <Value>0.7</Value>
+          <Unit>mV/s</Unit>
+        </Lead_V4>
+        <Lead_V5>
+          <Value>0.8</Value>
+          <Unit>mV/s</Unit>
+        </Lead_V5>
+        <Lead_V6>
+          <Value>0.3</Value>
+          <Unit>mV/s</Unit>
+        </Lead_V6>
+      </ST_Slope>
+    </MinuteSummaryLine>
+    <MinuteSummaryLine>
+      <Stage>
+        <Value>TREND</Value>
+      </Stage>
+      <StageTime>
+        <Value>REC 00:08</Value>
+      </StageTime>
+      <Speed>
+        <Value>2.1</Value>
+        <Unit>km/h</Unit>
+      </Speed>
+      <Grade>
+        <Value>0.0</Value>
+        <Unit>%</Unit>
+      </Grade>
+      <HR>
+        <Value>83</Value>
+        <Unit>BPM</Unit>
+      </HR>
+      <SystolicBP>
+        <Value>130</Value>
+        <Unit>mmHg</Unit>
+      </SystolicBP>
+      <DiastolicBP>
+        <Value>80</Value>
+        <Unit>mmHg</Unit>
+      </DiastolicBP>
+      <METS>
+        <Value>2.2</Value>
+      </METS>
+      <DoubleProduct>
+        <Value>10010</Value>
+      </DoubleProduct>
+      <ST_Level>
+        <Lead_I>
+          <Value>0.9</Value>
+          <Unit>mm</Unit>
+        </Lead_I>
+        <Lead_II>
+          <Value>0.8</Value>
+          <Unit>mm</Unit>
+        </Lead_II>
+        <Lead_III>
+          <Value>-0.1</Value>
+          <Unit>mm</Unit>
+        </Lead_III>
+        <Lead_aVR>
+          <Value>-0.9</Value>
+          <Unit>mm</Unit>
+        </Lead_aVR>
+        <Lead_aVL>
+          <Value>0.4</Value>
+          <Unit>mm</Unit>
+        </Lead_aVL>
+        <Lead_aVF>
+          <Value>0.3</Value>
+          <Unit>mm</Unit>
+        </Lead_aVF>
+        <Lead_V1>
+          <Value>-1.0</Value>
+          <Unit>mm</Unit>
+        </Lead_V1>
+        <Lead_V2>
+          <Value>1.4</Value>
+          <Unit>mm</Unit>
+        </Lead_V2>
+        <Lead_V3>
+          <Value>1.2</Value>
+          <Unit>mm</Unit>
+        </Lead_V3>
+        <Lead_V4>
+          <Value>0.9</Value>
+          <Unit>mm</Unit>
+        </Lead_V4>
+        <Lead_V5>
+          <Value>0.7</Value>
+          <Unit>mm</Unit>
+        </Lead_V5>
+        <Lead_V6>
+          <Value>0.3</Value>
+          <Unit>mm</Unit>
+        </Lead_V6>
+      </ST_Level>
+      <ST_Slope>
+        <Lead_I>
+          <Value>1.8</Value>
+          <Unit>mV/s</Unit>
+        </Lead_I>
+        <Lead_II>
+          <Value>1.2</Value>
+          <Unit>mV/s</Unit>
+        </Lead_II>
+        <Lead_III>
+          <Value>-0.6</Value>
+          <Unit>mV/s</Unit>
+        </Lead_III>
+        <Lead_aVR>
+          <Value>-1.5</Value>
+          <Unit>mV/s</Unit>
+        </Lead_aVR>
+        <Lead_aVL>
+          <Value>1.2</Value>
+          <Unit>mV/s</Unit>
+        </Lead_aVL>
+        <Lead_aVF>
+          <Value>0.2</Value>
+          <Unit>mV/s</Unit>
+        </Lead_aVF>
+        <Lead_V1>
+          <Value>-1.3</Value>
+          <Unit>mV/s</Unit>
+        </Lead_V1>
+        <Lead_V2>
+          <Value>1.8</Value>
+          <Unit>mV/s</Unit>
+        </Lead_V2>
+        <Lead_V3>
+          <Value>1.3</Value>
+          <Unit>mV/s</Unit>
+        </Lead_V3>
+        <Lead_V4>
+          <Value>0.9</Value>
+          <Unit>mV/s</Unit>
+        </Lead_V4>
+        <Lead_V5>
+          <Value>0.8</Value>
+          <Unit>mV/s</Unit>
+        </Lead_V5>
+        <Lead_V6>
+          <Value>0.3</Value>
+          <Unit>mV/s</Unit>
+        </Lead_V6>
+      </ST_Slope>
+    </MinuteSummaryLine>
+    <MinuteSummaryLine>
+      <Stage>
+        <Value />
+      </Stage>
+      <StageTime>
+        <Value>REC 00:12</Value>
+      </StageTime>
+      <Speed>
+        <Value>0.0</Value>
+        <Unit>km/h</Unit>
+      </Speed>
+      <Grade>
+        <Value>0.0</Value>
+        <Unit>%</Unit>
+      </Grade>
+      <HR>
+        <Value>79</Value>
+        <Unit>BPM</Unit>
+      </HR>
+      <SystolicBP>
+        <Value>130</Value>
+        <Unit>mmHg</Unit>
+      </SystolicBP>
+      <DiastolicBP>
+        <Value>80</Value>
+        <Unit>mmHg</Unit>
+      </DiastolicBP>
+      <METS>
+        <Value>2.2</Value>
+      </METS>
+      <DoubleProduct>
+        <Value>10010</Value>
+      </DoubleProduct>
+      <ST_Level>
+        <Lead_I>
+          <Value>0.9</Value>
+          <Unit>mm</Unit>
+        </Lead_I>
+        <Lead_II>
+          <Value>0.8</Value>
+          <Unit>mm</Unit>
+        </Lead_II>
+        <Lead_III>
+          <Value>-0.1</Value>
+          <Unit>mm</Unit>
+        </Lead_III>
+        <Lead_aVR>
+          <Value>-0.9</Value>
+          <Unit>mm</Unit>
+        </Lead_aVR>
+        <Lead_aVL>
+          <Value>0.4</Value>
+          <Unit>mm</Unit>
+        </Lead_aVL>
+        <Lead_aVF>
+          <Value>0.3</Value>
+          <Unit>mm</Unit>
+        </Lead_aVF>
+        <Lead_V1>
+          <Value>-1.0</Value>
+          <Unit>mm</Unit>
+        </Lead_V1>
+        <Lead_V2>
+          <Value>1.4</Value>
+          <Unit>mm</Unit>
+        </Lead_V2>
+        <Lead_V3>
+          <Value>1.2</Value>
+          <Unit>mm</Unit>
+        </Lead_V3>
+        <Lead_V4>
+          <Value>0.9</Value>
+          <Unit>mm</Unit>
+        </Lead_V4>
+        <Lead_V5>
+          <Value>0.7</Value>
+          <Unit>mm</Unit>
+        </Lead_V5>
+        <Lead_V6>
+          <Value>0.3</Value>
+          <Unit>mm</Unit>
+        </Lead_V6>
+      </ST_Level>
+      <ST_Slope>
+        <Lead_I>
+          <Value>1.8</Value>
+          <Unit>mV/s</Unit>
+        </Lead_I>
+        <Lead_II>
+          <Value>1.2</Value>
+          <Unit>mV/s</Unit>
+        </Lead_II>
+        <Lead_III>
+          <Value>-0.6</Value>
+          <Unit>mV/s</Unit>
+        </Lead_III>
+        <Lead_aVR>
+          <Value>-1.5</Value>
+          <Unit>mV/s</Unit>
+        </Lead_aVR>
+        <Lead_aVL>
+          <Value>1.2</Value>
+          <Unit>mV/s</Unit>
+        </Lead_aVL>
+        <Lead_aVF>
+          <Value>0.2</Value>
+          <Unit>mV/s</Unit>
+        </Lead_aVF>
+        <Lead_V1>
+          <Value>-1.3</Value>
+          <Unit>mV/s</Unit>
+        </Lead_V1>
+        <Lead_V2>
+          <Value>1.8</Value>
+          <Unit>mV/s</Unit>
+        </Lead_V2>
+        <Lead_V3>
+          <Value>1.3</Value>
+          <Unit>mV/s</Unit>
+        </Lead_V3>
+        <Lead_V4>
+          <Value>0.9</Value>
+          <Unit>mV/s</Unit>
+        </Lead_V4>
+        <Lead_V5>
+          <Value>0.8</Value>
+          <Unit>mV/s</Unit>
+        </Lead_V5>
+        <Lead_V6>
+          <Value>0.3</Value>
+          <Unit>mV/s</Unit>
+        </Lead_V6>
+      </ST_Slope>
+    </MinuteSummaryLine>
+    <MinuteSummaryLine>
+      <Stage>
+        <Value>END REC</Value>
+      </Stage>
+      <StageTime>
+        <Value>REC 00:19</Value>
+      </StageTime>
+      <Speed>
+        <Value>0.0</Value>
+        <Unit>km/h</Unit>
+      </Speed>
+      <Grade>
+        <Value>0.0</Value>
+        <Unit>%</Unit>
+      </Grade>
+      <HR>
+        <Value>77</Value>
+        <Unit>BPM</Unit>
+      </HR>
+      <SystolicBP>
+        <Value>130</Value>
+        <Unit>mmHg</Unit>
+      </SystolicBP>
+      <DiastolicBP>
+        <Value>80</Value>
+        <Unit>mmHg</Unit>
+      </DiastolicBP>
+      <METS>
+        <Value>1.9</Value>
+      </METS>
+      <DoubleProduct>
+        <Value>10010</Value>
+      </DoubleProduct>
+      <ST_Level>
+        <Lead_I>
+          <Value>1.1</Value>
+          <Unit>mm</Unit>
+        </Lead_I>
+        <Lead_II>
+          <Value>0.9</Value>
+          <Unit>mm</Unit>
+        </Lead_II>
+        <Lead_III>
+          <Value>-0.2</Value>
+          <Unit>mm</Unit>
+        </Lead_III>
+        <Lead_aVR>
+          <Value>-1.1</Value>
+          <Unit>mm</Unit>
+        </Lead_aVR>
+        <Lead_aVL>
+          <Value>0.6</Value>
+          <Unit>mm</Unit>
+        </Lead_aVL>
+        <Lead_aVF>
+          <Value>0.4</Value>
+          <Unit>mm</Unit>
+        </Lead_aVF>
+        <Lead_V1>
+          <Value>-0.9</Value>
+          <Unit>mm</Unit>
+        </Lead_V1>
+        <Lead_V2>
+          <Value>1.5</Value>
+          <Unit>mm</Unit>
+        </Lead_V2>
+        <Lead_V3>
+          <Value>1.1</Value>
+          <Unit>mm</Unit>
+        </Lead_V3>
+        <Lead_V4>
+          <Value>0.8</Value>
+          <Unit>mm</Unit>
+        </Lead_V4>
+        <Lead_V5>
+          <Value>0.5</Value>
+          <Unit>mm</Unit>
+        </Lead_V5>
+        <Lead_V6>
+          <Value>0.3</Value>
+          <Unit>mm</Unit>
+        </Lead_V6>
+      </ST_Level>
+      <ST_Slope>
+        <Lead_I>
+          <Value>1.9</Value>
+          <Unit>mV/s</Unit>
+        </Lead_I>
+        <Lead_II>
+          <Value>1.2</Value>
+          <Unit>mV/s</Unit>
+        </Lead_II>
+        <Lead_III>
+          <Value>-0.7</Value>
+          <Unit>mV/s</Unit>
+        </Lead_III>
+        <Lead_aVR>
+          <Value>-1.6</Value>
+          <Unit>mV/s</Unit>
+        </Lead_aVR>
+        <Lead_aVL>
+          <Value>1.3</Value>
+          <Unit>mV/s</Unit>
+        </Lead_aVL>
+        <Lead_aVF>
+          <Value>0.3</Value>
+          <Unit>mV/s</Unit>
+        </Lead_aVF>
+        <Lead_V1>
+          <Value>-1.2</Value>
+          <Unit>mV/s</Unit>
+        </Lead_V1>
+        <Lead_V2>
+          <Value>1.9</Value>
+          <Unit>mV/s</Unit>
+        </Lead_V2>
+        <Lead_V3>
+          <Value>1.1</Value>
+          <Unit>mV/s</Unit>
+        </Lead_V3>
+        <Lead_V4>
+          <Value>0.8</Value>
+          <Unit>mV/s</Unit>
+        </Lead_V4>
+        <Lead_V5>
+          <Value>0.7</Value>
+          <Unit>mV/s</Unit>
+        </Lead_V5>
+        <Lead_V6>
+          <Value>0.3</Value>
+          <Unit>mV/s</Unit>
+        </Lead_V6>
+      </ST_Slope>
+    </MinuteSummaryLine>
+  </SummaryTable>
+  <ProductName>X-Scribe</ProductName>
+  <ExamGUID>cba87fef-48c5-4a0a-8a72-77b03214a8fc</ExamGUID>
+</StressTest>

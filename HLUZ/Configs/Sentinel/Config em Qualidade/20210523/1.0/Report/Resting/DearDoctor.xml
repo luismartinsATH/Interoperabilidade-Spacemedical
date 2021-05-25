@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ReportFormat>
+
+    <Title>
+        <EnglishUK Str="UKRestingECG4x3_a4_seq"/>
+    </Title>
+
+
+
+
+
+    This is a sample “Dear Dr” template for use with Del Mar Reynolds Report Manager.
+
+    <DrawText Name="">
+        <Position X="4.0" Y="165.0" OffsetType="Abs"/>
+        <Font FontType="ArialSmall" />
+        <EnglishUK Str="Patient Details"/>
+    </DrawText>
+
+    <DrawText Name="">
+        <Position X="4.0" Y="165.0" OffsetType="Abs"/>
+        <Font FontType="ArialSmall" />
+        <Parameter Number="0" Id="patient_ID" Format="Text"/>
+        <EnglishUK Str="ID: %0"/>
+    </DrawText>
+
+    <DrawText Name="">
+        <Position X="4.0" Y="165.0" OffsetType="Abs"/>
+        <Font FontType="ArialSmall" />
+        <Parameter Number="0" Id="patient_full_name" Format="Text"/>
+        <EnglishUK Str="Name: %0"/>
+    </DrawText>
+
+    <DrawText Name="">
+        <Position X="4.0" Y="165.0" OffsetType="Abs"/>
+        <Font FontType="ArialSmall" />
+        <Parameter Number="0" Id="patient_date_of_birth" Format="DateTime"/>
+        <EnglishUK Str="Date of Birth: %0"/>
+    </DrawText>
+
+    <DrawText Name="">
+        <Position X="4.0" Y="165.0" OffsetType="Abs"/>
+        <Font FontType="ArialSmall" />
+        <Parameter Number="0" Id="patient_age" Format="Text"/>
+        <EnglishUK Str="Age: %0"/>
+    </DrawText>
+
+    <DrawText Name="">
+        <Position X="4.0" Y="165.0" OffsetType="Abs"/>
+        <Font FontType="ArialSmall" />
+        <Parameter Number="0" Id="patient_gender" Format="Text"/>
+        <EnglishUK Str="Gender: %0"/>
+    </DrawText>
+
+    <DrawText Name="">
+        <Position X="4.0" Y="165.0" OffsetType="Abs"/>
+        <Font FontType="ArialSmall" />
+        <Parameter Number="0" Id="technician_name" Format="Text"/>
+        <EnglishUK Str="Technician: %0"/>
+    </DrawText>
+
+Doctor:		<patdet.physician>
+Insurer:		<patdet.insurer>
+Hospital.:	<patdet.hospital>
+
+
+Recording Details
+
+Recording ID:		<patdet.recording.id>
+Recording Date:		<patdet.recording.date>
+Recorder ID:		<patdet.recorder.id>
+Analysis Date:		<patdet.analysis.date>
+
+Technician’s Comments
+
+<patdet.comments>
+
+Arrhythmia Analysis
+<ST.analysis.period>
+[!=“”]<ST.analysis.period>
+[>0]Ambulatory ECG analysis was performed for a period of <ST.analysis.period>[%.2lf] hours.</ST.analysis.period>[>0]
+</ST.analysis.period>[!=“”]\
+A total of <QRS>
+beats were analysed, of which <normal>
+beats were normal.
+The average heart rate was <HR.mean>
+bpm, with a maximum of <HR.fastest.rate>
+bpm at <HR.fastest.when>
+, and a minimum of <HR.slowest.rate>
+bpm at <HR.slowest.when>
+.
+<brady>[=0]There were no episodes of bradycardia.</brady>[=0]\
+<brady>
+[>0]There <brady>[=1]was one episode</brady>[=1]<brady>
+[>1]were <brady> episodes</brady>[>1] of bradycardia, <brady>[>1]the longest</brady>[>1] of <brady.longest.length>
+beats <brady>
+[>1]at <brady.longest.when>, and the slowest </brady>[>1]at <brady.slowest.rate>
+bpm at <brady.slowest.when>.</brady>[>0]
+
+Ventricular ectopic activity:
+<VT>[=0]There were no episodes of VT. </VT>[=0] <salvo>[=0]There were no ventricular runs. </salvo>[=0]\
+<VT>
+[>0]There <VT>
+[=1]was <VT> episode</VT>[=1]<vt>
+[>1]were <VT> episodes</vt>[>1] of ventricular tachycardia faster than <arr.crit.vt.min.rate>
+bpm, <vt>[>1]the fastest</vt>[>1] at <vt.fastest.rate>
+bpm occurring at <vt.fastest.when>
+, <vt>[>1]and the longest</vt>[>1] consisting of <VT.longest.length>
+beats <vt>
+[>1]at <VT.longest.when>.</vt>[>1]
+</VT>[>0]\
+<salvo>
+[>0] There <salvo>
+[=1]was <salvo> ventricular run</salvo>[=1]<salvo>
+[>1]were <salvo>
+ventricular runs of <arr.crit.salvo.min.beats> beats or more, the longest</salvo>[>1] of <salvo.longest.length>
+beats at <salvo.longest.when>. </salvo>[>0]\
+There <couplet>[!=1]were</couplet>[!=1]<couplet>[=1]was one ventricular couplet</couplet>[=1] <couplet>[=0]no ventricular couplets</couplet>[=0]\
+<couplet>
+[>1]<couplet> ventricular couplets</couplet>[>1] and <triplet>[=0]no triplets </triplet>[=0]<triplet>
+[=1]<triplet> triplet </triplet>[=1]<triplet>
+[>1]<triplet> triplets </triplet>[>1]detected.
+There <premature.aberrant>[=1]was</premature.aberrant>[=1]<premature.aberrant>[!=1]were</premature.aberrant>[!=1] <premature.aberrant>[=0]no</premature.aberrant>[=0]<premature.aberrant>
+[>0]<premature.aberrant> </premature.aberrant>[>0] isolated premature ventricular <premature.aberrant>[=1]beat.</premature.aberrant>[=1]<premature.aberrant>[!=1]beats.</premature.aberrant>[!=1] In total there <aberrant>[=1]was</aberrant>[=1]<aberrant>[!=1]were </aberrant>[!=1]<aberrant>[=0]no</aberrant>[=0]<aberrant>
+[>0]<aberrant></aberrant>[>0] ventricular <aberrant>[=1]beat</aberrant>[=1]<aberrant>[!=1]beats</aberrant>[!=1] in the recording.
+
+Supraventricular ectopic activity:
+There <premature.normal>[=1]was </premature.normal>[=1] <premature.normal>[!=1]were </premature.normal>[!=1]<premature.normal>[=0]no</premature.normal>[=0]<premature.normal>
+[>0]<premature.normal></premature.normal>[>0] isolated <premature.normal>[=1]supraventricular extrasystole </premature.normal>[=1] <premature.normal>[!=1]supraventricular extrasystoles </premature.normal>[!=1]detected.
+<svt>[=0]There were no episodes of SVT. </svt>[=0]\
+<svt>
+[>0]There <svt>[=1]was 1 episode</svt>[=1]<svt>
+[!=1]were <SVT> episodes</svt>[!=1] of supraventricular tachycardia faster than <arr.crit.svt.min.rate>
+bpm, <svt>[>1]the fastest </svt>[>1]at <svt.fastest.rate>
+bpm occurring at <svt.fastest.when>
+, <svt>[>1]and the longest </svt>[>1]consisting of <svt.longest.length>
+beats <svt>
+[>1]at <svt.longest.when></svt>[>1].
+</svt>[>0]
+<af.count>
+[!=“”]<af.count>
+[>0]There <af.count>[=1]was 1 episode</af.count>[=1]<af.count>
+[>1]were <af.count> episodes</af.count>[>1] of AF, with a total duration of <af.duration>[%.0lf] seconds</af.count>[>0]
+</af.count>[!=“”]
+
+
+
+ST Analysis
+
+<ST.analysis.period>[=“”] ST Analysis was not performed. </ST.analysis.period>[=“”]\
+<ST.analysis.period>[=0] ST Analysis was not performed. </ST.analysis.period>[=0]\
+<ST.analysis.period>
+[>0]The period of ST analysis was <ST.analysis.period>
+[%.2lf] hours.
+There <ST.ch1.depressions>[=1]was</ST.ch1.depressions>[=1] <ST.ch1.depressions>[!=1]were</ST.ch1.depressions>[!=1]<ST.ch1.depressions>[=0] no significant episodes of ST depression in channel 1. </ST.ch1.depressions>[=0]\
+<ST.ch1.depressions>
+[>0] <ST.ch1.depressions>
+significant <ST.ch1.depressions>[=1]episode of depression in channel 1, </ST.ch1.depressions>[=1] <ST.ch1.depressions>[!=1]episodes of depression in channel 1, the greatest </ST.ch1.depressions>[!=1]of
+<ST.ch1.max.dep.value>
+V occurring at <ST.ch1.max.dep.when>
+. The total depression burden in channel 1 was <ST.ch1.dep.burden>mVs.</ST.ch1.depressions>[>0]
+There <ST.ch1.elevations>[=1]was</ST.ch1.elevations>[=1] <ST.ch1.elevations>[!=1]were</ST.ch1.elevations>[!=1]<ST.ch1.elevations>[=0] no significant episodes of ST elevation in channel 1. </ST.ch1.elevations>[=0]\
+<ST.ch1.elevations>
+[>0] <ST.ch1.elevations>
+significant <ST.ch1.elevations>[=1]episode of elevation in channel 1, </ST.ch1.elevations>[=1] <ST.ch1.elevations>[!=1]episodes of elevation in channel 1, the greatest </ST.ch1.elevations>[!=1]of
+<ST.ch1.max.elev.value>
+V occurring at <ST.ch1.max.elev.when>
+. The total elevation burden in channel 1 was <ST.ch1.elev.burden>mVs.</ST.ch1.elevations>[>0]
+
+There <ST.ch2.depressions>[=1]was</ST.ch2.depressions>[=1] <ST.ch2.depressions>[!=1]were</ST.ch2.depressions>[!=1]<ST.ch2.depressions>[=0] no significant episodes of ST depression in channel 2. </ST.ch2.depressions>[=0]\
+<ST.ch2.depressions>
+[>0] <ST.ch2.depressions>
+significant <ST.ch2.depressions>[=1]episode of depression in channel 2, </ST.ch2.depressions>[=1] <ST.ch2.depressions>[!=1]episodes of depression in channel 2, the greatest </ST.ch2.depressions>[!=1]of
+<ST.ch2.max.dep.value>
+V occurring at <ST.ch2.max.dep.when>
+. The total depression burden in channel 2 was <ST.ch2.dep.burden>mVs.</ST.ch2.depressions>[>0]
+There <ST.ch2.elevations>[=1]was</ST.ch2.elevations>[=1] <ST.ch2.elevations>[!=1]were</ST.ch2.elevations>[!=1]<ST.ch2.elevations>[=0] no significant episodes of ST elevation in channel 2. </ST.ch2.elevations>[=0]\
+<ST.ch2.elevations>
+[>0] <ST.ch2.elevations>
+significant <ST.ch2.elevations>[=1]episode of elevation in channel 2, </ST.ch2.elevations>[=1] <ST.ch2.elevations>[!=1]episodes of elevation in channel 2, the greatest </ST.ch2.elevations>[!=1]of
+<ST.ch2.max.elev.value>
+V occurring at <ST.ch2.max.elev.when>
+. The total elevation burden in channel 2 was <ST.ch2.elev.burden>mVs.</ST.ch2.elevations>[>0]
+
+There <ST.ch3.depressions>[=1]was</ST.ch3.depressions>[=1] <ST.ch3.depressions>[!=1]were</ST.ch3.depressions>[!=1]<ST.ch3.depressions>[=0] no significant episodes of ST depression in channel 3. </ST.ch3.depressions>[=0]\
+<ST.ch3.depressions>
+[>0] <ST.ch3.depressions>
+significant <ST.ch3.depressions>[=1]episode of depression in channel 3, </ST.ch3.depressions>[=1] <ST.ch3.depressions>[!=1]episodes of depression in channel 3, the greatest </ST.ch3.depressions>[!=1]of
+<ST.ch3.max.dep.value>
+V occurring at <ST.ch3.max.dep.when>
+. The total depression burden in channel 3 was <ST.ch3.dep.burden>mVs.</ST.ch3.depressions>[>0]
+There <ST.ch3.elevations>[=1]was</ST.ch3.elevations>[=1] <ST.ch3.elevations>[!=1]were</ST.ch3.elevations>[!=1]<ST.ch3.elevations>[=0] no significant episodes of ST elevation in channel 3. </ST.ch3.elevations>[=0]\
+<ST.ch3.elevations>
+[>0] <ST.ch3.elevations>
+significant <ST.ch3.elevations>[=1]episode of elevation in channel 3, </ST.ch3.elevations>[=1] <ST.ch3.elevations>[!=1]episodes of elevation in channel 3, the greatest </ST.ch3.elevations>[!=1]of
+<ST.ch3.max.elev.value>
+V occurring at <ST.ch3.max.elev.when>
+. The total elevation burden in channel 3 was <ST.ch3.elev.burden>mVs.</ST.ch3.elevations>[>0]
+
+The ST deviation threshold was <ST.crit.dev.thresh> V. </ST.analysis.period>[>0]
+
+
+
+
+</DrawText>
+
+<DrawText Name="No bradycardia">
+<Condition Param="bradycardia_event_count" Value="0"/>
+<Position X="139.25" Y="4.5" OffsetType="Abs"/>
+<Font FontType="ArialSmall" />
+<EnglishUK Str="There were no episodes of bradycardia."/>
+</DrawText>
+
+<DrawText Name="One bradycardia">
+<Condition Param="bradycardia_event_count" Value="1"/>
+<Position X="139.25" Y="4.5" OffsetType="Abs"/>
+<Font FontType="ArialSmall" />
+<Parameter Number="0" Id="bradycardia_longest_length" Format="Text"/>
+<Parameter Number="1" Id="bradycardia_slowest_length" Format="Text"/>
+<Parameter Number="2" Id="bradycardia_slowest_time" Format="Time"/>
+<EnglishUK Str="There was one episode of bradycardia, of %0 beats, and %1 bpm at %2."/>
+</DrawText>
+
+<DrawText Name="More than once bradycardia">
+<Condition Param="bradycardia_event_count" Operation="greater_than" Value="1"/>
+<Position X="139.25" Y="4.5" OffsetType="Abs"/>
+<Font FontType="ArialSmall" />
+<Parameter Number="0" Id="date_time_now" Format="Text"/>
+<Parameter Number="0" Id="bradycardia_event_count" Format="Text"/>
+<Parameter Number="1" Id="bradycardia_longest_length" Format="Text"/>
+<Parameter Number="2" Id="bradycardia_longest_time" Format="Time"/>
+<Parameter Number="3" Id="bradycardia_slowest_length" Format="Text"/>
+<Parameter Number="4" Id="bradycardia_slowest_time" Format="Time"/>
+<EnglishUK Str="There were %0 episodes of bradycardia, the longest of %1 beats at %2, and the slowest at %3 bpm at %4."/>
+</DrawText>
+
+    <!--StartNextSection X="0.0" Y="12.0" /-->
+
+</ReportFormat>

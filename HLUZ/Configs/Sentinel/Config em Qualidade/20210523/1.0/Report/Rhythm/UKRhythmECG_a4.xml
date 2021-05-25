@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ReportFormat>
+
+    <Definition>
+        <!-- UK Rhythm Report A4 - Top Level file -->
+        <ReportType ReportTypeValue="RhythmECG"/>
+        <PageType PageTypeValue="NormalPage"/>
+        <PageOrientation>Landscape</PageOrientation>
+    </Definition>
+
+    <Page Filename="UKRhythmECG_a4_front.xml" />
+    <Page Filename="UKRhythmECG_a4_cont.xml" />
+    <Page Filename="UKRhythmECG_a4_4x3_strip.xml" />
+
+</ReportFormat>

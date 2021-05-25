@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Acronyms>
+    <Section Name ="Normal/Abnormal">
+        <Acronym>NORM Normal blood pressure</Acronym>
+        <Acronym>HIGH High blood pressure</Acronym>
+        <Acronym>NTHT Nocturnal hypertension</Acronym>
+        <Acronym>WCHT White coat hypertension</Acronym>
+    </Section>
+</Acronyms>

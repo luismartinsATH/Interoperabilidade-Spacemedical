@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<EcgInboxSettings>
+  <!--
+  <Inbox ImportType="Mac5000">
+    <DirectoryPath>C:\EcgInboxes\test</DirectoryPath>
+    <FileNamePattern>*.xml,*.ecg</FileNamePattern>
+  </Inbox>
+  -->
+  <Inbox ImportType="Outro">
+    <DirectoryPath>C:\EcgInboxes\Cairngorm</DirectoryPath>
+    <FileNamePattern>*.xml,*.ecg</FileNamePattern>
+  </Inbox>
+  <!--
+  <Inbox ImportType="CardioExpress SCP">
+    <DirectoryPath></DirectoryPath>
+    <FileNamePattern>*.scp</FileNamePattern>
+  </Inbox>
+  -->
+</EcgInboxSettings>

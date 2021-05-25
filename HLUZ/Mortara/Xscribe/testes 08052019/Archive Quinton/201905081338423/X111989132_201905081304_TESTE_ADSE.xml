@@ -9,12 +9,12 @@
 
     <PatientDemographics>
         <LastName>
-            <Value>ADSE</Value>
+            <Value></Value>
             <Label>Last Name:</Label>
         </LastName>
 
         <FirstName>
-            <Value>TESTE</Value>
+            <Value></Value>
             <Label>First Name:</Label>
         </FirstName>
 
@@ -34,17 +34,17 @@
         </SecondaryID>
 
         <DOB>
-            <Value>08/06/1985</Value>
+            <Value></Value>
             <Label>Date of Birth:</Label>
         </DOB>
 
         <DobEx>
-            <Value>1985-06-08</Value>
+            <Value></Value>
             <Label>Date of Birth:</Label>
         </DobEx>
 
         <Age>
-            <Value>33</Value>
+            <Value></Value>
             <Units>years</Units>
             <Label>Age:</Label>
         </Age>

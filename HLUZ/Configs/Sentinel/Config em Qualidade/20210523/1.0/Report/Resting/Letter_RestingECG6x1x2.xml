@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ReportFormat>
+
+    <Definition>
+        <!-- Resting ECG Report 6x1x2 Letter -->
+        <ReportType ReportTypeValue="RestingECG"/>
+        <PageType PageTypeValue="NormalPage"/>
+        <PageOrientation>Landscape</PageOrientation>
+    </Definition>
+
+    <Page Filename="Letter_RestingECG6x1x2_page1.xml" />
+    <Page Filename="Letter_RestingECG6x1x2_page2.xml" />
+    <Page Filename="Letter_RestingECG6x1x2_page3.xml" />
+
+</ReportFormat>

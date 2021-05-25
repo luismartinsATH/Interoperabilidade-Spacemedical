@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Medications>
+  <Medication>Acebutalol</Medication>
+  <Medication>Acenocoumarol</Medication>
+  <Medication>Adalat</Medication>
+  <Medication>Adalat-Retard</Medication>
+  <Medication>Adalat-LA</Medication>
+  <Medication>Adenosine</Medication>
+  <Medication>Adipine MR</Medication>
+  <Medication>Adipine XL</Medication>
+  <Medication>Adizem-SR</Medication>
+  <Medication>Adizem-XL</Medication>
+  <Medication>Adrenaline</Medication>
+  <Medication>Alimemazine</Medication>
+  <Medication>Aliskiren</Medication>
+  <Medication>Amfetamine</Medication>
+  <Medication>Amiloride</Medication>
+  <Medication>Aminoacridine</Medication>
+  <Medication>Amiodarone</Medication>
+  <Medication>Amlodipine</Medication>
+  <Medication>Amobarbital</Medication>
+  <Medication>Amobarbital Sodium</Medication>
+  <Medication>Amoxicillin</Medication>
+  <Medication>Angitil SR</Medication>
+  <Medication>Angitil XL</Medication>
+  <Medication>Apixaban</Medication>
+  <Medication>Articaine</Medication>
+  <Medication>Asa</Medication>
+  <Medication>Aspirin</Medication>
+  <Medication>Atenolol</Medication>
+  <Medication>Atorvastatin</Medication>
+  <Medication>Beclometeasone</Medication>
+  <Medication>Bendroflumethiazide</Medication>
+  <Medication>Benicar</Medication>
+  <Medication>Benorilate</Medication>
+  <Medication>Benzatopine</Medication>
+  <Medication>Benzfetamine</Medication>
+  <Medication>Betapace</Medication>
+  <Medication>Bezafibrate</Medication>
+  <Medication>Bisoprolol</Medication>
+  <Medication>Bumetanide</Medication>
+  <Medication>Busulfan</Medication>
+  <Medication>Butobarbital</Medication>
+  <Medication>Calcicard CR</Medication>
+  <Medication>Calcitonin (Salmon)</Medication>
+  <Medication>Candesartan</Medication>
+  <Medication>Captopril</Medication>
+  <Medication>Cardizem</Medication>
+  <Medication>Carvedilol</Medication>
+  <Medication>Cefalexin</Medication>
+  <Medication>Cefamandole Nafate</Medication>
+  <Medication>Cefradine</Medication>
+  <Medication>Celiprolol</Medication>
+  <Medication>Chiorphenamine</Medication>
+  <Medication>Chlormethine</Medication>
+  <Medication>Chlorobutamol</Medication>
+  <Medication>Chlortalidone</Medication>
+  <Medication>Ciclosporin</Medication>
+  <Medication>Cilazapril</Medication>
+  <Medication>Cilostazol</Medication>
+  <Medication>Clexane</Medication>
+  <Medication>Clonidine</Medication>
+  <Medication>Clomethiazole</Medication>
+  <Medication>Clomifene</Medication>
+  <Medication>Clopidogrel</Medication>
+  <Medication>Cloral Betaine</Medication>
+  <Medication>Co-Amilofruse</Medication>
+  <Medication>Co-Amilozide</Medication>
+  <Medication>Colecalciferol</Medication>
+  <Medication>Colestyramine</Medication>
+  <Medication>Colistimethate Sodium</Medication>
+  <Medication>Coracten SR</Medication>
+  <Medication>Coracten XL</Medication>
+  <Medication>Coreg</Medication>
+  <Medication>Corticotropin</Medication>
+  <Medication>Cyclopenthiazide</Medication>
+  <Medication>Dabigatran</Medication>
+  <Medication>Desoximetasone</Medication>
+  <Medication>Dexamfetamine</Medication>
+  <Medication>Dibrompropamidine</Medication>
+  <Medication>Dicycloverine</Medication>
+  <Medication>Dienestrol</Medication>
+  <Medication>Diethylstibestrol</Medication>
+  <Medication>Digoxin</Medication>
+  <Medication>Dilcardia SR</Medication>
+  <Medication>Diltiazem</Medication>
+  <Medication>Dilzem XL</Medication>
+  <Medication>Diltizem</Medication>
+  <Medication>Dimethyl Sulfoxide</Medication>
+  <Medication>Dimeticone</Medication>
+  <Medication>Diovan</Medication>
+  <Medication>Dipotassium Clorazepate</Medication>
+  <Medication>Dipyridamole</Medication>
+  <Medication>Disopyramide</Medication>
+  <Medication>Dobutamine</Medication>
+  <Medication>Dopamine</Medication>
+  <Medication>Dosulepin</Medication>
+  <Medication>Doxazosin</Medication>
+  <Medication>Doxycycline Hyclate</Medication>
+  <Medication>Dronedarone</Medication>
+  <Medication>Enalapril</Medication>
+  <Medication>Epinephrine</Medication>
+  <Medication>Eplerenone</Medication>
+  <Medication>Eprosartan</Medication>
+  <Medication>Estradiol</Medication>
+  <Medication>Estriol</Medication>
+  <Medication>Estrone</Medication>
+  <Medication>Etacrynic Acid</Medication>
+  <Medication>Etamsylate</Medication>
+  <Medication>Ethinylestradiol</Medication>
+  <Medication>Etynodiol</Medication>
+  <Medication>Ezetimibe</Medication>
+  <Medication>Felodipine</Medication>
+  <Medication>Fenafibrate</Medication>
+  <Medication>Flecainide</Medication>
+  <Medication>Fludroxycortide</Medication>
+  <Medication>Flumetasone</Medication>
+  <Medication>Flupentixol</Medication>
+  <Medication>Fluvastatin</Medication>
+  <Medication>Formoterol</Medication>
+  <Medication>Fortipine LA 40</Medication>
+  <Medication>Fosinopril</Medication>
+  <Medication>Furosemide</Medication>
+  <Medication>Gemfibrozil</Medication>
+  <Medication>Gestonorone</Medication>
+  <Medication>Gtn</Medication>
+  <Medication>Guaifenesin</Medication>
+  <Medication>Guanethidine</Medication>
+  <Medication>Half-Securon SR</Medication>
+  <Medication>Heparin</Medication>
+  <Medication>Hexachlorophene</Medication>
+  <Medication>Hydoxyprogesterone Caproate</Medication>
+  <Medication>Hydralazine</Medication>
+  <Medication>Hydroxycarbamide</Medication>
+  <Medication>Iloprost</Medication>
+  <Medication>Imidapril</Medication>
+  <Medication>Indapamide</Medication>
+  <Medication>Indometacin</Medication>
+  <Medication>Indoramin</Medication>
+  <Medication>Irbesartan</Medication>
+  <Medication>Isosorbide Mono/Dinitrate</Medication>
+  <Medication>Isradipine</Medication>
+  <Medication>Ivabradine</Medication>
+  <Medication>Labetalol</Medication>
+  <Medication>Lacidipine</Medication>
+  <Medication>Lercanidipine</Medication>
+  <Medication>Levomepromazine</Medication>
+  <Medication>Levothyroxine Sodium</Medication>
+  <Medication>Lidocaine</Medication>
+  <Medication>Lignocaine</Medication>
+  <Medication>Liptor</Medication>
+  <Medication>Lisinopril</Medication>
+  <Medication>Lisuride</Medication>
+  <Medication>Lotrel</Medication>
+  <Medication>Losartan</Medication>
+  <Medication>Mannitol</Medication>
+  <Medication>Mecysteine</Medication>
+  <Medication>Mercaptamine</Medication>
+  <Medication>Methenamine Hippurate</Medication>
+  <Medication>Methyldopa</Medication>
+  <Medication>Methylphenpbarbital</Medication>
+  <Medication>Methylthioninium Chloride</Medication>
+  <Medication>Metolozone</Medication>
+  <Medication>Metoprolol</Medication>
+  <Medication>Micardis</Medication>
+  <Medication>Micorias</Medication>
+  <Medication>Milrinone</Medication>
+  <Medication>Minoxidil</Medication>
+  <Medication>Mitoxantrone</Medication>
+  <Medication>Moexipril</Medication>
+  <Medication>Moxisylyte</Medication>
+  <Medication>Moxonidine</Medication>
+  <Medication>Nadolol</Medication>
+  <Medication>Nebivolol</Medication>
+  <Medication>Nicardipine</Medication>
+  <Medication>Nicorandil</Medication>
+  <Medication>Nifedipine</Medication>
+  <Medication>Nifedipress Mr</Medication>
+  <Medication>Nimodipine</Medication>
+  <Medication>Noradrenaline</Medication>
+  <Medication>Norepinephrine</Medication>
+  <Medication>Olmesartan</Medication>
+  <Medication>Oxetacaine</Medication>
+  <Medication>Oxprenolol</Medication>
+  <Medication>Pentaerithrityl Tetranitrate</Medication>
+  <Medication>Pentoxifylline</Medication>
+  <Medication>Perindopril Erbumine (Generic)</Medication>
+  <Medication>Perindopril Arginine</Medication>
+  <Medication>Phenobarbital</Medication>
+  <Medication>Phenoxybenzamine</Medication>
+  <Medication>Pindolol</Medication>
+  <Medication>Pipotiaaine</Medication>
+  <Medication>Plavix</Medication>
+  <Medication>Polihexanide</Medication>
+  <Medication>Pramocaine</Medication>
+  <Medication>Prasugrel</Medication>
+  <Medication>Pravastatin</Medication>
+  <Medication>Prazosin</Medication>
+  <Medication>Procaine Benzylpencillin</Medication>
+  <Medication>Procardia</Medication>
+  <Medication>Propafenone</Medication>
+  <Medication>Propranolol</Medication>
+  <Medication>Protionamide</Medication>
+  <Medication>Quinapril</Medication>
+  <Medication>Ramipril</Medication>
+  <Medication>Ranolazine</Medication>
+  <Medication>Rasilez</Medication>
+  <Medication>Ribavirin</Medication>
+  <Medication>Riboflavin</Medication>
+  <Medication>Rivaroxaban</Medication>
+  <Medication>Rosuvastatin</Medication>
+  <Medication>Secobarbital</Medication>
+  <Medication>Securon SR</Medication>
+  <Medication>Sildenafil</Medication>
+  <Medication>Simvastatin</Medication>
+  <Medication>Slozem</Medication>
+  <Medication>Sodium Calcium Edetate</Medication>
+  <Medication>Sodium Cromoglicate</Medication>
+  <Medication>Sodium Feredetate</Medication>
+  <Medication>Sodium Picosulfate</Medication>
+  <Medication>Sorbitan Stearate</Medication>
+  <Medication>Sotalol</Medication>
+  <Medication>Spironolactone</Medication>
+  <Medication>Stibocaptate Sodium</Medication>
+  <Medication>Sulfacetamide</Medication>
+  <Medication>Sulfadiazine</Medication>
+  <Medication>Sulfadimidine</Medication>
+  <Medication>Sulfamethoxazole</Medication>
+  <Medication>Sulfapyridine</Medication>
+  <Medication>Sulfasalazine</Medication>
+  <Medication>Sulfathiazole</Medication>
+  <Medication>Sulfinpyrazone</Medication>
+  <Medication>Tadalafil</Medication>
+  <Medication>Terazosin</Medication>
+  <Medication>Telmisartan</Medication>
+  <Medication>Tetracaine</Medication>
+  <Medication>Tetracosactide</Medication>
+  <Medication>Thiopental</Medication>
+  <Medication>Tiabendazole</Medication>
+  <Medication>Ticagrelor</Medication>
+  <Medication>Tiguanine</Medication>
+  <Medication>Tildiem LA</Medication>
+  <Medication>Tildiem Retard</Medication>
+  <Medication>Timolol</Medication>
+  <Medication>Tirofiban</Medication>
+  <Medication>Toprol</Medication>
+  <Medication>Torasemide</Medication>
+  <Medication>Trandolapril</Medication>
+  <Medication>Triamterine</Medication>
+  <Medication>Univer</Medication>
+  <Medication>Trihexphenidyl</Medication>
+  <Medication>Urofollitrpoin</Medication>
+  <Medication>Valni XL</Medication>
+  <Medication>Valsartan</Medication>
+  <Medication>Valsartin</Medication>
+  <Medication>Verapamil</Medication>
+  <Medication>Verapress MR</Medication>
+  <Medication>Vertab SR 240</Medication>
+  <Medication>Viazem XL</Medication>
+  <Medication>Warfarin</Medication>
+  <Medication>Xipamide</Medication>
+  <Medication>Zemtard</Medication>
+</Medications>
