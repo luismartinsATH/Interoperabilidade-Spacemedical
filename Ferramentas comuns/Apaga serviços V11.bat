@@ -1,0 +1,9 @@
+SC delete AppDiscovery
+SC delete SentinelMessagingService
+SC delete SentinelRdtStartService
+SC delete RestingECGFileService
+SC delete ScpImportService
+SC delete XdtService
+SC delete CH2000PDFService
+SC delete DicomService
+SC delete SciStore

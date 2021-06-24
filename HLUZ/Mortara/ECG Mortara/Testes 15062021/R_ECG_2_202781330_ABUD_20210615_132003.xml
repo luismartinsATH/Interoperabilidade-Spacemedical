@@ -1,0 +1,155 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE RestingECGRequest>
+<RestingECGRequest>
+  <Manufacturer>Mortara Instrument Inc.</Manufacturer>
+  <Version>4.7.0.16</Version>
+  <PatientDemographics>
+    <LastName>
+      <Value>ABUD</Value>
+      <Label>Last Name:</Label>
+    </LastName>
+    <FirstName>
+      <Value>RAQUEL CARDOSO</Value>
+      <Label>First Name:</Label>
+    </FirstName>
+    <MiddleName>
+      <Value></Value>
+      <Label>Middle Name:</Label>
+    </MiddleName>
+    <ID>
+      <Value>202781330</Value>
+      <Label>ID:</Label>
+    </ID>
+    <SecondID>
+      <Value></Value>
+      <Label>Second ID:</Label>
+    </SecondID>
+    <SocialSecurityNum>
+      <Value></Value>
+      <Label>SSN:</Label>
+    </SocialSecurityNum>
+    <PatientBirthDate>
+      <Value></Value>
+      <Label>Date of Birth:</Label>
+    </PatientBirthDate>
+    <Age>
+      <Value>48</Value>
+      <Units>Y</Units>
+      <Label>Age:</Label>
+    </Age>
+    <Gender>
+      <Value>Female</Value>
+      <Label>Gender:</Label>
+    </Gender>
+    <Race>
+      <Value></Value>
+      <Label>Race:</Label>
+    </Race>
+    <Height>
+      <Value></Value>
+      <Units></Units>
+      <Label>Height:</Label>
+    </Height>
+    <Weight>
+      <Value></Value>
+      <Units></Units>
+      <Label>Weight:</Label>
+    </Weight>
+    <PatientLocation>
+      <Value></Value>
+      <Label>Patient Location:</Label>
+    </PatientLocation>
+    <PatientRoom>
+      <Value></Value>
+      <Label>Patient Room:</Label>
+    </PatientRoom>
+    <CommentField>
+      <Value></Value>
+      <Label>Comment:</Label>
+    </CommentField>
+    <ReferringPhysician>
+      <Value></Value>
+      <Label>Referring Phy:</Label>
+    </ReferringPhysician>
+    <AttendingPhysician>
+      <Value></Value>
+      <Label>Attending Phy:</Label>
+    </AttendingPhysician>
+    <OverreadingPhysician>
+      <Value></Value>
+      <Label>Overreading Phy:</Label>
+    </OverreadingPhysician>
+    <AssistingProvider>
+      <Value></Value>
+      <Label>Assisting Provider:</Label>
+    </AssistingProvider>
+    <ProceduralDiagnosis>
+      <Value></Value>
+      <Label>Procedural Diagnosis:</Label>
+    </ProceduralDiagnosis>
+    <ReasonForProcedure>
+      <Value></Value>
+      <Label>Reason For Procedure:</Label>
+    </ReasonForProcedure>
+    <Medications1>
+      <Value></Value>
+      <Label>Medications1:</Label>
+    </Medications1>
+    <Medications2>
+      <Value></Value>
+      <Label>Medications2:</Label>
+    </Medications2>
+    <Note1>
+      <Value></Value>
+      <Label>Note1:</Label>
+    </Note1>
+    <Note2>
+      <Value></Value>
+      <Label>Note2:</Label>
+    </Note2>
+    <OrderRequestNum>
+      <Value></Value>
+      <Label>Order Request Number:</Label>
+    </OrderRequestNum>
+    <CartLcdReqField>
+      <Value></Value>
+      <Label>Cart LCD Request Number:</Label>
+    </CartLcdReqField>
+    <SysBPNum>
+      <Value></Value>
+      <Label>Systolic BP:</Label>
+    </SysBPNum>
+    <DiaBPNum>
+      <Value></Value>
+      <Label>Diastolic BP:</Label>
+    </DiaBPNum>
+    <RequestingPhysician>
+      <Value></Value>
+      <Label>Requesting Physician:</Label>
+    </RequestingPhysician>
+    <AccessionNumber>
+      <Value></Value>
+      <Label>Accession Number:</Label>
+    </AccessionNumber>
+    <AdmissionId>
+      <Value></Value>
+      <Label>Admission ID:</Label>
+    </AdmissionId>
+    <RequestedProcedureDescription>
+      <Value></Value>
+      <Label>Requested Procedure Description:</Label>
+    </RequestedProcedureDescription>
+    <ScheduledProcedureStepLocation>
+      <Value></Value>
+      <Label>Scheduled Procedure Step Location:</Label>
+    </ScheduledProcedureStepLocation>
+    <Initials>
+      <Value></Value>
+      <Label>Initials:</Label>
+    </Initials>
+    <Visit>
+      <Value></Value>
+      <Label>Visit:</Label>
+    </Visit>
+  </PatientDemographics>
+</RestingECGRequest>
