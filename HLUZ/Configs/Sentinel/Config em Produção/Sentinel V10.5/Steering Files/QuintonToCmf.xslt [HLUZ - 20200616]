@@ -90,13 +90,18 @@
         <UserDefinedField3Value></UserDefinedField3Value>
         <UserDefinedField4Value></UserDefinedField4Value>
       </Test>
+      <Order>
+        <PlacerNumber>
+			<xsl:value-of select="StressTest/PatientDemographics/OrderNumber/Value"/>
+        </PlacerNumber>
+      </Order>	  
       <Reports>
         <Report>
-          <TestType>stress</TestType>
+          <TestType>Esforço</TestType>
           <RecordingDuration><!-- <xsl:value-of select="StressTest/TestSummary/ExerciseTime/Value"/> --></RecordingDuration>
           <RecordingDateTime><xsl:value-of select="StressTest/TestSummary/ExamDateEx/Value"/></RecordingDateTime>
           <ReportFormat></ReportFormat>
-          <ReportType>stress</ReportType>
+          <ReportType>Esforço</ReportType>
           <Status>Unconfirmed</Status>
         </Report>
       </Reports>
